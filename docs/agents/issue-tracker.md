@@ -15,6 +15,10 @@ Issues and specs for this repo live in Jira, not GitHub Issues.
 - **Apply / remove labels**: edit the issue's `labels` field (Jira creates labels on first use).
 - **Close**: transition the issue to `Done` (look up the available transitions first), with a comment explaining why.
 
+- **Titles and labels**: start every title with the area code and that area's next number, e.g. `[LOG-003] Log a Working Set`, and add the lowercase area label (`log`). Areas and codes are listed in `docs/product/workflow.md`.
+- **Statuses**: To Do → In Progress → In Review → Ready To Merge → Done. The full developer/reviewer agent flow is in `docs/product/workflow.md`.
+- **Closing comment**: every finished ticket gets one comment with **Done / PRs / Q&A / Follow-ups**. The exact format is in `docs/product/workflow.md`.
+
 Refer to issues by their Jira key (`SCRUM-12`), never by a bare `#12`.
 
 ## Linking code to Jira
