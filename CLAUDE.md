@@ -17,3 +17,7 @@ Single-context: one `CONTEXT.md` and `docs/adr/` at the repo root. See `docs/age
 ### ponytail
 
 The ponytail plugin (write less code) is enabled for this project in `.claude/settings.json`. See `docs/agents/ponytail.md` for setup, mode and uninstall.
+
+### graphify
+
+The `/graphify` project skill builds a local knowledge graph of the repo in git-ignored `graphify-out/`. Querying is manual; always-on hooks are off. See `docs/agents/graphify.md` for when to query, refresh and uninstall.

@@ -1,0 +1,15 @@
+# Dependencies and build output
+node_modules/
+dist/
+build/
+.wrangler/
+coverage/
+
+# The vendored skill
+.claude/
+
+# Real data never goes in the graph (ADR-0005)
+exports/
+*.zip
+*.csv
+.dev.vars
