@@ -4,7 +4,7 @@
 
 ### Issue tracker
 
-Issues are tracked in this repo's GitHub Issues (via the `gh` CLI). See `docs/agents/issue-tracker.md`.
+Issues are tracked in Jira, project `SCRUM` at liamg626.atlassian.net (via the `atlassian` MCP server). See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 

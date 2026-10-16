@@ -1,45 +1,45 @@
-# Issue tracker: GitHub
+# Issue tracker: Jira
 
-Issues and specs for this repo live as GitHub issues. Use the `gh` CLI for all operations.
+Issues and specs for this repo live in Jira, not GitHub Issues.
+
+- **Site**: https://liamg626.atlassian.net
+- **Project**: `SCRUM` (Scrum board: https://liamg626.atlassian.net/jira/software/projects/SCRUM/boards/1)
+- **Access**: the `atlassian` MCP server (Atlassian Rovo MCP v2, `https://mcp.atlassian.com/v2/mcp`, configured in `.mcp.json`). If its tools aren't loaded, run `/mcp` and authenticate `atlassian`. Don't fall back to `gh issue`.
 
 ## Conventions
 
-- **Create an issue**: `gh issue create --title "..." --body "..."`. Use a heredoc for multi-line bodies.
-- **Read an issue**: `gh issue view <number> --comments`, filtering comments by `jq` and also fetching labels.
-- **List issues**: `gh issue list --state open --json number,title,body,labels,comments --jq '[.[] | {number, title, body, labels: [.labels[].name], comments: [.comments[].body]}]'` with appropriate `--label` and `--state` filters.
-- **Comment on an issue**: `gh issue comment <number> --body "..."`
-- **Apply / remove labels**: `gh issue edit <number> --add-label "..."` / `--remove-label "..."`
-- **Close**: `gh issue close <number> --comment "..."`
+- **Create an issue**: create a Jira issue in project `SCRUM`. Use issue type `Story` for features, `Bug` for defects, `Task` for chores.
+- **Read an issue**: fetch it by key (e.g. `SCRUM-12`), including its comments, labels and status.
+- **List issues**: search with JQL, e.g. `project = SCRUM AND statusCategory != Done ORDER BY created DESC`. Add `AND labels = "<label>"` to filter by triage label.
+- **Comment on an issue**: add a Jira comment to the issue.
+- **Apply / remove labels**: edit the issue's `labels` field (Jira creates labels on first use).
+- **Close**: transition the issue to `Done` (look up the available transitions first), with a comment explaining why.
 
-Infer the repo from `git remote -v`; `gh` does this automatically when run inside a clone.
+Refer to issues by their Jira key (`SCRUM-12`), never by a bare `#12`.
+
+## Linking code to Jira
+
+Put the issue key in branch names, commit messages and PR titles (e.g. branch `SCRUM-12-log-workout`, commit `SCRUM-12: add workout form`). With the GitHub for Jira app installed, the branches, commits and PRs show up on the Jira issue.
 
 ## Pull requests as a triage surface
 
-**PRs as a request surface: no.** _(Set to `yes` if this repo treats external PRs as feature requests; `/triage` reads this flag.)_
-
-When set to `yes`, PRs run through the same labels and states as issues, using the `gh pr` equivalents:
-
-- **Read a PR**: `gh pr view <number> --comments` and `gh pr diff <number>` for the diff.
-- **List external PRs for triage**: `gh pr list --state open --json number,title,body,labels,author,authorAssociation,comments` then keep only `authorAssociation` of `CONTRIBUTOR`, `FIRST_TIME_CONTRIBUTOR`, or `NONE` (drop `OWNER`/`MEMBER`/`COLLABORATOR`).
-- **Comment / label / close**: `gh pr comment`, `gh pr edit --add-label`/`--remove-label`, `gh pr close`.
-
-GitHub shares one number space across issues and PRs, so a bare `#42` may be either: resolve with `gh pr view 42` and fall back to `gh issue view 42`.
+**PRs as a request surface: no.** Triage runs on Jira issues only.
 
 ## When a skill says "publish to the issue tracker"
 
-Create a GitHub issue.
+Create a Jira issue in project `SCRUM`.
 
 ## When a skill says "fetch the relevant ticket"
 
-Run `gh issue view <number> --comments`.
+Fetch the Jira issue by key, including comments.
 
 ## Wayfinding operations
 
-Used by `/wayfinder`. The **map** is a single issue with **child** issues as tickets.
+Used by `/wayfinder`. The **map** is an Epic, and its **children** are the tickets.
 
-- **Map**: a single issue labelled `wayfinder:map`, holding the Notes / Decisions-so-far / Fog body. `gh issue create --label wayfinder:map`.
-- **Child ticket**: an issue linked to the map as a GitHub sub-issue (`gh api` on the sub-issues endpoint). Where sub-issues aren't enabled, add the child to a task list in the map body and put `Part of #<map>` at the top of the child body. Labels: `wayfinder:<type>` (`research`/`prototype`/`grilling`/`task`). Once claimed, the ticket is assigned to the driving dev.
-- **Blocking**: GitHub's **native issue dependencies**, the canonical, UI-visible representation. Add an edge with `gh api --method POST repos/<owner>/<repo>/issues/<child>/dependencies/blocked_by -F issue_id=<blocker-db-id>`, where `<blocker-db-id>` is the blocker's numeric **database id** (`gh api repos/<owner>/<repo>/issues/<n> --jq .id`, _not_ the `#number` or `node_id`). GitHub reports `issue_dependencies_summary.blocked_by` (open blockers only, the live gate). Where dependencies aren't available, fall back to a `Blocked by: #<n>, #<n>` line at the top of the child body. A ticket is unblocked when every blocker is closed.
-- **Frontier query**: list the map's open children (`gh issue list --state open`, scoped to the map's sub-issues / task list), drop any with an open blocker (`issue_dependencies_summary.blocked_by > 0`, or an open issue in the `Blocked by` line) or an assignee; first in map order wins.
-- **Claim**: `gh issue edit <n> --add-assignee @me`, the session's first write.
-- **Resolve**: `gh issue comment <n> --body "<answer>"`, then `gh issue close <n>`, then append a context pointer (gist + link) to the map's Decisions-so-far.
+- **Map**: a `SCRUM` Epic labelled `wayfinder-map`, whose description holds Notes / Decisions-so-far / Fog.
+- **Child ticket**: an issue whose parent is the map Epic, labelled `wayfinder-<type>` (`research`/`prototype`/`grilling`/`task`). Once claimed, it's assigned to the driving dev.
+- **Blocking**: a Jira issue link of type `Blocks` ("is blocked by"). A ticket is unblocked when every blocking issue is Done.
+- **Frontier query**: JQL `parent = <map key> AND statusCategory != Done AND assignee IS EMPTY ORDER BY rank`, then drop any with an unresolved "is blocked by" link. The first one in rank order wins.
+- **Claim**: assign the issue to yourself and move it to `In Progress`. This is the session's first write.
+- **Resolve**: comment with the answer, transition to `Done`, then add a pointer (gist + key) to the map Epic's Decisions-so-far.
