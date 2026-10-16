@@ -38,10 +38,10 @@ ponytail (level `full`) is on for both the developer and reviewer agents through
 
 ## Design gate
 
-Each release (MVP, v1.1, v1.2, v1.3) has one **design ticket**, labelled `design`: FND-007 to FND-010 (SCRUM-16 to SCRUM-19). Each one produces two Claude Design artifacts, one for mobile and one for the web dashboard. Each release builds on the previous release's approved artifacts.
+Each release (MVP, v1.1, v1.2, v1.3) has one **design ticket**, labelled `design`: FND-007 to FND-010 (SCRUM-16 to SCRUM-19). Each one produces two Claude Design artifacts, one for mobile and one for the web dashboard. Each design ticket publishes its **own new** artifacts, starting from a copy of the previous release's approved ones. Once a release's artifacts are approved they are never republished, because that release's Stories are built against them.
 
-- **Gate:** every Story for a release gets an "is blocked by" link to that release's design ticket, created together with the Story. So no Story starts until its release's design is approved.
-- **The design ticket's loop:** the agent posts the artifact links on the ticket and moves it to In Review. Liam gives feedback in artifact comments or Jira comments, and the agent republishes to the same URLs. This repeats, with no round limit, until Liam approves. There is no branch, PR or reviewer agent. The closing comment's **Done** line holds the final artifact links, and the ticket moves to Done.
+- **Gate:** each design ticket is blocked by the previous release's one. Every Story for a release gets an "is blocked by" link to that release's design ticket, created together with the Story. So no Story starts until its release's design is approved.
+- **The design ticket's loop:** the agent posts the artifact links on the ticket and moves it to In Review. Liam gives feedback in artifact comments or Jira comments, and the agent republishes that ticket's artifacts to the same URLs. This repeats, with no round limit, until Liam approves. There is no branch, PR or reviewer agent. The closing comment's **Done** line holds the final artifact links, and the ticket moves to Done.
 - **Building a Story:** the developer agent opens the approved artifacts linked from the design ticket's closing comment, for the device(s) the Story touches, and builds to match them. The reviewer checks the build against them too.
 
 ## Skills by ticket type
