@@ -51,6 +51,6 @@ It also offers once to set up a status-line badge in your user `settings.json`. 
 
 Order matters: the cleanup script lives inside the plugin, so run it first.
 
-1. From the installed plugin directory (under `~/.claude/plugins/`), run `node scripts/uninstall.js`. It removes the mode flags, the config file, the status-line script and the `statusLine` entry ponytail added.
+1. From the installed plugin directory (`~/.claude/plugins/cache/ponytail/ponytail/<version>/`, or a fresh clone of the repo), run `node scripts/uninstall.js`. It removes the mode flags, the config file, the status-line script and the `statusLine` entry ponytail added. It does **not** remove the ledger, so delete `~/.config/ponytail/band/` by hand if you want that gone.
 2. `/plugin remove ponytail`
-3. Remove the `ponytail` entries from `.claude/settings.json`, or the next session will offer to install it again.
+3. Remove the `ponytail` entries from `.claude/settings.json`, or the next session will offer to install it again. That turns it off for the whole repo. To opt out on one machine only, set `"enabledPlugins": { "ponytail@ponytail": false }` in the git-ignored `.claude/settings.local.json` instead.
