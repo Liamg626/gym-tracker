@@ -1,0 +1,16 @@
+# Dependencies and build output
+node_modules/
+dist/
+build/
+.wrangler/
+coverage/
+
+# graphify's own output and the vendored skill
+graphify-out/
+.claude/
+
+# Real data never goes in the graph (ADR-0005)
+exports/
+*.zip
+*.csv
+.dev.vars
