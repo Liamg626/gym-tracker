@@ -36,6 +36,14 @@ ponytail (level `full`) is on for both the developer and reviewer agents through
 4. When the reviewer approves: the **developer agent** marks the PR ready for review, assigns Liam, posts the closing comment on the ticket, and moves the ticket to **Ready To Merge**.
 5. **Liam** tests on the PR's Cloudflare preview URL and merges; the ticket moves to Done.
 
+## Design gate
+
+Each release (MVP, v1.1, v1.2, v1.3) has one **design ticket**, labelled `design`: FND-007 to FND-010 (SCRUM-16 to SCRUM-19). Each one produces two Claude Design artifacts, one for mobile and one for the web dashboard. Each release builds on the previous release's approved artifacts.
+
+- **Gate:** every Story for a release gets an "is blocked by" link to that release's design ticket, created together with the Story. So no Story starts until its release's design is approved.
+- **The design ticket's loop:** the agent posts the artifact links on the ticket and moves it to In Review. Liam gives feedback in artifact comments or Jira comments, and the agent republishes to the same URLs. This repeats, with no round limit, until Liam approves. There is no branch, PR or reviewer agent. The closing comment's **Done** line holds the final artifact links, and the ticket moves to Done.
+- **Building a Story:** the developer agent opens the approved artifacts linked from the design ticket's closing comment, for the device(s) the Story touches, and builds to match them. The reviewer checks the build against them too.
+
 ## Skills by ticket type
 
 | Ticket type | Skill |
@@ -44,6 +52,7 @@ ponytail (level `full`) is on for both the developer and reviewer agents through
 | Setup steps only Liam can do (machine installs) | `mattpocock-skills:wizard` for the human steps, then the agent finishes the repo side |
 | Story / Bug | project `implement` skill: `tdd` during the build, `code-review` and `ponytail-review` by the reviewer agent |
 | Task the agent can do itself (chore/setup: CI, deploys, config, demo data) | no extra skill; `tdd` for any logic, `code-review` and `ponytail-review` by the reviewer agent |
+| Design prototype (label `design`) | the Artifact tool: `quickstart` with intent `design`, then publish and iterate. See § Design gate |
 | Applying research to the design | `mattpocock-skills:grilling` + `mattpocock-skills:domain-modeling` |
 
 ## Closing comment (every ticket)
