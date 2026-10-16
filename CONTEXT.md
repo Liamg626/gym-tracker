@@ -27,7 +27,7 @@ One bout of an Exercise within a Workout, recorded as weight × reps, optionally
 _Avoid_: Rep set, entry
 
 **Warm-up Set**:
-A Set flagged as warm-up; it never counts toward Volume, Recovery or Milestones.
+A Set flagged as warm-up; it never counts toward Volume, Recovery, PRs or Milestones.
 
 **Working Set**:
 Any Set that is not a Warm-up Set.
