@@ -28,6 +28,8 @@ To Do → In Progress → In Review → **Ready To Merge** → Done
 
 Liam starts each ticket with the project `implement` skill and a `SCRUM-n` key.
 
+ponytail (level `full`) is on for both the developer and reviewer agents through `.claude/settings.json`. Subagents get it through its SubagentStart hook. See [ponytail.md](../agents/ponytail.md).
+
 1. **Developer agent**: reads the ticket, moves it to In Progress, branches off `main` as `SCRUM-n-short-slug`, builds test-first (TDD) for domain logic and API, runs typecheck and tests, commits with `SCRUM-n: …` messages, opens a **draft PR** titled `SCRUM-n [AREA-nnn] …`, and moves the ticket to In Review.
 2. **Reviewer agent**: reviews the PR against the ticket's acceptance criteria and the repo docs, and leaves line comments on the draft PR. If changes are needed, it hands back to the developer agent (the ticket stays In Review).
 3. After **3** unsuccessful review rounds: label `ready-for-human`, comment on the ticket with what's blocking, stop.
@@ -40,8 +42,8 @@ Liam starts each ticket with the project `implement` skill and a `SCRUM-n` key.
 |---|---|
 | Research Task | `mattpocock-skills:research`: findings go to `docs/research/<topic>.md` with sources; proposed design-doc changes are listed for Liam, never applied directly |
 | Setup steps only Liam can do (machine installs) | `mattpocock-skills:wizard` for the human steps, then the agent finishes the repo side |
-| Story / Bug | project `implement` skill: `tdd` during the build, `code-review` by the reviewer agent |
-| Task the agent can do itself (chore/setup: CI, deploys, config, demo data) | no extra skill; `tdd` for any logic, `code-review` by the reviewer agent |
+| Story / Bug | project `implement` skill: `tdd` during the build, `code-review` and `ponytail-review` by the reviewer agent |
+| Task the agent can do itself (chore/setup: CI, deploys, config, demo data) | no extra skill; `tdd` for any logic, `code-review` and `ponytail-review` by the reviewer agent |
 | Applying research to the design | `mattpocock-skills:grilling` + `mattpocock-skills:domain-modeling` |
 
 ## Closing comment (every ticket)
