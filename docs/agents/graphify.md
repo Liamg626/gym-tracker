@@ -58,5 +58,5 @@ graphify 0.9.92 writes **no** query log by default. Logging only starts if you s
 ## Uninstall
 
 1. `graphify claude uninstall --project` removes the project-scoped Claude Code install. Don't use plain `graphify uninstall`: it also removes graphify from your user-wide `~/.claude/skills/` and from other tools.
-2. Delete `.claude/skills/graphify/`, `.graphifyignore` and `graphify-out/`. Then drop `graphify-out/` from `.gitignore` and the `### graphify` section from `CLAUDE.md`.
+2. Delete `.graphifyignore` and `graphify-out/`. Then drop `graphify-out/` from `.gitignore` and the `### graphify` section from `CLAUDE.md`.
 3. `uv tool uninstall graphifyy`
