@@ -5,8 +5,7 @@ build/
 .wrangler/
 coverage/
 
-# graphify's own output and the vendored skill
-graphify-out/
+# The vendored skill
 .claude/
 
 # Real data never goes in the graph (ADR-0005)
