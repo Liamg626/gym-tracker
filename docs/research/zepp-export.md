@@ -16,8 +16,9 @@ Out of scope: the unofficial/reverse-engineered Zepp (Huami) API, and anything t
 - **There is no official public Zepp cloud API for a personal project.** I found no developer API, auth scheme, rate limits or approval process for reading a user's health data from Zepp's cloud. A third-party aggregator says it integrates with Zepp ([Thryve][thryve]) and another says Zepp has no public API ([HAID][haid]); both are vendors, not primary sources, so this is "not found", not proven. Route A1: **NO**.
 - **A Zepp OS mini-app is technically possible but unproven for this use.** The documented pieces exist: a watch app reads sensors, a side service running inside the Zepp phone app can call `fetch` to a server ([Side Service intro][ss-intro], [Fetch API][ss-fetch]), and a Zepp maintainer-labelled post shares a sample that uploads sleep data to a server ([Zepp discussion #276][gh276]). But: (a) Liam's watch model is unknown and the app needs Zepp OS API_LEVEL 2.0+ to 3.0+ depending on the sensor ([device list][devlist]); (b) no HRV sensor appears in the docs I could reach; (c) iOS support for developer-mode install and for the side service is **not stated** in the docs; (d) a background run is limited to 600 ms per execution unless a continuous service is approved ([App Service][app-service]); (e) there is no documented private-distribution route other than developer-mode QR install, and the public route needs a Zepp Console account, a privacy policy and 1 to 5 working days of review ([Distribute][distribute]). Liam has since confirmed his watch is an **Amazfit GTS 2**. The GTS 2 is not on Zepp's device list (the GTS 2 mini is, under non-Zepp OS) ([device list][devlist]); mini-apps are ruled out by that absence, not by a statement that names the GTS 2. Route A2: **NO for Liam's current watch**; it would only reopen if he moved to a Zepp OS 3.0+ watch.
 - **Third-party sync to a web API: NO for the fields we want.** Strava is the only web API route that is not native-only, and it carries workouts only (heart rate summary per activity), not sleep, steps, resting HR or HRV, and Zepp's Strava sync is reported to cover outdoor activities only ([Amazfit support, Italian][amz-strava]). Apple Health and Health Connect are native-only and ruled out by ADR-0001.
-- **Export is the best-supported route, but its format is unconfirmed.** Zepp lists "Export data: Export personal data" as a data-subject right, reached from the app under Profile > Setting > "Exercising user rights" ([Zepp privacy support][zepp-priv]), and the Zepp App privacy policy lists access and portability rights exercised through that portal ([Zepp App privacy policy][zepp-app-pp]). **I could not find any primary source that states the file format, folder layout, contents or turnaround.** Per-workout GPX export exists ([unofficial, rolandsz][rs-post]); this is not a primary source.
-- **Recommendation: exports, with one cheap gate before any build.** Liam requests one personal-data export now (steps below). **No sample file is added**, because the real format is not confirmed from a primary source. The WCH parser story stays blocked until Liam supplies a real export (see [What Liam should provide](#what-liam-should-provide)). If the export turns out to lack daily HR, sleep or steps, the fallback is an Apple Health export (Zepp writes to Health; the PWA parses `export.xml` in the browser; unverified, see B1). The Zepp OS mini-app (route A2) is ruled out for the GTS 2. If neither export works, close the WCH area. Direct integration is **not** recommended today.
+- **Export is the route, and its format is now confirmed from Liam's real export (2026-10-17).** Zepp lists "Export data: Export personal data" as a data-subject right, reached from the app under Profile > Setting > "Exercising user rights" ([Zepp privacy support][zepp-priv]). No primary source documents the file, so the format below comes from **one real export Liam supplied**, inspected outside the repo and never committed (ADR-0005). It is a password-protected ZIP (WinZip AES, ZIP method 99 ([PKWARE APPNOTE][appnote], [WinZip AES][winzip-aes])) holding 11 folders of UTF-8 CSV files, one per data type, covering the account's whole history. See [Confirmed export format](#b2-confirmed-export-format).
+- **Fields available:** daily steps, distance and calories; heart rate every 10 minutes (every minute during workouts); nightly sleep with deep, light and wake minutes, start and stop; minute-by-minute sleep stages; workouts with type code, start, duration and calories. **Not in the export:** HRV and resting HR. REM minutes are always 0 in Liam's file. Per-workout TCX/FIT files are also available but add only finer heart rate for single sessions, so they are skipped (Liam's call).
+- **Recommendation: build the upload from the personal-data export.** Use these fields: daily steps, sleep (total, deep, light, wake, bed and wake times), daily heart rate (min, average, max from the 10-minute readings) and workouts (start, duration, calories, type). Resting HR is not in the file; a derived figure is proposed for Liam below. A made-up sample is in [`samples/zepp-export/`](samples/zepp-export/). The Zepp OS mini-app (route A2) is ruled out for the GTS 2, and the Apple Health export is no longer needed as a backup.
 
 ## Part A: direct integration
 
@@ -83,60 +84,73 @@ Watch (device app, JS) --BLE--> Side service (JS inside Zepp phone app) --HTTPS 
 
 | Way | What is confirmed (primary) | Format, layout, turnaround, repeatability |
 |---|---|---|
-| **Account data request ("Export personal data")** | Zepp's privacy support page lists "4. Export data: Export personal data" under exercising data subject rights, and gives the app path Zepp: App > Profile > Setting > "Exercising user rights" (Zepp Life: App > Profile > Setting > Account and Security). The page gives this path for exercising data subject rights, which lists Export personal data as item 4. It does not name the export menu item itself ([Zepp privacy support][zepp-priv]). The Zepp App privacy policy lists access and data-portability rights exercised through the Privacy Support portal ([Zepp App privacy policy][zepp-app-pp]). Zepp's website policy names a data protection officer (dpo@zepp.com) and says requests are processed "by applicable laws", with identity verification; no response time is given ([Zepp privacy policy][zepp-pp]). | **Format: unconfirmed.** Folder layout: unconfirmed. Turnaround: not stated by Zepp; the GDPR default is one month ([GDPR Art. 12(3)][gdpr12], general law, not a Zepp statement). Repeatability: unconfirmed (rights policies do not forbid repeat requests but I found no limit stated). An unofficial source says the archive "does not contain workout specific data" ([rolandsz][rs-post]; not primary, 2023 era). |
-| **In-app export of workouts** | **Nothing primary.** Unverified: a search snippet of the App Store listing ([Zepp on the App Store][appstore]) and Android listings (non-primary) mention a storage permission used to "import/export your exercise data". No official support page found. | Unofficial source: workouts exportable one at a time as GPX, without all fields ([rolandsz][rs-post], non-primary). Not usable as a daily backup. |
+| **Account data request ("Export personal data")** | Zepp's privacy support page lists "4. Export data: Export personal data" under exercising data subject rights, and gives the app path Zepp: App > Profile > Setting > "Exercising user rights" (Zepp Life: App > Profile > Setting > Account and Security). The page gives this path for exercising data subject rights, which lists Export personal data as item 4. It does not name the export menu item itself ([Zepp privacy support][zepp-priv]). The Zepp App privacy policy lists access and data-portability rights exercised through the Privacy Support portal ([Zepp App privacy policy][zepp-app-pp]). Zepp's website policy names a data protection officer (dpo@zepp.com) and says requests are processed "by applicable laws", with identity verification; no response time is given ([Zepp privacy policy][zepp-pp]). | **Confirmed from Liam's export:** a password-protected ZIP of CSV files covering the whole account history; layout in [B2](#b2-confirmed-export-format). Turnaround: not stated by Zepp; the GDPR default is one month ([GDPR Art. 12(3)][gdpr12], general law, not a Zepp statement). Repeatability: not stated; each export is the full history, so a repeat overlaps everything before it. The archive does contain a workout summary (`SPORT`), unlike an older unofficial report ([rolandsz][rs-post]). |
+| **In-app export of workouts** | **Nothing primary.** Unverified: a search snippet of the App Store listing ([Zepp on the App Store][appstore]) and Android listings (non-primary) mention a storage permission used to "import/export your exercise data". No official support page found. | **Confirmed from Liam's files:** one workout at a time as TCX (Garmin Training Center Database v2 ([TCX schema][tcx])) or FIT ([FIT SDK][fit]). Liam's TCX has one lap with duration, calories, average and max HR, and a heart-rate trackpoint every few seconds in UTC; a strength session is `Sport="Other"` with `Notes` "Strength Training". Manual and per session, so **skipped** (Liam's call); the bulk export's minute-level heart rate during workouts is enough. |
 | **Third-party export tools** | None are primary sources. The unofficial `Mi-Fit-and-Zepp-workout-exporter` script logs in with Zepp credentials against Zepp's undocumented API ([repo][rs-repo]). | **Out of scope** (reverse-engineered API). |
 | **Apple Health export** | Zepp can write to Apple Health; Apple Health can export a ZIP containing `export.xml` ([Apple Health export][apple-export], via the Health app profile > Export All Health Data). | Only if Zepp is linked to Health on the iPhone. This is a user-side export, not a native app integration, so ADR-0001 does not rule it out: the PWA would parse the XML in the browser. **Unverified for this research**: I did not fetch Apple's page or confirm which Zepp fields land in Health. Worth considering as a backup route if the Zepp export fails. |
 
-Note on the Apple Health row: it is the one place where this research found a possibly workable path that the task did not list. It needs (a) Liam's Zepp account linked to Apple Health (Profile > Add accounts > Health per non-primary guides), and (b) a check of which categories Zepp writes (primary source needed). Flagged as an open question.
+Note on the Apple Health row: it is the one place where this research found a possibly workable path that the task did not list. It needs (a) Liam's Zepp account linked to Apple Health (Profile > Add accounts > Health per non-primary guides), and (b) a check of which categories Zepp writes (primary source needed). No longer needed now that the Zepp export is confirmed usable; kept as a fallback if Zepp changes the export.
 
-### B2. Fields and granularity
+### B2. Confirmed export format
 
-Nothing here is confirmed for the Zepp personal-data export. What the app collects, per Zepp's own policy, is the list of what the archive *could* contain, not what it does:
+Everything in this section comes from inspecting Liam's real export (2026-10-17) outside the repo. No primary source documents it, and Zepp could change it, so the parser should check headers and fail clearly on a mismatch.
 
-| Field | Collected by Zepp (policy) | In the export archive? |
-|---|---|---|
-| Heart rate | Yes ([Zepp App privacy policy][zepp-app-pp]) | unconfirmed, needs a real export from Liam |
-| Resting HR | Readiness uses "sleep RHR" ([Zepp App privacy policy][zepp-app-pp]) | unconfirmed, needs a real export from Liam |
-| HRV | "heart rate variability" and "sleep HRV" ([Zepp App privacy policy][zepp-app-pp]) | unconfirmed, needs a real export from Liam |
-| Sleep stages and duration | Sleep time, naps, breathing, sleep score ([Zepp App privacy policy][zepp-app-pp]) | unconfirmed, needs a real export from Liam |
-| Steps | Not named in the passages I read | unconfirmed, needs a real export from Liam |
-| Workouts | Exercise period, distance, heart rate etc. ([Zepp App privacy policy][zepp-app-pp]) | Unofficial source says no ([rolandsz][rs-post]); unconfirmed |
+**Archive:** `<userId>_<epoch ms>.zip`, encrypted with WinZip AES (ZIP method 99), password given to Liam by Zepp. Inside are 11 folders, each holding one file named `<FOLDER>_<epoch ms>.csv`. All files are UTF-8 **with a BOM**, LF line endings, comma-separated, with a header row. Days the watch was not worn are absent, not zero rows.
 
-Granularity (per-minute vs daily), column names, units: **unconfirmed, needs a real export from Liam.** I will not guess field names.
+| Folder | Header | One row is | Time format | Use |
+|---|---|---|---|---|
+| `ACTIVITY` | `date,steps,distance,runDistance,calories` | a day | `date` local | **Yes:** daily steps, distance (m), calories |
+| `ACTIVITY_MINUTE` | `date,time,steps` | a minute with steps (zero minutes left out) | local | No (the daily total is enough) |
+| `ACTIVITY_STAGE` | `date,start,stop,distance,calories,steps` | a walking or moving block | local `HH:MM` | No |
+| `SLEEP` | `date,deepSleepTime,shallowSleepTime,wakeTime,start,stop,REMTime,naps` | a night; `date` is the wake-up day | `start`/`stop` UTC (`YYYY-MM-DD HH:MM:SS+0000`) | **Yes:** minutes deep, light (`shallow`) and awake; bed and wake times. Deep + shallow + wake matched stop − start in Liam's file. `REMTime` was always 0. `naps` is empty or a quoted JSON array of `{start,end}` with backslash-escaped quotes. A night with start = stop and all zeros means no sleep recorded |
+| `SLEEP_MINUTE` | `date,time,stage,hr,respiratory_rate` | a minute asleep | local `HH:MM`; see the date note below | Optional: stages `LIGHT`, `DEEP`, `WAKE` (no `REM` seen); `hr` filled about every 10 minutes; `respiratory_rate` always empty |
+| `HEARTRATE` | `time,heartRate` | a manual measurement | UTC `+0000` | No (few rows) |
+| `HEARTRATE_AUTO` | `date,time,heartRate` | an automatic reading: every 10 minutes, every minute during a workout | local | **Yes:** daily min, average, max |
+| `SPORT` | `type,startTime,sportTime(s),maxPace(/meter),minPace(/meter),distance(m),avgPace(/meter),calories(kcal)` | a workout | `startTime` UTC | **Yes:** start, duration (s), calories, type. No heart rate. Type `52` is strength training (matched to Liam's TCX "Strength Training" session by start time and duration). Codes `6`, `8` and `10` are unmapped |
+| `BODY` | `time,weight,height,bmi,fatRate,bodyWaterRate,boneMass,metabolism,muscleRate,visceralFat` | a weight entry in Zepp | UTC; unknown fields are the literal `null` | No: the app has its own Weigh-ins (BDY) |
+| `HEALTH_DATA` | `date,time,arm,calf,chest,hip,thigh,waist` | a body measurement | n/a (empty in Liam's file) | No |
+| `USER` | `userId,gender,height,weight,nickName,avatar,birthday` | the account | n/a | **Never read:** personal profile |
+
+**The fields the ticket asked about:**
+
+| Field | In the export? |
+|---|---|
+| Heart rate | Yes: `HEARTRATE_AUTO` (10-minute, 1-minute in workouts) and `SLEEP_MINUTE.hr` |
+| Resting HR | **No.** Proposal for Liam: derive it as the lowest `HEARTRATE_AUTO` reading inside the night's `SLEEP` start–stop window (agent proposal, not a Zepp figure) |
+| HRV | **No** |
+| Sleep stages and duration | Yes: deep, light and awake minutes per night, plus per-minute stages. REM was always 0 on the GTS 2 |
+| Steps | Yes: daily (`ACTIVITY`) and per minute |
+| Workouts | Yes, `SPORT`: type, start, duration, calories; no heart rate (take it from `HEARTRATE_AUTO` in the workout window if needed) |
 
 ### B3. Time zones and overlap
 
-- **Time zones:** unconfirmed for the export. On the watch side, sleep times are "minutes since midnight" with no zone ([Sleep][s-sleep]) and heart-rate `getToday()` is relative to midnight ([HeartRate][s-hr]), so any mini-app route must attach the watch's local date. For an export, check whether timestamps are UTC epochs, local times or local with offset (the AFib API uses "UTC seconds" ([HeartRate][s-hr]), which hints that Zepp uses UTC epochs in places; not evidence for the export). Liam's file will settle this.
-- **Overlap between repeated exports:** unconfirmed whether each export is the full history or a window. The WCH rule ("re-uploading overlapping dates updates them rather than duplicating them", keyed by date) already handles both cases. The parser should key on local calendar date plus metric.
+- **Two time formats.** Columns holding a full timestamp (`SLEEP.start`/`stop`, `SPORT.startTime`, `HEARTRATE`, `BODY`) are UTC with a `+0000` suffix. Files with separate `date` and `time` columns (`ACTIVITY*`, `HEARTRATE_AUTO`, `SLEEP_MINUTE`) are **local time with no offset**. Checked by matching a workout's UTC start in `SPORT` and the TCX against the heart-rate rise in `HEARTRATE_AUTO`, which came one hour later, as expected for UK summer time. The parser needs the user's time zone (the browser's) to turn local rows into instants; DST changes make one local hour a year missing and one ambiguous.
+- **`SLEEP_MINUTE` dates look one day late.** Each minute's `date` was one calendar day after the local date implied by `SLEEP.start`/`stop`, for both the evening and the morning part of a night. Seen in one export only. Use `SLEEP` for nightly figures and treat `SLEEP_MINUTE.date` with care.
+- **`SLEEP.date` is the wake-up day** (a night starting on the 4th is dated the 5th).
+- **A nap entry had a start date two years before its row's date.** Treat naps as unreliable and skip them.
+- **Overlap:** each export is the full history, so every re-upload overlaps every earlier one. The existing WCH rule (overlapping dates update rather than duplicate) handles this: key daily rows on local calendar date, and workouts on UTC `startTime`.
 
 ### B4. Step by step on Liam's iPhone (recommended route: account data request)
 
-Menu names come from Zepp's privacy page and may differ by app version; stop and tell Claude what you see if a step does not match.
+Menu names come from Zepp's privacy page and may differ by app version; stop and tell Claude what you see if a step does not match. Liam has done this once and received the ZIP and its password.
 
 1. Open the Zepp app your watch is paired with on the iPhone. If the menus below differ, report what you see.
 2. Open **Profile**, then **Setting**, then **Exercising user rights** ([Zepp privacy support][zepp-priv]).
 3. Choose **Export data** / **Export personal data**. If it is not there, open https://www.zepp.com/privacy-support in Safari and choose "Export data", signing in with the same Zepp account. If neither works, email privacy@zepp.com asking for a copy of your personal data in a machine-readable format (named as the privacy contact on [Zepp privacy support][zepp-priv]; the data protection officer is dpo@zepp.com ([Zepp privacy policy][zepp-pp])).
 4. Note the date and time of the request and how long the data takes to arrive (Zepp does not state a time; GDPR default is one month ([GDPR Art. 12(3)][gdpr12])).
-5. When it arrives (email link or in-app download, unconfirmed), save the file in **Files** on the iPhone, in a folder **outside the repo** (ADR-0005: never commit it).
+5. When it arrives, save the ZIP in **Files** on the iPhone, in a folder **outside the repo** (ADR-0005: never commit it).
 6. Do **not** open it in the repo or paste it into chat. Follow [What Liam should provide](#what-liam-should-provide).
 
 Steps 2 and 3 are the only part tied to a primary source. The page gives the "Exercising user rights" path for data subject rights, which lists Export personal data as item 4, but it does not name the export menu item itself.
 
 ## What Liam should provide
 
-Do all of these; the parser story cannot start without them. Keep the real file out of the repo.
+Received 2026-10-17: the watch model (GTS 2), a full personal-data export, and one workout as TCX and FIT. The format above is based on them. Still useful, none blocking:
 
-1. ~~Watch model~~: GTS 2 (answered 2026-10-17). Still needed: the **Zepp app version**.
-2. **Whether the export option exists** where described above: a screenshot of the menu is enough.
-3. **How the export arrived**: email or in-app, and how long it took.
-4. **The file type** (ZIP or other) and a screenshot or text listing of its **folder and file names**.
-5. **A redacted extract of each file** that looks relevant to heart rate, sleep, steps and workouts: the header row or first two records, with the values replaced by dummy numbers and any name, email, GPS or device ID removed. Say which file each came from.
-6. **Whether timestamps look like UTC epochs, local times or local with offset**, and the granularity (one row per minute, per day, per night).
-7. **Whether HRV and resting HR appear at all.**
-8. Optional, for the Apple Health backup: whether Zepp is linked to Apple Health (Zepp app > Profile > Add accounts > Health) and which categories show Zepp as a source in the Health app.
+1. How the export and its password arrived (email or in app), and how long it took. This goes into the upload screen's help text.
+2. Which activities the `SPORT` type codes `6`, `8` and `10` were (for example a walk or the treadmill), so the codes can be mapped to names.
 
-With items 1 to 7 a sample file in the real format can be written to `docs/research/samples/` with clearly fake data. **None was written now** because the real format is not confirmed from a primary source.
+A made-up sample matching the real format is in [`samples/zepp-export/`](samples/zepp-export/).
 
 ## Data flow if direct integration is chosen later (route A2)
 
@@ -153,22 +167,22 @@ Only relevant if Liam moves to a Zepp OS 3.0+ watch; the GTS 2 cannot run it.
 
 **`docs/product/features/wch-watch-data.md`**
 
-- Intro: leave "no live sync (ADR-0001)" as is for now.
-- Under **WCH: Research the Zepp export**: add a bullet "Findings in `docs/research/zepp-export.md`: no official API, mini-app ruled out on the GTS 2, export format unconfirmed; waiting on Liam's real export (see 'What Liam should provide')".
-- Mark **WCH: Upload and parse a Zepp export** "blocked until Liam supplies a real export and the format is confirmed".
-- Add a bullet to the Rules: "Key daily figures by local calendar date and metric so overlapping exports update rather than duplicate (time zone of the export to be confirmed)."
-- If the export lacks daily HR, sleep or steps: try the Apple Health export (same upload flow, different parser), or close the area. The Zepp OS mini-app is not an option on the GTS 2.
+- Intro: keep "no live sync (ADR-0001)". Change "uploading an export file" to "uploading a Zepp personal-data export (a password-protected ZIP of CSV files)".
+- Rules: add "The ZIP is decrypted and parsed in the browser with the password Zepp gives; the password is never sent to the API or stored." Add "Key daily figures by local calendar date (the browser's time zone); key workouts by UTC start time."
+- Under **WCH: Research the Zepp export**: add "Findings and format in `docs/research/zepp-export.md`; sample in `docs/research/samples/zepp-export/`."
+- **WCH: Upload and parse a Zepp export**: no longer blocked by the research. List the figures: daily steps, distance and calories; sleep deep, light and awake minutes, bed and wake times; heart rate min, average and max; workouts (start, duration, calories, type). Leave out HRV (not in the export). Resting HR only if Liam accepts the derived figure.
+- In the research story, change the field list "heart rate, resting HR, HRV, sleep, steps, workouts" to what the export has.
 
 **`CONTEXT.md`**
 
-- Amend **Watch Data**: "Heart rate, sleep and activity figures imported from a Zepp (Amazfit) personal-data export. Source and fields to be confirmed against a real export (see docs/research/zepp-export.md)."
-- No new terms yet.
+- Amend **Watch Data**: "Daily heart rate, sleep, steps and Zepp workout figures imported from an uploaded Zepp (Amazfit) personal-data export."
+- No new terms.
 
-**ADRs**: none now. A new ADR (mini-app sync) only if route A2 is chosen.
+**ADRs**: none. The export route keeps ADR-0001 and ADR-0005 as they are. The parse story needs a browser ZIP library that handles WinZip AES (zip.js says it supports AES encryption ([zip.js][zipjs])); to confirm in that story.
 
 ## Unverified / limits
 
-- **Format of the Zepp personal-data export is unconfirmed**, as are contents, turnaround and repeatability. The only sources for contents are unofficial.
+- **The export format comes from one real export**, not from Zepp documentation. Zepp may change it, other watch models may fill other fields (e.g. REM, respiratory rate), and the `SLEEP_MINUTE` date offset was seen once. Turnaround and repeat limits are still not stated by Zepp.
 - **The Zepp privacy-support and developer.zepp.com pages** returned little text to my fetch tool, so I could not read any export instructions beyond the menu path and the list of options. The pages may hold more.
 - **Zepp App privacy policy**: statements here came from a summarised fetch; it was truncated for length, and the Apple Health section was not seen.
 - **No HRV API** in the sensor docs I reached; I could not fetch the sensor index page (404), so a method I did not find may exist.
@@ -214,6 +228,13 @@ Third-party platforms
 - [hc]: Android, Health Connect — https://developer.android.com/health-and-fitness/guides/health-connect
 - [gdpr12]: GDPR Article 12 — https://eur-lex.europa.eu/eli/reg/2016/679/oj
 
+File formats
+- [appnote]: PKWARE, ZIP APPNOTE (method 99, AE-x encryption) — https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT
+- [winzip-aes]: WinZip, AES encryption information — https://www.winzip.com/en/support/aes-encryption/
+- [tcx]: Garmin, Training Center Database v2 schema — https://www8.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd
+- [fit]: Garmin, FIT SDK — https://developer.garmin.com/fit/overview/
+- [zipjs]: zip.js — https://gildas-lormeau.github.io/zip.js/
+
 Non-primary (marked as such where used)
 - [thryve]: Thryve, Zepp / Amazfit integration — https://www.thryve.health/supported-wearable-devices/zepp-amazfit
 - [haid]: HAID, Amazfit integration — https://haid.app/en/integrations/amazfit
@@ -250,6 +271,11 @@ Non-primary (marked as such where used)
 [apple-export]: https://support.apple.com/guide/iphone/share-your-health-data-iph5ede58c3d/ios
 [hc]: https://developer.android.com/health-and-fitness/guides/health-connect
 [gdpr12]: https://eur-lex.europa.eu/eli/reg/2016/679/oj
+[appnote]: https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT
+[winzip-aes]: https://www.winzip.com/en/support/aes-encryption/
+[tcx]: https://www8.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd
+[fit]: https://developer.garmin.com/fit/overview/
+[zipjs]: https://gildas-lormeau.github.io/zip.js/
 [thryve]: https://www.thryve.health/supported-wearable-devices/zepp-amazfit
 [haid]: https://haid.app/en/integrations/amazfit
 [gw-hc]: https://gadgetsandwearables.com/2025/01/24/zepp-health-connect/
