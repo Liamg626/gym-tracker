@@ -1,3 +1,5 @@
 # Single-passphrase auth, no user accounts
 
 There is exactly one user, so there is no users table or login system. A single passphrase, stored as a Cloudflare secret, is exchanged once per device for a long-lived bearer token, and every API request must carry that token. The API is publicly reachable and the repo is public, so the API still needs protecting. A full account system would add code that serves no real user. Each Cloudflare Preview has its own throwaway passphrase, set as a Preview base-config secret, so no production secret is available to preview deployments. (Amended 2026-10-17, `docs/research/pr-testing.md`.)
+
+Amended 2026-10-17: the token is HMAC-signed with a `TOKEN_SECRET` Cloudflare secret and has no expiry. There is no tokens table; rotating `TOKEN_SECRET` logs out every device, which is how a lost device is revoked.

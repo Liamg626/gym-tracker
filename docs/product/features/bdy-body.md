@@ -3,8 +3,8 @@
 ## Rules
 
 - One Weigh-in per day, in kg, entered by hand. Entering again the same day overwrites it.
-- Trend Weight = 7-day rolling average of Weigh-ins.
-- Measurement Session: weekly, in cm. Neck and waist are **required**; chest, shoulders, right arm and right thigh are optional.
+- Trend Weight on a day = the mean of the Weigh-ins in the 7 days ending that day. With no Weigh-in in those 7 days, that day has no Trend Weight.
+- Measurement Session: normally weekly but not enforced; any date, at most one per day (logging again that day overwrites it, like a Weigh-in); in cm. Neck and waist are **required**; chest, shoulders, right arm and right thigh are optional.
 - Body Fat Estimate uses the US Navy formula (male): `495 / (1.0324 − 0.19077·log10(waist − neck) + 0.15456·log10(height)) − 450`, using height from Settings.
 
 ## Stories

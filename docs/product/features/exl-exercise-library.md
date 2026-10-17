@@ -21,7 +21,9 @@ The repo-owned catalogue of Exercises and the Muscles they work (ADR-0006).
 - A test fails if a Muscle has no Region or a Region has no Muscle (ADR-0006)
 
 **EXL: Generate the library** (MVP, blocked by the two stories above)
-- Research each Exercise on Liam's list and write its entry, citing sources in the PR
+- Every entry in `docs/research/exercise-list.md` goes into the library
+- Muscle tags come from `docs/research/exercise-tags.md` (SCRUM-22 Phase 2): researched once per family, with a variant overriding them only where sources show its Muscles differ (e.g. incline vs flat press, leg press foot position, hammer vs supinated curl); the JSON stores complete Primary and Secondary tags on every Exercise
+- Cite sources in the PR
 - Exercises are never removed (ADR-0006)
 
 **EXL: Exercise picker** (MVP)
