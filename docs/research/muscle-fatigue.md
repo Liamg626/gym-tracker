@@ -14,7 +14,7 @@ The output is a model for the v1.2 **Volume-weighted fatigue model** story, whic
 - **Nothing retrieved supports different recovery times for large vs small Muscles or fast vs slow fibres.** The one direct comparison (untrained, eccentric-only) found arm muscles recovered *slower* than leg muscles ([Jamurtas 2005][jamurtas2005]). The proposed config therefore uses one recovery scale for every Muscle Group (1.0) and keeps the field so Liam can tune it.
 - **Effort changes the immediate drop more clearly than the recovery.** Closer to failure means a bigger velocity loss right after the Working Set ([Refalo 2023][refalo2023]). The recovery difference is small: in Refalo 2023 velocity at 24 h was -3% for both failure and 1 RIR, and there was no significant difference at 48 h. Morán-Navarro 2017 compared 3 x 10 to failure with 6 x 5, which changes reps and effort together, so it cannot isolate proximity to failure ([Morán-Navarro 2017][moran2017]).
 - **Secondary Muscle = 0.5 of a Primary set** is supported, but only for *training stimulus*, not for fatigue. A 2026 meta-regression of 67 studies found that counting indirect (synergist) sets as half a set predicted hypertrophy better than counting them as full sets or as zero (strength was not the basis of that finding) ([Pelland 2026][pelland2026]). No study retrieved measures fatigue or recovery in synergists against a fraction. One bench press study suggests triceps soreness lasts as long as chest soreness ([Nuckols 2026][nuckols2026]), which argues *against* 0.5 for recovery time.
-- **Best marker for "ready to train again": recovery of force or velocity** (maximal voluntary contraction torque, lifting velocity), not soreness or creatine kinase ([Warren 1999][warren1999]). The app records none of these directly, so the model is anchored to performance studies and the doc proposes a cheap check against next-Workout Estimated 1RM.
+- **Best marker for "ready to train again": recovery of force or velocity** (maximal voluntary contraction torque and range of motion per [Warren 1999][warren1999]; bar velocity per [Refalo 2023][refalo2023] and [Morán-Navarro 2017][moran2017]), not soreness or creatine kinase ([Warren 1999][warren1999]). The app records none of these directly, so the model is anchored to performance studies and the doc proposes a cheap check against next-Workout Estimated 1RM.
 - **Sleep, resting HR and HRV: do not use in v1.2.** There is no resistance-training evidence that would let us pick a number. See [Q5](#q5-sleep-resting-hr-and-hrv).
 - **Weekly Working Sets per Muscle Group: 12-20 is the target range (Baz-Valle 2022), 4 is the minimum detectable gain, and gains keep rising past 20 with diminishing returns (Pelland 2026 preprint tiers).** Sources: [Baz-Valle 2022][bazvalle2022], [Pelland 2026][pelland2026] (tiers from the September 2024 preprint, not the published version). Schoenfeld 2017 shows a dose-response but its 10+ bin was not significant, so it is not the source of any number here. See [Q6](#q6-weekly-working-sets-per-muscle-group).
 - **Proposed model** (details below): each Working Set adds `roleWeight x effort(RIR)` to a Muscle's **Fatigue Dose** for that Workout; the Fatigue Dose sets the **Recovery Window** (12 h for a trivial dose rising linearly to 72 h at a Fatigue Dose of 4 and above); Fatigue Level falls linearly from 1 to 0 across that window; **Fatigued** for the first third, **Recovering** until the end, then **Ready**. At the top of the range it reproduces the MVP's 24 h / 72 h boundaries.
@@ -138,7 +138,7 @@ Weekly target counting (Q6): per Muscle Group per Monday-Sunday week, count each
 // Proposed shape for the fatigue config file named in rec-recovery.md.
 // "Source" comments: S = traced to a paper, A = our own assumption.
 export const FATIGUE_CONFIG = {
-  version: 1,
+  version: 1,                                              // schema version, not a model value
 
   roleWeight: { primary: 1.0, secondary: 0.5 },          // S: Pelland 2026 (stimulus); A for fatigue
 
@@ -184,7 +184,7 @@ export const FATIGUE_CONFIG = {
     maxRirCounted: null as number | null,                 // A: null = count every Working Set
   },
 
-  watchAdjustment: null,                                  // reserved; no supported number (Q5)
+  watchAdjustment: null,                                  // A: reserved; no supported number (Q5)
 } as const
 ```
 
