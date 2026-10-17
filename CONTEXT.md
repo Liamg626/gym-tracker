@@ -55,7 +55,7 @@ A skeletal muscle, or a head or part of one, that the app tracks (e.g. "Biceps b
 _Avoid_: muscle group (say Muscle Group only for the roll-up), body part
 
 **Muscle Group**:
-A roll-up of Muscles for summaries and filters: Chest, Shoulders, Back, Arms, Core, Glutes and hips, Quads, Hamstrings, Calves and shins. Every Muscle belongs to exactly one.
+A roll-up of Muscles for summaries and filters: Chest, Shoulders, Back, Biceps, Triceps, Forearms, Core, Glutes and hips, Quads, Hamstrings, Calves and shins. Every Muscle belongs to exactly one.
 _Avoid_: Body part, muscle (for a group), split
 
 **Region**:

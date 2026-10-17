@@ -10,7 +10,7 @@ The rule used for "how much detail": split a muscle into heads or parts only whe
 
 ## Summary and recommendation
 
-- **41 Muscles in 9 groups.** Groups: chest, shoulders, back, arms, core, hips, quads, hamstrings, lower legs. "Legs" is split four ways because 17 of the 41 Muscles are in the legs, and quads, hamstrings and hips respond to different exercises (e.g. squats grow the vasti, adductors and glutes but not the rectus femoris or hamstrings ([Kubo 2019][kubo2019])). One "legs" group would hide that.
+- **48 Muscles in 11 groups (was 41 in 9 before SCRUM-22 Phase 1).** Groups: chest, shoulders, back, arms, core, hips, quads, hamstrings, lower legs. "Legs" is split four ways because 17 of the 41 Muscles are in the legs, and quads, hamstrings and hips respond to different exercises (e.g. squats grow the vasti, adductors and glutes but not the rectus femoris or hamstrings ([Kubo 2019][kubo2019])). One "legs" group would hide that.
 - **Conventions:** deltoid in 3 parts (anterior/lateral/posterior); pectoralis major in 2 heads (clavicular, sternocostal; the small abdominal part goes with sternocostal); trapezius upper/middle/lower (= Terminologia Anatomica descending/transverse/ascending); latissimus dorsi as one Muscle; quadriceps shown as 3 (vastus intermedius left out, it is deep); hamstrings as 4 (biceps femoris long and short head, semitendinosus, semimembranosus); gastrocnemius medial and lateral head plus soleus; erector spinae as one Muscle; forearm as flexors, extensors and brachioradialis; external oblique only; adductors as one group Muscle. Details and sources are in [Source disagreements](#source-disagreements-and-the-convention-we-follow).
 - **Artwork fit.** Re-tagging and cutting the existing react-native-body-highlighter shapes gives **38 of the 41** Muscles their own region (for 6 of them, serratus anterior, sartorius, fibularis, triceps medial head, semimembranosus and brachioradialis, the sub-path read is still "to confirm"). Brachialis gets one new sliver, and 2 Muscles share a neighbour's region. Several gaps from the SVG research turn out to have a shape after all, but this needs confirming while tagging: sartorius and gracilis look like sub-paths inside the `adductors` slug, the fibularis (peroneals) like the outer `calves` sub-path on the front, and infraspinatus and teres major are two of the three `upper-back` sub-paths.
 - **No-shape Muscles (proposal for Liam).** Brachialis gets a small region cut from the biceps shape, since we are cutting the biceps anyway. Biceps femoris short head and iliopsoas share a neighbour's region. Rhomboids, vastus intermedius, gluteus minimus, teres minor, internal oblique and gracilis are left out of the taxonomy (folded into a neighbour for tagging). See [No-shape recommendations](#no-shape-muscles-recommendation-per-muscle-proposal-for-liam).
@@ -28,27 +28,27 @@ The rule used for "how much detail": split a muscle into heads or parts only whe
 | 4 | `deltoid-anterior` | Deltoid, anterior part (front delt) | front | shoulders | cut from `deltoids` (front) | Flexion and medial rotation ([TeachMe shoulder][tma-shoulder]); most active in shoulder press ([Campos 2020][campos2020]) |
 | 5 | `deltoid-lateral` | Deltoid, lateral part (side delt) | both | shoulders | cut from `deltoids` (front and back) | Main abductor ([TeachMe shoulder][tma-shoulder]); almost silent in bench press and flyes, high in lateral raise ([Campos 2020][campos2020]) |
 | 6 | `deltoid-posterior` | Deltoid, posterior part (rear delt) | back | shoulders | cut from `deltoids` (back) | Extension and lateral rotation ([TeachMe shoulder][tma-shoulder]); its own exercises (reverse fly, face pull) |
-| 7 | `infraspinatus` | Infraspinatus (with teres minor) | back | shoulders | `upper-back` sub-path | The visible rotator cuff muscle; lateral rotation ([TeachMe shoulder][tma-shoulder], [OpenStax 11.5][os-115]). Teres minor folded in (same action) |
+| 7 | `infraspinatus` | Infraspinatus | back | shoulders | `upper-back` sub-path | The visible rotator cuff muscle; lateral rotation ([TeachMe shoulder][tma-shoulder], [OpenStax 11.5][os-115]). Teres minor folded in (same action) |
 | 8 | `trapezius-upper` | Trapezius, upper part (upper traps) | both | back | `trapezius` (front) + cut from `trapezius` (back) | Elevates the scapula (shrugs) ([TeachMe superficial back][tma-back]); TA "descending part" ([TA2][ta2-trap]) |
 | 9 | `trapezius-middle` | Trapezius, middle part (mid traps) | back | back | cut from `trapezius` (back) | Retracts the scapula (rows) ([TeachMe superficial back][tma-back]); TA "transverse part" |
 | 10 | `trapezius-lower` | Trapezius, lower part (lower traps) | back | back | cut from `trapezius` (back) | Depresses the scapula ([TeachMe superficial back][tma-back]); TA "ascending part" ([TA2][ta2-trap-asc]) |
 | 11 | `latissimus-dorsi` | Latissimus dorsi (lats) | back | back | `upper-back` sub-path | Extends, adducts and medially rotates the arm ([TeachMe superficial back][tma-back]); pull-ups, rows |
 | 12 | `teres-major` | Teres major | back | back | `upper-back` sub-path | Visible below the infraspinatus; extends, adducts and medially rotates the arm with the lats ([TeachMe shoulder][tma-shoulder], [StatPearls][sp-teresmajor]) |
 | 13 | `erector-spinae` | Erector spinae (lower back) | back | back | `lower-back` sub-paths | Iliocostalis, longissimus and spinalis act together as one column to extend the spine ([TeachMe intrinsic back][tma-intrinsic], [StatPearls][sp-backmuscles]) |
-| 14 | `biceps-brachii-long-head` | Biceps brachii, long head | front | arms | cut from `biceps` | Arises from the supraglenoid tubercle and crosses the shoulder ([TeachMe upper arm][tma-arm]); visibly distinct |
-| 15 | `biceps-brachii-short-head` | Biceps brachii, short head | front | arms | cut from `biceps` | Arises from the coracoid process ([TeachMe upper arm][tma-arm]); visibly distinct |
-| 16 | `brachialis` | Brachialis | front | arms | cut a sliver from `biceps` (no own shape) | Deep to the biceps, a pure elbow flexor ([TeachMe upper arm][tma-arm]); trained by every curl, worth its own state |
-| 17 | `brachioradialis` | Brachioradialis | front | arms | `forearm` (front) sub-path | Elbow flexor despite extensor origin ([TeachMe posterior forearm][tma-postfa]); its share changes with grip ([Kleiber 2015][kleiber2015], [Coratella 2023][coratella2023]) |
-| 18 | `triceps-brachii-long-head` | Triceps brachii, long head | both | arms | `triceps` (front) + `triceps` (back) sub-path | The only head that crosses the shoulder, so overhead work stretches it ([TeachMe upper arm][tma-arm]); overhead extensions grew it more than pushdowns did (+28.5% vs +19.6%), though the other heads gained too ([Maeo 2023][maeo2023]) |
-| 19 | `triceps-brachii-lateral-head` | Triceps brachii, lateral head | back | arms | `triceps` (back) sub-path | Visibly distinct; one-joint head ([StatPearls triceps][sp-triceps], [Maeo 2023][maeo2023]) |
-| 20 | `triceps-brachii-medial-head` | Triceps brachii, medial head | back | arms | `triceps` (back) sub-path (to confirm) | Third head; mostly covered by the other two ([TeachMe upper arm][tma-arm]). Kept because the artwork has a third triceps shape |
-| 21 | `forearm-flexors` | Forearm flexors (wrist and finger flexors) | front | arms | `forearm` (front) sub-paths | Anterior compartment, flexes wrist and fingers ([TeachMe anterior forearm][tma-antfa], [OpenStax 11.5][os-115]); grip and wrist curls |
-| 22 | `forearm-extensors` | Forearm extensors (wrist and finger extensors) | back | arms | `forearm` (back) sub-paths | Posterior compartment ([TeachMe posterior forearm][tma-postfa], [OpenStax 11.5][os-115]); reverse curls, wrist extensions |
+| 14 | `biceps-brachii-long-head` | Biceps brachii, long head | front | biceps | cut from `biceps` | Arises from the supraglenoid tubercle and crosses the shoulder ([TeachMe upper arm][tma-arm]); visibly distinct |
+| 15 | `biceps-brachii-short-head` | Biceps brachii, short head | front | biceps | cut from `biceps` | Arises from the coracoid process ([TeachMe upper arm][tma-arm]); visibly distinct |
+| 16 | `brachialis` | Brachialis | front | biceps | cut a sliver from `biceps` (no own shape) | Deep to the biceps, a pure elbow flexor ([TeachMe upper arm][tma-arm]); trained by every curl, worth its own state |
+| 17 | `brachioradialis` | Brachioradialis | front | forearms | `forearm` (front) sub-path | Elbow flexor despite extensor origin ([TeachMe posterior forearm][tma-postfa]); its share changes with grip ([Kleiber 2015][kleiber2015], [Coratella 2023][coratella2023]) |
+| 18 | `triceps-brachii-long-head` | Triceps brachii, long head | both | triceps | `triceps` (front) + `triceps` (back) sub-path | The only head that crosses the shoulder, so overhead work stretches it ([TeachMe upper arm][tma-arm]); overhead extensions grew it more than pushdowns did (+28.5% vs +19.6%), though the other heads gained too ([Maeo 2023][maeo2023]) |
+| 19 | `triceps-brachii-lateral-head` | Triceps brachii, lateral head | back | triceps | `triceps` (back) sub-path | Visibly distinct; one-joint head ([StatPearls triceps][sp-triceps], [Maeo 2023][maeo2023]) |
+| 20 | `triceps-brachii-medial-head` | Triceps brachii, medial head | back | triceps | `triceps` (back) sub-path (to confirm) | Third head; mostly covered by the other two ([TeachMe upper arm][tma-arm]). Kept because the artwork has a third triceps shape |
+| 21 | `forearm-flexors` | Forearm flexors (wrist and finger flexors) | front | forearms | `forearm` (front) sub-paths | Anterior compartment, flexes wrist and fingers ([TeachMe anterior forearm][tma-antfa], [OpenStax 11.5][os-115]); grip and wrist curls |
+| 22 | `forearm-extensors` | Forearm extensors (wrist and finger extensors) | back | forearms | `forearm` (back) sub-paths | Posterior compartment ([TeachMe posterior forearm][tma-postfa], [OpenStax 11.5][os-115]); reverse curls, wrist extensions |
 | 23 | `rectus-abdominis` | Rectus abdominis (abs) | front | core | `abs` sub-paths | One muscle segmented by tendinous intersections ([OpenStax 11.4][os-114]) |
 | 24 | `external-oblique` | External oblique (obliques) | both | core | `obliques` sub-paths (front) + `lower-back` sub-path (back) | Superficial; twisting and side bending ([OpenStax 11.4][os-114]). Internal oblique folded in |
 | 25 | `gluteus-maximus` | Gluteus maximus | back | hips | `gluteal` sub-path | Main hip extensor ([TeachMe gluteal][tma-glute]); grew with squats ([Kubo 2019][kubo2019]) |
-| 26 | `gluteus-medius` | Gluteus medius (with minimus) | back | hips | `gluteal` sub-path | Abducts and medially rotates the hip ([TeachMe gluteal][tma-glute]); different exercises from maximus (abduction). Minimus folded in |
-| 27 | `adductors` | Adductors (longus, brevis, magnus, gracilis) | both | hips | `adductors` sub-paths (front and back) | Medial thigh group that adducts the hip ([OpenStax 11.6][os-116], [TeachMe medial thigh][tma-medthigh]); grew with full squats ([Kubo 2019][kubo2019]) |
+| 26 | `gluteus-medius` | Gluteus medius | back | hips | `gluteal` sub-path | Abducts and medially rotates the hip ([TeachMe gluteal][tma-glute]); different exercises from maximus (abduction). Minimus folded in |
+| 27 | `adductors` | Adductors (longus, brevis, magnus) | both | hips | `adductors` sub-paths (front and back) | Medial thigh group that adducts the hip ([OpenStax 11.6][os-116], [TeachMe medial thigh][tma-medthigh]); grew with full squats ([Kubo 2019][kubo2019]) |
 | 28 | `iliopsoas` | Iliopsoas (hip flexors) | front | hips | no shape: shares the `rectus-femoris` region | Psoas major + iliacus, flexes the hip ([OpenStax 11.6][os-116], [TeachMe anterior thigh][tma-antthigh]); main mover in leg raises |
 | 29 | `rectus-femoris` | Rectus femoris | front | quads | `quadriceps` sub-path | Only quadriceps head crossing the hip ([TeachMe anterior thigh][tma-antthigh]); no growth from squats ([Kubo 2019][kubo2019]) but the most growth from knee extensions ([Wakahara 2017][wakahara2017]) |
 | 30 | `vastus-lateralis` | Vastus lateralis (outer quad) | both | quads | `quadriceps` (front) sub-path + `hamstring` (back) outer sub-path (to confirm) | Largest quadriceps component ([StatPearls VL][sp-vl]); visibly distinct |
@@ -63,20 +63,29 @@ The rule used for "how much detail": split a muscle into heads or parts only whe
 | 39 | `soleus` | Soleus | back | lower-legs | `calves` (back) lower sub-paths | Deep to gastrocnemius, acts only at the ankle ([TeachMe posterior leg][tma-postleg]); bent-knee calf raises favour it ([Kassiano 2023][kassiano2023]) |
 | 40 | `tibialis-anterior` | Tibialis anterior | front | lower-legs | `tibialis` | Visible on the shin; lifts the front of the foot ([OpenStax 11.6][os-116]); tib raises |
 | 41 | `fibularis` | Fibularis (peroneus) longus and brevis | front | lower-legs | `calves` (front) outer sub-path (to confirm) | The lateral compartment; eversion ([TeachMe lateral leg][tma-latleg], [OpenStax 11.6][os-116]). Kept because the artwork appears to draw it |
+| 42 | `rhomboids` | Rhomboids (major and minor) | back | back | shares `trapezius-middle` region | Deep to trapezius ([StatPearls rhomboids][sp-rhomboid]); every row and reverse fly. Added in SCRUM-22 Phase 1 |
+| 43 | `vastus-intermedius` | Vastus intermedius | front | quads | shares `vastus-lateralis` region | Between the vasti, deep to rectus femoris ([OpenStax 11.6][os-116]); tag with the other vasti, never rectus femoris alone ([Kubo 2019][kubo2019]). SCRUM-22 Phase 1 |
+| 44 | `gluteus-minimus` | Gluteus minimus | back | hips | shares `gluteus-medius` region | Same shape and function as medius ([TeachMe gluteal][tma-glute]). SCRUM-22 Phase 1 |
+| 45 | `teres-minor` | Teres minor | back | shoulders | shares `infraspinatus` region | Rotator cuff, lateral rotation ([TeachMe shoulder][tma-shoulder]). SCRUM-22 Phase 1 |
+| 46 | `supraspinatus` | Supraspinatus | back | shoulders | shares `infraspinatus` region | Rotator cuff; starts abduction ([OpenStax 11.5][os-115]). SCRUM-22 Phase 1 |
+| 47 | `internal-oblique` | Internal oblique | front | core | shares `external-oblique` region | Twisting and side bending, under the external oblique ([OpenStax 11.4][os-114]). SCRUM-22 Phase 1 |
+| 48 | `gracilis` | Gracilis | front | hips | shares `adductors` region (own Region in Phase 3 if the sliver confirms) | Adductor-group strap ([TeachMe medial thigh][tma-medthigh]). SCRUM-22 Phase 1 |
 
-Group counts: chest 3, shoulders 4, back 6, arms 9, core 2, hips 4, quads 4, hamstrings 4, lower-legs 5.
+Group counts: chest 3, shoulders 6, back 7, biceps 3, triceps 3, forearms 3, core 3, hips 6, quads 5, hamstrings 4, lower-legs 5 (48 Muscles in 11 groups; Phase 1 of SCRUM-22).
 
 ### The group set
 
 | Group ID | Display name | Muscles |
 |---|---|---|
 | `chest` | Chest | 1–3 |
-| `shoulders` | Shoulders | 4–7 |
-| `back` | Back | 8–13 |
-| `arms` | Arms | 14–22 |
-| `core` | Core | 23–24 |
-| `hips` | Glutes and hips | 25–28 |
-| `quads` | Quads | 29–32 |
+| `shoulders` | Shoulders | 4–7, 45, 46 |
+| `back` | Back | 8–13, 42 |
+| `biceps` | Biceps | 14–16 |
+| `triceps` | Triceps | 18–20 |
+| `forearms` | Forearms | 17, 21, 22 |
+| `core` | Core | 23–24, 47 |
+| `hips` | Glutes and hips | 25–28, 44, 48 |
+| `quads` | Quads | 29–32, 43 |
 | `hamstrings` | Hamstrings | 33–36 |
 | `lower-legs` | Calves and shins | 37–41 |
 
@@ -87,7 +96,7 @@ Why this set:
 - **Sartorius in quads.** It sits in the anterior compartment of the thigh with the quadriceps ([TeachMe anterior thigh][tma-antthigh]).
 - **Serratus anterior in chest.** It is worked by pressing and push-ups and sits next to the pec on the diagram. Core would also be defensible.
 - **Infraspinatus in shoulders, teres major in back.** Infraspinatus is rotator cuff (a shoulder rotator); teres major works with the lats.
-- **Arms not split.** Biceps/triceps/forearms could be separate groups. With 9 groups already, one "arms" group keeps summaries short; the picker can still filter by Muscle. Easy to change later because groups are only a roll-up.
+- **Arms split three ways (SCRUM-22 Phase 1, Liam).** One "arms" group lumped 9 Muscles and hid a missed triceps day; Biceps, Triceps and Forearms are separate groups. Groups are only a roll-up, so this stays easy to change.
 
 One catch for **Volume by group**: a Working Set of bench press is attributed to both pectoralis Muscles. If group Volume is a plain sum over Muscles, chest Volume counts that Set twice. Group Volume should count each Working Set once per group. This is flagged in [Proposed doc changes](#proposed-doc-changes-for-liam-to-approve-not-applied).
 
@@ -95,11 +104,11 @@ One catch for **Volume by group**: a Working Set of bench press is attributed to
 
 | View | Muscles |
 |---|---|
-| **Front only** (16) | pectoralis-major-clavicular, pectoralis-major-sternal, serratus-anterior, deltoid-anterior, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis, forearm-flexors, rectus-abdominis, iliopsoas, rectus-femoris, vastus-medialis, sartorius, tibialis-anterior, fibularis |
-| **Back only** (18) | deltoid-posterior, infraspinatus, trapezius-middle, trapezius-lower, latissimus-dorsi, teres-major, erector-spinae, triceps-brachii-lateral-head, triceps-brachii-medial-head, forearm-extensors, gluteus-maximus, gluteus-medius, biceps-femoris-long-head, biceps-femoris-short-head, semitendinosus, semimembranosus, gastrocnemius-lateral-head, soleus |
+| **Front only** (19) | pectoralis-major-clavicular, pectoralis-major-sternal, serratus-anterior, deltoid-anterior, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis, forearm-flexors, rectus-abdominis, iliopsoas, rectus-femoris, vastus-medialis, sartorius, tibialis-anterior, fibularis, vastus-intermedius, internal-oblique, gracilis |
+| **Back only** (22) | deltoid-posterior, infraspinatus, trapezius-middle, trapezius-lower, latissimus-dorsi, teres-major, erector-spinae, triceps-brachii-lateral-head, triceps-brachii-medial-head, forearm-extensors, gluteus-maximus, gluteus-medius, biceps-femoris-long-head, biceps-femoris-short-head, semitendinosus, semimembranosus, gastrocnemius-lateral-head, soleus, rhomboids, gluteus-minimus, teres-minor, supraspinatus |
 | **Both** (7) | deltoid-lateral, trapezius-upper, triceps-brachii-long-head, external-oblique, adductors, vastus-lateralis, gastrocnemius-medial-head |
 
-So: 16 front only + 18 back only + 7 both = 41. Four of the "both" entries depend on sub-paths still to confirm (triceps-brachii-long-head on the front, external-oblique and vastus-lateralis on the back, gastrocnemius-medial-head on the front); if one turns out wrong, that Muscle becomes single-sided.
+So: 19 front only + 22 back only + 7 both = 48. Four of the "both" entries depend on sub-paths still to confirm (triceps-brachii-long-head on the front, external-oblique and vastus-lateralis on the back, gastrocnemius-medial-head on the front); if one turns out wrong, that Muscle becomes single-sided.
 
 ## Source disagreements and the convention we follow
 
@@ -134,15 +143,10 @@ Each of these is left out of the taxonomy. Exercises that work them are tagged w
 
 | Muscle | Why left out | Tag as |
 |---|---|---|
-| Vastus intermedius | Deep to rectus femoris ([OpenStax 11.6][os-116]); trained with the other vasti. Sharing the rectus femoris region would colour it red after squats, which barely train rectus femoris ([Kubo 2019][kubo2019]) | `vastus-lateralis`, `vastus-medialis` |
-| Rhomboid major and minor | Deep to trapezius ([StatPearls rhomboids][sp-rhomboid]); retract the scapula with middle trapezius ([TeachMe superficial back][tma-back]); no shape | `trapezius-middle` |
-| Gluteus minimus | Deepest gluteal; same shape and function as medius ([TeachMe gluteal][tma-glute]) | `gluteus-medius` |
-| Teres minor | Same action as infraspinatus (lateral rotation) ([TeachMe shoulder][tma-shoulder]); small | `infraspinatus` |
-| Supraspinatus, subscapularis | Deep rotator cuff ([OpenStax 11.5][os-115]); not visible; rarely a gym target | `deltoid-lateral` (abduction) / none |
-| Internal oblique, transversus abdominis | Deep to the external oblique ([OpenStax 11.4][os-114]) | `external-oblique` / `rectus-abdominis` |
+| Subscapularis | Deep rotator cuff ([OpenStax 11.5][os-115]); not visible; rarely a gym target (supraspinatus was added in Phase 1) | none |
+| Transversus abdominis | Deep to the external oblique ([OpenStax 11.4][os-114]) | `rectus-abdominis` (internal oblique was added in Phase 1) |
 | Quadratus lumborum | Deep posterior abdominal wall ([StatPearls QL][sp-ql]); side bending is tagged with obliques | `external-oblique` |
 | Transversospinales (multifidus, rotatores, semispinalis) | Under the erector spinae ([TeachMe intrinsic back][tma-intrinsic]) | `erector-spinae` |
-| Gracilis | Part of the hip adductor group ([TeachMe medial thigh][tma-medthigh], [OpenStax 11.6][os-116]); its sliver in the artwork becomes part of the `adductors` region | `adductors` |
 | Pectineus | Sources disagree on its compartment ([OpenStax 11.6][os-116] vs [TeachMe anterior thigh][tma-antthigh]); hip adduction and flexion | `adductors` |
 | Deep hip rotators (piriformis, gemelli, obturators, quadratus femoris) | Deep to gluteus maximus; lateral rotation only ([TeachMe gluteal][tma-glute]) | `gluteus-maximus` |
 | Tensor fasciae latae | Small, no shape; hip abduction with gluteus medius | `gluteus-medius` |
@@ -292,9 +296,9 @@ Applied as written below, with small wording changes from review: ADR-0006 was a
 and under **Rules**:
   > - Volume for a Muscle Group counts each Working Set once, even when the Exercise tags several Muscles in that group
 
-## Phase 1 proposal: every gym-trained Muscle visible (SCRUM-22, not applied)
+## Phase 1: every gym-trained Muscle visible (SCRUM-22, approved by Liam 2026-10-17 and applied above)
 
-**Proposal for Liam to approve; nothing above has changed.** The rule from SCRUM-22: every gym-trained Muscle gets its own Region or a shared Region, so it appears in the tap list. A shared Region lists each Muscle with its own state when tapped, so folding a Muscle into a neighbour's Region costs no map space. No ID above is renamed or removed (ADR-0006), so Phase 1 only **adds** Muscles and edits display names.
+**Approved:** all 7 new Muscles, Arms split into Biceps/Triceps/Forearms, serratus anterior stays in Chest. The tables above already include them; the rest of this section is the reasoning. The rule from SCRUM-22: every gym-trained Muscle gets its own Region or a shared Region, so it appears in the tap list. A shared Region lists each Muscle with its own state when tapped, so folding a Muscle into a neighbour's Region costs no map space. No ID above is renamed or removed (ADR-0006), so Phase 1 only **adds** Muscles and edits display names.
 
 ### New Muscles (7, taking the total from 41 to 48)
 
@@ -320,7 +324,7 @@ Still excluded (not gym-trained or not reachable by any Exercise in the list): s
 - **Arms:** the open question. With 9 Muscles in one group, it lumps biceps, triceps and forearm Volume together, so "Weekly Sets: arms" cannot tell a missed triceps day from a missed biceps day. **Recommendation: split into Biceps (3: both heads, brachialis), Triceps (3), Forearms (3: brachioradialis, flexors, extensors)**, taking the group count from 9 to 11. Cost: two more rows in the Weekly Breakdown and picker filter. Group IDs are only a roll-up, so this stays easy to change.
 - **Other groups unchanged.** Shoulders gains `teres-minor` and `supraspinatus`; hips gains `gluteus-minimus` and `gracilis`; quads gains `vastus-intermedius`; core gains `internal-oblique`; back gains `rhomboids`.
 
-### Proposed doc changes (applied only after approval)
+### Doc changes
 
 - Add the 7 rows above to the taxonomy table (#42-48) and the group table, and move the matching rows out of **Excluded muscles**.
 - `CONTEXT.md`: only if arms are split, update the **Muscle Group** list to the 11 names.
