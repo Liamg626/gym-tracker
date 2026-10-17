@@ -208,7 +208,7 @@ Rules the template relies on: screenshots and recordings use demo data only (ADR
 
 ## Proposed doc changes (applied 2026-10-17)
 
-Liam approved all of these on 2026-10-17 and they are applied in the same PR, including the optional ADR-0001 line. The ADR amendments are inline, dated notes, as for ADR-0006. The PR template from section 6 is committed as `.github/pull_request_template.md`, so the FND: PR template story notes that the template exists; wiring it into the `implement` skill is what remains.
+Liam approved all of these on 2026-10-17 and they are applied in the same PR, including the optional ADR-0001 line. The ADR amendments are inline, dated notes, as for ADR-0006. The PR template from section 6 is committed as `.github/pull_request_template.md`; what remains of the FND: PR template story is wiring it into the `implement` skill.
 
 **`docs/adr/0002-hono-cloudflare-workers-d1.md`.** ADRs are normally not edited after acceptance; add a dated note, as was done for ADR-0006, or write a new ADR superseding the Pages part. Replace "The PWA is hosted on Cloudflare Pages." with:
 

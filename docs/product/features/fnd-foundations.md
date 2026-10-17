@@ -15,7 +15,7 @@ Repo, tooling, deploys, auth and the agent workflow. Everything else builds on t
 - Given a `SCRUM-n` key, it runs the whole developer → reviewer → PR loop
 
 **FND: PR template** (MVP)
-- `.github/pull_request_template.md` with: what this does, preview URL and passphrase, iPhone test steps from the ticket's acceptance criteria, screenshots, and notes on migrations and secrets (template added by SCRUM-6)
+- `.github/pull_request_template.md` with: what this does, preview URL and passphrase, iPhone test steps from the ticket's acceptance criteria, screenshots, and notes on migrations and secrets
 - The `implement` skill fills it in; the `pr` skill's body follows its headings
 
 **FND: CI** (MVP)
