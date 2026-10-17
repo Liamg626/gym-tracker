@@ -153,6 +153,8 @@ So **35 of the 40 provisional Muscles** can be shown, 3 of them pending confirma
 
 ## Doc changes (approved by Liam and applied 2026-10-17)
 
+Applied as written below, except the REC notice bullet, which went in with the ADR-0007 wording: the full MIT notice in the SVG file and the README third-party notices, and a credit line on the About screen.
+
 **`docs/product/roadmap.md`**
 
 - In **MVP**, replace

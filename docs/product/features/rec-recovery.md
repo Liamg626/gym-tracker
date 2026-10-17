@@ -8,7 +8,7 @@ The feature that sets this app apart: a front/back body diagram colouring each M
 - No left/right split; both sides show the same state.
 - All thresholds live in a config file in the repo, not in Settings.
 
-### MVP placeholder rules (time-only)
+### MVP rules (time-only)
 
 | Since last Working Set | Primary Muscle | Secondary Muscle |
 |---|---|---|
