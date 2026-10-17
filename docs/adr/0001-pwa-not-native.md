@@ -6,3 +6,4 @@ The app is a single React + Vite Progressive Web App, installed on the iPhone vi
 
 - No live Apple Health / HealthKit access. (Amended 2026-10-17: Watch Data was dropped, see ADR-0008.)
 - iOS web push only works from the home-screen app (iOS 16.4+), so any notifications are best-effort.
+- Each preview URL is its own origin, so a Home Screen install and its login are per preview. Use Safari for most PR tests. (Added 2026-10-17, `docs/research/pr-testing.md`.)
