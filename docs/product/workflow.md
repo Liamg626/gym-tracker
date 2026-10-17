@@ -35,8 +35,14 @@ ponytail (level `full`) is on for the skill session and both subagents through `
 1. **Skill session**: reads the ticket, moves it to In Progress and branches off `main` as `SCRUM-n-short-slug`. The **`implementer`** builds test-first (TDD) for domain logic and API, runs typecheck and tests, and commits with `SCRUM-n: …` messages. The skill session checks its evidence, pushes, opens a **draft PR** titled `SCRUM-n [AREA-nnn] …`, and moves the ticket to In Review.
 2. **`reviewer`**: reviews the PR against the ticket's acceptance criteria and the repo docs, and leaves line comments on the draft PR. If changes are needed, the skill session sends them to a fresh `implementer` (the ticket stays In Review).
 3. After **3** unsuccessful review rounds: label `ready-for-human`, comment on the ticket with what's blocking, stop.
-4. When the reviewer approves: the **skill session** marks the PR ready for review, assigns Liam, posts the closing comment on the ticket, and moves the ticket to **Ready To Merge**.
-5. **Liam** tests on the PR's Cloudflare preview URL and merges; the ticket moves to Done.
+4. When the reviewer approves: the **skill session** marks the PR ready for review, assigns Liam, posts the closing comment on the ticket, and moves the ticket to **Ready To Merge**. Before it marks the PR ready, the skill session opens the preview, checks that the build SHA matches the branch head and that the preview passphrase logs in, and reseeds the preview database if a migration changed. The PR body's "Test on iPhone" list is Liam's checklist.
+5. **Liam** tests in Safari on the PR's preview URL, following the PR's "Test on iPhone" list, and merges; the ticket moves to Done. He installs the preview to the Home Screen only when the PR says so, and deletes the icon afterwards.
+
+## Previews
+
+Every non-production branch gets a Cloudflare Preview: one URL that serves the web app and the API, backed by the shared `gym-tracker-preview` database (demo data only) and its own passphrase. Previews never read production data or secrets. Two open PRs share one preview database, so a PR with a schema change reseeds it before it is tested and again after it closes.
+
+A PR moves to Ready To Merge only when its Preview build and CI are both green. When a PR closes, its Preview is deleted (`wrangler preview delete --name <preview>`) and Liam removes any Home Screen icon for it.
 
 ## Design gate
 

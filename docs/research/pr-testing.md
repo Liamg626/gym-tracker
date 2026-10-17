@@ -17,7 +17,7 @@ Sources are primary only (Cloudflare docs and repos, WebKit, MDN, web.dev). Anyt
 
 ## Summary and recommendation
 
-- **Use Cloudflare Workers, not Pages.** The Pages docs say "Start new projects with Workers" and "It is Cloudflare's primary platform for building applications" ([Pages home][cf-pages-home]); Workers lists "most Pages use cases" as supported ([Pages Vite guide][cf-pages-vite]). Pages has nothing we need that Workers lacks: the gaps are custom domains outside Cloudflare, Early Hints, file-based routing and Pages Plugins ([migration guide][cf-migrate]), and the project uses none. This contradicts ADR-0002 and FND "Cloudflare deploys" (both say Pages). See [Proposed doc changes](#proposed-doc-changes-for-liam-to-approve-not-applied).
+- **Use Cloudflare Workers, not Pages.** The Pages docs say "Start new projects with Workers" and "It is Cloudflare's primary platform for building applications" ([Pages home][cf-pages-home]); Workers lists "most Pages use cases" as supported ([Pages Vite guide][cf-pages-vite]). Pages has nothing we need that Workers lacks: the gaps are custom domains outside Cloudflare, Early Hints, file-based routing and Pages Plugins ([migration guide][cf-migrate]), and the project uses none. This contradicted ADR-0002 and FND "Cloudflare deploys" (both said Pages); both are now amended. See [Proposed doc changes](#proposed-doc-changes-applied-2026-10-17).
 - **Simplest preview shape: one Worker that serves both the API and the built web app** (Hono for `/api/*`, static assets for the PWA, SPA fallback). A preview is then one URL and the frontend calls its own origin, so there is no cross-origin wiring and no CORS. Workers static assets supports `not_found_handling = "single-page-application"` and `run_worker_first` route patterns ([static assets][cf-assets], [config][cf-wrangler-config]). The cost is that `apps/api`'s deploy bundles `apps/web/dist`, so the build order is web, then Worker. The alternative of two Workers is in [Frontend to API](#1-previews-in-a-monorepo-and-reaching-the-preview-api).
 - **Use Workers Previews, not Version URLs.** Cloudflare says Previews are "the recommended way to test changes before production" and that Version URLs "run on production resources" ([compare workflows][cf-compare]). A Preview has its own vars, secrets and bindings, and does **not** inherit production settings ([Previews][cf-previews], [configuration][cf-prev-config]). Workers Builds runs `npx wrangler preview` on every non-production branch and comments the URL on the PR ([branches][cf-builds-branches], [GitHub integration][cf-builds-gh]). Previews are new: **whether they are available on the Free plan is not stated** in the pages read ([get started][cf-prev-start]). Verify in the first FND "Cloudflare deploys" run.
 - **One shared preview D1 database, reseeded, rather than one per PR.** Previews that share a `database_id` share rows; a different ID isolates ([resources][cf-prev-res]). Free accounts get 10 databases ([D1 limits][cf-d1-limits]), so per-PR databases would need create and delete automation and would hit the cap with open PRs. A shared `gym-tracker-preview` database holds demo data only (ADR-0005), and a reseed script resets it. Trade-off: two open PRs that change the schema need the same database; see [D1](#2-a-d1-database-per-preview-that-never-touches-production).
@@ -156,7 +156,7 @@ Notes:
 
 ## 6. PR template
 
-Draft `.github/pull_request_template.md`. Not created. The `pr` skill writes the body, so the template mainly fixes the headings the skill fills in. Acceptance criteria come from the Jira ticket; the agent copies them as tickable steps.
+Draft `.github/pull_request_template.md`, committed as that file after Liam's approval on 2026-10-17. The `pr` skill writes the body, so the template mainly fixes the headings the skill fills in. Acceptance criteria come from the Jira ticket; the agent copies them as tickable steps.
 
 ```markdown
 ## What this does
@@ -206,9 +206,9 @@ Rules the template relies on: screenshots and recordings use demo data only (ADR
 5. **Liam merges.** Production deploys from `main`. For PWA-shell tickets he re-checks the installed production app.
 6. **Cleanup.** Delete the PR's Preview (`wrangler preview delete --name <preview>`) when the PR closes, optionally with a GitHub Actions job as in the Cloudflare example ([examples][cf-prev-auto]); delete any Home Screen icon. If the PR changed the schema, reseed the preview database (`pnpm db:reseed:preview`).
 
-## Proposed doc changes (for Liam to approve, not applied)
+## Proposed doc changes (applied 2026-10-17)
 
-These change nothing until Liam says so. Wording is exact.
+Liam approved all of these on 2026-10-17 and they are applied in the same PR, including the optional ADR-0001 line. The ADR amendments are inline, dated notes, as for ADR-0006. The PR template from section 6 is committed as `.github/pull_request_template.md`, so the FND: PR template story notes that the template exists; wiring it into the `implement` skill is what remains.
 
 **`docs/adr/0002-hono-cloudflare-workers-d1.md`.** ADRs are normally not edited after acceptance; add a dated note, as was done for ADR-0006, or write a new ADR superseding the Pages part. Replace "The PWA is hosted on Cloudflare Pages." with:
 
