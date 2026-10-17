@@ -23,7 +23,7 @@ Sources are primary only (Cloudflare docs and repos, WebKit, MDN, web.dev). Anyt
 - **One shared preview D1 database, reseeded, rather than one per PR.** Previews that share a `database_id` share rows; a different ID isolates ([resources][cf-prev-res]). Free accounts get 10 databases ([D1 limits][cf-d1-limits]), so per-PR databases would need create and delete automation and would hit the cap with open PRs. A shared `gym-tracker-preview` database holds demo data only (ADR-0005), and a reseed script resets it. Trade-off: two open PRs that change the schema need the same database; see [D1](#2-a-d1-database-per-preview-that-never-touches-production).
 - **Secrets:** set the preview passphrase once as a Preview base-config secret (`wrangler preview base-config secret put`); production uses `wrangler secret put`. They are different values, so a leaked preview passphrase opens nothing real ([secrets](#3-secrets-per-environment)).
 - **iPhone:** test in Safari by default. Install to the Home Screen only for tickets that touch the PWA shell, service worker or offline behaviour, because each preview URL is its own origin with its own storage ([WebKit storage][wk-storage]), so the install and the login are per preview.
-- **Cost:** within free limits on every number checked ([cost check](#5-free-tier-cost-check)); the tight ones are 1 concurrent build and 100 Previews per Worker, neither a problem for one developer.
+- **Cost:** within free limits on every number checked ([cost check](#5-free-tier-cost-check)), assuming Workers Previews are available on the Free plan, which the docs do not state; the tight ones are 1 concurrent build and 100 Previews per Worker, neither a problem for one developer.
 
 ## 1. Previews in a monorepo and reaching the preview API
 
@@ -79,7 +79,7 @@ Previews need Wrangler 4.135.0 or later installed as a project dependency ([get 
 | Free-tier fit | 2 databases of 10 | Open PRs plus production plus preview must stay under 10 ([D1 limits][cf-d1-limits]) |
 | Fit for one developer and one PR at a time | Good | Over-built |
 
-**Recommendation:** shared preview database, with the reseed as an npm script that drops the app tables, runs `d1 migrations apply --remote`, then runs the FND "Demo data generator" output (`d1 execute --file`). Move to per-PR only if two schema-changing PRs are routinely open together. Because migrations are applied to the shared database by the PR under test, a PR with a destructive migration must not be left open against it; reseed after each such PR.
+**Recommendation:** shared preview database, with the reseed as an npm script that drops the app tables, runs `d1 migrations apply --remote`, then runs the FND "Demo data generator" output (`d1 execute --file`). Move to per-PR only if two schema-changing PRs are routinely open together. Because migrations are applied to the shared database by the PR under test, a PR with a destructive migration must not be left open against it. A PR that changes the schema reseeds the preview database before it is tested and again after it closes.
 
 ### Guard rails so previews cannot hit production
 
@@ -141,7 +141,7 @@ Checked 2026-10-17 against the current docs.
 | Static asset requests | "Free and unlimited" | The PWA bundle | [Workers pricing][cf-workers-pricing] |
 | Static asset size | 20,000 files per version; 25 MiB per file | Small | [Workers limits][cf-workers-limits] |
 | Secrets and env vars | 64 per Worker | A handful | [Workers limits][cf-workers-limits] |
-| Previews | 100 per Worker, 100 deployments each; oldest auto-deleted | Few open PRs | [Previews][cf-previews] |
+| Previews (**Free-plan availability not stated**; see [Unverified](#unverified--limits)) | If available: 100 per Worker, 100 deployments each; oldest auto-deleted | Few open PRs | [Previews][cf-previews] |
 | D1 databases | 10 per account | Production plus preview = 2 | [D1 limits][cf-d1-limits] |
 | D1 database size / storage | 500 MB each / 5 GB total | Single user | [D1 limits][cf-d1-limits], [D1 pricing][cf-d1-pricing] |
 | D1 rows read / written | 5 million / 100,000 per day; beyond that queries error until 00:00 UTC | Preview and production counted together on one account | [D1 pricing][cf-d1-pricing] |
@@ -249,7 +249,7 @@ These change nothing until Liam says so. Wording is exact.
 
 > ## Previews
 >
-> Every non-production branch gets a Cloudflare Preview: one URL that serves the web app and the API, backed by the shared `gym-tracker-preview` database (demo data only) and its own passphrase. Previews never read production data or secrets. Two open PRs share one preview database, so a PR with a schema change reseeds it when it opens and after it closes.
+> Every non-production branch gets a Cloudflare Preview: one URL that serves the web app and the API, backed by the shared `gym-tracker-preview` database (demo data only) and its own passphrase. Previews never read production data or secrets. Two open PRs share one preview database, so a PR with a schema change reseeds it before it is tested and again after it closes.
 
 **`docs/adr/0003-single-passphrase-auth.md`.** Add one sentence:
 
