@@ -731,7 +731,7 @@ Only one addition here. The common calf exercises are all calf raise variants, w
 "Families (current)" are Liam's 29. "Variant rows" are the rows under his families. "Additions" are the added families and their rows. Every row is one entry.
 
 | Muscle Group | Families (current) | Variant rows | Addition families | Addition rows | Total entries |
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | Chest | 3 | 28 | 3 | 23 | 51 |
 | Shoulders | 3 | 31 | 3 | 15 | 46 |
 | Back | 4 | 27 | 3 | 24 | 51 |
