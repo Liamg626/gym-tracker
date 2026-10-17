@@ -165,15 +165,15 @@ Near misses: Dumbbell Pullover, Landmine Press (listed under Shoulders).
 | Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
 |---|---|---|---|---|---|
 | Standing Barbell Overhead Press | Barbell, rack | No | Pronated, standing | option | |
-| Seated Barbell Overhead Press | Barbell, rack, Adjustable bench set upright | No | Pronated, seated | option | |
+| Seated Barbell Overhead Press | Barbell, rack, adjustable bench set upright | No | Pronated, seated | option | |
 | Behind-the-Neck Barbell Press | Barbell, rack | No | Pronated, wide, seated or standing | option | |
 | Barbell Push Press | Barbell, rack | No | Pronated, standing, leg drive | option | |
-| Seated Dumbbell Shoulder Press | Dumbbells, Adjustable bench set upright | No | Pronated, seated | option | |
+| Seated Dumbbell Shoulder Press | Dumbbells, adjustable bench set upright | No | Pronated, seated | option | |
 | Standing Dumbbell Shoulder Press | Dumbbells | No | Pronated, standing | option | |
-| Seated Neutral-Grip Dumbbell Shoulder Press | Dumbbells, Adjustable bench set upright | No | Neutral, seated | option | |
+| Seated Neutral-Grip Dumbbell Shoulder Press | Dumbbells, adjustable bench set upright | No | Neutral, seated | option | |
 | Single-Arm Standing Dumbbell Shoulder Press | Dumbbell | Yes | Pronated or neutral, standing | option | |
-| Seated Arnold Press | Dumbbells, Adjustable bench set upright | No | Rotating supinated to pronated, seated | option | |
-| Seated Smith Machine Shoulder Press | Smith machine, Adjustable bench set upright | No | Pronated, seated | option | |
+| Seated Arnold Press | Dumbbells, adjustable bench set upright | No | Rotating supinated to pronated, seated | option | |
+| Seated Smith Machine Shoulder Press | Smith machine, adjustable bench set upright | No | Pronated, seated | option | |
 | Selectorised Machine Shoulder Press | Selectorised machine (assumed) | No | Pronated or neutral, seated | option | |
 | Plate-Loaded Shoulder Press | Plate-loaded machine | No | Pronated or neutral, seated | option | |
 | Single-Arm Plate-Loaded Shoulder Press | Plate-loaded iso-lateral machine (assumed) | Yes | Pronated or neutral, seated | option | |
@@ -341,10 +341,10 @@ Near misses: Barbell Shrug and Dumbbell Shrug (upper trapezius), Cable Pull-Thro
 | Cable Overhead Triceps Extension (Rope) | Cable, rope | No | Neutral, standing facing away | option | |
 | Cable Overhead Triceps Extension (Bar) | Cable, straight bar or EZ bar | No | Pronated, standing facing away | option | |
 | Cable Single-Arm Overhead Triceps Extension | Cable, handle | Yes | Neutral, standing | option | |
-| Seated Dumbbell Overhead Triceps Extension | Dumbbell, Adjustable bench set upright | No | Both hands on one dumbbell, seated | option | |
+| Seated Dumbbell Overhead Triceps Extension | Dumbbell, adjustable bench set upright | No | Both hands on one dumbbell, seated | option | |
 | Standing Dumbbell Overhead Triceps Extension | Dumbbell | No | Both hands on one dumbbell, standing | option | |
 | Single-Arm Dumbbell Overhead Triceps Extension | Dumbbell | Yes | Neutral, seated or standing | option | |
-| Seated EZ-Bar Overhead Triceps Extension | EZ bar, Adjustable bench set upright | No | Pronated, angled grip, seated | option | |
+| Seated EZ-Bar Overhead Triceps Extension | EZ bar, adjustable bench set upright | No | Pronated, angled grip, seated | option | |
 | Machine Overhead Triceps Extension | Selectorised machine (assumed) | No | Neutral, seated | option | |
 
 ### Triceps Pushdown — current
