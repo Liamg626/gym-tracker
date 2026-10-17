@@ -19,6 +19,8 @@ The feature that sets this app apart: a front/back body diagram colouring each R
 | 24–72h | Recovering | Recovering |
 | > 72h | Ready | Ready |
 
+A Muscle's state is worked out from its last Primary Working Set and its last Secondary Working Set separately, and the worse of the two is shown (e.g. Primary 30h ago and Secondary 2h ago gives Recovering).
+
 ### v1.2 researched model
 
 Volume-weighted fatigue per Muscle, from `docs/research/muscle-fatigue.md`. Each Working Set adds to the Fatigue Dose of every Muscle it tags: 1 for a Primary Muscle, 0.5 for a Secondary Muscle, multiplied by an effort factor from its RIR (1.0 at RIR 0, falling to 0.2 at RIR 5 or more; RIR is optional, and an unrecorded RIR counts as RIR 1). A Workout's Fatigue Dose sets the Muscle's Recovery Window, from 12 h up to 72 h, which is reached at a Fatigue Dose of 4. Fatigue Level falls linearly from 1 to 0 over the Recovery Window; the Muscle is Fatigued for the first third, Recovering until the end of the window, then Ready. When several Workouts overlap, the highest Fatigue Level wins. All numbers, including the Weekly Sets targets, live in the fatigue config file, not in Settings.
@@ -40,5 +42,5 @@ Volume-weighted fatigue per Muscle, from `docs/research/muscle-fatigue.md`. Each
 
 **REC: Volume-weighted fatigue model** (v1.2, domain, TDD, blocked by the research)
 - Pure function: Workouts + Exercise Library + fatigue config + now → Recovery State and Fatigue Level per Muscle, replacing the time-only rules behind the same interface
-- Config holds `version`, `roleWeight`, `effortByRir`, `rirWhenMissing`, `recovery`, `groupScale`, `muscleScale`, `weeklySets` and `watchAdjustment` (values and sources in `docs/research/muscle-fatigue.md`), in one shared fatigue config module (suggested path `src/fatigue/fatigue.config.ts`) that the Weekly Sets insight also imports
+- Config holds `version`, `roleWeight`, `effortByRir`, `rirWhenMissing`, `recovery`, `groupScale`, `muscleScale`, and `weeklySets` (values and sources in `docs/research/muscle-fatigue.md`), in one shared fatigue config module (suggested path `src/fatigue/fatigue.config.ts`) that the Weekly Sets insight also imports
 - Tests cover the worked examples in the research doc and the MVP boundaries at the maximum dose

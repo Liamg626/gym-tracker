@@ -42,8 +42,8 @@ Repo, tooling, deploys, auth and the agent workflow. Everything else builds on t
 - Phone layout plus wider dashboard layout; Workouts are started, logged (live or after the fact) and edited on the phone only; the dashboard shows them read-only and manages everything else (e.g. Routines, Weigh-ins, Measurement Sessions, Settings)
 
 **FND: Settings** (MVP)
-- Weekly Target, height (default 188cm), sex (default male), stored via the API
-- v1.2 adds Working Set target ranges per Muscle
+- Weekly Target and height (default 188cm), stored via the API. There is no sex setting: the one lifter is male and only the male US Navy formula is used
+- Weekly Sets targets are not in Settings; they live in the fatigue config file (`rec-recovery.md`)
 
 **FND: Demo data generator** (MVP, ADR-0005)
 - Script that seeds a local D1 and the shared preview D1 (`gym-tracker-preview` only; it refuses any other database name) with plausible made-up Workouts, Weigh-ins and Measurement Sessions, in the low thousands of rows to stay under the D1 daily write limit
