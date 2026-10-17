@@ -16,5 +16,5 @@ Full charts work best on the wider dashboard; the phone gets compact versions. C
 
 **INS: Weekly Breakdown** (v1.2)
 - Monday–Sunday (Europe/London), available from Monday, shown in the app and on the dashboard, with past weeks browsable
-- Contains: Workouts vs Weekly Target and total duration; Volume per Muscle Group with change since last week; Working Sets per Muscle vs target range; new PRs; change in Trend Weight and Body Fat Estimate; Watch Data averages (resting HR, HRV, sleep) once WCH exists; progress on each goal
+- Contains: Workouts vs Weekly Target and total duration; Volume per Muscle Group with change since last week; Working Sets per Muscle vs target range; new PRs; change in Trend Weight and Body Fat Estimate; progress on each goal
 - No AI-written summary (decided)

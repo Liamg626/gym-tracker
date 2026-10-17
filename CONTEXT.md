@@ -105,9 +105,6 @@ A new best for an Exercise: heaviest weight at a given rep count, or highest Est
 _Avoid_: PB, record
 
 **Weekly Breakdown**:
-The Monday–Sunday summary of Workouts, Volume, PRs, body changes, Watch Data and goal progress.
+The Monday–Sunday summary of Workouts, Volume, PRs, body changes and goal progress.
 _Avoid_: Report, weekly summary
 
-**Watch Data**:
-Heart rate, sleep and activity figures imported from an uploaded Zepp (Amazfit) export.
-_Avoid_: Health data, wearable sync

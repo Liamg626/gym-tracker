@@ -4,5 +4,5 @@ The app is a single React + Vite Progressive Web App, installed on the iPhone vi
 
 ## Consequences
 
-- No live Apple Health / HealthKit access. Watch Data arrives by uploading export files instead.
+- No live Apple Health / HealthKit access. (Amended 2026-10-17: Watch Data was dropped, see ADR-0008.)
 - iOS web push only works from the home-screen app (iOS 16.4+), so any notifications are best-effort.

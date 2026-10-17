@@ -2,6 +2,8 @@
 
 SCRUM-10 · [WCH-001] · researched 2026-10-17
 
+**Outcome (2026-10-17):** after reading this, Liam dropped Watch Data entirely, because getting the export is not worth the hassle for what it gives (ADR-0008). The proposed doc changes below were not applied, and the made-up sample was removed. The findings stay as a record.
+
 ## Question
 
 Can Watch Data (heart rate, resting HR, HRV, sleep, steps, workouts) from Liam's Amazfit watch reach the app at £0, from Windows, with no Mac and no paid Apple Developer Program, without breaking ADR-0001 (PWA, no HealthKit), ADR-0002 (Hono Worker + D1) or ADR-0005 (raw health files never stored or committed)?
@@ -18,7 +20,7 @@ Out of scope: the unofficial/reverse-engineered Zepp (Huami) API, and anything t
 - **Third-party sync to a web API: NO for the fields we want.** Strava is the only web API route that is not native-only, and it carries workouts only (heart rate summary per activity), not sleep, steps, resting HR or HRV, and Zepp's Strava sync is reported to cover outdoor activities only ([Amazfit support, Italian][amz-strava]). Apple Health and Health Connect are native-only and ruled out by ADR-0001.
 - **Export is the route, and its format is now confirmed from Liam's real export (2026-10-17).** Zepp lists "Export data: Export personal data" as a data-subject right, reached from the app under Profile > Setting > "Exercising user rights" ([Zepp privacy support][zepp-priv]). No primary source documents the file, so the format below comes from **one real export Liam supplied**, inspected outside the repo and never committed (ADR-0005). It is a password-protected ZIP (WinZip AES, ZIP method 99 ([PKWARE APPNOTE][appnote], [WinZip AES][winzip-aes])) holding 11 folders of UTF-8 CSV files, one per data type, covering the account's whole history. See [Confirmed export format](#b2-confirmed-export-format).
 - **Fields available:** daily steps, distance and calories; heart rate every 10 minutes (every minute during workouts); nightly sleep with deep, light and wake minutes, start and stop; minute-by-minute sleep stages; workouts with type code, start, duration and calories. **Not in the export:** HRV and resting HR. REM minutes are always 0 in Liam's file. Per-workout TCX/FIT files are also available but add only finer heart rate for single sessions, so they are skipped (Liam's call).
-- **Recommendation: build the upload from the personal-data export.** Use these fields: daily steps, sleep (total, deep, light, wake, bed and wake times), daily heart rate (min, average, max from the 10-minute readings) and workouts (start, duration, calories, type). Resting HR is not in the file; a derived figure is proposed for Liam below. A made-up sample is in [`samples/zepp-export/`](samples/zepp-export/). The Zepp OS mini-app (route A2) is ruled out for the GTS 2, and the Apple Health export is kept only as a fallback if the Zepp export fails or changes (see B1).
+- **Recommendation: build the upload from the personal-data export.** Use these fields: daily steps, sleep (total, deep, light, wake, bed and wake times), daily heart rate (min, average, max from the 10-minute readings) and workouts (start, duration, calories, type). Resting HR is not in the file; a derived figure is proposed for Liam below. The Zepp OS mini-app (route A2) is ruled out for the GTS 2, and the Apple Health export is kept only as a fallback if the Zepp export fails or changes (see B1).
 
 ## Part A: direct integration
 
@@ -149,8 +151,6 @@ Received 2026-10-17: the watch model (GTS 2), a full personal-data export, and o
 
 1. How the export and its password arrived (email or in app), and how long it took. This goes into the upload screen's help text.
 2. Which activities the `SPORT` type codes `6`, `8` and `10` were (for example a walk or the treadmill), so the codes can be mapped to names.
-
-A made-up sample matching the real format is in [`samples/zepp-export/`](samples/zepp-export/).
 
 ## Data flow if direct integration is chosen later (route A2)
 

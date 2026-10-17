@@ -6,7 +6,7 @@
 - Titles start with an **area code + a number that counts up per area**: `[LOG-003] Log a Working Set`.
 - Every ticket carries its area label in lowercase (`log`) for filtering.
 - Epics: one per area. Stories: thin end-to-end slices Liam can test on his phone. Tasks: research and setup. Bugs: issue type `Bug`.
-- Jira versions: MVP, v1.1, v1.2, v1.3. Sprints are one week, with no story points.
+- Jira versions: MVP, v1.1, v1.2. Sprints are one week, with no story points.
 
 | Code | Area | Spec |
 |---|---|---|
@@ -18,7 +18,6 @@
 | GOL | Milestones, Body Goals, PRs | [gol-goals.md](features/gol-goals.md) |
 | HOM | Home screen and widgets | [hom-home-widgets.md](features/hom-home-widgets.md) |
 | INS | Charts, Weekly Breakdown | [ins-insights.md](features/ins-insights.md) |
-| WCH | Watch Data | [wch-watch-data.md](features/wch-watch-data.md) |
 
 ## Statuses
 
@@ -40,7 +39,7 @@ ponytail (level `full`) is on for the skill session and both subagents through `
 
 ## Design gate
 
-Each release (MVP, v1.1, v1.2, v1.3) has one **design ticket**, labelled `design`: FND-007 to FND-010 (SCRUM-16 to SCRUM-19). Each one produces two Claude Design artifacts, one for mobile and one for the web dashboard. Each design ticket publishes its **own new** artifacts, starting from a copy of the previous release's. A release's artifacts can still change after approval, until that release's Stories are sliced. From then on they are **frozen** for that release, because the Stories are built against them; any later change goes into the next release's design.
+Each release (MVP, v1.1, v1.2) has one **design ticket**, labelled `design`: FND-007 to FND-009 (SCRUM-16 to SCRUM-18). Each one produces two Claude Design artifacts, one for mobile and one for the web dashboard. Each design ticket publishes its **own new** artifacts, starting from a copy of the previous release's. A release's artifacts can still change after approval, until that release's Stories are sliced. From then on they are **frozen** for that release, because the Stories are built against them; any later change goes into the next release's design.
 
 - **Gate:** each design ticket is blocked by the previous release's one. Every Story for a release gets an "is blocked by" link to that release's design ticket, created together with the Story. So no Story starts until its release's design is approved.
 - **The design ticket's loop:** the agent posts the artifact links on the ticket and moves it to In Review. Liam gives feedback in artifact comments or Jira comments, and the agent republishes that ticket's artifacts to the same URLs. This repeats, with no round limit, until Liam approves. There is no branch, PR or reviewer agent. The closing comment's **Done** line holds the final artifact links, and the ticket moves to Done.

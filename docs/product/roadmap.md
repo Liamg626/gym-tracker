@@ -29,11 +29,6 @@ Releases map to Jira versions. Sprints are one week long, with no story points.
 - Volume per Muscle views, Working Sets per Muscle against a target range
 - Researched, volume-weighted fatigue model replaces the time-only rules
 
-## v1.3: Watch Data
-
-- Upload a Zepp export into the app; extract heart rate, resting HR, HRV, sleep and steps
-- Watch Data in the Weekly Breakdown
-
 ## Defaults
 
 kg only · weeks run Monday–Sunday · Europe/London · dark mode · no backups (decided)

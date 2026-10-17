@@ -23,7 +23,6 @@ Exactly one, forever. There are no accounts, no sharing and no multi-user design
 4. **Goals**: hand-written Milestones (weight × reps) and Body Goals with optional deadlines.
 5. **Progress over time**: Estimated 1RM per Exercise, Volume per Muscle, body trends.
 6. **Weekly Breakdown** every Monday.
-7. **Watch Data** (Amazfit via Zepp) brought in by uploading an export file.
 
 ## Constraints
 
