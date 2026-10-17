@@ -28,6 +28,8 @@ To Do → In Progress → In Review → **Ready To Merge** → Done
 
 Liam starts each ticket with the project `implement` skill and a `SCRUM-n` key.
 
+Models: the skill itself runs on Sonnet (medium effort) and orchestrates; the code is written by the `implementer` subagent (Haiku, low; Sonnet, medium for the round-3 fixes) and reviewed by the `reviewer` subagent (Haiku, medium), both defined in `.claude/agents/`. Research and design tickets are done by the skill session itself.
+
 ponytail (level `full`) is on for both the developer and reviewer agents through `.claude/settings.json`. Subagents get it through its SubagentStart hook. See [ponytail.md](../agents/ponytail.md).
 
 1. **Developer agent**: reads the ticket, moves it to In Progress, branches off `main` as `SCRUM-n-short-slug`, builds test-first (TDD) for domain logic and API, runs typecheck and tests, commits with `SCRUM-n: …` messages, opens a **draft PR** titled `SCRUM-n [AREA-nnn] …`, and moves the ticket to In Review.
