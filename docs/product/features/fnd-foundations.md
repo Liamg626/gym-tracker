@@ -14,14 +14,21 @@ Repo, tooling, deploys, auth and the agent workflow. Everything else builds on t
 - `.claude/skills/implement/SKILL.md`, based on Liam's `claude/.agents/skills/implement`, extended with the flow in [workflow.md](../workflow.md)
 - Given a `SCRUM-n` key, it runs the whole developer → reviewer → PR loop
 
+**FND: PR template** (MVP)
+- `.github/pull_request_template.md` with: what this does, preview URL and passphrase, iPhone test steps from the ticket's acceptance criteria, screenshots, and notes on migrations and secrets
+- The `implement` skill fills it in; the `pr` skill's body follows its headings
+
 **FND: CI** (MVP)
 - GitHub Actions on every PR and every push to `main`: lint, typecheck, test
 - PR cannot merge while CI is red (branch protection)
 
 **FND: Cloudflare deploys** (MVP)
-- `apps/web` on Cloudflare Pages, `apps/api` on Workers, D1 database with Drizzle migrations
-- Every PR gets a preview URL; merging to `main` deploys to production
-- Secrets come only from Wrangler/Cloudflare secrets
+- `apps/api` is one Cloudflare Worker (Hono) that also serves the built `apps/web` PWA as static assets, with a D1 database and Drizzle migrations
+- Workers Builds deploys `main` to production and runs `wrangler preview` for every other branch; each PR gets a Preview URL, posted as a PR comment
+- A separate `gym-tracker-preview` D1 database, bound only in the `previews` block of `wrangler.jsonc`, holds demo data only; a test fails if its ID equals the production database ID
+- `pnpm db:reseed:preview` drops the preview tables, applies migrations and loads the demo data
+- Secrets come only from Wrangler/Cloudflare secrets: production with `wrangler secret put`, previews with `wrangler preview base-config secret put`. The preview passphrase is not the production one
+- The Settings screen and the login screen show the build commit SHA
 
 **FND: Passphrase login** (MVP, ADR-0003)
 - First visit on a device shows a passphrase screen; a correct passphrase returns a long-lived token stored on the device
@@ -31,6 +38,7 @@ Repo, tooling, deploys, auth and the agent workflow. Everything else builds on t
 **FND: Installable PWA shell** (MVP)
 - Manifest, icons and service worker; "Add to Home Screen" on iPhone opens full-screen
 - Dark theme by default; Tailwind + shadcn/ui set up
+- The service worker updates predictably on previews: it calls `skipWaiting()` and `clients.claim()` on preview builds, and the build SHA on screen shows which build is running
 - Phone layout plus wider dashboard layout; Workouts are started, logged (live or after the fact) and edited on the phone only; the dashboard shows them read-only and manages everything else (e.g. Routines, Weigh-ins, Measurement Sessions, Settings)
 
 **FND: Settings** (MVP)
@@ -38,4 +46,4 @@ Repo, tooling, deploys, auth and the agent workflow. Everything else builds on t
 - v1.2 adds Working Set target ranges per Muscle
 
 **FND: Demo data generator** (MVP, ADR-0005)
-- Script that seeds a local/preview D1 with plausible made-up Workouts, Weigh-ins and Measurement Sessions
+- Script that seeds a local D1 and the shared preview D1 (`gym-tracker-preview` only; it refuses any other database name) with plausible made-up Workouts, Weigh-ins and Measurement Sessions, in the low thousands of rows to stay under the D1 daily write limit
