@@ -67,7 +67,7 @@ Previews need Wrangler 4.135.0 or later installed as a project dependency ([get 
 - Previews migrate through a second config, `wrangler.preview-migrations.jsonc`, which "must point to the same physical database" as the Preview binding ([resources][cf-prev-res]). If several Previews share one database, run the migration for it only once ([resources][cf-prev-res]).
 - The existing Pages equivalent (if Pages is kept): `[env.preview]` with its own `d1_databases`; bindings are not inherited, so every binding must be repeated in the environment block ([Pages Wrangler config][cf-pages-wrangler]).
 - D1 migrations: `wrangler d1 migrations create/list/apply`; applied migrations are recorded in `d1_migrations`; `apply` takes `--local` and `--remote`; a failed migration rolls back ([migrations][cf-d1-mig], [commands][cf-d1-cmd]). Drizzle's one-folder-per-migration layout needs `migrations_pattern` alongside `migrations_dir` ([migrations][cf-d1-mig]).
-- Seeding: `wrangler d1 execute <DB> --remote --file seed.sql`. Without `--local`, `d1 execute` targets the **remote** database ([local development][cf-d1-local], [commands][cf-d1-cmd]). That default is the danger: a mistyped command on the production binding writes to production.
+- Seeding: `wrangler d1 execute <DB> --remote --file seed.sql` ([commands][cf-d1-cmd]). Which database `d1 execute` and `d1 migrations apply` use when neither `--local` nor `--remote` is given is not stated on the pages read: **not knowable without trying it**. Every script passes `--local` or `--remote` explicitly, so a mistyped command on the production binding cannot fall back to production by default.
 
 ### Per-PR versus shared preview database
 
@@ -126,7 +126,7 @@ Previews need Wrangler 4.135.0 or later installed as a project dependency ([get 
 - **7-day eviction.** Safari deletes a site's script-writable storage (IndexedDB, localStorage, service worker registrations and caches, and others) "after seven days of Safari use without user interaction on the site" ([WebKit ITP][wk-itp]). Home Screen web apps "have their own counter of days of use" and WebKit "do[es] not expect" their data to be deleted ([WebKit ITP][wk-itp]). The same article's wording is about Safari itself; the storage-policy article only says eviction can also follow "a site goes unused for some time" and is on an LRU, origin basis ([WebKit storage][wk-storage]). Effect on testing: a preview left in a Safari tab for a week may lose its token and any unsynced sets. Harmless for demo data, but an unsynced-sets test (ADR-0004) must be done within a session.
 - **Quota.** Home Screen web apps have the same origin and overall quota as Safari ([WebKit storage][wk-storage]); not a testing constraint.
 - **Push notifications** work only from the Home Screen app (ADR-0001); they cannot be tested from a Safari tab.
-- **Preview URLs are deleted over time.** The oldest Preview is deleted when the Free-plan limit of 100 Previews per Worker is reached ([Previews][cf-previews]); deleted ones leave dead Home Screen icons.
+- **Preview URLs are deleted over time.** If Previews are available on the Free plan (not stated; see [Unverified](#unverified--limits)), the oldest Preview is deleted when the limit of 100 Previews per Worker is reached ([Previews][cf-previews]); deleted ones leave dead Home Screen icons.
 
 ## 5. Free-tier cost check
 
@@ -204,7 +204,7 @@ Rules the template relies on: screenshots and recordings use demo data only (ADR
 3. **PR is marked ready, ticket moves to Ready To Merge.** The PR description's "Test on iPhone" list is Liam's checklist (workflow.md step 4).
 4. **Liam tests on the iPhone in Safari**, walking the ticket's steps. Home Screen install only if the PR says so. After a re-push he compares the SHA shown in the app with the PR's latest commit before testing.
 5. **Liam merges.** Production deploys from `main`. For PWA-shell tickets he re-checks the installed production app.
-6. **Cleanup.** Delete the PR's Preview (`wrangler preview delete --name <preview>`) when the PR closes, optionally with a GitHub Actions job as in the Cloudflare example ([examples][cf-prev-auto]); delete any Home Screen icon.
+6. **Cleanup.** Delete the PR's Preview (`wrangler preview delete --name <preview>`) when the PR closes, optionally with a GitHub Actions job as in the Cloudflare example ([examples][cf-prev-auto]); delete any Home Screen icon. If the PR changed the schema, reseed the preview database (`pnpm db:reseed:preview`).
 
 ## Proposed doc changes (for Liam to approve, not applied)
 
