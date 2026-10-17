@@ -67,7 +67,7 @@ Previews need Wrangler 4.135.0 or later installed as a project dependency ([get 
 - Previews migrate through a second config, `wrangler.preview-migrations.jsonc`, which "must point to the same physical database" as the Preview binding ([resources][cf-prev-res]). If several Previews share one database, run the migration for it only once ([resources][cf-prev-res]).
 - The existing Pages equivalent (if Pages is kept): `[env.preview]` with its own `d1_databases`; bindings are not inherited, so every binding must be repeated in the environment block ([Pages Wrangler config][cf-pages-wrangler]).
 - D1 migrations: `wrangler d1 migrations create/list/apply`; applied migrations are recorded in `d1_migrations`; `apply` takes `--local` and `--remote`; a failed migration rolls back ([migrations][cf-d1-mig], [commands][cf-d1-cmd]). Drizzle's one-folder-per-migration layout needs `migrations_pattern` alongside `migrations_dir` ([migrations][cf-d1-mig]).
-- Seeding: `wrangler d1 execute <DB> --remote --file seed.sql` ([commands][cf-d1-cmd]). Which database `d1 execute` and `d1 migrations apply` use when neither `--local` nor `--remote` is given is not stated on the pages read: **not knowable without trying it**. Every script passes `--local` or `--remote` explicitly, so a mistyped command on the production binding cannot fall back to production by default.
+- Seeding: `wrangler d1 execute <DB> --remote --file seed.sql` ([commands][cf-d1-cmd]). Which database `d1 execute` and `d1 migrations apply` target when neither flag is given is **not knowable without trying it** (not stated on the pages read). Always pass `--local` or `--remote` explicitly.
 
 ### Per-PR versus shared preview database
 
@@ -90,7 +90,7 @@ Previews need Wrangler 4.135.0 or later installed as a project dependency ([get 
 
 ## 3. Secrets per environment
 
-- Workers production: `npx wrangler secret put PASSPHRASE` creates and deploys a new version immediately; `wrangler versions secret put` creates a version without deploying ([secrets][cf-secrets]). Local: `.dev.vars` (already git-ignored, ADR-0005 and FND scaffold).
+- Workers production: `npx wrangler secret put PASSPHRASE` creates and deploys a new version immediately; `wrangler versions secret put` creates a version without deploying ([secrets][cf-secrets]). Local: `.dev.vars`, which FND "Monorepo scaffold" adds to `.gitignore` (ADR-0005); it is not in `.gitignore` yet.
 - Previews: secrets cannot live in the config file. `npx wrangler preview base-config secret put PASSPHRASE` sets it for every **new** Preview; "later changes to Base secrets apply only to new Previews, so active Previews remain unchanged"; `npx wrangler preview secret put PASSPHRASE --name <preview>` sets one ([configuration][cf-prev-config]).
 - Practical result: give the preview the passphrase `preview-demo` (or similar throwaway) and keep the real one only on production. Rotating it needs a base-config change plus a new Preview, or the per-preview command.
 - A `cloudflare/workers-sdk` pull request reports that in Wrangler 4.148.0 re-running `wrangler preview` on an existing Preview could drop its secrets; a fix is proposed in [workers-sdk#16102][gh-sdk-16102]. **Not knowable without trying it:** whether the installed version has the fix. If previews lose the passphrase, FND login will return 401 with a correct passphrase; check this first.
@@ -250,6 +250,8 @@ These change nothing until Liam says so. Wording is exact.
 > ## Previews
 >
 > Every non-production branch gets a Cloudflare Preview: one URL that serves the web app and the API, backed by the shared `gym-tracker-preview` database (demo data only) and its own passphrase. Previews never read production data or secrets. Two open PRs share one preview database, so a PR with a schema change reseeds it before it is tested and again after it closes.
+>
+> A PR moves to Ready To Merge only when its Preview build and CI are both green. When a PR closes, its Preview is deleted (`wrangler preview delete --name <preview>`) and Liam removes any Home Screen icon for it.
 
 **`docs/adr/0003-single-passphrase-auth.md`.** Add one sentence:
 
