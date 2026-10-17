@@ -38,10 +38,12 @@ ponytail (level `full`) is on for both the developer and reviewer agents through
 
 ## Design gate
 
-Each release (MVP, v1.1, v1.2, v1.3) has one **design ticket**, labelled `design`: FND-007 to FND-010 (SCRUM-16 to SCRUM-19). Each one produces two Claude Design artifacts, one for mobile and one for the web dashboard. Each design ticket publishes its **own new** artifacts, starting from a copy of the previous release's approved ones. Once a release's artifacts are approved they are never republished, because that release's Stories are built against them.
+Each release (MVP, v1.1, v1.2, v1.3) has one **design ticket**, labelled `design`: FND-007 to FND-010 (SCRUM-16 to SCRUM-19). Each one produces two Claude Design artifacts, one for mobile and one for the web dashboard. Each design ticket publishes its **own new** artifacts, starting from a copy of the previous release's. A release's artifacts can still change after approval, until that release's dev tickets are sliced. From then on they are **frozen** until the next round, because the Stories are built against them; any later change goes into the next release's design.
 
 - **Gate:** each design ticket is blocked by the previous release's one. Every Story for a release gets an "is blocked by" link to that release's design ticket, created together with the Story. So no Story starts until its release's design is approved.
 - **The design ticket's loop:** the agent posts the artifact links on the ticket and moves it to In Review. Liam gives feedback in artifact comments or Jira comments, and the agent republishes that ticket's artifacts to the same URLs. This repeats, with no round limit, until Liam approves. There is no branch, PR or reviewer agent. The closing comment's **Done** line holds the final artifact links, and the ticket moves to Done.
+- **Changes after approval, before slicing:** Liam asks, the agent republishes to the same URLs and adds a dated comment on the design ticket saying what changed. The ticket stays Done.
+- **Freeze at slicing:** when a release's Stories are created, the agent adds a comment on its design ticket: "Design frozen for <release>". The comment names the artifact versions. Stories build against those versions.
 - **Building a Story:** the developer agent opens the approved artifacts linked from the design ticket's closing comment, for the device(s) the Story touches, and builds to match them. The reviewer checks the build against them too.
 
 ## Skills by ticket type
