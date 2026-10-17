@@ -31,7 +31,7 @@ Repo, tooling, deploys, auth and the agent workflow. Everything else builds on t
 **FND: Installable PWA shell** (MVP)
 - Manifest, icons and service worker; "Add to Home Screen" on iPhone opens full-screen
 - Dark theme by default; Tailwind + shadcn/ui set up
-- Phone layout plus wider dashboard layout
+- Phone layout plus wider dashboard layout; the dashboard views and manages data, and Workouts are started and logged on the phone only
 
 **FND: Settings** (MVP)
 - Weekly Target, height (default 188cm), sex (default male), stored via the API

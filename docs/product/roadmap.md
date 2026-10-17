@@ -9,7 +9,7 @@ Releases map to Jira versions. Sprints are one week long, with no story points.
 - Exercise Library, generated from Liam's own exercise list (ADR-0006)
 - Routines: create, edit, start a Workout from one
 - Live Workout logging: Start/End Workout with an elapsed clock (no rest timer), prefill from last time, Warm-up Sets, RIR, notes, per-exercise weight step; Sets saved on the device first (ADR-0004); auto-end after 3h with no Sets
-- Home screen widgets in a fixed default layout (Start Workout, Recovery Map, Quick Weigh-in, This week, Last Workout, Latest Body Fat Estimate)
+- Home screen widgets in a fixed default layout (Start Workout on the phone only, Recovery Map, Quick Weigh-in, This week, Last Workout, Latest Body Fat Estimate, Weight and Body Fat chart)
 - Settings: Weekly Target, height, sex
 - Workout history: view, edit, delete, log after the fact
 - Weigh-ins (one per day) and Trend Weight

@@ -2,7 +2,7 @@
 
 ## What it is
 
-A personal strength-training tracker for one lifter (Liam), used on an iPhone 15 Pro at the gym and on a larger screen as a dashboard. It is also a public portfolio piece, so the code, docs and workflow (Jira, ADRs, tests, CI) are part of the product.
+A personal strength-training tracker for one lifter (Liam), used on an iPhone 15 Pro at the gym and on a larger screen as a dashboard for viewing and managing data (Workouts are logged on the phone). It is also a public portfolio piece, so the code, docs and workflow (Jira, ADRs, tests, CI) are part of the product.
 
 ## Why build it
 

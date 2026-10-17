@@ -13,12 +13,13 @@ The home screen works like an iOS home screen made of widgets.
 
 | Widget | Release |
 |---|---|
-| Start Workout (pick a Routine or start empty) | MVP |
+| Start Workout (pick a Routine or start empty); phone only | MVP |
 | Recovery Map | MVP |
 | Quick Weigh-in | MVP |
 | This week (Workouts vs Weekly Target) | MVP |
 | Last Workout | MVP |
 | Latest Body Fat Estimate | MVP |
+| Weight and Body Fat chart: Trend Weight (left axis) and Body Fat Estimate (right axis) over time, with This week / 1 month / 3 months / All time | MVP |
 | Trend Weight sparkline | v1.1 |
 | Next Milestone | v1.1 |
 | Recent PRs | v1.1 |

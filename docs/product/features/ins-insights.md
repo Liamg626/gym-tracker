@@ -6,7 +6,7 @@ Full charts work best on the wider dashboard; the phone gets compact versions. C
 
 **INS: Strength chart per Exercise** (v1.1): Estimated 1RM over time, with PRs marked
 
-**INS: Body charts** (v1.1): Trend Weight with the raw Weigh-ins faded behind it; Body Fat Estimate; one line per tape measurement
+**INS: Body charts** (v1.1): Trend Weight with the raw Weigh-ins faded behind it; Body Fat Estimate; one line per tape measurement. The MVP Home already has a compact Weight and Body Fat widget (HOM); this story adds the full charts
 
 **INS: Workout calendar** (v1.1): month view of the days with a Workout
 
