@@ -12,11 +12,11 @@ The output is a model for the v1.2 **Volume-weighted fatigue model** story, whic
 
 - **The literature gives time courses for a handful of Exercises, not a table of recovery times per Muscle.** The best-matched trials (resistance-trained adults, multi-set bench press and squat) show performance back to baseline in **about 6 h (far from failure, low volume) to 48-72 h (sets taken to failure, or 8 x 10)**. See [Q1](#q1-how-long-do-muscles-take-to-recover) and [Q2](#q2-how-recovery-scales-with-volume-and-effort).
 - **Nothing retrieved supports different recovery times for large vs small Muscles or fast vs slow fibres.** The one direct comparison (untrained, eccentric-only) found arm muscles recovered *slower* than leg muscles ([Jamurtas 2005][jamurtas2005]). The proposed config therefore uses one recovery scale for every Muscle Group (1.0) and keeps the field so Liam can tune it.
-- **Effort matters more than anyone's folk rule.** Closer to failure means a bigger drop right after the Working Set and slower recovery over 24-48 h ([Refalo 2023][refalo2023], [Morán-Navarro 2017][moran2017]). With the same total reps, 6 x 5 (stopping at 5 of a possible 10) recovered faster than 3 x 10 to failure ([Morán-Navarro 2017][moran2017]).
+- **Effort changes the immediate drop more clearly than the recovery.** Closer to failure means a bigger velocity loss right after the Working Set ([Refalo 2023][refalo2023]). The recovery difference is small: in Refalo 2023 velocity at 24 h was -3% for both failure and 1 RIR, and there was no significant difference at 48 h. Morán-Navarro 2017 compared 3 x 10 to failure with 6 x 5, which changes reps and effort together, so it cannot isolate proximity to failure ([Morán-Navarro 2017][moran2017]).
 - **Secondary Muscle = 0.5 of a Primary set** is supported, but only for *training stimulus*, not for fatigue. A 2026 meta-regression of 67 studies found that counting indirect (synergist) sets as half a set predicted hypertrophy and strength gains better than counting them as full sets or as zero ([Pelland 2026][pelland2026]). No study retrieved measures fatigue or recovery in synergists against a fraction. One bench press study suggests triceps soreness lasts as long as chest soreness ([Nuckols 2026][nuckols2026]), which argues *against* 0.5 for recovery time.
 - **Best marker for "ready to train again": recovery of force or velocity** (maximal voluntary contraction torque, lifting velocity), not soreness or creatine kinase ([Warren 1999][warren1999]). The app records none of these directly, so the model is anchored to performance studies and the doc proposes a cheap check against next-Workout Estimated 1RM.
 - **Sleep, resting HR and HRV: do not use in v1.2.** There is no resistance-training evidence that would let us pick a number. See [Q5](#q5-sleep-resting-hr-and-hrv).
-- **Weekly Working Sets per Muscle Group: 10-20 is the productive range, 4 is the lowest detectable-gain figure, above about 20 returns diminish.** Sources: [Schoenfeld 2017][schoenfeld2017], [Baz-Valle 2022][bazvalle2022], [Pelland 2026][pelland2026]. See [Q6](#q6-weekly-working-sets-per-muscle-group).
+- **Weekly Working Sets per Muscle Group: 12-20 is the target range (Baz-Valle 2022), 4 is the minimum detectable gain, and gains keep rising past 20 with diminishing returns (Pelland 2026 preprint tiers).** Sources: [Baz-Valle 2022][bazvalle2022], [Pelland 2026][pelland2026] (tiers from the September 2024 preprint, not the published version). Schoenfeld 2017 shows a dose-response but its 10+ bin was not significant, so it is not the source of any number here. See [Q6](#q6-weekly-working-sets-per-muscle-group).
 - **Proposed model** (details below): each Working Set adds `roleWeight x effort(RIR)` to a Muscle's **Fatigue Dose** for that Workout; the Fatigue Dose sets the **Recovery Window** (12 h for a trivial dose rising linearly to 72 h at a Fatigue Dose of 4 and above); Fatigue Level falls linearly from 1 to 0 across that window; **Fatigued** for the first third, **Recovering** until the end, then **Ready**. At the top of the range it reproduces the MVP's 24 h / 72 h boundaries.
 
 ## Findings
@@ -54,7 +54,7 @@ What follows from these:
 
 - Six bench Working Sets at 75% 1RM: velocity drop at 4 min was -25% (failure), -13% (1 RIR), -8% (3 RIR). At 24 h it was -3%, -3% and +2%; at 48 h the differences were no longer significant. Soreness at 24 h was higher for failure than for 1 RIR (effect size 0.79) or 3 RIR (1.16) ([Refalo 2023][refalo2023]).
 - Failure is where the cost jumps. Velocity loss from the first to the last set was 22% (failure), 9% (1 RIR) and 6% (3 RIR) (same paper).
-- With the same total reps, 3 x 10 to failure recovered slower than 6 x 5 at 24-48 h ([Morán-Navarro 2017][moran2017]).
+- With the same total reps, 3 x 10 to failure recovered slower than 6 x 5 at 24-48 h ([Morán-Navarro 2017][moran2017]). This is confounded: the two protocols differ in rep scheme as well as proximity to failure, so it is not evidence about effort alone.
 - For gains: a meta-analysis found no significant difference between training to failure and not (hypertrophy effect size 0.22, 95% CI -0.11 to 0.55; strength -0.09, -0.22 to 0.05) ([Grgic 2022][grgic2022]); in trained participants alone, failure was slightly better for hypertrophy (0.15, 0.03 to 0.26). A meta-regression found hypertrophy rose as sets ended closer to failure while strength did not, but warned the RIR values were *estimated from study descriptions* ([Robinson 2024][robinson2024]).
 - RIR itself is usable as a measure: resistance-trained men and women predicted 1 and 3 RIR on the bench press with a mean absolute error of 0.65 reps (SD 0.78) ([Refalo 2024][refalo2024], abstract). Bench press only.
 
@@ -97,7 +97,7 @@ What follows from these:
 | [Schoenfeld 2017][schoenfeld2017] (meta-regression, 15 studies, 34 groups) | Each extra weekly set per Muscle Group was associated with +0.37% muscle gain (effect size +0.023). Higher vs lower volume within a study: +3.9%. Three-level split (<5, 5-9, 10+ sets) only a trend (p = 0.074). Few trained participants |
 | [Schoenfeld 2019][schoenfeld2019] (trial, 34 resistance-trained men, 8 weeks, 3 Workouts a week) | 1, 3 or 5 sets per Exercise per Workout: strength gains similar; hypertrophy rose with volume at the elbow flexors, mid-thigh and lateral thigh |
 | [Baz-Valle 2022][bazvalle2022] (systematic review, 7 studies, trained young men, at least 1 year) | Concluded 12-20 weekly sets per Muscle Group is a sensible standard for hypertrophy. No difference between moderate and high volume for quadriceps (p = 0.19) or biceps (p = 0.59); high was better for triceps (p = 0.01) |
-| [Pelland 2026][pelland2026] (67 studies, fractional counting) | Hypertrophy rises with volume with diminishing returns, no clear plateau found. Preprint tiers (fractional sets per week): minimum detectable gain **4**; 5-10 efficient (about 6 more sets per detectable increment); 11-18 (about 8.5 more); 19-29 (about 10.75 more); 30-42 (about 12.5 more); 43+ unclear. Detectable means above 2.05% (hypertrophy). Strength plateaus far earlier (minimum 1 set, lower efficiency beyond about 5) |
+| [Pelland 2026][pelland2026] (67 studies, fractional counting) | Hypertrophy rises with volume with diminishing returns, no clear plateau found. Tiers from the **September 2024 preprint** ([Pelland preprint][pelland2024pre]), not the published 2026 version (fractional sets per week): minimum detectable gain **4**; 5-10 efficient (about 6 more sets per detectable increment); 11-18 (about 8.5 more); 19-29 (about 10.75 more); 30-42 (about 12.5 more); 43+ unclear. Detectable means above 2.05% (hypertrophy). Strength plateaus far earlier (minimum 1 set, lower efficiency beyond about 5) |
 | Frequency: [Schoenfeld 2016][schoenfeld2016], [Grgic 2019][grgic2019], [Pelland 2026][pelland2026] | Volume-equated, training a Muscle twice a week beat once; later reviews and the 2026 meta-regression find little independent effect of frequency on hypertrophy. Not used to gate targets |
 | Maintenance: [Spiering 2021][spiering2021], [Bickel 2011][bickel2011] | Strength and size in young adults were kept for up to 32 weeks with one Workout per week and one set per Exercise at the same relative weight; a third of the original dose kept muscle size in the young. No weekly set figure to copy |
 
@@ -111,15 +111,17 @@ For one Muscle `m` and one Workout `w` performed at time `t_w`:
 
 1. **Set weight.** For each Working Set `j` that tags `m`: `s_j = roleWeight[role_j] x effort[RIR_j]`.
    - `roleWeight`: Primary 1.0, Secondary 0.5 ([Pelland 2026][pelland2026]; used for stimulus; applied to fatigue is **our own assumption**).
-   - `effort[RIR]`: 0 -> 1.00, 1 -> 0.52, 3 -> 0.32 are the ratios of the velocity drop at 4 min in [Refalo 2023][refalo2023] (13/25 and 8/25, rounded); 2 -> 0.42 is the midpoint; 4 -> 0.25 and 5 or more -> 0.20 are **our own assumption** (no study tested RIR above 3 on this measure; [Morán-Navarro 2017][moran2017] stopped at 5 of 10 reps and recovered in about 6 h, so the value is small but not zero).
+   - `effort[RIR]` = `effortByRir[min(RIR, 5)]`, so RIR 6 or more uses the RIR 5 value.
+   - The values for RIR 0, 1 and 3 (1.00, 0.52, 0.32) are **acute velocity-loss ratios**: the drop in bench velocity 4 min after the Set in [Refalo 2023][refalo2023] (failure -25%, 1 RIR -13%, 3 RIR -8%, divided by the failure drop, rounded). They are not recovery times. Using them as fatigue weights is **our own assumption** (S for the ratios, A for their use here).
+   - RIR 2 -> 0.42 is the midpoint of the RIR 1 and RIR 3 values (**our own assumption**). RIR 4 -> 0.25 and RIR 5 or more -> 0.20 are **our own assumption** (no study tested RIR above 3 on this measure; [Morán-Navarro 2017][moran2017] stopped at 5 of 10 reps and recovered in about 6 h, so the value is small but not zero).
    - No RIR recorded: treat as RIR 1 (**our own assumption**: errs towards a longer window).
 2. **Fatigue Dose** in the Workout: `U = sum of s_j` over the Workout's Working Sets for that Muscle. Warm-up Sets are excluded (existing rule).
-3. **Recovery Window** (hours until Ready): `D = scale_g x (minHours + (maxHours - minHours) x min(U, capSets) / capSets)`.
+3. **Recovery Window** (hours until Ready): `D = scale_m x (minHours + (maxHours - minHours) x min(U, capFatigueDose) / capFatigueDose)`, where `scale_m = muscleScale[m] ?? groupScale[group(m)]` and `group(m)` is the Muscle Group of `m`.
    - `maxHours = 72`: end of the 3 x 10-to-failure and 8 x 10 time courses ([Morán-Navarro 2017][moran2017], [Bartolomei 2017][bartolomei2017]) and the MVP's 72 h.
    - `minHours = 12`: **our own assumption**; trial values were about 6 h ([Morán-Navarro 2017][moran2017]) and I rounded up to avoid claiming instant recovery.
-   - `capSets = 4`: **our own assumption**; chosen so 3 sets to failure (U = 3) gives 57 h, inside the 48-72 h seen in [Morán-Navarro 2017][moran2017], and 8 sets at RIR 1 (U = 4.16) reaches the 72 h cap.
+   - `capFatigueDose = 4`: **our own assumption**; chosen so 3 sets to failure (U = 3) gives 57 h, inside the 48-72 h seen in [Morán-Navarro 2017][moran2017], and 8 sets at RIR 1 (U = 4.16) reaches the 72 h cap.
    - Linear between those points: **our own assumption** (no study varies only volume).
-   - `scale_g = 1.0` for every Muscle Group (see Q1: no supported difference).
+   - `groupScale` and `muscleScale` default to 1.0 for every Muscle Group and Muscle (**our own assumption**; no supported difference, see Q1).
 4. **Fatigue Level** from that Workout: `L_w(t) = max(0, 1 - (t - t_w) / D)`. It starts at 1 and falls linearly to 0 (linear decay is **our own assumption**; [Raastad 2000][raastad2000] saw a biphasic pattern the model ignores).
 5. **Across Workouts:** `L(t) = max over Workouts of L_w(t)` (**our own assumption**: no compounding; a later small Workout does not extend an earlier large Workout's window. [Nosaka 1995][nosaka1995] is the only support, in untrained eccentric work).
 6. **Recovery State**, from the combined `L(t)` (so the max rule decides which Workout counts):
@@ -140,29 +142,36 @@ export const FATIGUE_CONFIG = {
 
   roleWeight: { primary: 1.0, secondary: 0.5 },          // S: Pelland 2026 (stimulus); A for fatigue
 
-  effortByRir: { 0: 1.0, 1: 0.52, 2: 0.42, 3: 0.32, 4: 0.25, 5: 0.2 }, // 0,1,3 S: Refalo 2023; 2 interpolated; 4,5 A (5 = 5 or more)
+  // Lookup: effortByRir[min(RIR, 5)]. Values for RIR 0, 1, 3 are Refalo 2023's acute
+  // velocity-loss ratios at 4 min (S: a measure of the immediate drop, NOT recovery time).
+  // Using them as fatigue weights is A. RIR 2 (midpoint), 4 and 5+ are A.
+  effortByRir: { 0: 1.0, 1: 0.52, 2: 0.42, 3: 0.32, 4: 0.25, 5: 0.2 },
   rirWhenMissing: 1,                                      // A
 
   recovery: {
     minHours: 12,                                         // A (trial: ~6 h, Moran-Navarro 2017)
     maxHours: 72,                                         // S: Moran-Navarro 2017, Bartolomei 2017; MVP
-    capFatigueDose: 4,                                    // A
+    capFatigueDose: 4,                                    // A (fatigue dose at which maxHours is reached)
     fatiguedUntilFraction: 1 / 3,                         // A (reproduces MVP 24 h at 72 h)
   },
 
-  // Multiplier on the Recovery Window per Muscle Group. All 1.0: no supported difference (Q1).
+  // Multiplier on the Recovery Window per Muscle Group. All 1.0 is A ("no supported
+  // difference", Q1). Keys are taxonomy group IDs (muscle-taxonomy.md); CONTEXT.md names:
+  //   chest = Chest, shoulders = Shoulders, back = Back, arms = Arms, core = Core,
+  //   hips = Glutes and hips, quads = Quads, hamstrings = Hamstrings,
+  //   'lower-legs' = Calves and shins.
   groupScale: {
     chest: 1.0, shoulders: 1.0, back: 1.0, arms: 1.0, core: 1.0,
-    hips: 1.0, quads: 1.0, hamstrings: 1.0, 'lower-legs': 1.0,
+    hips: 1.0, quads: 1.0, hamstrings: 1.0, 'lower-legs': 1.0,   // all A
   },
-  muscleScale: {} as Record<string, number>,             // per Muscle ID overrides, empty by default
+  muscleScale: {} as Record<string, number>,             // per Muscle ID overrides, empty by default (A)
 
   // Weekly Working Sets per Muscle Group (fractional: Secondary = 0.5). Same for every group.
   weeklySets: {
-    min: 4,                                               // S: Pelland 2026 preprint, min detectable gain
-    targetLow: 10,                                        // S: Schoenfeld 2017 (10+), Baz-Valle 2022 (12+), Pelland 2026
-    targetHigh: 20,                                       // S: Baz-Valle 2022 (12-20), Pelland 2026 tiers (11-18, 19-29)
-    softCeiling: 30,                                      // S: Pelland 2026 preprint tier boundary; evidence thin above
+    min: 4,                                               // S: Pelland 2026 preprint (Sept 2024), minimum detectable gain
+    targetLow: 12,                                        // S: Baz-Valle 2022 (12-20 per Muscle Group)
+    targetHigh: 20,                                       // S: Baz-Valle 2022
+    softCeiling: 30,                                      // S: Pelland 2026 preprint (Sept 2024) tier boundary; evidence thin above
     maxRirCounted: null as number | null,                 // A: null = count every Working Set
   },
 
@@ -170,7 +179,7 @@ export const FATIGUE_CONFIG = {
 } as const
 ```
 
-Weekly Working Set bands the UI could use: under 4 = below the lowest detectable-gain figure; 4-9 = some gain, high efficiency; **10-20 = target**; 21-30 = diminishing returns; over 30 = insufficient data on benefit. Targets are a goal, not a limit: [Pelland 2026][pelland2026] found no clear plateau.
+Weekly Working Set bands the UI could use, aligned with the tiers in the Sept 2024 [Pelland preprint][pelland2024pre] (the published 2026 version was not read past its abstract): under 4 = below the minimum detectable gain; 4-10 = detectable, efficient at 5-10 (**4 is the minimum detectable gain; "efficient" is the preprint's 5-10 tier**); 11-18; 19-29; 30-42; 43 or more = unclear. The **target** is a separate overlay of **12-20** from [Baz-Valle 2022][bazvalle2022] (a Muscle Group-agnostic range; not a Pelland tier). Targets are a goal, not a limit: [Pelland 2026][pelland2026] found no clear plateau.
 
 ## Worked examples
 
@@ -181,14 +190,18 @@ All numbers are made-up demo values (ADR-0005). Assumed tags for the bench press
 | Muscle | Role | U (Fatigue Dose) | Recovery Window `D` | Fatigued until |
 |---|---|---|---|---|
 | Pectoralis major, sternocostal | Primary | 4 x 1.0 x 0.52 = **2.08** | 12 + 60 x 2.08 / 4 = **43.2 h** | 43.2 / 3 = 14.4 h |
+| Pectoralis major, clavicular part | Secondary | 4 x 0.5 x 0.52 = **1.04** | 12 + 60 x 1.04 / 4 = **27.6 h** | 9.2 h |
 | Deltoid, anterior part | Secondary | 4 x 0.5 x 0.52 = **1.04** | 12 + 60 x 1.04 / 4 = **27.6 h** | 9.2 h |
 | Triceps brachii, lateral head | Secondary | 1.04 | 27.6 h | 9.2 h |
+
+The medial and long triceps heads are also Secondary and match the lateral-head row exactly (same U, D and states); they are left out of the table to keep it short.
 
 Fatigue Level `L = 1 - elapsed / D` and state:
 
 | Muscle | 24 h | 48 h | 72 h |
 |---|---|---|---|
 | Sternocostal pec (P) | L = 1 - 24/43.2 = 0.44 -> **Recovering** | 48 >= 43.2 -> **Ready** | **Ready** |
+| Clavicular pec (S) | L = 1 - 24/27.6 = 0.13 -> **Recovering** | **Ready** | **Ready** |
 | Anterior deltoid (S) | L = 1 - 24/27.6 = 0.13 -> **Recovering** | **Ready** | **Ready** |
 | Triceps lateral head (S) | **Recovering** (0.13) | **Ready** | **Ready** |
 
@@ -213,7 +226,7 @@ At Wednesday 06:00 (t = 36 h after Monday, 12 h after Tuesday): Monday's L = 1 -
 
 ### Example 4: weekly Working Sets for the Chest group
 
-Bench 4 sets (sternocostal Primary, clavicular Secondary) + incline press 3 sets (clavicular Primary, sternocostal Secondary) = 7 Working Sets at weight 1.0, each counted once for the Chest group even though two chest Muscles are tagged. The Shoulders group gets the same bench sets once at 0.5 (front-delt Secondary) = 2.0 plus incline 3 x 0.5 = 1.5. Chest: 7 (band 4-9); Shoulders: 3.5 before any overhead work (under the 4 minimum).
+Bench 4 sets (sternocostal Primary, clavicular Secondary) + incline press 3 sets (clavicular Primary, sternocostal Secondary) = 7 Working Sets at weight 1.0, each counted once for the Chest group even though two chest Muscles are tagged. The Shoulders group gets the same bench sets once at 0.5 (front-delt Secondary) = 2.0 plus incline 3 x 0.5 = 1.5. Chest: 7 (band 4-10, below the 12-20 target); Shoulders: 3.5 before any overhead work (under the 4 minimum).
 
 ## Proposed doc changes (for Liam to approve, not applied)
 
@@ -234,13 +247,14 @@ Replace the story **REC: Volume-weighted fatigue model**:
 
 > **REC: Volume-weighted fatigue model** (v1.2, domain, TDD, blocked by the research)
 > - Pure function: Workouts + Exercise Library + fatigue config + now -> Recovery State and Fatigue Level per Muscle, behind the same interface as the time-only rules
-> - Config holds `roleWeight`, `effortByRir`, `rirWhenMissing`, `recovery`, `groupScale` and `muscleScale` (see `docs/research/muscle-fatigue.md` for values and sources)
+> - Config holds `roleWeight`, `effortByRir`, `rirWhenMissing`, `recovery`, `groupScale`, `muscleScale`, `weeklySets` and `watchAdjustment` (see `docs/research/muscle-fatigue.md` for values and sources)
+> - Proposal: the config lives in one shared fatigue config module, e.g. `src/fatigue/fatigue.config.ts`, imported by both the fatigue model and the Weekly Sets insight so the targets and the Recovery Window share one source. The path is a suggestion; no `src/` module exists yet.
 > - Tests cover the worked examples in the research doc and the MVP boundaries at the maximum dose
 
 Add a story:
 
 > **INS: Weekly Working Sets per Muscle Group** (v1.2)
-> - Counts each Working Set once per Muscle Group per Monday-Sunday week (Primary 1, Secondary 0.5) and shows it against the band in the config (below 4, 4-9, 10-20 target, 21-30, over 30)
+> - Counts each Working Set once per Muscle Group per Monday-Sunday week (Primary 1, Secondary 0.5) and shows it against the bands in the config (below 4, 4-10, 11-18, 19-29, 30-42, 43+) with the 12-20 target marked
 
 ### `CONTEXT.md`
 
