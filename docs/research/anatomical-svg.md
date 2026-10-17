@@ -11,7 +11,7 @@ Which openly licensed front and back muscle-anatomy artwork can the **Recovery M
 **Use the path data from [`react-native-body-highlighter`][rnbh-repo] (H, MIT)**, with the legs rotated outward at the hip for a wider stance, every original colour stripped, all muscles on one grey base and each Muscle coloured by its Recovery State. Liam chose this on 2026-10-17 from a side-by-side comparison of A and H, both greyed and state-coloured (the "Recovery Map artwork options" board in the MVP mobile design artifact). He wanted a **fitness style** like stock "athletic muscle chart" vectors (separated muscle blocks, legs apart), not a medical illustration. Stock art can't be used in a public repo, so it was only a style reference.
 
 - **Licence impact:** MIT. Keep the copyright and permission notice with the artwork. There is no share-alike, so nothing about the repo's licence changes.
-- **Taxonomy coverage:** against the provisional Muscle list in [Recommendation](#recommendation), 35 of 39 Muscles work as-is or after a cut. For 3 of those, which sub-path is which still has to be confirmed. 4 are gaps: brachialis, sartorius, peroneals, and one of infraspinatus / teres major / rhomboids. Deltoid, pec major, trapezius and biceps are one shape each and need cutting into heads.
+- **Taxonomy coverage:** against the provisional Muscle list in [Recommendation](#recommendation), 35 of 40 Muscles work as-is or after a cut. For 3 of those, which sub-path is which still has to be confirmed. 5 are gaps: brachialis, sartorius, gracilis, peroneals, and one of infraspinatus / teres major / rhomboids. Deltoid, pec major, trapezius and biceps are one shape each and need cutting into heads.
 - **Runner-up:** A, Wikimedia Commons `Muscles front and back.svg` (OpenStax, redrawn by Tomáš Kebert & umimeto.org, **CC BY-SA 4.0**). It's finer medical anatomy with one closed path per muscle, but it's in a textbook style with the legs together, and share-alike applies. It remains the fallback if H's artwork provenance turns out to be a problem (see [Unverified](#unverified--limits)).
 
 A draft ADR is at `docs/adr/0007-anatomical-svg-source.md` (Status: proposed).
@@ -29,7 +29,7 @@ A draft ADR is at `docs/adr/0007-anatomical-svg-source.md` (Status: proposed).
 | E. OpenStax "1105 Anterior and Posterior Views of Muscles" | [Commons][c-openstax] | CC BY 4.0 | Required: OpenStax | None (BY only) | 0: JPG raster (A is the vector redraw of this) | n/a | Raster | 1.7 MB JPG | Full trace (already done by A) |
 | F. Servier Medical Art "Musculature front/back" | [front][servier-front], [back][servier-back] | CC BY 4.0 | Required: "Image(s) provided by Servier Medical Art (https://smart.servier.com), licensed under CC BY 4.0" | None (BY only) | Unverified: PNG download (516×1356); vector only inside a PPTX kit made of thousands of freeform shading shapes | Unverified | Detailed fibre shading, poor for flat state colours | 0.36 MB PNG; 3.6 MB PPTX kit | High: convert PPTX freeforms → SVG, rebuild outlines |
 | G. wger muscle SVGs | [repo][wger-repo] | Repo AGPL-3.0; the muscle images cite Termininja BY-SA 3.0 as source | Unclear (see notes) | Unclear | 15 muscles (wger API), one overlay SVG per muscle | Coarse | Photographic base (B) | 321 KB / 404 KB base + 16 × ~3 KB | High, and licence is ambiguous |
-| **H. react-native-body-highlighter (chosen)** | [repo][rnbh-repo] | MIT | Keep copyright + licence notice | None | 23 slugs; 159 paths across both sides (≈31 front / 25 back per side) | Medium: quads ×3, hamstrings ×4, calves ×4, upper-back ×3, triceps ×3 sub-paths, but deltoid/pec/trap are one shape each | Good: clean stylised shapes | 25 KB + 21 KB TS | Low–medium: re-tag sub-paths; React Native component, so reuse path data only |
+| **H. react-native-body-highlighter (chosen)** | [repo][rnbh-repo] | MIT | Keep copyright + licence notice | None | 23 slugs; 159 paths across both views (per side: 29 front / 25 back muscle paths) | Medium: quads ×3, hamstrings ×4, calves ×4, upper-back ×3, triceps ×3 sub-paths, but deltoid/pec/trap are one shape each | Good: clean stylised shapes | 25 KB + 21 KB TS | Low–medium: re-tag sub-paths; React Native component, so reuse path data only |
 | I. react-body-highlighter | [repo][rbh-repo] | MIT | Keep notice | None | 22 muscle names, 66 polygons | Coarse (older subset of H) | OK, polygonal | 6 KB | Low but coarse |
 | J. react-muscle-highlighter | [repo][rmh-repo] | MIT (no copyright line) | Keep notice | None | Same assets as H (byte-identical) | As H | As H | As H | As H; prefer upstream H |
 | K. body-muscles | [repo][bm-repo] | Apache-2.0 | Keep LICENSE + NOTICE, state changes | None | 89 named regions incl. left/right (40 front, 49 back) | Finest naming of the libraries (traps ×3, triceps ×2, hamstrings ×2, gastroc ×2 + soleus, glute med/max, serratus, erectors, QL) | Crude low-poly polygons with gaps | 12.8 KB + 11.9 KB TS | Low: rename/merge L/R; art quality is the cost |
@@ -125,22 +125,22 @@ This only matters if we fall back to A; H is MIT. In short: no, provided the art
 **Licence implications**
 
 1. MIT: "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software." ([LICENSE][rnbh-license])
-2. Keep the notice (`Copyright (c) 2022 ELABBASSI Hicham` plus the MIT permission text) in a comment at the top of the SVG file, and in a third-party notices section of the README. Because the PWA ships the file, also list it on an in-app About/licences line:
+2. Keep the notice (`Copyright (c) 2022 ELABBASSI Hicham` plus the MIT permission text) in a comment at the top of the SVG file, and in a third-party notices section of the README. Build tools (SVGO, inlining, upload sanitisers) strip comments, so the README notice and the in-app line are what cover the shipped copy. Because the PWA ships the file, also list it on an in-app About/licences line:
    > Body diagram adapted from react-native-body-highlighter by ELABBASSI Hicham (https://github.com/HichamELBSI/react-native-body-highlighter), MIT licence. Modified: legs repositioned, recoloured, regions split and tagged with Muscle IDs.
 3. No share-alike: the modified file can sit under the repo's own licence, and the [Share-alike](#share-alike-does-a-cc-by-sa-asset-force-the-whole-repo) section only applies if we ever fall back to A.
 
 **How much of the taxonomy it can show**
 
-The Muscle taxonomy (EXL-002, SCRUM-7) isn't written yet. The list below is this doc's own **provisional** list of 39 Muscles, and coverage must be rechecked against the real taxonomy.
+The Muscle taxonomy (EXL-002, SCRUM-7) isn't written yet. The list below is this doc's own **provisional** list of 40 Muscles, and coverage must be rechecked against the real taxonomy.
 
 | Status | Muscles (count) |
 |---|---|
 | Re-tag an existing sub-path | latissimus dorsi; triceps long, lateral and medial heads (3 back sub-paths); forearm flexors (front, 3 sub-paths); forearm extensors (back, 4); rectus abdominis (4 segments); external oblique (front sub-paths); gluteus maximus and gluteus medius (2 gluteal sub-paths); rectus femoris, vastus lateralis and vastus medialis (3 quadriceps sub-paths); adductors (3); biceps femoris, semitendinosus and semimembranosus (4 hamstring sub-paths); gastrocnemius medial and lateral heads and soleus (4 back calf sub-paths); tibialis anterior; erector spinae (2 lower-back sub-paths). **22** |
 | Probably available, sub-path to confirm | two of infraspinatus / teres major / rhomboids (the 2 non-lat upper-back sub-paths); serratus anterior (the upper of the 8 front oblique sub-paths look like digitations). **3** |
 | Available after we cut an existing shape | deltoid anterior / lateral / posterior (one shape per view); pectoralis major clavicular vs sternal (one shape); trapezius upper / middle / lower (one shape per view); biceps long vs short head (one shape). **10** |
-| **Gap**: no shape in H | brachialis; sartorius; peroneals; the third of infraspinatus / teres major / rhomboids. **4** |
+| **Gap**: no shape in H | brachialis; sartorius; gracilis; peroneals; the third of infraspinatus / teres major / rhomboids. **5** |
 
-So **35 of the 39 provisional Muscles** can be shown, 3 of them pending confirmation, and 4 are gaps. **Open question for EXL-002:** ADR-0006 says Muscle IDs must match region IDs, so a Muscle without a shape needs a decision. The options are: (a) draw a small region for it, (b) let it borrow the region of a neighbouring muscle (e.g. brachialis with biceps), or (c) leave it out of the taxonomy.
+So **35 of the 40 provisional Muscles** can be shown, 3 of them pending confirmation, and 5 are gaps. **Open question for EXL-002:** ADR-0006 says Muscle IDs must match region IDs, so a Muscle without a shape needs a decision. The options are: (a) draw a small region for it, (b) let it borrow the region of a neighbouring muscle (e.g. brachialis with biceps), or (c) leave it out of the taxonomy.
 
 **Splitting work** (for the Anatomical Recovery Map story; estimate about 1 day of SVG work)
 
@@ -170,7 +170,7 @@ So **35 of the 39 provisional Muscles** can be shown, 3 of them pending confirma
   > - Findings in `docs/research/anatomical-svg.md`; source recorded in ADR-0007 (react-native-body-highlighter path data, MIT)
 - Change **REC: Anatomical Recovery Map** to:
   > **REC: Anatomical Recovery Map** (MVP, blocked by the EXL Muscle taxonomy)
-  > - Front/back diagram from the ADR-0007 artwork, legs widened, grey base; each region ID matches a Muscle ID and is coloured by its Recovery State; tapping a region lists its Muscles, their states and when they were last trained; the same component renders on phone and dashboard
+  > - Front/back diagram from the ADR-0007 artwork, legs widened, grey base; each region ID matches a Muscle ID and is coloured by its Recovery State, and a Muscle with no Working Sets yet stays grey (no state); tapping a region lists its Muscles, their states and when they were last trained; the same component renders on phone and dashboard
   > - The MIT notice is kept in the SVG file, the README third-party notices and the app's About screen
 
 **`docs/product/features/exl-exercise-library.md`** (EXL: Muscle taxonomy story), add a bullet:
