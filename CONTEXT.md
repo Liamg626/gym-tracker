@@ -34,7 +34,7 @@ Any Set that is not a Warm-up Set.
 _Avoid_: Hard set, effective set
 
 **RIR**:
-Reps in reserve: how many more reps the lifter could have done at the end of a Set.
+Reps in reserve: how many more reps the lifter could have done at the end of a Set. Optional; a Working Set with no RIR is treated as RIR 1 by the fatigue model.
 _Avoid_: RPE
 
 **Volume**:
@@ -63,7 +63,7 @@ One shape on the Recovery Map. A Region shows one or more Muscles and is coloure
 _Avoid_: Area, zone, body part
 
 **Primary Muscle / Secondary Muscle**:
-The role a Muscle plays in an Exercise: the main mover, or an assisting one.
+The role a Muscle plays in an Exercise: the main mover, or an assisting one. In the fatigue model a Secondary Muscle takes half the fatigue of a Primary Muscle for the same Working Set.
 
 **Recovery State**:
 A Muscle's readiness: **Fatigued** (red, just worked), **Recovering** (amber) or **Ready** (green).
@@ -73,6 +73,22 @@ _Avoid_: Fresh, sore, rested
 **Recovery Map**:
 The front-and-back body diagram that colours each Region by the Recovery State of its Muscles.
 _Avoid_: Heatmap, body chart
+
+**Fatigue Dose**:
+How hard one Workout hit a Muscle: the sum over its Working Sets of 1 (Primary Muscle) or 0.5 (Secondary Muscle), times an effort factor from the Set's RIR. Internal to the fatigue model; not shown in the UI.
+_Avoid_: Effective sets
+
+**Recovery Window**:
+The hours after a Workout until a Muscle is Ready, set by the Muscle's Fatigue Dose from that Workout (12 h at the lowest dose, 72 h at a Fatigue Dose of 4 or more).
+_Avoid_: Rest period, cooldown
+
+**Fatigue Level**:
+A Muscle's remaining fatigue from 1 (just worked) to 0 (Ready), falling in a straight line across the Recovery Window. Recovery State is read from it: Fatigued for the first third of the window, Recovering after that, Ready at 0.
+_Avoid_: Fatigue score
+
+**Weekly Sets**:
+Working Sets per Muscle Group over a Monday-Sunday week, each counted once, with a Secondary Muscle counting half a set.
+_Avoid_: Hard sets, effective sets
 
 ### Body
 
