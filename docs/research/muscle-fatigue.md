@@ -88,7 +88,7 @@ What follows from these:
 - **HRV and resistance exercise.** Acute resistance exercise lowers parasympathetic modulation more than aerobic exercise, but resistance training has no effect on resting HRV in healthy young adults ([Kingsley 2016][kingsley2016], review abstract). A review of cardiac parasympathetic reactivation states it "does not appear to coincide with the recovery of all physiological systems (e.g. energy stores or the neuromuscular system)" and that data after strength work are limited ([Stanley 2013][stanley2013], abstract). HRV-guided training beat fixed training only by a small, non-significant margin for fitness and endurance performance, and all of that evidence is aerobic ([Manresa-Rocamora 2021][manresa2021], abstract).
 - **Resting heart rate.** I found no resistance-training source that relates resting HR to local muscle recovery. It is not used.
 - **Wearable accuracy.** A meta-analysis of 24 studies (798 people) found consumer wrist-worn trackers differ from polysomnography: total sleep time -16.9 min (95% CI -26.3 to -7.4), sleep efficiency -4.7 points, wake after sleep onset +13.3 min ([Lee 2025][lee2025], abstract). Huami Arc and Xiaomi Mi Band 5 were among the devices; I did not find a Zepp/Amazfit-specific validation.
-- **Recommendation.** Keep **Watch Data** out of the v1.2 recovery model. The evidence supports sleep and HRV as context for the Weekly Breakdown, not as a number that shortens or lengthens a Recovery Window. If added later, the config has a reserved `watchAdjustment: null`.
+- **Recommendation.** Keep **Watch Data** out of the v1.2 recovery model. The evidence supports sleep and HRV as context for the Weekly Breakdown, not as a number that shortens or lengthens a Recovery Window. (Watch Data was later dropped altogether, ADR-0008, so the config has no `watchAdjustment` field.)
 
 ### Q6: Weekly Working Sets per Muscle Group
 
@@ -157,11 +157,12 @@ export const FATIGUE_CONFIG = {
 
   // Multiplier on the Recovery Window per Muscle Group. All 1.0 is A ("no supported
   // difference", Q1). Keys are taxonomy group IDs (muscle-taxonomy.md); CONTEXT.md names:
-  //   chest = Chest, shoulders = Shoulders, back = Back, arms = Arms, core = Core,
+  //   chest = Chest, shoulders = Shoulders, back = Back, biceps = Biceps, triceps = Triceps,
+  //   forearms = Forearms, core = Core,
   //   hips = Glutes and hips, quads = Quads, hamstrings = Hamstrings,
   //   'lower-legs' = Calves and shins.
   groupScale: {
-    chest: 1.0, shoulders: 1.0, back: 1.0, arms: 1.0, core: 1.0,
+    chest: 1.0, shoulders: 1.0, back: 1.0, biceps: 1.0, triceps: 1.0, forearms: 1.0, core: 1.0,
     hips: 1.0, quads: 1.0, hamstrings: 1.0, 'lower-legs': 1.0,   // all A
   },
   muscleScale: {} as Record<string, number>,             // per Muscle ID overrides, empty by default (A)
@@ -183,8 +184,6 @@ export const FATIGUE_CONFIG = {
     ],
     maxRirCounted: null as number | null,                 // A: null = count every Working Set
   },
-
-  watchAdjustment: null,                                  // A: reserved; no supported number (Q5)
 } as const
 ```
 
