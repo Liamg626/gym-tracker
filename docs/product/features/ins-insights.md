@@ -12,9 +12,9 @@ Full charts work best on the wider dashboard; the phone gets compact versions. C
 
 **INS: Goals view** (v1.1): all Milestones and Body Goals with progress
 
-**INS: Volume per Muscle** (v1.2): weekly Volume per Muscle (rolled up into Muscle Groups for readability), and Working Sets per Muscle against the target ranges from Settings
+**INS: Volume per Muscle** (v1.2): weekly Volume per Muscle (rolled up into Muscle Groups for readability), and Weekly Sets per Muscle Group against the bands in the fatigue config (below 4, 4-10, 11-18, 19-29, 30-42, 43+) with the 12-20 target marked (see `docs/research/muscle-fatigue.md`)
 
 **INS: Weekly Breakdown** (v1.2)
 - Monday–Sunday (Europe/London), available from Monday, shown in the app and on the dashboard, with past weeks browsable
-- Contains: Workouts vs Weekly Target and total duration; Volume per Muscle Group with change since last week; Working Sets per Muscle vs target range; new PRs; change in Trend Weight and Body Fat Estimate; Watch Data averages (resting HR, HRV, sleep) once WCH exists; progress on each goal
+- Contains: Workouts vs Weekly Target and total duration; Volume per Muscle Group with change since last week; Weekly Sets per Muscle Group vs target; new PRs; change in Trend Weight and Body Fat Estimate; Watch Data averages (resting HR, HRV, sleep) once WCH exists; progress on each goal
 - No AI-written summary (decided)

@@ -241,7 +241,9 @@ At Wednesday 06:00 (t = 36 h after Monday, 12 h after Tuesday): Monday's L = 1 -
 
 Bench 4 sets (sternocostal Primary, clavicular Secondary) + incline press 3 sets (clavicular Primary, sternocostal Secondary) = 7 Working Sets at weight 1.0, each counted once for the Chest group even though two chest Muscles are tagged. The Shoulders group gets the same bench sets once at 0.5 (front-delt Secondary) = 2.0 plus incline 3 x 0.5 = 1.5. Chest: 7 (band 4-10, below the 12-20 target); Shoulders: 3.5 before any overhead work (under the 4 minimum).
 
-## Proposed doc changes (for Liam to approve, not applied)
+## Proposed doc changes (applied 2026-10-17)
+
+Liam approved these on 2026-10-17 and they are applied in the same PR. RIR stays optional. The INS story was merged into the existing **INS: Volume per Muscle** story in `ins-insights.md` instead of being added as a new one.
 
 ### `docs/product/features/rec-recovery.md`
 
@@ -306,10 +308,10 @@ Answered by Liam on 2026-10-17:
 2. **Name for the internal fatigue unit:** Fatigue Dose (new glossary term; "effective set" stays avoided).
 3. **Secondary weight for fatigue:** keep 0.5. Example 2 shows the trade-off; tune `roleWeight.secondary` later if needed.
 4. **Minimum-dose cutoff:** none. Any Working Set counts (Example 3's quirk accepted).
+5. **RIR stays optional.** An unrecorded RIR counts as RIR 1, which lengthens Windows if most Working Sets are really RIR 3.
 
 Still open:
 
-5. **Should RIR be mandatory?** The model depends on it; an unrecorded RIR defaults to 1, which lengthens Windows if most of your Working Sets are really RIR 3.
 6. **Validation.** Are you happy to compare model state with the next Workout's Estimated 1RM and reps on your own data, locally (ADR-0005: demo data only in the repo)?
 
 ## Unverified / limits
