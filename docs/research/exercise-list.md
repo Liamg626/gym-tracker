@@ -26,7 +26,7 @@ Liam's gym has all of the following (his description, 2026-10-17).
 - Dumbbells
 - EZ bar
 - Squat rack / power rack
-- Benches: flat, incline and decline
+- Benches: flat, incline and decline (an adjustable bench that also sets upright is assumed)
 
 **Smith machine**
 
@@ -69,7 +69,7 @@ Liam's gym has all of the following (his description, 2026-10-17).
 - Accessories: dip belt, ankle strap cable attachment, landmine attachment, ab wheel, resistance bands, medicine ball, stability ball, plyo box or step, tib bar, ankle/wrist cuff, half rope, wide neutral-grip lat bar
 - Bars: trap bar (hex bar), safety squat bar
 - Benches: free-standing preacher bench, captain's chair
-- Machines: plate-loaded iso-lateral presses and rows, selectorised chest-supported row, assisted pull-up / dip machine, machine lateral raise, machine overhead triceps extension, ab crunch machine, seated back extension machine, hip thrust machine, glute kickback machine, standing leg curl, horizontal (seated) leg press, plate-loaded lat pulldown, plate-loaded decline press, seated dip machine, donkey calf raise machine, glute-ham developer (GHD)
+- Machines: plate-loaded iso-lateral presses and rows, selectorised chest-supported row, assisted pull-up / dip machine, machine lateral raise, machine overhead triceps extension, ab crunch machine, seated back extension machine, hip thrust machine, glute kickback machine, standing leg curl, horizontal (seated) leg press, plate-loaded lat pulldown, plate-loaded seated row, plate-loaded decline press, seated dip machine, donkey calf raise machine, glute-ham developer (GHD), horizontal hyperextension bench
 
 ## Chest
 
@@ -165,15 +165,15 @@ Near misses: Dumbbell Pullover, Landmine Press (listed under Shoulders).
 | Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
 |---|---|---|---|---|---|
 | Standing Barbell Overhead Press | Barbell, rack | No | Pronated, standing | option | |
-| Seated Barbell Overhead Press | Barbell, rack, upright bench | No | Pronated, seated | option | |
+| Seated Barbell Overhead Press | Barbell, rack, Adjustable bench set upright | No | Pronated, seated | option | |
 | Behind-the-Neck Barbell Press | Barbell, rack | No | Pronated, wide, seated or standing | option | |
 | Barbell Push Press | Barbell, rack | No | Pronated, standing, leg drive | option | |
-| Seated Dumbbell Shoulder Press | Dumbbells, upright bench | No | Pronated, seated | option | |
+| Seated Dumbbell Shoulder Press | Dumbbells, Adjustable bench set upright | No | Pronated, seated | option | |
 | Standing Dumbbell Shoulder Press | Dumbbells | No | Pronated, standing | option | |
-| Seated Neutral-Grip Dumbbell Shoulder Press | Dumbbells, upright bench | No | Neutral, seated | option | |
+| Seated Neutral-Grip Dumbbell Shoulder Press | Dumbbells, Adjustable bench set upright | No | Neutral, seated | option | |
 | Single-Arm Standing Dumbbell Shoulder Press | Dumbbell | Yes | Pronated or neutral, standing | option | |
-| Seated Arnold Press | Dumbbells, upright bench | No | Rotating supinated to pronated, seated | option | |
-| Seated Smith Machine Shoulder Press | Smith machine, upright bench | No | Pronated, seated | option | |
+| Seated Arnold Press | Dumbbells, Adjustable bench set upright | No | Rotating supinated to pronated, seated | option | |
+| Seated Smith Machine Shoulder Press | Smith machine, Adjustable bench set upright | No | Pronated, seated | option | |
 | Selectorised Machine Shoulder Press | Selectorised machine (assumed) | No | Pronated or neutral, seated | option | |
 | Plate-Loaded Shoulder Press | Plate-loaded machine | No | Pronated or neutral, seated | option | |
 | Single-Arm Plate-Loaded Shoulder Press | Plate-loaded iso-lateral machine (assumed) | Yes | Pronated or neutral, seated | option | |
@@ -264,7 +264,7 @@ Near misses: shoulder external rotation (cable or band), Arnold Press is listed 
 | Underhand Seated Cable Row | Selectorised seated row, straight bar | No | Supinated, shoulder width | option | |
 | Single-Arm Seated Cable Row | Cable, handle | Yes | Neutral, seated | option | |
 | Chest-Supported Machine Row | Selectorised chest-supported row (assumed) | No | Neutral or pronated, seated, chest on pad | option | |
-| Plate-Loaded Seated Row | Plate-loaded machine | No | Neutral or pronated, seated | option | |
+| Plate-Loaded Seated Row | Plate-loaded seated row (assumed) | No | Neutral or pronated, seated | option | |
 | Single-Arm Plate-Loaded Seated Row | Plate-loaded iso-lateral machine (assumed) | Yes | Neutral or pronated, seated | option | |
 
 ### T-Bar Row — current
@@ -285,7 +285,7 @@ Main group Back (erector spinae). The glutes and hamstrings also work, and a rou
 | 45-Degree Back Extension | Back extension bench | No | Arms crossed or behind head | option | |
 | Weighted 45-Degree Back Extension | Back extension bench, plate or dumbbell | No | Weight held at chest | option | |
 | Single-Leg 45-Degree Back Extension | Back extension bench | Yes | One leg anchored | option | |
-| 90-Degree Back Extension | Horizontal hyperextension bench or GHD (assumed) | No | Arms crossed | option | |
+| 90-Degree Back Extension | Horizontal hyperextension bench (assumed) or GHD (assumed) | No | Arms crossed | option | |
 | Seated Machine Back Extension | Selectorised machine (assumed) | No | Seated, pad on upper back | option | |
 | Floor Back Extension (Superman) | Bodyweight | No | Lying face down | option | |
 
@@ -341,10 +341,10 @@ Near misses: Barbell Shrug and Dumbbell Shrug (upper trapezius), Cable Pull-Thro
 | Cable Overhead Triceps Extension (Rope) | Cable, rope | No | Neutral, standing facing away | option | |
 | Cable Overhead Triceps Extension (Bar) | Cable, straight bar or EZ bar | No | Pronated, standing facing away | option | |
 | Cable Single-Arm Overhead Triceps Extension | Cable, handle | Yes | Neutral, standing | option | |
-| Seated Dumbbell Overhead Triceps Extension | Dumbbell, upright bench | No | Both hands on one dumbbell, seated | option | |
+| Seated Dumbbell Overhead Triceps Extension | Dumbbell, Adjustable bench set upright | No | Both hands on one dumbbell, seated | option | |
 | Standing Dumbbell Overhead Triceps Extension | Dumbbell | No | Both hands on one dumbbell, standing | option | |
 | Single-Arm Dumbbell Overhead Triceps Extension | Dumbbell | Yes | Neutral, seated or standing | option | |
-| Seated EZ-Bar Overhead Triceps Extension | EZ bar, upright bench | No | Pronated, angled grip, seated | option | |
+| Seated EZ-Bar Overhead Triceps Extension | EZ bar, Adjustable bench set upright | No | Pronated, angled grip, seated | option | |
 | Machine Overhead Triceps Extension | Selectorised machine (assumed) | No | Neutral, seated | option | |
 
 ### Triceps Pushdown — current
