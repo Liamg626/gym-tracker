@@ -53,6 +53,9 @@ Liam's gym has all of the following (his description, 2026-10-17).
 - Hip abductor and hip adductor
 - Preacher curl
 - Calf raise
+
+**Benches and stations**
+
 - Back extension bench (45-degree)
 - Dip station
 
@@ -63,9 +66,10 @@ Liam's gym has all of the following (his description, 2026-10-17).
 
 **Assumed, not confirmed** (used by some variants below; marked "(assumed)" in the tables)
 
-- Accessories: dip belt, ankle strap cable attachment, landmine attachment, ab wheel, resistance bands, medicine ball, stability ball, plyo box or step, skipping rope, tib bar
+- Accessories: dip belt, ankle strap cable attachment, landmine attachment, ab wheel, resistance bands, medicine ball, stability ball, plyo box or step, tib bar, ankle/wrist cuff, half rope, wide neutral-grip lat bar
 - Bars: trap bar (hex bar), safety squat bar
-- Machines: assisted pull-up / dip machine, machine lateral raise, machine overhead triceps extension, ab crunch machine, seated back extension machine, hip thrust machine, glute kickback machine, standing leg curl, horizontal (seated) leg press, plate-loaded lat pulldown, plate-loaded decline press, seated dip machine, donkey calf raise machine, glute-ham developer (GHD)
+- Benches: free-standing preacher bench, captain's chair
+- Machines: plate-loaded iso-lateral presses and rows, selectorised chest-supported row, assisted pull-up / dip machine, machine lateral raise, machine overhead triceps extension, ab crunch machine, seated back extension machine, hip thrust machine, glute kickback machine, standing leg curl, horizontal (seated) leg press, plate-loaded lat pulldown, plate-loaded decline press, seated dip machine, donkey calf raise machine, glute-ham developer (GHD)
 
 ## Chest
 
@@ -79,7 +83,7 @@ Liam's gym has all of the following (his description, 2026-10-17).
 | Single-Arm Incline Dumbbell Press | Dumbbell, incline bench | Yes | Pronated or neutral, incline | option | |
 | Smith Machine Incline Bench Press | Smith machine, incline bench | No | Pronated, incline | option | |
 | Plate-Loaded Incline Chest Press | Plate-loaded machine | No | Pronated or neutral, seated | option | |
-| Single-Arm Plate-Loaded Incline Chest Press | Plate-loaded iso-lateral machine | Yes | Pronated or neutral, seated | option | |
+| Single-Arm Plate-Loaded Incline Chest Press | Plate-loaded iso-lateral machine (assumed) | Yes | Pronated or neutral, seated | option | |
 | Incline Cable Chest Press | Dual cables, incline bench | No | Pronated (handles), incline | option | |
 
 ### Chest Fly (Pec Deck) — current
@@ -126,7 +130,7 @@ Main group Chest (with a forward lean). The triceps are a big Secondary Muscle, 
 | Dumbbell Floor Press | Dumbbells | No | Neutral or pronated, lying on floor | option | |
 | Smith Machine Bench Press | Smith machine, flat bench | No | Pronated | option | |
 | Plate-Loaded Seated Chest Press | Plate-loaded machine | No | Pronated or neutral, seated | option | |
-| Single-Arm Plate-Loaded Seated Chest Press | Plate-loaded iso-lateral machine | Yes | Pronated or neutral, seated | option | |
+| Single-Arm Plate-Loaded Seated Chest Press | Plate-loaded iso-lateral machine (assumed) | Yes | Pronated or neutral, seated | option | |
 | Selectorised Seated Chest Press | Selectorised machine (assumed) | No | Pronated or neutral, seated | option | |
 | Standing Cable Chest Press | Dual cables, handles | No | Pronated, standing | option | |
 | Single-Arm Standing Cable Chest Press | Cable, handle | Yes | Pronated, standing | option | |
@@ -172,7 +176,7 @@ Near misses: Dumbbell Pullover, Landmine Press (listed under Shoulders).
 | Seated Smith Machine Shoulder Press | Smith machine, upright bench | No | Pronated, seated | option | |
 | Selectorised Machine Shoulder Press | Selectorised machine (assumed) | No | Pronated or neutral, seated | option | |
 | Plate-Loaded Shoulder Press | Plate-loaded machine | No | Pronated or neutral, seated | option | |
-| Single-Arm Plate-Loaded Shoulder Press | Plate-loaded iso-lateral machine | Yes | Pronated or neutral, seated | option | |
+| Single-Arm Plate-Loaded Shoulder Press | Plate-loaded iso-lateral machine (assumed) | Yes | Pronated or neutral, seated | option | |
 | Standing Landmine Press | Barbell, landmine (assumed) | No | Both hands on bar end, standing | option | |
 | Half-Kneeling Single-Arm Landmine Press | Barbell, landmine (assumed) | Yes | Neutral, half-kneeling | option | |
 
@@ -184,7 +188,7 @@ Near misses: Dumbbell Pullover, Landmine Press (listed under Shoulders).
 | Seated Dumbbell Lateral Raise | Dumbbells, bench | No | Neutral, seated | option | |
 | Single-Arm Leaning Dumbbell Lateral Raise | Dumbbell, upright to hold | Yes | Neutral, leaning away from a post | option | |
 | Side-Lying Incline Dumbbell Lateral Raise | Dumbbell, incline bench | Yes | Neutral, lying on side on incline bench | option | |
-| Cable Single-Arm Lateral Raise | Cable, handle or cuff | Yes | Neutral, standing, cable low | option | |
+| Cable Single-Arm Lateral Raise | Cable, handle or ankle/wrist cuff (assumed) | Yes | Neutral, standing, cable low | option | |
 | Cable Y-Raise | Dual cables, handles | No | Neutral, standing, both arms crossing | option | |
 | Machine Lateral Raise | Selectorised machine (assumed) | No | Pads on arms, seated | option | |
 | Resistance Band Lateral Raise | Band (assumed) | No | Neutral, standing | option | |
@@ -242,7 +246,7 @@ Near misses: shoulder external rotation (cable or band), Arnold Press is listed 
 |---|---|---|---|---|---|
 | Wide-Grip Lat Pulldown | Selectorised pulldown, wide bar | No | Pronated, wide | option | |
 | Close-Grip Pronated Lat Pulldown | Selectorised pulldown, straight bar | No | Pronated, shoulder width | option | |
-| Wide Neutral-Grip Lat Pulldown | Selectorised pulldown, neutral bar | No | Neutral, wide | option | |
+| Wide Neutral-Grip Lat Pulldown | Selectorised pulldown, wide neutral-grip bar (assumed) | No | Neutral, wide | option | |
 | Close-Grip V-Bar Lat Pulldown | Selectorised pulldown, V-bar | No | Neutral, close | option | |
 | Supinated Lat Pulldown | Selectorised pulldown, straight bar | No | Supinated, shoulder width | option | |
 | Behind-the-Neck Lat Pulldown | Selectorised pulldown, wide bar | No | Pronated, wide, bar behind head | option | |
@@ -259,9 +263,9 @@ Near misses: shoulder external rotation (cable or band), Arnold Press is listed 
 | Wide-Grip Seated Cable Row | Selectorised seated row, wide bar | No | Pronated, wide | option | |
 | Underhand Seated Cable Row | Selectorised seated row, straight bar | No | Supinated, shoulder width | option | |
 | Single-Arm Seated Cable Row | Cable, handle | Yes | Neutral, seated | option | |
-| Chest-Supported Machine Row | Selectorised machine | No | Neutral or pronated, seated, chest on pad | option | |
+| Chest-Supported Machine Row | Selectorised chest-supported row (assumed) | No | Neutral or pronated, seated, chest on pad | option | |
 | Plate-Loaded Seated Row | Plate-loaded machine | No | Neutral or pronated, seated | option | |
-| Single-Arm Plate-Loaded Seated Row | Plate-loaded iso-lateral machine | Yes | Neutral or pronated, seated | option | |
+| Single-Arm Plate-Loaded Seated Row | Plate-loaded iso-lateral machine (assumed) | Yes | Neutral or pronated, seated | option | |
 
 ### T-Bar Row — current
 
@@ -362,14 +366,14 @@ Liam named the single-arm cable version.
 
 | Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
 |---|---|---|---|---|---|
-| EZ-Bar Preacher Curl | EZ bar, preacher bench | No | Supinated, angled grip | option | |
-| Barbell Preacher Curl | Straight barbell, preacher bench | No | Supinated | option | |
-| Reverse-Grip EZ-Bar Preacher Curl | EZ bar, preacher bench | No | Pronated | option | |
-| Single-Arm Dumbbell Preacher Curl | Dumbbell, preacher bench | Yes | Supinated | option | |
+| EZ-Bar Preacher Curl | EZ bar, free-standing preacher bench (assumed) | No | Supinated, angled grip | option | |
+| Barbell Preacher Curl | Straight barbell, free-standing preacher bench (assumed) | No | Supinated | option | |
+| Reverse-Grip EZ-Bar Preacher Curl | EZ bar, free-standing preacher bench (assumed) | No | Pronated | option | |
+| Single-Arm Dumbbell Preacher Curl | Dumbbell, free-standing preacher bench (assumed) | Yes | Supinated | option | |
 | Machine Preacher Curl | Selectorised preacher machine | No | Supinated, seated | option | |
 | Single-Arm Machine Preacher Curl | Selectorised preacher machine | Yes | Supinated, seated | option | |
-| Cable Preacher Curl (Bar) | Cable, straight or EZ bar, preacher bench | No | Supinated | option | |
-| Cable Single-Arm Preacher Curl | Cable, handle, preacher bench | Yes | Supinated | option | |
+| Cable Preacher Curl (Bar) | Cable, straight or EZ bar, free-standing preacher bench (assumed) | No | Supinated | option | |
+| Cable Single-Arm Preacher Curl | Cable, handle, free-standing preacher bench (assumed) | Yes | Supinated | option | |
 
 ### Bayesian Curl — current
 
@@ -378,7 +382,7 @@ Also called the cable behind-the-body curl. The dumbbell version of this "stretc
 | Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
 |---|---|---|---|---|---|
 | Cable Single-Arm Bayesian Curl | Cable, handle | Yes | Supinated, standing facing away, cable low | option | |
-| Cable Single-Arm Bayesian Hammer Curl | Cable, handle or half rope | Yes | Neutral, standing facing away | option | |
+| Cable Single-Arm Bayesian Hammer Curl | Cable, handle or half rope (assumed) | Yes | Neutral, standing facing away | option | |
 
 ### Hammer Curl — current
 
@@ -465,8 +469,8 @@ Near misses: Cable Triceps Kickback, Dumbbell Triceps Kickback, Wrist Roller.
 | Hanging Leg Raise | Pull-up bar (assumed) | No | Pronated hang, legs straight | option | |
 | Hanging Knee Raise | Pull-up bar (assumed) | No | Pronated hang, knees bent | option | |
 | Hanging Oblique Knee Raise | Pull-up bar (assumed) | No | Pronated hang, knees to one side | option | |
-| Captain's Chair Leg Raise | Dip station with back pad (captain's chair) | No | Forearms on pads, legs straight | option | |
-| Captain's Chair Knee Raise | Dip station with back pad (captain's chair) | No | Forearms on pads, knees bent | option | |
+| Captain's Chair Leg Raise | Captain's chair (assumed) | No | Forearms on pads, legs straight | option | |
+| Captain's Chair Knee Raise | Captain's chair (assumed) | No | Forearms on pads, knees bent | option | |
 | Lying Leg Raise | Bodyweight or flat bench | No | Lying on back | option | |
 | Reverse Crunch | Bodyweight | No | Lying on back, knees to chest | option | |
 | Decline Bench Reverse Crunch | Decline bench | No | Lying head-up on decline, holding bench | option | |
@@ -704,11 +708,11 @@ Near misses: Kettlebell Swing (no kettlebells listed), Cable Pull-Through.
 | Seated Machine Calf Raise | Seated calf raise machine (assumed) | No | Seated, pad on knees (soleus bias) | option | |
 | Leg Press Calf Raise | Plate-loaded leg press | No | Balls of feet on platform edge | option | |
 | Hack Squat Calf Raise | Plate-loaded hack squat | No | Balls of feet on platform edge | option | |
-| Smith Machine Standing Calf Raise | Smith machine, step or plate | No | Standing | option | |
-| Barbell Standing Calf Raise | Barbell, rack, step or plate | No | Standing | option | |
-| Single-Leg Dumbbell Calf Raise | Dumbbell, step | Yes | Standing on one leg | option | |
-| Bodyweight Standing Calf Raise | Step | No | Standing | option | |
-| Seated Dumbbell Calf Raise | Dumbbells, bench, step or plate | No | Seated, dumbbells on knees | option | |
+| Smith Machine Standing Calf Raise | Smith machine, step (assumed) or plate | No | Standing | option | |
+| Barbell Standing Calf Raise | Barbell, rack, step (assumed) or plate | No | Standing | option | |
+| Single-Leg Dumbbell Calf Raise | Dumbbell, step (assumed) | Yes | Standing on one leg | option | |
+| Bodyweight Standing Calf Raise | Step (assumed) | No | Standing | option | |
+| Seated Dumbbell Calf Raise | Dumbbells, bench, step (assumed) or plate | No | Seated, dumbbells on knees | option | |
 | Donkey Calf Raise | Donkey calf raise machine (assumed) | No | Hinged at the hips | option | |
 
 ### Tibialis Raise — option (addition)
