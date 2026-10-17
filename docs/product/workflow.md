@@ -28,12 +28,14 @@ To Do → In Progress → In Review → **Ready To Merge** → Done
 
 Liam starts each ticket with the project `implement` skill and a `SCRUM-n` key.
 
-ponytail (level `full`) is on for both the developer and reviewer agents through `.claude/settings.json`. Subagents get it through its SubagentStart hook. See [ponytail.md](../agents/ponytail.md).
+Models: the skill itself runs on Sonnet (medium effort) and orchestrates; the code is written by the `implementer` subagent (Haiku, low; Sonnet, medium for the round-3 fixes) and reviewed by the `reviewer` subagent (Haiku, medium), both defined in `.claude/agents/`. Research and design tickets are done by the skill session itself.
 
-1. **Developer agent**: reads the ticket, moves it to In Progress, branches off `main` as `SCRUM-n-short-slug`, builds test-first (TDD) for domain logic and API, runs typecheck and tests, commits with `SCRUM-n: …` messages, opens a **draft PR** titled `SCRUM-n [AREA-nnn] …`, and moves the ticket to In Review.
-2. **Reviewer agent**: reviews the PR against the ticket's acceptance criteria and the repo docs, and leaves line comments on the draft PR. If changes are needed, it hands back to the developer agent (the ticket stays In Review).
+ponytail (level `full`) is on for the skill session and both subagents through `.claude/settings.json`. Subagents get it through its SubagentStart hook. See [ponytail.md](../agents/ponytail.md).
+
+1. **Skill session**: reads the ticket, moves it to In Progress and branches off `main` as `SCRUM-n-short-slug`. The **`implementer`** builds test-first (TDD) for domain logic and API, runs typecheck and tests, and commits with `SCRUM-n: …` messages. The skill session checks its evidence, pushes, opens a **draft PR** titled `SCRUM-n [AREA-nnn] …`, and moves the ticket to In Review.
+2. **`reviewer`**: reviews the PR against the ticket's acceptance criteria and the repo docs, and leaves line comments on the draft PR. If changes are needed, the skill session sends them to a fresh `implementer` (the ticket stays In Review).
 3. After **3** unsuccessful review rounds: label `ready-for-human`, comment on the ticket with what's blocking, stop.
-4. When the reviewer approves: the **developer agent** marks the PR ready for review, assigns Liam, posts the closing comment on the ticket, and moves the ticket to **Ready To Merge**.
+4. When the reviewer approves: the **skill session** marks the PR ready for review, assigns Liam, posts the closing comment on the ticket, and moves the ticket to **Ready To Merge**.
 5. **Liam** tests on the PR's Cloudflare preview URL and merges; the ticket moves to Done.
 
 ## Design gate
@@ -44,7 +46,7 @@ Each release (MVP, v1.1, v1.2, v1.3) has one **design ticket**, labelled `design
 - **The design ticket's loop:** the agent posts the artifact links on the ticket and moves it to In Review. Liam gives feedback in artifact comments or Jira comments, and the agent republishes that ticket's artifacts to the same URLs. This repeats, with no round limit, until Liam approves. There is no branch, PR or reviewer agent. The closing comment's **Done** line holds the final artifact links, and the ticket moves to Done.
 - **Sliced = frozen:** a release's design is frozen once it is approved **and** at least one Story with an "is blocked by" link to its design ticket exists, whichever happens later. If Stories are sliced before approval, the freeze comment is posted when Liam approves. Whoever triggers the freeze (creates that Story, or closes the design ticket when Stories already exist; Liam or an agent) adds a comment on the design ticket: "Design frozen for <release>", with the artifact links and their current version ids (the Artifact tool's version id, e.g. `1792235320-0528`).
 - **Changes after approval, before slicing:** before republishing, the agent checks the design ticket for a "Design frozen" comment or a Story blocked by it. If either exists, the change goes to the next release's design ticket instead. Otherwise the agent republishes to the same URLs and adds a dated comment on the design ticket saying what changed; the ticket stays Done. If the next release's design ticket has already copied these artifacts, the change is applied there too.
-- **Building a Story:** the developer agent opens the artifacts named in the design ticket's "Design frozen" comment, for the device(s) the Story touches, and builds to match them. The reviewer checks the build against them too.
+- **Building a Story:** the `implementer` opens the artifacts named in the design ticket's "Design frozen" comment, for the device(s) the Story touches, and builds to match them. The reviewer checks the build against them too.
 
 ## Skills by ticket type
 
