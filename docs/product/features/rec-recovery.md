@@ -7,6 +7,7 @@ The feature that sets this app apart: a front/back body diagram colouring each M
 - Recovery is driven by Working Sets only, using the Workout's performed time.
 - No left/right split; both sides show the same state.
 - All thresholds live in a config file in the repo, not in Settings.
+- Volume for a Muscle Group counts each Working Set once, even when the Exercise tags several Muscles in that group.
 
 ### MVP rules (time-only)
 
@@ -31,6 +32,7 @@ Volume-weighted fatigue per Muscle that decays over a recovery window per Muscle
 **REC: Anatomical Recovery Map** (MVP, blocked by the EXL Muscle taxonomy)
 - Front/back diagram from the ADR-0007 artwork, legs widened, grey base; each region ID matches a Muscle ID and is coloured by its Recovery State, and a Muscle with no Working Sets yet stays grey (no state); tapping a region lists its Muscles, their states and when they were last trained; the same component renders on phone and dashboard
 - The MIT notice is kept in the SVG file and the README third-party notices; the app's About screen carries a credit line
+- A Region can carry several Muscle IDs and shows the worst Recovery State among them; tapping it lists each Muscle with its own state (see `docs/research/muscle-taxonomy.md`)
 
 **REC: Research muscle fatigue and recovery** (v1.2, research Task)
 - Primary sources on per-muscle recovery times and how fatigue scales with volume and RIR; the output is a findings doc plus a proposed model and config values
