@@ -10,7 +10,7 @@ How the tags work:
 
 - **current**: one of the 29 exercises Liam named. He named families, not exact variants, so `current` is on the family heading (e.g. "Lateral Raise — current").
 - **option**: every variant row, and every addition. Additions are the 3 most common exercises per Muscle Group that are not already on Liam's list. Their family headings say "option (addition)".
-- **Liam does**: left blank. Liam ticks the exact variants he does. Anything ticked goes into the library first.
+- Exact variants are not ticked here: Liam's Routines in the app show which ones he actually does (Liam, 2026-10-17). Every entry goes into the library.
 
 Every row names one specific variant. Names are unique across the whole file.
 
@@ -75,86 +75,86 @@ Liam's gym has all of the following (his description, 2026-10-17).
 
 ### Incline Chest Press — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Incline Barbell Bench Press | Barbell, incline bench, rack | No | Pronated, 30–45° incline | option | |
-| Incline Dumbbell Press | Dumbbells, incline bench | No | Pronated, incline | option | |
-| Incline Neutral-Grip Dumbbell Press | Dumbbells, incline bench | No | Neutral, incline | option | |
-| Single-Arm Incline Dumbbell Press | Dumbbell, incline bench | Yes | Pronated or neutral, incline | option | |
-| Smith Machine Incline Bench Press | Smith machine, incline bench | No | Pronated, incline | option | |
-| Plate-Loaded Incline Chest Press | Plate-loaded machine | No | Pronated or neutral, seated | option | |
-| Single-Arm Plate-Loaded Incline Chest Press | Plate-loaded iso-lateral machine (assumed) | Yes | Pronated or neutral, seated | option | |
-| Incline Cable Chest Press | Dual cables, incline bench | No | Pronated (handles), incline | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Incline Barbell Bench Press | Barbell, incline bench, rack | No | Pronated, 30–45° incline | option |
+| Incline Dumbbell Press | Dumbbells, incline bench | No | Pronated, incline | option |
+| Incline Neutral-Grip Dumbbell Press | Dumbbells, incline bench | No | Neutral, incline | option |
+| Single-Arm Incline Dumbbell Press | Dumbbell, incline bench | Yes | Pronated or neutral, incline | option |
+| Smith Machine Incline Bench Press | Smith machine, incline bench | No | Pronated, incline | option |
+| Plate-Loaded Incline Chest Press | Plate-loaded machine | No | Pronated or neutral, seated | option |
+| Single-Arm Plate-Loaded Incline Chest Press | Plate-loaded iso-lateral machine (assumed) | Yes | Pronated or neutral, seated | option |
+| Incline Cable Chest Press | Dual cables, incline bench | No | Pronated (handles), incline | option |
 
 ### Chest Fly (Pec Deck) — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Pec Deck Fly | Selectorised pec deck | No | Neutral handles or pads, seated | option | |
-| Single-Arm Pec Deck Fly | Selectorised pec deck | Yes | Neutral, seated | option | |
-| Flat Dumbbell Chest Fly | Dumbbells, flat bench | No | Neutral, lying | option | |
-| Incline Dumbbell Chest Fly | Dumbbells, incline bench | No | Neutral, incline | option | |
-| Decline Dumbbell Chest Fly | Dumbbells, decline bench | No | Neutral, decline | option | |
-| Standing Cable Chest Fly | Dual cables, handles | No | Neutral, standing, cables at chest height | option | |
-| High-to-Low Cable Chest Fly | Dual cables, handles | No | Neutral, standing, cables high | option | |
-| Low-to-High Cable Chest Fly | Dual cables, handles | No | Supinated or neutral, standing, cables low | option | |
-| Seated Cable Chest Fly | Dual cables, bench | No | Neutral, seated | option | |
-| Flat Bench Cable Chest Fly | Dual cables, flat bench | No | Neutral, lying | option | |
-| Incline Bench Cable Chest Fly | Dual cables, incline bench | No | Neutral, incline | option | |
-| Single-Arm Cable Chest Fly | Cable, handle | Yes | Neutral, standing | option | |
-| Resistance Band Chest Fly | Band (assumed) | No | Neutral, standing | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Pec Deck Fly | Selectorised pec deck | No | Neutral handles or pads, seated | option |
+| Single-Arm Pec Deck Fly | Selectorised pec deck | Yes | Neutral, seated | option |
+| Flat Dumbbell Chest Fly | Dumbbells, flat bench | No | Neutral, lying | option |
+| Incline Dumbbell Chest Fly | Dumbbells, incline bench | No | Neutral, incline | option |
+| Decline Dumbbell Chest Fly | Dumbbells, decline bench | No | Neutral, decline | option |
+| Standing Cable Chest Fly | Dual cables, handles | No | Neutral, standing, cables at chest height | option |
+| High-to-Low Cable Chest Fly | Dual cables, handles | No | Neutral, standing, cables high | option |
+| Low-to-High Cable Chest Fly | Dual cables, handles | No | Supinated or neutral, standing, cables low | option |
+| Seated Cable Chest Fly | Dual cables, bench | No | Neutral, seated | option |
+| Flat Bench Cable Chest Fly | Dual cables, flat bench | No | Neutral, lying | option |
+| Incline Bench Cable Chest Fly | Dual cables, incline bench | No | Neutral, incline | option |
+| Single-Arm Cable Chest Fly | Cable, handle | Yes | Neutral, standing | option |
+| Resistance Band Chest Fly | Band (assumed) | No | Neutral, standing | option |
 
 ### Dip — current
 
 Main group Chest (with a forward lean). The triceps are a big Secondary Muscle, and the upright and bench versions shift the work to the triceps.
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Parallel Bar Dip (Chest Lean) | Dip station | No | Neutral, torso leaning forward | option | |
-| Parallel Bar Dip (Upright) | Dip station | No | Neutral, torso upright (triceps bias) | option | |
-| Weighted Parallel Bar Dip | Dip station, dip belt (assumed), plates | No | Neutral | option | |
-| Machine-Assisted Dip | Assisted pull-up / dip machine (assumed) | No | Neutral, kneeling or standing | option | |
-| Band-Assisted Dip | Dip station, band (assumed) | No | Neutral | option | |
-| Seated Machine Dip | Seated dip machine (assumed) | No | Neutral, seated | option | |
-| Bench Dip | Flat bench | No | Pronated, hands behind on bench (triceps bias) | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Parallel Bar Dip (Chest Lean) | Dip station | No | Neutral, torso leaning forward | option |
+| Parallel Bar Dip (Upright) | Dip station | No | Neutral, torso upright (triceps bias) | option |
+| Weighted Parallel Bar Dip | Dip station, dip belt (assumed), plates | No | Neutral | option |
+| Machine-Assisted Dip | Assisted pull-up / dip machine (assumed) | No | Neutral, kneeling or standing | option |
+| Band-Assisted Dip | Dip station, band (assumed) | No | Neutral | option |
+| Seated Machine Dip | Seated dip machine (assumed) | No | Neutral, seated | option |
+| Bench Dip | Flat bench | No | Pronated, hands behind on bench (triceps bias) | option |
 
 ### Flat Bench Press — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Barbell Bench Press | Barbell, flat bench, rack | No | Pronated, medium grip | option | |
-| Wide-Grip Barbell Bench Press | Barbell, flat bench, rack | No | Pronated, wide | option | |
-| Flat Dumbbell Bench Press | Dumbbells, flat bench | No | Pronated | option | |
-| Flat Neutral-Grip Dumbbell Bench Press | Dumbbells, flat bench | No | Neutral | option | |
-| Single-Arm Flat Dumbbell Bench Press | Dumbbell, flat bench | Yes | Pronated or neutral | option | |
-| Dumbbell Floor Press | Dumbbells | No | Neutral or pronated, lying on floor | option | |
-| Smith Machine Bench Press | Smith machine, flat bench | No | Pronated | option | |
-| Plate-Loaded Seated Chest Press | Plate-loaded machine | No | Pronated or neutral, seated | option | |
-| Single-Arm Plate-Loaded Seated Chest Press | Plate-loaded iso-lateral machine (assumed) | Yes | Pronated or neutral, seated | option | |
-| Selectorised Seated Chest Press | Selectorised machine (assumed) | No | Pronated or neutral, seated | option | |
-| Standing Cable Chest Press | Dual cables, handles | No | Pronated, standing | option | |
-| Single-Arm Standing Cable Chest Press | Cable, handle | Yes | Pronated, standing | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Barbell Bench Press | Barbell, flat bench, rack | No | Pronated, medium grip | option |
+| Wide-Grip Barbell Bench Press | Barbell, flat bench, rack | No | Pronated, wide | option |
+| Flat Dumbbell Bench Press | Dumbbells, flat bench | No | Pronated | option |
+| Flat Neutral-Grip Dumbbell Bench Press | Dumbbells, flat bench | No | Neutral | option |
+| Single-Arm Flat Dumbbell Bench Press | Dumbbell, flat bench | Yes | Pronated or neutral | option |
+| Dumbbell Floor Press | Dumbbells | No | Neutral or pronated, lying on floor | option |
+| Smith Machine Bench Press | Smith machine, flat bench | No | Pronated | option |
+| Plate-Loaded Seated Chest Press | Plate-loaded machine | No | Pronated or neutral, seated | option |
+| Single-Arm Plate-Loaded Seated Chest Press | Plate-loaded iso-lateral machine (assumed) | Yes | Pronated or neutral, seated | option |
+| Selectorised Seated Chest Press | Selectorised machine (assumed) | No | Pronated or neutral, seated | option |
+| Standing Cable Chest Press | Dual cables, handles | No | Pronated, standing | option |
+| Single-Arm Standing Cable Chest Press | Cable, handle | Yes | Pronated, standing | option |
 
 ### Push-Up — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Push-Up | Bodyweight | No | Pronated, shoulder width | option | |
-| Wide-Grip Push-Up | Bodyweight | No | Pronated, wide | option | |
-| Diamond Push-Up | Bodyweight | No | Hands together (triceps bias) | option | |
-| Incline Push-Up | Bodyweight, bench | No | Hands on bench | option | |
-| Decline Push-Up | Bodyweight, bench | No | Feet on bench | option | |
-| Weighted Push-Up | Bodyweight, plate on back | No | Pronated | option | |
-| Kneeling Push-Up | Bodyweight | No | Pronated, on knees | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Push-Up | Bodyweight | No | Pronated, shoulder width | option |
+| Wide-Grip Push-Up | Bodyweight | No | Pronated, wide | option |
+| Diamond Push-Up | Bodyweight | No | Hands together (triceps bias) | option |
+| Incline Push-Up | Bodyweight, bench | No | Hands on bench | option |
+| Decline Push-Up | Bodyweight, bench | No | Feet on bench | option |
+| Weighted Push-Up | Bodyweight, plate on back | No | Pronated | option |
+| Kneeling Push-Up | Bodyweight | No | Pronated, on knees | option |
 
 ### Decline Bench Press — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Decline Barbell Bench Press | Barbell, decline bench | No | Pronated, decline | option | |
-| Decline Dumbbell Press | Dumbbells, decline bench | No | Pronated or neutral, decline | option | |
-| Smith Machine Decline Bench Press | Smith machine, decline bench | No | Pronated, decline | option | |
-| Plate-Loaded Decline Chest Press | Plate-loaded machine (assumed) | No | Pronated or neutral, seated | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Decline Barbell Bench Press | Barbell, decline bench | No | Pronated, decline | option |
+| Decline Dumbbell Press | Dumbbells, decline bench | No | Pronated or neutral, decline | option |
+| Smith Machine Decline Bench Press | Smith machine, decline bench | No | Pronated, decline | option |
+| Plate-Loaded Decline Chest Press | Plate-loaded machine (assumed) | No | Pronated or neutral, seated | option |
 
 Near misses: Dumbbell Pullover, Landmine Press (listed under Shoulders).
 
@@ -162,79 +162,79 @@ Near misses: Dumbbell Pullover, Landmine Press (listed under Shoulders).
 
 ### Shoulder Press — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Standing Barbell Overhead Press | Barbell, rack | No | Pronated, standing | option | |
-| Seated Barbell Overhead Press | Barbell, rack, adjustable bench set upright | No | Pronated, seated | option | |
-| Behind-the-Neck Barbell Press | Barbell, rack | No | Pronated, wide, seated or standing | option | |
-| Barbell Push Press | Barbell, rack | No | Pronated, standing, leg drive | option | |
-| Seated Dumbbell Shoulder Press | Dumbbells, adjustable bench set upright | No | Pronated, seated | option | |
-| Standing Dumbbell Shoulder Press | Dumbbells | No | Pronated, standing | option | |
-| Seated Neutral-Grip Dumbbell Shoulder Press | Dumbbells, adjustable bench set upright | No | Neutral, seated | option | |
-| Single-Arm Standing Dumbbell Shoulder Press | Dumbbell | Yes | Pronated or neutral, standing | option | |
-| Seated Arnold Press | Dumbbells, adjustable bench set upright | No | Rotating supinated to pronated, seated | option | |
-| Seated Smith Machine Shoulder Press | Smith machine, adjustable bench set upright | No | Pronated, seated | option | |
-| Selectorised Machine Shoulder Press | Selectorised machine (assumed) | No | Pronated or neutral, seated | option | |
-| Plate-Loaded Shoulder Press | Plate-loaded machine | No | Pronated or neutral, seated | option | |
-| Single-Arm Plate-Loaded Shoulder Press | Plate-loaded iso-lateral machine (assumed) | Yes | Pronated or neutral, seated | option | |
-| Standing Landmine Press | Barbell, landmine (assumed) | No | Both hands on bar end, standing | option | |
-| Half-Kneeling Single-Arm Landmine Press | Barbell, landmine (assumed) | Yes | Neutral, half-kneeling | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Standing Barbell Overhead Press | Barbell, rack | No | Pronated, standing | option |
+| Seated Barbell Overhead Press | Barbell, rack, adjustable bench set upright | No | Pronated, seated | option |
+| Behind-the-Neck Barbell Press | Barbell, rack | No | Pronated, wide, seated or standing | option |
+| Barbell Push Press | Barbell, rack | No | Pronated, standing, leg drive | option |
+| Seated Dumbbell Shoulder Press | Dumbbells, adjustable bench set upright | No | Pronated, seated | option |
+| Standing Dumbbell Shoulder Press | Dumbbells | No | Pronated, standing | option |
+| Seated Neutral-Grip Dumbbell Shoulder Press | Dumbbells, adjustable bench set upright | No | Neutral, seated | option |
+| Single-Arm Standing Dumbbell Shoulder Press | Dumbbell | Yes | Pronated or neutral, standing | option |
+| Seated Arnold Press | Dumbbells, adjustable bench set upright | No | Rotating supinated to pronated, seated | option |
+| Seated Smith Machine Shoulder Press | Smith machine, adjustable bench set upright | No | Pronated, seated | option |
+| Selectorised Machine Shoulder Press | Selectorised machine (assumed) | No | Pronated or neutral, seated | option |
+| Plate-Loaded Shoulder Press | Plate-loaded machine | No | Pronated or neutral, seated | option |
+| Single-Arm Plate-Loaded Shoulder Press | Plate-loaded iso-lateral machine (assumed) | Yes | Pronated or neutral, seated | option |
+| Standing Landmine Press | Barbell, landmine (assumed) | No | Both hands on bar end, standing | option |
+| Half-Kneeling Single-Arm Landmine Press | Barbell, landmine (assumed) | Yes | Neutral, half-kneeling | option |
 
 ### Lateral Raise — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Standing Dumbbell Lateral Raise | Dumbbells | No | Neutral, standing | option | |
-| Seated Dumbbell Lateral Raise | Dumbbells, bench | No | Neutral, seated | option | |
-| Single-Arm Leaning Dumbbell Lateral Raise | Dumbbell, upright to hold | Yes | Neutral, leaning away from a post | option | |
-| Side-Lying Incline Dumbbell Lateral Raise | Dumbbell, incline bench | Yes | Neutral, lying on side on incline bench | option | |
-| Cable Single-Arm Lateral Raise | Cable, handle or ankle/wrist cuff (assumed) | Yes | Neutral, standing, cable low | option | |
-| Cable Y-Raise | Dual cables, handles | No | Neutral, standing, both arms crossing | option | |
-| Machine Lateral Raise | Selectorised machine (assumed) | No | Pads on arms, seated | option | |
-| Resistance Band Lateral Raise | Band (assumed) | No | Neutral, standing | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Standing Dumbbell Lateral Raise | Dumbbells | No | Neutral, standing | option |
+| Seated Dumbbell Lateral Raise | Dumbbells, bench | No | Neutral, seated | option |
+| Single-Arm Leaning Dumbbell Lateral Raise | Dumbbell, upright to hold | Yes | Neutral, leaning away from a post | option |
+| Side-Lying Incline Dumbbell Lateral Raise | Dumbbell, incline bench | Yes | Neutral, lying on side on incline bench | option |
+| Cable Single-Arm Lateral Raise | Cable, handle or ankle/wrist cuff (assumed) | Yes | Neutral, standing, cable low | option |
+| Cable Y-Raise | Dual cables, handles | No | Neutral, standing, both arms crossing | option |
+| Machine Lateral Raise | Selectorised machine (assumed) | No | Pads on arms, seated | option |
+| Resistance Band Lateral Raise | Band (assumed) | No | Neutral, standing | option |
 
 ### Rear Delt Fly — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Reverse Pec Deck Fly | Selectorised pec deck / rear delt | No | Neutral or pronated, seated facing pad | option | |
-| Single-Arm Reverse Pec Deck Fly | Selectorised pec deck / rear delt | Yes | Neutral or pronated, seated | option | |
-| Bent-Over Dumbbell Reverse Fly | Dumbbells | No | Neutral, standing hinged | option | |
-| Seated Bent-Over Dumbbell Reverse Fly | Dumbbells, bench | No | Neutral, seated leaning forward | option | |
-| Chest-Supported Incline Dumbbell Reverse Fly | Dumbbells, incline bench | No | Neutral or pronated, lying face down on incline | option | |
-| Standing Cable Reverse Fly | Dual cables (no handle, or handles) | No | Pronated, standing, cables crossed at shoulder height | option | |
-| Cable Single-Arm Rear Delt Fly | Cable, handle | Yes | Neutral, standing | option | |
-| Band Pull-Apart | Band (assumed) | No | Pronated, standing | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Reverse Pec Deck Fly | Selectorised pec deck / rear delt | No | Neutral or pronated, seated facing pad | option |
+| Single-Arm Reverse Pec Deck Fly | Selectorised pec deck / rear delt | Yes | Neutral or pronated, seated | option |
+| Bent-Over Dumbbell Reverse Fly | Dumbbells | No | Neutral, standing hinged | option |
+| Seated Bent-Over Dumbbell Reverse Fly | Dumbbells, bench | No | Neutral, seated leaning forward | option |
+| Chest-Supported Incline Dumbbell Reverse Fly | Dumbbells, incline bench | No | Neutral or pronated, lying face down on incline | option |
+| Standing Cable Reverse Fly | Dual cables (no handle, or handles) | No | Pronated, standing, cables crossed at shoulder height | option |
+| Cable Single-Arm Rear Delt Fly | Cable, handle | Yes | Neutral, standing | option |
+| Band Pull-Apart | Band (assumed) | No | Pronated, standing | option |
 
 ### Front Raise — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Dumbbell Front Raise | Dumbbells | No | Pronated, standing | option | |
-| Alternating Dumbbell Front Raise | Dumbbells | Yes (alternating) | Pronated or neutral, standing | option | |
-| Barbell Front Raise | Barbell or EZ bar | No | Pronated, standing | option | |
-| Plate Front Raise | Plate | No | Neutral, both hands on plate | option | |
-| Cable Front Raise (Rope) | Cable, rope | No | Neutral, standing, facing away | option | |
-| Cable Single-Arm Front Raise | Cable, handle | Yes | Pronated, standing | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Dumbbell Front Raise | Dumbbells | No | Pronated, standing | option |
+| Alternating Dumbbell Front Raise | Dumbbells | Yes (alternating) | Pronated or neutral, standing | option |
+| Barbell Front Raise | Barbell or EZ bar | No | Pronated, standing | option |
+| Plate Front Raise | Plate | No | Neutral, both hands on plate | option |
+| Cable Front Raise (Rope) | Cable, rope | No | Neutral, standing, facing away | option |
+| Cable Single-Arm Front Raise | Cable, handle | Yes | Pronated, standing | option |
 
 ### Face Pull — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Standing Cable Face Pull (Rope) | Cable, rope | No | Neutral, standing, cable at face height | option | |
-| Seated Cable Face Pull (Rope) | Cable, rope, bench | No | Neutral, seated | option | |
-| Cable Single-Arm Face Pull | Cable, handle | Yes | Neutral or pronated, standing | option | |
-| Banded Face Pull | Band (assumed) | No | Pronated, standing | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Standing Cable Face Pull (Rope) | Cable, rope | No | Neutral, standing, cable at face height | option |
+| Seated Cable Face Pull (Rope) | Cable, rope, bench | No | Neutral, seated | option |
+| Cable Single-Arm Face Pull | Cable, handle | Yes | Neutral or pronated, standing | option |
+| Banded Face Pull | Band (assumed) | No | Pronated, standing | option |
 
 ### Upright Row — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Barbell Upright Row | Barbell | No | Pronated, shoulder width | option | |
-| EZ-Bar Upright Row | EZ bar | No | Pronated, angled grip | option | |
-| Dumbbell Upright Row | Dumbbells | No | Pronated | option | |
-| Cable Upright Row (Straight Bar) | Cable, straight bar | No | Pronated, standing | option | |
-| Smith Machine Upright Row | Smith machine | No | Pronated | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Barbell Upright Row | Barbell | No | Pronated, shoulder width | option |
+| EZ-Bar Upright Row | EZ bar | No | Pronated, angled grip | option |
+| Dumbbell Upright Row | Dumbbells | No | Pronated | option |
+| Cable Upright Row (Straight Bar) | Cable, straight bar | No | Pronated, standing | option |
+| Smith Machine Upright Row | Smith machine | No | Pronated | option |
 
 Near misses: shoulder external rotation (cable or band), Arnold Press is listed under Shoulder Press.
 
@@ -242,91 +242,91 @@ Near misses: shoulder external rotation (cable or band), Arnold Press is listed 
 
 ### Lat Pulldown — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Wide-Grip Lat Pulldown | Selectorised pulldown, wide bar | No | Pronated, wide | option | |
-| Close-Grip Pronated Lat Pulldown | Selectorised pulldown, straight bar | No | Pronated, shoulder width | option | |
-| Wide Neutral-Grip Lat Pulldown | Selectorised pulldown, wide neutral-grip bar (assumed) | No | Neutral, wide | option | |
-| Close-Grip V-Bar Lat Pulldown | Selectorised pulldown, V-bar | No | Neutral, close | option | |
-| Supinated Lat Pulldown | Selectorised pulldown, straight bar | No | Supinated, shoulder width | option | |
-| Behind-the-Neck Lat Pulldown | Selectorised pulldown, wide bar | No | Pronated, wide, bar behind head | option | |
-| Single-Arm Cable Lat Pulldown | Cable or pulldown, handle | Yes | Neutral or pronated, seated or kneeling | option | |
-| Plate-Loaded Lat Pulldown | Plate-loaded machine (assumed) | No | Pronated or neutral, seated | option | |
-| Straight-Arm Cable Pulldown (Bar) | Cable, straight bar | No | Pronated, standing hinged | option | |
-| Straight-Arm Cable Pulldown (Rope) | Cable, rope | No | Neutral, standing hinged | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Wide-Grip Lat Pulldown | Selectorised pulldown, wide bar | No | Pronated, wide | option |
+| Close-Grip Pronated Lat Pulldown | Selectorised pulldown, straight bar | No | Pronated, shoulder width | option |
+| Wide Neutral-Grip Lat Pulldown | Selectorised pulldown, wide neutral-grip bar (assumed) | No | Neutral, wide | option |
+| Close-Grip V-Bar Lat Pulldown | Selectorised pulldown, V-bar | No | Neutral, close | option |
+| Supinated Lat Pulldown | Selectorised pulldown, straight bar | No | Supinated, shoulder width | option |
+| Behind-the-Neck Lat Pulldown | Selectorised pulldown, wide bar | No | Pronated, wide, bar behind head | option |
+| Single-Arm Cable Lat Pulldown | Cable or pulldown, handle | Yes | Neutral or pronated, seated or kneeling | option |
+| Plate-Loaded Lat Pulldown | Plate-loaded machine (assumed) | No | Pronated or neutral, seated | option |
+| Straight-Arm Cable Pulldown (Bar) | Cable, straight bar | No | Pronated, standing hinged | option |
+| Straight-Arm Cable Pulldown (Rope) | Cable, rope | No | Neutral, standing hinged | option |
 
 ### Seated Row — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Seated Cable Row (V-Handle) | Selectorised seated row, V-bar | No | Neutral, close | option | |
-| Wide-Grip Seated Cable Row | Selectorised seated row, wide bar | No | Pronated, wide | option | |
-| Underhand Seated Cable Row | Selectorised seated row, straight bar | No | Supinated, shoulder width | option | |
-| Single-Arm Seated Cable Row | Cable, handle | Yes | Neutral, seated | option | |
-| Chest-Supported Machine Row | Selectorised chest-supported row (assumed) | No | Neutral or pronated, seated, chest on pad | option | |
-| Plate-Loaded Seated Row | Plate-loaded seated row (assumed) | No | Neutral or pronated, seated | option | |
-| Single-Arm Plate-Loaded Seated Row | Plate-loaded iso-lateral machine (assumed) | Yes | Neutral or pronated, seated | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Seated Cable Row (V-Handle) | Selectorised seated row, V-bar | No | Neutral, close | option |
+| Wide-Grip Seated Cable Row | Selectorised seated row, wide bar | No | Pronated, wide | option |
+| Underhand Seated Cable Row | Selectorised seated row, straight bar | No | Supinated, shoulder width | option |
+| Single-Arm Seated Cable Row | Cable, handle | Yes | Neutral, seated | option |
+| Chest-Supported Machine Row | Selectorised chest-supported row (assumed) | No | Neutral or pronated, seated, chest on pad | option |
+| Plate-Loaded Seated Row | Plate-loaded seated row (assumed) | No | Neutral or pronated, seated | option |
+| Single-Arm Plate-Loaded Seated Row | Plate-loaded iso-lateral machine (assumed) | Yes | Neutral or pronated, seated | option |
 
 ### T-Bar Row — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Chest-Supported T-Bar Row | Plate-loaded T-bar row | No | Neutral or pronated, chest on pad | option | |
-| Wide-Grip Chest-Supported T-Bar Row | Plate-loaded T-bar row | No | Pronated, wide handles | option | |
-| Landmine T-Bar Row (V-Handle) | Barbell, landmine (assumed), V-bar | No | Neutral, standing hinged | option | |
-| Meadows Row | Barbell, landmine (assumed) | Yes | Pronated, staggered stance | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Chest-Supported T-Bar Row | Plate-loaded T-bar row | No | Neutral or pronated, chest on pad | option |
+| Wide-Grip Chest-Supported T-Bar Row | Plate-loaded T-bar row | No | Pronated, wide handles | option |
+| Landmine T-Bar Row (V-Handle) | Barbell, landmine (assumed), V-bar | No | Neutral, standing hinged | option |
+| Meadows Row | Barbell, landmine (assumed) | Yes | Pronated, staggered stance | option |
 
 ### Back Extension — current
 
 Main group Back (erector spinae). The glutes and hamstrings also work, and a rounded-back version shifts the work to the glutes.
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| 45-Degree Back Extension | Back extension bench | No | Arms crossed or behind head | option | |
-| Weighted 45-Degree Back Extension | Back extension bench, plate or dumbbell | No | Weight held at chest | option | |
-| Single-Leg 45-Degree Back Extension | Back extension bench | Yes | One leg anchored | option | |
-| 90-Degree Back Extension | Horizontal hyperextension bench (assumed) or GHD (assumed) | No | Arms crossed | option | |
-| Seated Machine Back Extension | Selectorised machine (assumed) | No | Seated, pad on upper back | option | |
-| Floor Back Extension (Superman) | Bodyweight | No | Lying face down | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| 45-Degree Back Extension | Back extension bench | No | Arms crossed or behind head | option |
+| Weighted 45-Degree Back Extension | Back extension bench, plate or dumbbell | No | Weight held at chest | option |
+| Single-Leg 45-Degree Back Extension | Back extension bench | Yes | One leg anchored | option |
+| 90-Degree Back Extension | Horizontal hyperextension bench (assumed) or GHD (assumed) | No | Arms crossed | option |
+| Seated Machine Back Extension | Selectorised machine (assumed) | No | Seated, pad on upper back | option |
+| Floor Back Extension (Superman) | Bodyweight | No | Lying face down | option |
 
 ### Pull-Up — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Pull-Up | Pull-up bar (assumed) | No | Pronated, shoulder width | option | |
-| Wide-Grip Pull-Up | Pull-up bar (assumed) | No | Pronated, wide | option | |
-| Neutral-Grip Pull-Up | Pull-up bar with parallel handles (assumed) | No | Neutral | option | |
-| Chin-Up | Pull-up bar (assumed) | No | Supinated, shoulder width | option | |
-| Weighted Pull-Up | Pull-up bar, dip belt (assumed) | No | Pronated | option | |
-| Weighted Chin-Up | Pull-up bar, dip belt (assumed) | No | Supinated | option | |
-| Machine-Assisted Pull-Up | Assisted pull-up / dip machine (assumed) | No | Pronated or neutral | option | |
-| Band-Assisted Pull-Up | Pull-up bar, band (assumed) | No | Pronated | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Pull-Up | Pull-up bar (assumed) | No | Pronated, shoulder width | option |
+| Wide-Grip Pull-Up | Pull-up bar (assumed) | No | Pronated, wide | option |
+| Neutral-Grip Pull-Up | Pull-up bar with parallel handles (assumed) | No | Neutral | option |
+| Chin-Up | Pull-up bar (assumed) | No | Supinated, shoulder width | option |
+| Weighted Pull-Up | Pull-up bar, dip belt (assumed) | No | Pronated | option |
+| Weighted Chin-Up | Pull-up bar, dip belt (assumed) | No | Supinated | option |
+| Machine-Assisted Pull-Up | Assisted pull-up / dip machine (assumed) | No | Pronated or neutral | option |
+| Band-Assisted Pull-Up | Pull-up bar, band (assumed) | No | Pronated | option |
 
 ### Bent-Over Row — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Barbell Bent-Over Row | Barbell | No | Pronated, standing hinged | option | |
-| Underhand Barbell Bent-Over Row | Barbell | No | Supinated, standing hinged | option | |
-| Pendlay Row | Barbell | No | Pronated, torso flat, from floor | option | |
-| Smith Machine Bent-Over Row | Smith machine | No | Pronated, standing hinged | option | |
-| Bent-Over Dumbbell Row | Dumbbells | No | Neutral, standing hinged | option | |
-| Single-Arm Dumbbell Row | Dumbbell, flat bench | Yes | Neutral, one knee and hand on bench | option | |
-| Chest-Supported Incline Dumbbell Row | Dumbbells, incline bench | No | Neutral or pronated, face down on incline | option | |
-| Barbell Seal Row | Barbell, raised flat bench (assumed) | No | Pronated, lying face down | option | |
-| Inverted Row | Smith machine or rack bar | No | Pronated, bodyweight, feet on floor | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Barbell Bent-Over Row | Barbell | No | Pronated, standing hinged | option |
+| Underhand Barbell Bent-Over Row | Barbell | No | Supinated, standing hinged | option |
+| Pendlay Row | Barbell | No | Pronated, torso flat, from floor | option |
+| Smith Machine Bent-Over Row | Smith machine | No | Pronated, standing hinged | option |
+| Bent-Over Dumbbell Row | Dumbbells | No | Neutral, standing hinged | option |
+| Single-Arm Dumbbell Row | Dumbbell, flat bench | Yes | Neutral, one knee and hand on bench | option |
+| Chest-Supported Incline Dumbbell Row | Dumbbells, incline bench | No | Neutral or pronated, face down on incline | option |
+| Barbell Seal Row | Barbell, raised flat bench (assumed) | No | Pronated, lying face down | option |
+| Inverted Row | Smith machine or rack bar | No | Pronated, bodyweight, feet on floor | option |
 
 ### Deadlift — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Conventional Barbell Deadlift | Barbell | No | Pronated or mixed, hip-width stance | option | |
-| Sumo Barbell Deadlift | Barbell | No | Pronated or mixed, wide stance | option | |
-| Trap Bar Deadlift | Trap bar (assumed) | No | Neutral | option | |
-| Dumbbell Deadlift | Dumbbells | No | Neutral | option | |
-| Smith Machine Deadlift | Smith machine | No | Pronated | option | |
-| Barbell Rack Pull | Barbell, rack | No | Pronated or mixed, bar on pins at knee height | option | |
-| Barbell Deficit Deadlift | Barbell, plate to stand on | No | Pronated or mixed | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Conventional Barbell Deadlift | Barbell | No | Pronated or mixed, hip-width stance | option |
+| Sumo Barbell Deadlift | Barbell | No | Pronated or mixed, wide stance | option |
+| Trap Bar Deadlift | Trap bar (assumed) | No | Neutral | option |
+| Dumbbell Deadlift | Dumbbells | No | Neutral | option |
+| Smith Machine Deadlift | Smith machine | No | Pronated | option |
+| Barbell Rack Pull | Barbell, rack | No | Pronated or mixed, bar on pins at knee height | option |
+| Barbell Deficit Deadlift | Barbell, plate to stand on | No | Pronated or mixed | option |
 
 Main group Back for this list. The deadlift works the glutes, hamstrings and quads a lot too.
 
@@ -336,118 +336,118 @@ Near misses: Barbell Shrug and Dumbbell Shrug (upper trapezius), Cable Pull-Thro
 
 ### Overhead Triceps Extension — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Cable Overhead Triceps Extension (Rope) | Cable, rope | No | Neutral, standing facing away | option | |
-| Cable Overhead Triceps Extension (Bar) | Cable, straight bar or EZ bar | No | Pronated, standing facing away | option | |
-| Cable Single-Arm Overhead Triceps Extension | Cable, handle | Yes | Neutral, standing | option | |
-| Seated Dumbbell Overhead Triceps Extension | Dumbbell, adjustable bench set upright | No | Both hands on one dumbbell, seated | option | |
-| Standing Dumbbell Overhead Triceps Extension | Dumbbell | No | Both hands on one dumbbell, standing | option | |
-| Single-Arm Dumbbell Overhead Triceps Extension | Dumbbell | Yes | Neutral, seated or standing | option | |
-| Seated EZ-Bar Overhead Triceps Extension | EZ bar, adjustable bench set upright | No | Pronated, angled grip, seated | option | |
-| Machine Overhead Triceps Extension | Selectorised machine (assumed) | No | Neutral, seated | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Cable Overhead Triceps Extension (Rope) | Cable, rope | No | Neutral, standing facing away | option |
+| Cable Overhead Triceps Extension (Bar) | Cable, straight bar or EZ bar | No | Pronated, standing facing away | option |
+| Cable Single-Arm Overhead Triceps Extension | Cable, handle | Yes | Neutral, standing | option |
+| Seated Dumbbell Overhead Triceps Extension | Dumbbell, adjustable bench set upright | No | Both hands on one dumbbell, seated | option |
+| Standing Dumbbell Overhead Triceps Extension | Dumbbell | No | Both hands on one dumbbell, standing | option |
+| Single-Arm Dumbbell Overhead Triceps Extension | Dumbbell | Yes | Neutral, seated or standing | option |
+| Seated EZ-Bar Overhead Triceps Extension | EZ bar, adjustable bench set upright | No | Pronated, angled grip, seated | option |
+| Machine Overhead Triceps Extension | Selectorised machine (assumed) | No | Neutral, seated | option |
 
 ### Triceps Pushdown — current
 
 Liam named the single-arm cable version.
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Cable Single-Arm Tricep Pushdown (Handle) | Cable, handle | Yes | Neutral or pronated, standing | option | |
-| Cable Single-Arm Reverse-Grip Tricep Pushdown | Cable, handle | Yes | Supinated, standing | option | |
-| Cable Cross-Body Triceps Extension | Cable, handle or no handle | Yes | Neutral, cable from opposite side | option | |
-| Cable Tricep Pushdown (Rope) | Cable, rope | No | Neutral, standing | option | |
-| Cable Tricep Pushdown (Straight Bar) | Cable, straight bar | No | Pronated, standing | option | |
-| Cable Tricep Pushdown (V-Bar) | Cable, V-bar | No | Pronated angled, standing | option | |
-| Cable Reverse-Grip Tricep Pushdown (Bar) | Cable, straight bar | No | Supinated, standing | option | |
-| Resistance Band Tricep Pushdown | Band (assumed) | No | Pronated or neutral, standing | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Cable Single-Arm Tricep Pushdown (Handle) | Cable, handle | Yes | Neutral or pronated, standing | option |
+| Cable Single-Arm Reverse-Grip Tricep Pushdown | Cable, handle | Yes | Supinated, standing | option |
+| Cable Cross-Body Triceps Extension | Cable, handle or no handle | Yes | Neutral, cable from opposite side | option |
+| Cable Tricep Pushdown (Rope) | Cable, rope | No | Neutral, standing | option |
+| Cable Tricep Pushdown (Straight Bar) | Cable, straight bar | No | Pronated, standing | option |
+| Cable Tricep Pushdown (V-Bar) | Cable, V-bar | No | Pronated angled, standing | option |
+| Cable Reverse-Grip Tricep Pushdown (Bar) | Cable, straight bar | No | Supinated, standing | option |
+| Resistance Band Tricep Pushdown | Band (assumed) | No | Pronated or neutral, standing | option |
 
 ### Preacher Curl — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| EZ-Bar Preacher Curl | EZ bar, free-standing preacher bench (assumed) | No | Supinated, angled grip | option | |
-| Barbell Preacher Curl | Straight barbell, free-standing preacher bench (assumed) | No | Supinated | option | |
-| Reverse-Grip EZ-Bar Preacher Curl | EZ bar, free-standing preacher bench (assumed) | No | Pronated | option | |
-| Single-Arm Dumbbell Preacher Curl | Dumbbell, free-standing preacher bench (assumed) | Yes | Supinated | option | |
-| Machine Preacher Curl | Selectorised preacher machine | No | Supinated, seated | option | |
-| Single-Arm Machine Preacher Curl | Selectorised preacher machine | Yes | Supinated, seated | option | |
-| Cable Preacher Curl (Bar) | Cable, straight or EZ bar, free-standing preacher bench (assumed) | No | Supinated | option | |
-| Cable Single-Arm Preacher Curl | Cable, handle, free-standing preacher bench (assumed) | Yes | Supinated | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| EZ-Bar Preacher Curl | EZ bar, free-standing preacher bench (assumed) | No | Supinated, angled grip | option |
+| Barbell Preacher Curl | Straight barbell, free-standing preacher bench (assumed) | No | Supinated | option |
+| Reverse-Grip EZ-Bar Preacher Curl | EZ bar, free-standing preacher bench (assumed) | No | Pronated | option |
+| Single-Arm Dumbbell Preacher Curl | Dumbbell, free-standing preacher bench (assumed) | Yes | Supinated | option |
+| Machine Preacher Curl | Selectorised preacher machine | No | Supinated, seated | option |
+| Single-Arm Machine Preacher Curl | Selectorised preacher machine | Yes | Supinated, seated | option |
+| Cable Preacher Curl (Bar) | Cable, straight or EZ bar, free-standing preacher bench (assumed) | No | Supinated | option |
+| Cable Single-Arm Preacher Curl | Cable, handle, free-standing preacher bench (assumed) | Yes | Supinated | option |
 
 ### Bayesian Curl — current
 
 Also called the cable behind-the-body curl. The dumbbell version of this "stretched" curl is the Incline Dumbbell Curl, listed under Biceps Curl.
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Cable Single-Arm Bayesian Curl | Cable, handle | Yes | Supinated, standing facing away, cable low | option | |
-| Cable Single-Arm Bayesian Hammer Curl | Cable, handle or half rope (assumed) | Yes | Neutral, standing facing away | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Cable Single-Arm Bayesian Curl | Cable, handle | Yes | Supinated, standing facing away, cable low | option |
+| Cable Single-Arm Bayesian Hammer Curl | Cable, handle or half rope (assumed) | Yes | Neutral, standing facing away | option |
 
 ### Hammer Curl — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Standing Dumbbell Hammer Curl | Dumbbells | No | Neutral, standing | option | |
-| Alternating Dumbbell Hammer Curl | Dumbbells | Yes (alternating) | Neutral, standing | option | |
-| Seated Dumbbell Hammer Curl | Dumbbells, bench | No | Neutral, seated | option | |
-| Cross-Body Dumbbell Hammer Curl | Dumbbells | Yes (alternating) | Neutral, curl across the body | option | |
-| Cable Rope Hammer Curl | Cable, rope | No | Neutral, standing | option | |
-| Cable Single-Arm Hammer Curl | Cable, handle | Yes | Neutral, standing | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Standing Dumbbell Hammer Curl | Dumbbells | No | Neutral, standing | option |
+| Alternating Dumbbell Hammer Curl | Dumbbells | Yes (alternating) | Neutral, standing | option |
+| Seated Dumbbell Hammer Curl | Dumbbells, bench | No | Neutral, seated | option |
+| Cross-Body Dumbbell Hammer Curl | Dumbbells | Yes (alternating) | Neutral, curl across the body | option |
+| Cable Rope Hammer Curl | Cable, rope | No | Neutral, standing | option |
+| Cable Single-Arm Hammer Curl | Cable, handle | Yes | Neutral, standing | option |
 
 ### Wrist Curl — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Seated Barbell Wrist Curl | Barbell or EZ bar, bench | No | Supinated, forearms on thighs or bench | option | |
-| Seated Single-Arm Dumbbell Wrist Curl | Dumbbell, bench | Yes | Supinated | option | |
-| Behind-the-Back Barbell Wrist Curl | Barbell | No | Pronated hands behind back, palms facing back, standing | option | |
-| Cable Wrist Curl | Cable, straight bar | No | Supinated, kneeling or seated | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Seated Barbell Wrist Curl | Barbell or EZ bar, bench | No | Supinated, forearms on thighs or bench | option |
+| Seated Single-Arm Dumbbell Wrist Curl | Dumbbell, bench | Yes | Supinated | option |
+| Behind-the-Back Barbell Wrist Curl | Barbell | No | Pronated hands behind back, palms facing back, standing | option |
+| Cable Wrist Curl | Cable, straight bar | No | Supinated, kneeling or seated | option |
 
 ### Wrist Extension — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Seated Barbell Wrist Extension | Barbell or EZ bar, bench | No | Pronated, forearms on thighs or bench | option | |
-| Seated Single-Arm Dumbbell Wrist Extension | Dumbbell, bench | Yes | Pronated | option | |
-| Cable Wrist Extension | Cable, straight bar | No | Pronated, kneeling or seated | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Seated Barbell Wrist Extension | Barbell or EZ bar, bench | No | Pronated, forearms on thighs or bench | option |
+| Seated Single-Arm Dumbbell Wrist Extension | Dumbbell, bench | Yes | Pronated | option |
+| Cable Wrist Extension | Cable, straight bar | No | Pronated, kneeling or seated | option |
 
 ### Biceps Curl — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Standing Barbell Curl | Barbell | No | Supinated, shoulder width | option | |
-| Standing EZ-Bar Curl | EZ bar | No | Supinated, angled grip | option | |
-| Standing Dumbbell Curl | Dumbbells | No | Supinated, both arms together | option | |
-| Alternating Dumbbell Curl | Dumbbells | Yes (alternating) | Supinated, standing | option | |
-| Seated Dumbbell Curl | Dumbbells, bench | No | Supinated, seated | option | |
-| Incline Dumbbell Curl | Dumbbells, incline bench | No | Supinated, lying back on incline | option | |
-| Concentration Curl | Dumbbell, bench | Yes | Supinated, seated, elbow on thigh | option | |
-| Dumbbell Spider Curl | Dumbbells, incline bench | No | Supinated, face down on incline | option | |
-| Cable Curl (Straight Bar) | Cable, straight or EZ bar | No | Supinated, standing | option | |
-| Cable Single-Arm Curl | Cable, handle | Yes | Supinated, standing facing cable | option | |
-| Barbell Drag Curl | Barbell | No | Supinated, bar dragged up the body | option | |
-| Reverse-Grip EZ-Bar Curl | EZ bar | No | Pronated, standing | option | |
-| Zottman Curl | Dumbbells | No | Supinated up, pronated down | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Standing Barbell Curl | Barbell | No | Supinated, shoulder width | option |
+| Standing EZ-Bar Curl | EZ bar | No | Supinated, angled grip | option |
+| Standing Dumbbell Curl | Dumbbells | No | Supinated, both arms together | option |
+| Alternating Dumbbell Curl | Dumbbells | Yes (alternating) | Supinated, standing | option |
+| Seated Dumbbell Curl | Dumbbells, bench | No | Supinated, seated | option |
+| Incline Dumbbell Curl | Dumbbells, incline bench | No | Supinated, lying back on incline | option |
+| Concentration Curl | Dumbbell, bench | Yes | Supinated, seated, elbow on thigh | option |
+| Dumbbell Spider Curl | Dumbbells, incline bench | No | Supinated, face down on incline | option |
+| Cable Curl (Straight Bar) | Cable, straight or EZ bar | No | Supinated, standing | option |
+| Cable Single-Arm Curl | Cable, handle | Yes | Supinated, standing facing cable | option |
+| Barbell Drag Curl | Barbell | No | Supinated, bar dragged up the body | option |
+| Reverse-Grip EZ-Bar Curl | EZ bar | No | Pronated, standing | option |
+| Zottman Curl | Dumbbells | No | Supinated up, pronated down | option |
 
 ### Lying Triceps Extension (Skull Crusher) — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| EZ-Bar Skull Crusher | EZ bar, flat bench | No | Pronated angled, lying | option | |
-| Barbell Skull Crusher | Straight barbell, flat bench | No | Pronated, lying | option | |
-| Incline EZ-Bar Skull Crusher | EZ bar, incline bench | No | Pronated angled, incline | option | |
-| Dumbbell Lying Triceps Extension | Dumbbells, flat bench | No | Neutral, lying | option | |
-| Smith Machine Skull Crusher | Smith machine, flat bench | No | Pronated, lying | option | |
-| Cable Lying Triceps Extension | Cable, straight or EZ bar, flat bench | No | Pronated, lying head towards cable | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| EZ-Bar Skull Crusher | EZ bar, flat bench | No | Pronated angled, lying | option |
+| Barbell Skull Crusher | Straight barbell, flat bench | No | Pronated, lying | option |
+| Incline EZ-Bar Skull Crusher | EZ bar, incline bench | No | Pronated angled, incline | option |
+| Dumbbell Lying Triceps Extension | Dumbbells, flat bench | No | Neutral, lying | option |
+| Smith Machine Skull Crusher | Smith machine, flat bench | No | Pronated, lying | option |
+| Cable Lying Triceps Extension | Cable, straight or EZ bar, flat bench | No | Pronated, lying head towards cable | option |
 
 ### Close-Grip Bench Press — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Close-Grip Barbell Bench Press | Barbell, flat bench, rack | No | Pronated, shoulder width or a bit narrower | option | |
-| Smith Machine Close-Grip Bench Press | Smith machine, flat bench | No | Pronated, close | option | |
-| Dumbbell Crush Press | Dumbbells, flat bench | No | Neutral, dumbbells pressed together | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Close-Grip Barbell Bench Press | Barbell, flat bench, rack | No | Pronated, shoulder width or a bit narrower | option |
+| Smith Machine Close-Grip Bench Press | Smith machine, flat bench | No | Pronated, close | option |
+| Dumbbell Crush Press | Dumbbells, flat bench | No | Neutral, dumbbells pressed together | option |
 
 Near misses: Cable Triceps Kickback, Dumbbell Triceps Kickback, Wrist Roller.
 
@@ -455,68 +455,68 @@ Near misses: Cable Triceps Kickback, Dumbbell Triceps Kickback, Wrist Roller.
 
 ### Cable Crunch — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Kneeling Cable Crunch (Rope) | Cable, rope | No | Kneeling, rope beside head | option | |
-| Standing Cable Crunch | Cable, rope or handles | No | Standing facing away | option | |
-| Kneeling Cable Oblique Crunch | Cable, rope or handle | Yes (one side) | Kneeling, crunch to one side | option | |
-| Machine Ab Crunch | Selectorised ab crunch machine (assumed) | No | Seated | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Kneeling Cable Crunch (Rope) | Cable, rope | No | Kneeling, rope beside head | option |
+| Standing Cable Crunch | Cable, rope or handles | No | Standing facing away | option |
+| Kneeling Cable Oblique Crunch | Cable, rope or handle | Yes (one side) | Kneeling, crunch to one side | option |
+| Machine Ab Crunch | Selectorised ab crunch machine (assumed) | No | Seated | option |
 
 ### Leg Raise — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Hanging Leg Raise | Pull-up bar (assumed) | No | Pronated hang, legs straight | option | |
-| Hanging Knee Raise | Pull-up bar (assumed) | No | Pronated hang, knees bent | option | |
-| Hanging Oblique Knee Raise | Pull-up bar (assumed) | No | Pronated hang, knees to one side | option | |
-| Captain's Chair Leg Raise | Captain's chair (assumed) | No | Forearms on pads, legs straight | option | |
-| Captain's Chair Knee Raise | Captain's chair (assumed) | No | Forearms on pads, knees bent | option | |
-| Lying Leg Raise | Bodyweight or flat bench | No | Lying on back | option | |
-| Reverse Crunch | Bodyweight | No | Lying on back, knees to chest | option | |
-| Decline Bench Reverse Crunch | Decline bench | No | Lying head-up on decline, holding bench | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Hanging Leg Raise | Pull-up bar (assumed) | No | Pronated hang, legs straight | option |
+| Hanging Knee Raise | Pull-up bar (assumed) | No | Pronated hang, knees bent | option |
+| Hanging Oblique Knee Raise | Pull-up bar (assumed) | No | Pronated hang, knees to one side | option |
+| Captain's Chair Leg Raise | Captain's chair (assumed) | No | Forearms on pads, legs straight | option |
+| Captain's Chair Knee Raise | Captain's chair (assumed) | No | Forearms on pads, knees bent | option |
+| Lying Leg Raise | Bodyweight or flat bench | No | Lying on back | option |
+| Reverse Crunch | Bodyweight | No | Lying on back, knees to chest | option |
+| Decline Bench Reverse Crunch | Decline bench | No | Lying head-up on decline, holding bench | option |
 
 ### Russian Twist — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Bodyweight Russian Twist | Bodyweight | No | Seated, feet up or down | option | |
-| Plate Russian Twist | Plate | No | Seated, plate held at chest | option | |
-| Dumbbell Russian Twist | Dumbbell | No | Seated, dumbbell held at both ends | option | |
-| Medicine Ball Russian Twist | Medicine ball (assumed) | No | Seated | option | |
-| Decline Bench Russian Twist | Decline bench, plate | No | Seated on decline | option | |
-| Landmine Rotation | Barbell, landmine (assumed) | No | Standing, both hands on bar end | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Bodyweight Russian Twist | Bodyweight | No | Seated, feet up or down | option |
+| Plate Russian Twist | Plate | No | Seated, plate held at chest | option |
+| Dumbbell Russian Twist | Dumbbell | No | Seated, dumbbell held at both ends | option |
+| Medicine Ball Russian Twist | Medicine ball (assumed) | No | Seated | option |
+| Decline Bench Russian Twist | Decline bench, plate | No | Seated on decline | option |
+| Landmine Rotation | Barbell, landmine (assumed) | No | Standing, both hands on bar end | option |
 
 ### Plank — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Front Plank | Bodyweight | No | On forearms | option | |
-| Weighted Front Plank | Bodyweight, plate on back | No | On forearms | option | |
-| Side Plank | Bodyweight | Yes (one side) | On one forearm | option | |
-| Plank with Shoulder Taps | Bodyweight | Yes (alternating) | On hands | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Front Plank | Bodyweight | No | On forearms | option |
+| Weighted Front Plank | Bodyweight, plate on back | No | On forearms | option |
+| Side Plank | Bodyweight | Yes (one side) | On one forearm | option |
+| Plank with Shoulder Taps | Bodyweight | Yes (alternating) | On hands | option |
 
 ### Crunch and Sit-Up — option (addition)
 
 Floor and bench crunches. The cable and machine versions are under Cable Crunch.
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Floor Crunch | Bodyweight | No | Lying on back, knees bent | option | |
-| Bicycle Crunch | Bodyweight | Yes (alternating) | Lying on back, elbow to opposite knee | option | |
-| Oblique Crunch | Bodyweight | Yes (one side) | Lying on back or side | option | |
-| Decline Bench Crunch | Decline bench | No | Feet anchored on decline | option | |
-| Stability Ball Crunch | Stability ball (assumed) | No | Lying on ball | option | |
-| Sit-Up | Bodyweight | No | Lying on back, full range | option | |
-| Decline Bench Sit-Up | Decline bench | No | Feet anchored on decline | option | |
-| Weighted Decline Bench Sit-Up | Decline bench, plate | No | Plate held at chest | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Floor Crunch | Bodyweight | No | Lying on back, knees bent | option |
+| Bicycle Crunch | Bodyweight | Yes (alternating) | Lying on back, elbow to opposite knee | option |
+| Oblique Crunch | Bodyweight | Yes (one side) | Lying on back or side | option |
+| Decline Bench Crunch | Decline bench | No | Feet anchored on decline | option |
+| Stability Ball Crunch | Stability ball (assumed) | No | Lying on ball | option |
+| Sit-Up | Bodyweight | No | Lying on back, full range | option |
+| Decline Bench Sit-Up | Decline bench | No | Feet anchored on decline | option |
+| Weighted Decline Bench Sit-Up | Decline bench, plate | No | Plate held at chest | option |
 
 ### Ab Wheel Rollout — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Kneeling Ab Wheel Rollout | Ab wheel (assumed) | No | Kneeling | option | |
-| Standing Ab Wheel Rollout | Ab wheel (assumed) | No | Standing | option | |
-| Kneeling Barbell Rollout | Barbell with round plates | No | Kneeling, pronated | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Kneeling Ab Wheel Rollout | Ab wheel (assumed) | No | Kneeling | option |
+| Standing Ab Wheel Rollout | Ab wheel (assumed) | No | Standing | option |
+| Kneeling Barbell Rollout | Barbell with round plates | No | Kneeling, pronated | option |
 
 Near misses: Cable Woodchop, Pallof Press, Dead Bug, Dumbbell Side Bend.
 
@@ -524,56 +524,56 @@ Near misses: Cable Woodchop, Pallof Press, Dead Bug, Dumbbell Side Bend.
 
 ### Hip Abduction — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Seated Machine Hip Abduction | Selectorised hip abductor | No | Seated upright | option | |
-| Seated Machine Hip Abduction (Forward Lean) | Selectorised hip abductor | No | Seated, leaning forward (more glute max) | option | |
-| Cable Standing Hip Abduction | Cable, ankle strap (assumed) | Yes | Standing side-on to the cable | option | |
-| Side-Lying Hip Abduction | Bodyweight | Yes | Lying on side | option | |
-| Banded Seated Hip Abduction | Band (assumed) | No | Seated, band above knees | option | |
-| Banded Lateral Walk | Band (assumed) | No | Standing, half squat | option | |
-| Banded Clamshell | Band (assumed) | Yes | Lying on side, knees bent | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Seated Machine Hip Abduction | Selectorised hip abductor | No | Seated upright | option |
+| Seated Machine Hip Abduction (Forward Lean) | Selectorised hip abductor | No | Seated, leaning forward (more glute max) | option |
+| Cable Standing Hip Abduction | Cable, ankle strap (assumed) | Yes | Standing side-on to the cable | option |
+| Side-Lying Hip Abduction | Bodyweight | Yes | Lying on side | option |
+| Banded Seated Hip Abduction | Band (assumed) | No | Seated, band above knees | option |
+| Banded Lateral Walk | Band (assumed) | No | Standing, half squat | option |
+| Banded Clamshell | Band (assumed) | Yes | Lying on side, knees bent | option |
 
 ### Hip Adduction — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Seated Machine Hip Adduction | Selectorised hip adductor | No | Seated | option | |
-| Cable Standing Hip Adduction | Cable, ankle strap (assumed) | Yes | Standing side-on to the cable | option | |
-| Side-Lying Hip Adduction | Bodyweight | Yes | Lying on side, lower leg lifts | option | |
-| Copenhagen Plank | Bodyweight, flat bench | Yes (one side) | Side plank, top leg on bench | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Seated Machine Hip Adduction | Selectorised hip adductor | No | Seated | option |
+| Cable Standing Hip Adduction | Cable, ankle strap (assumed) | Yes | Standing side-on to the cable | option |
+| Side-Lying Hip Adduction | Bodyweight | Yes | Lying on side, lower leg lifts | option |
+| Copenhagen Plank | Bodyweight, flat bench | Yes (one side) | Side plank, top leg on bench | option |
 
 ### Hip Thrust and Glute Bridge — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Barbell Hip Thrust | Barbell, flat bench | No | Upper back on bench | option | |
-| Dumbbell Hip Thrust | Dumbbell, flat bench | No | Upper back on bench | option | |
-| Single-Leg Hip Thrust | Bodyweight or dumbbell, flat bench | Yes | Upper back on bench, one foot down | option | |
-| Smith Machine Hip Thrust | Smith machine, flat bench | No | Upper back on bench | option | |
-| Machine Hip Thrust | Hip thrust machine (assumed) | No | Seated / back on pad | option | |
-| Glute Bridge | Bodyweight | No | Lying on floor | option | |
-| Barbell Glute Bridge | Barbell | No | Lying on floor | option | |
-| Single-Leg Glute Bridge | Bodyweight | Yes | Lying on floor, one foot down | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Barbell Hip Thrust | Barbell, flat bench | No | Upper back on bench | option |
+| Dumbbell Hip Thrust | Dumbbell, flat bench | No | Upper back on bench | option |
+| Single-Leg Hip Thrust | Bodyweight or dumbbell, flat bench | Yes | Upper back on bench, one foot down | option |
+| Smith Machine Hip Thrust | Smith machine, flat bench | No | Upper back on bench | option |
+| Machine Hip Thrust | Hip thrust machine (assumed) | No | Seated / back on pad | option |
+| Glute Bridge | Bodyweight | No | Lying on floor | option |
+| Barbell Glute Bridge | Barbell | No | Lying on floor | option |
+| Single-Leg Glute Bridge | Bodyweight | Yes | Lying on floor, one foot down | option |
 
 ### Step-Up — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Dumbbell Step-Up | Dumbbells, box or bench (assumed box) | Yes | Forward step | option | |
-| Barbell Step-Up | Barbell, box or bench (assumed box) | Yes | Forward step, bar on back | option | |
-| Bodyweight Step-Up | Box or bench (assumed box) | Yes | Forward step | option | |
-| Dumbbell Lateral Step-Up | Dumbbells, box or bench (assumed box) | Yes | Side step | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Dumbbell Step-Up | Dumbbells, box or bench (assumed box) | Yes | Forward step | option |
+| Barbell Step-Up | Barbell, box or bench (assumed box) | Yes | Forward step, bar on back | option |
+| Bodyweight Step-Up | Box or bench (assumed box) | Yes | Forward step | option |
+| Dumbbell Lateral Step-Up | Dumbbells, box or bench (assumed box) | Yes | Side step | option |
 
 Main group Glutes and hips for this list (the step-up had the highest glute max activity in the Krause Neto review). The quads work hard too.
 
 ### Glute Kickback — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Cable Glute Kickback | Cable, ankle strap (assumed) | Yes | Standing hinged, facing cable | option | |
-| Machine Glute Kickback | Glute kickback machine (assumed) | Yes | Standing or kneeling on machine | option | |
-| Quadruped Donkey Kick | Bodyweight | Yes | On hands and knees | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Cable Glute Kickback | Cable, ankle strap (assumed) | Yes | Standing hinged, facing cable | option |
+| Machine Glute Kickback | Glute kickback machine (assumed) | Yes | Standing or kneeling on machine | option |
+| Quadruped Donkey Kick | Bodyweight | Yes | On hands and knees | option |
 
 Near misses: Cable Pull-Through, Reverse Hyperextension.
 
@@ -581,70 +581,70 @@ Near misses: Cable Pull-Through, Reverse Hyperextension.
 
 ### Leg Press — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| 45-Degree Leg Press | Plate-loaded leg press | No | Feet mid-platform, shoulder width | option | |
-| 45-Degree Leg Press (Low, Narrow Feet) | Plate-loaded leg press | No | Feet low and close (quad bias) | option | |
-| 45-Degree Leg Press (High, Wide Feet) | Plate-loaded leg press | No | Feet high and wide (glute and adductor bias) | option | |
-| Single-Leg 45-Degree Leg Press | Plate-loaded leg press | Yes | One foot mid-platform | option | |
-| Seated Horizontal Leg Press | Selectorised leg press (assumed) | No | Seated upright | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| 45-Degree Leg Press | Plate-loaded leg press | No | Feet mid-platform, shoulder width | option |
+| 45-Degree Leg Press (Low, Narrow Feet) | Plate-loaded leg press | No | Feet low and close (quad bias) | option |
+| 45-Degree Leg Press (High, Wide Feet) | Plate-loaded leg press | No | Feet high and wide (glute and adductor bias) | option |
+| Single-Leg 45-Degree Leg Press | Plate-loaded leg press | Yes | One foot mid-platform | option |
+| Seated Horizontal Leg Press | Selectorised leg press (assumed) | No | Seated upright | option |
 
 ### Leg Extension — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Seated Machine Leg Extension | Selectorised leg extension | No | Seated | option | |
-| Single-Leg Machine Leg Extension | Selectorised leg extension | Yes | Seated | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Seated Machine Leg Extension | Selectorised leg extension | No | Seated | option |
+| Single-Leg Machine Leg Extension | Selectorised leg extension | Yes | Seated | option |
 
 ### Pendulum Squat — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Pendulum Squat | Plate-loaded pendulum squat | No | Shoulders under pads, feet mid-platform | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Pendulum Squat | Plate-loaded pendulum squat | No | Shoulders under pads, feet mid-platform | option |
 
 No other variants are common. The reverse pendulum squat and single-leg pendulum squat exist but are rare (not verified in an exercise library).
 
 ### Bulgarian Split Squat — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Dumbbell Bulgarian Split Squat | Dumbbells, flat bench | Yes | Rear foot on bench | option | |
-| Barbell Bulgarian Split Squat | Barbell, flat bench | Yes | Rear foot on bench, bar on back | option | |
-| Smith Machine Bulgarian Split Squat | Smith machine, flat bench | Yes | Rear foot on bench | option | |
-| Bodyweight Bulgarian Split Squat | Flat bench | Yes | Rear foot on bench | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Dumbbell Bulgarian Split Squat | Dumbbells, flat bench | Yes | Rear foot on bench | option |
+| Barbell Bulgarian Split Squat | Barbell, flat bench | Yes | Rear foot on bench, bar on back | option |
+| Smith Machine Bulgarian Split Squat | Smith machine, flat bench | Yes | Rear foot on bench | option |
+| Bodyweight Bulgarian Split Squat | Flat bench | Yes | Rear foot on bench | option |
 
 ### Squat — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| High-Bar Barbell Back Squat | Barbell, rack | No | Bar on upper traps | option | |
-| Low-Bar Barbell Back Squat | Barbell, rack | No | Bar on rear delts | option | |
-| Barbell Front Squat | Barbell, rack | No | Bar on front delts | option | |
-| Safety Bar Squat | Safety squat bar (assumed), rack | No | Yoke on shoulders | option | |
-| Smith Machine Squat | Smith machine | No | Bar on upper back | option | |
-| Goblet Squat | Dumbbell | No | Dumbbell held at chest | option | |
-| Bodyweight Squat | Bodyweight | No | Hands in front | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| High-Bar Barbell Back Squat | Barbell, rack | No | Bar on upper traps | option |
+| Low-Bar Barbell Back Squat | Barbell, rack | No | Bar on rear delts | option |
+| Barbell Front Squat | Barbell, rack | No | Bar on front delts | option |
+| Safety Bar Squat | Safety squat bar (assumed), rack | No | Yoke on shoulders | option |
+| Smith Machine Squat | Smith machine | No | Bar on upper back | option |
+| Goblet Squat | Dumbbell | No | Dumbbell held at chest | option |
+| Bodyweight Squat | Bodyweight | No | Hands in front | option |
 
 ### Hack Squat — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Machine Hack Squat | Plate-loaded hack squat | No | Back on pad, facing out | option | |
-| Reverse Machine Hack Squat | Plate-loaded hack squat | No | Chest on pad, facing the machine | option | |
-| Barbell Hack Squat | Barbell | No | Bar held behind the legs | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Machine Hack Squat | Plate-loaded hack squat | No | Back on pad, facing out | option |
+| Reverse Machine Hack Squat | Plate-loaded hack squat | No | Chest on pad, facing the machine | option |
+| Barbell Hack Squat | Barbell | No | Bar held behind the legs | option |
 
 ### Lunge — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Dumbbell Walking Lunge | Dumbbells | Yes (alternating) | Walking forward | option | |
-| Barbell Walking Lunge | Barbell | Yes (alternating) | Walking forward, bar on back | option | |
-| Bodyweight Walking Lunge | Bodyweight | Yes (alternating) | Walking forward | option | |
-| Dumbbell Reverse Lunge | Dumbbells | Yes | Stepping back | option | |
-| Barbell Reverse Lunge | Barbell, rack | Yes | Stepping back, bar on back | option | |
-| Smith Machine Reverse Lunge | Smith machine | Yes | Stepping back | option | |
-| Dumbbell Forward Lunge | Dumbbells | Yes | Stepping forward and back | option | |
-| Dumbbell Lateral Lunge | Dumbbell or bodyweight | Yes | Stepping to the side | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Dumbbell Walking Lunge | Dumbbells | Yes (alternating) | Walking forward | option |
+| Barbell Walking Lunge | Barbell | Yes (alternating) | Walking forward, bar on back | option |
+| Bodyweight Walking Lunge | Bodyweight | Yes (alternating) | Walking forward | option |
+| Dumbbell Reverse Lunge | Dumbbells | Yes | Stepping back | option |
+| Barbell Reverse Lunge | Barbell, rack | Yes | Stepping back, bar on back | option |
+| Smith Machine Reverse Lunge | Smith machine | Yes | Stepping back | option |
+| Dumbbell Forward Lunge | Dumbbells | Yes | Stepping forward and back | option |
+| Dumbbell Lateral Lunge | Dumbbell or bodyweight | Yes | Stepping to the side | option |
 
 Near misses: Reverse Nordic, Sissy Squat.
 
@@ -652,49 +652,49 @@ Near misses: Reverse Nordic, Sissy Squat.
 
 ### Hamstring Curl — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Seated Machine Leg Curl | Selectorised leg curl | No | Seated | option | |
-| Single-Leg Seated Machine Leg Curl | Selectorised leg curl | Yes | Seated | option | |
-| Lying Machine Leg Curl | Selectorised leg curl (assumed lying version) | No | Lying face down | option | |
-| Single-Leg Lying Machine Leg Curl | Selectorised leg curl (assumed lying version) | Yes | Lying face down | option | |
-| Standing Single-Leg Machine Leg Curl | Standing leg curl (assumed) | Yes | Standing | option | |
-| Cable Standing Leg Curl | Cable, ankle strap (assumed) | Yes | Standing facing the cable | option | |
-| Dumbbell Lying Leg Curl | Dumbbell, flat bench | No | Lying face down, dumbbell between feet | option | |
-| Stability Ball Leg Curl | Stability ball (assumed) | No | Lying on back, heels on ball | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Seated Machine Leg Curl | Selectorised leg curl | No | Seated | option |
+| Single-Leg Seated Machine Leg Curl | Selectorised leg curl | Yes | Seated | option |
+| Lying Machine Leg Curl | Selectorised leg curl (assumed lying version) | No | Lying face down | option |
+| Single-Leg Lying Machine Leg Curl | Selectorised leg curl (assumed lying version) | Yes | Lying face down | option |
+| Standing Single-Leg Machine Leg Curl | Standing leg curl (assumed) | Yes | Standing | option |
+| Cable Standing Leg Curl | Cable, ankle strap (assumed) | Yes | Standing facing the cable | option |
+| Dumbbell Lying Leg Curl | Dumbbell, flat bench | No | Lying face down, dumbbell between feet | option |
+| Stability Ball Leg Curl | Stability ball (assumed) | No | Lying on back, heels on ball | option |
 
 ### Romanian Deadlift — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Barbell Romanian Deadlift | Barbell | No | Pronated or mixed | option | |
-| Dumbbell Romanian Deadlift | Dumbbells | No | Neutral or pronated | option | |
-| Single-Leg Dumbbell Romanian Deadlift | Dumbbell or dumbbells | Yes | Standing on one leg | option | |
-| B-Stance Dumbbell Romanian Deadlift | Dumbbells | Yes (mostly one leg) | Kickstand stance | option | |
-| Smith Machine Romanian Deadlift | Smith machine | No | Pronated | option | |
-| Barbell Stiff-Leg Deadlift | Barbell | No | Pronated, knees nearly straight, from floor | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Barbell Romanian Deadlift | Barbell | No | Pronated or mixed | option |
+| Dumbbell Romanian Deadlift | Dumbbells | No | Neutral or pronated | option |
+| Single-Leg Dumbbell Romanian Deadlift | Dumbbell or dumbbells | Yes | Standing on one leg | option |
+| B-Stance Dumbbell Romanian Deadlift | Dumbbells | Yes (mostly one leg) | Kickstand stance | option |
+| Smith Machine Romanian Deadlift | Smith machine | No | Pronated | option |
+| Barbell Stiff-Leg Deadlift | Barbell | No | Pronated, knees nearly straight, from floor | option |
 
 ### Nordic Hamstring Curl — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Nordic Hamstring Curl | Bodyweight, ankles anchored (pad, partner or bar; assumed) | No | Kneeling | option | |
-| Band-Assisted Nordic Hamstring Curl | Bodyweight, band (assumed) | No | Kneeling, band round chest | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Nordic Hamstring Curl | Bodyweight, ankles anchored (pad, partner or bar; assumed) | No | Kneeling | option |
+| Band-Assisted Nordic Hamstring Curl | Bodyweight, band (assumed) | No | Kneeling, band round chest | option |
 
 ### Good Morning — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Barbell Good Morning | Barbell, rack | No | Bar on upper back, standing | option | |
-| Smith Machine Good Morning | Smith machine | No | Bar on upper back, standing | option | |
-| Banded Good Morning | Band (assumed) | No | Band round neck and under feet | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Barbell Good Morning | Barbell, rack | No | Bar on upper back, standing | option |
+| Smith Machine Good Morning | Smith machine | No | Bar on upper back, standing | option |
+| Banded Good Morning | Band (assumed) | No | Band round neck and under feet | option |
 
 ### Glute-Ham Raise — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Glute-Ham Raise | GHD (assumed) | No | Kneeling on pad, feet locked | option | |
-| Weighted Glute-Ham Raise | GHD (assumed), plate | No | Plate held at chest | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Glute-Ham Raise | GHD (assumed) | No | Kneeling on pad, feet locked | option |
+| Weighted Glute-Ham Raise | GHD (assumed), plate | No | Plate held at chest | option |
 
 Near misses: Kettlebell Swing (no kettlebells listed), Cable Pull-Through.
 
@@ -702,27 +702,27 @@ Near misses: Kettlebell Swing (no kettlebells listed), Cable Pull-Through.
 
 ### Calf Raise — current
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Standing Machine Calf Raise | Selectorised standing calf raise | No | Standing, pads on shoulders | option | |
-| Seated Machine Calf Raise | Seated calf raise machine (assumed) | No | Seated, pad on knees (soleus bias) | option | |
-| Leg Press Calf Raise | Plate-loaded leg press | No | Balls of feet on platform edge | option | |
-| Hack Squat Calf Raise | Plate-loaded hack squat | No | Balls of feet on platform edge | option | |
-| Smith Machine Standing Calf Raise | Smith machine, step (assumed) or plate | No | Standing | option | |
-| Barbell Standing Calf Raise | Barbell, rack, step (assumed) or plate | No | Standing | option | |
-| Single-Leg Dumbbell Calf Raise | Dumbbell, step (assumed) | Yes | Standing on one leg | option | |
-| Bodyweight Standing Calf Raise | Step (assumed) | No | Standing | option | |
-| Seated Dumbbell Calf Raise | Dumbbells, bench, step (assumed) or plate | No | Seated, dumbbells on knees | option | |
-| Donkey Calf Raise | Donkey calf raise machine (assumed) | No | Hinged at the hips | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Standing Machine Calf Raise | Selectorised standing calf raise | No | Standing, pads on shoulders | option |
+| Seated Machine Calf Raise | Seated calf raise machine (assumed) | No | Seated, pad on knees (soleus bias) | option |
+| Leg Press Calf Raise | Plate-loaded leg press | No | Balls of feet on platform edge | option |
+| Hack Squat Calf Raise | Plate-loaded hack squat | No | Balls of feet on platform edge | option |
+| Smith Machine Standing Calf Raise | Smith machine, step (assumed) or plate | No | Standing | option |
+| Barbell Standing Calf Raise | Barbell, rack, step (assumed) or plate | No | Standing | option |
+| Single-Leg Dumbbell Calf Raise | Dumbbell, step (assumed) | Yes | Standing on one leg | option |
+| Bodyweight Standing Calf Raise | Step (assumed) | No | Standing | option |
+| Seated Dumbbell Calf Raise | Dumbbells, bench, step (assumed) or plate | No | Seated, dumbbells on knees | option |
+| Donkey Calf Raise | Donkey calf raise machine (assumed) | No | Hinged at the hips | option |
 
 ### Tibialis Raise — option (addition)
 
-| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag | Liam does |
-|---|---|---|---|---|---|
-| Wall Tibialis Raise | Bodyweight, wall | No | Standing, back against wall | option | |
-| Seated Dumbbell Tibialis Raise | Dumbbell, bench | No | Seated, dumbbell held between feet | option | |
-| Tib Bar Tibialis Raise | Tib bar (assumed) | No | Seated on bench | option | |
-| Banded Ankle Dorsiflexion | Band (assumed) | Yes | Seated on floor, band round foot | option | |
+| Exercise (specific variant name) | Equipment | Unilateral? | Grip / position | Tag |
+|---|---|---|---|---|
+| Wall Tibialis Raise | Bodyweight, wall | No | Standing, back against wall | option |
+| Seated Dumbbell Tibialis Raise | Dumbbell, bench | No | Seated, dumbbell held between feet | option |
+| Tib Bar Tibialis Raise | Tib bar (assumed) | No | Seated on bench | option |
+| Banded Ankle Dorsiflexion | Band (assumed) | Yes | Seated on floor, band round foot | option |
 
 Only one addition here. The common calf exercises are all calf raise variants, which Liam's own family already covers. Heel Walk (a warm-up drill, not a strength exercise) and Jump Rope (cardio, a non-goal in `docs/product/vision.md`) were considered and dropped. Near miss: Banded Ankle Eversion (fibularis). See [Assumptions and open questions](#assumptions-and-open-questions).
 
