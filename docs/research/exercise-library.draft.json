@@ -1,0 +1,4896 @@
+[
+  {
+    "id": "incline-barbell-bench-press",
+    "name": "Incline Barbell Bench Press",
+    "equipment": "Barbell, incline bench, rack",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "incline-dumbbell-press",
+    "name": "Incline Dumbbell Press",
+    "equipment": "Dumbbells, incline bench",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "incline-neutral-grip-dumbbell-press",
+    "name": "Incline Neutral-Grip Dumbbell Press",
+    "equipment": "Dumbbells, incline bench",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "single-arm-incline-dumbbell-press",
+    "name": "Single-Arm Incline Dumbbell Press",
+    "equipment": "Dumbbell, incline bench",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "smith-machine-incline-bench-press",
+    "name": "Smith Machine Incline Bench Press",
+    "equipment": "Smith machine, incline bench",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "plate-loaded-incline-chest-press",
+    "name": "Plate-Loaded Incline Chest Press",
+    "equipment": "Plate-loaded machine",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "single-arm-plate-loaded-incline-chest-press",
+    "name": "Single-Arm Plate-Loaded Incline Chest Press",
+    "equipment": "Plate-loaded iso-lateral machine (assumed)",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "incline-cable-chest-press",
+    "name": "Incline Cable Chest Press",
+    "equipment": "Dual cables, incline bench",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "pec-deck-fly",
+    "name": "Pec Deck Fly",
+    "equipment": "Selectorised pec deck",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular",
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "single-arm-pec-deck-fly",
+    "name": "Single-Arm Pec Deck Fly",
+    "equipment": "Selectorised pec deck",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular",
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "flat-dumbbell-chest-fly",
+    "name": "Flat Dumbbell Chest Fly",
+    "equipment": "Dumbbells, flat bench",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular",
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "incline-dumbbell-chest-fly",
+    "name": "Incline Dumbbell Chest Fly",
+    "equipment": "Dumbbells, incline bench",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "decline-dumbbell-chest-fly",
+    "name": "Decline Dumbbell Chest Fly",
+    "equipment": "Dumbbells, decline bench",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "standing-cable-chest-fly",
+    "name": "Standing Cable Chest Fly",
+    "equipment": "Dual cables, handles",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular",
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "high-to-low-cable-chest-fly",
+    "name": "High-to-Low Cable Chest Fly",
+    "equipment": "Dual cables, handles",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "low-to-high-cable-chest-fly",
+    "name": "Low-to-High Cable Chest Fly",
+    "equipment": "Dual cables, handles",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "seated-cable-chest-fly",
+    "name": "Seated Cable Chest Fly",
+    "equipment": "Dual cables, bench",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular",
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "flat-bench-cable-chest-fly",
+    "name": "Flat Bench Cable Chest Fly",
+    "equipment": "Dual cables, flat bench",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular",
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "incline-bench-cable-chest-fly",
+    "name": "Incline Bench Cable Chest Fly",
+    "equipment": "Dual cables, incline bench",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "single-arm-cable-chest-fly",
+    "name": "Single-Arm Cable Chest Fly",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular",
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "resistance-band-chest-fly",
+    "name": "Resistance Band Chest Fly",
+    "equipment": "Band (assumed)",
+    "primaryMuscles": [
+      "pectoralis-major-clavicular",
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "parallel-bar-dip-chest-lean",
+    "name": "Parallel Bar Dip (Chest Lean)",
+    "equipment": "Dip station",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "deltoid-anterior",
+      "pectoralis-major-clavicular"
+    ]
+  },
+  {
+    "id": "parallel-bar-dip-upright",
+    "name": "Parallel Bar Dip (Upright)",
+    "equipment": "Dip station",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "weighted-parallel-bar-dip",
+    "name": "Weighted Parallel Bar Dip",
+    "equipment": "Dip station, dip belt (assumed), plates",
+    "primaryMuscles": [
+      "pectoralis-major-sternal",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "pectoralis-major-clavicular"
+    ]
+  },
+  {
+    "id": "machine-assisted-dip",
+    "name": "Machine-Assisted Dip",
+    "equipment": "Assisted pull-up / dip machine (assumed)",
+    "primaryMuscles": [
+      "pectoralis-major-sternal",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "pectoralis-major-clavicular"
+    ]
+  },
+  {
+    "id": "band-assisted-dip",
+    "name": "Band-Assisted Dip",
+    "equipment": "Dip station, band (assumed)",
+    "primaryMuscles": [
+      "pectoralis-major-sternal",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "pectoralis-major-clavicular"
+    ]
+  },
+  {
+    "id": "seated-machine-dip",
+    "name": "Seated Machine Dip",
+    "equipment": "Seated dip machine (assumed)",
+    "primaryMuscles": [
+      "pectoralis-major-sternal",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "pectoralis-major-clavicular"
+    ]
+  },
+  {
+    "id": "bench-dip",
+    "name": "Bench Dip",
+    "equipment": "Flat bench",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "pectoralis-major-sternal"
+    ]
+  },
+  {
+    "id": "barbell-bench-press",
+    "name": "Barbell Bench Press",
+    "equipment": "Barbell, flat bench, rack",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "wide-grip-barbell-bench-press",
+    "name": "Wide-Grip Barbell Bench Press",
+    "equipment": "Barbell, flat bench, rack",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "flat-dumbbell-bench-press",
+    "name": "Flat Dumbbell Bench Press",
+    "equipment": "Dumbbells, flat bench",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "flat-neutral-grip-dumbbell-bench-press",
+    "name": "Flat Neutral-Grip Dumbbell Bench Press",
+    "equipment": "Dumbbells, flat bench",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "single-arm-flat-dumbbell-bench-press",
+    "name": "Single-Arm Flat Dumbbell Bench Press",
+    "equipment": "Dumbbell, flat bench",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "dumbbell-floor-press",
+    "name": "Dumbbell Floor Press",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "smith-machine-bench-press",
+    "name": "Smith Machine Bench Press",
+    "equipment": "Smith machine, flat bench",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "plate-loaded-seated-chest-press",
+    "name": "Plate-Loaded Seated Chest Press",
+    "equipment": "Plate-loaded machine",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "single-arm-plate-loaded-seated-chest-press",
+    "name": "Single-Arm Plate-Loaded Seated Chest Press",
+    "equipment": "Plate-loaded iso-lateral machine (assumed)",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "selectorised-seated-chest-press",
+    "name": "Selectorised Seated Chest Press",
+    "equipment": "Selectorised machine (assumed)",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "standing-cable-chest-press",
+    "name": "Standing Cable Chest Press",
+    "equipment": "Dual cables, handles",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "single-arm-standing-cable-chest-press",
+    "name": "Single-Arm Standing Cable Chest Press",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "push-up",
+    "name": "Push-Up",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "serratus-anterior",
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "wide-grip-push-up",
+    "name": "Wide-Grip Push-Up",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "serratus-anterior",
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "diamond-push-up",
+    "name": "Diamond Push-Up",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-sternal",
+      "deltoid-anterior",
+      "serratus-anterior",
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "incline-push-up",
+    "name": "Incline Push-Up",
+    "equipment": "Bodyweight, bench",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "serratus-anterior",
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "decline-push-up",
+    "name": "Decline Push-Up",
+    "equipment": "Bodyweight, bench",
+    "primaryMuscles": [
+      "pectoralis-major-sternal",
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "serratus-anterior",
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "weighted-push-up",
+    "name": "Weighted Push-Up",
+    "equipment": "Bodyweight, plate on back",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "serratus-anterior",
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "kneeling-push-up",
+    "name": "Kneeling Push-Up",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "serratus-anterior",
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "decline-barbell-bench-press",
+    "name": "Decline Barbell Bench Press",
+    "equipment": "Barbell, decline bench",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "decline-dumbbell-press",
+    "name": "Decline Dumbbell Press",
+    "equipment": "Dumbbells, decline bench",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "smith-machine-decline-bench-press",
+    "name": "Smith Machine Decline Bench Press",
+    "equipment": "Smith machine, decline bench",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "plate-loaded-decline-chest-press",
+    "name": "Plate-Loaded Decline Chest Press",
+    "equipment": "Plate-loaded machine (assumed)",
+    "primaryMuscles": [
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ]
+  },
+  {
+    "id": "standing-barbell-overhead-press",
+    "name": "Standing Barbell Overhead Press",
+    "equipment": "Barbell, rack",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "seated-barbell-overhead-press",
+    "name": "Seated Barbell Overhead Press",
+    "equipment": "Barbell, rack, adjustable bench set upright",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "behind-the-neck-barbell-press",
+    "name": "Behind-the-Neck Barbell Press",
+    "equipment": "Barbell, rack",
+    "primaryMuscles": [
+      "deltoid-anterior",
+      "deltoid-lateral"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "barbell-push-press",
+    "name": "Barbell Push Press",
+    "equipment": "Barbell, rack",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior",
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ]
+  },
+  {
+    "id": "seated-dumbbell-shoulder-press",
+    "name": "Seated Dumbbell Shoulder Press",
+    "equipment": "Dumbbells, adjustable bench set upright",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "standing-dumbbell-shoulder-press",
+    "name": "Standing Dumbbell Shoulder Press",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "seated-neutral-grip-dumbbell-shoulder-press",
+    "name": "Seated Neutral-Grip Dumbbell Shoulder Press",
+    "equipment": "Dumbbells, adjustable bench set upright",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "single-arm-standing-dumbbell-shoulder-press",
+    "name": "Single-Arm Standing Dumbbell Shoulder Press",
+    "equipment": "Dumbbell",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "seated-arnold-press",
+    "name": "Seated Arnold Press",
+    "equipment": "Dumbbells, adjustable bench set upright",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "seated-smith-machine-shoulder-press",
+    "name": "Seated Smith Machine Shoulder Press",
+    "equipment": "Smith machine, adjustable bench set upright",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "selectorised-machine-shoulder-press",
+    "name": "Selectorised Machine Shoulder Press",
+    "equipment": "Selectorised machine (assumed)",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "plate-loaded-shoulder-press",
+    "name": "Plate-Loaded Shoulder Press",
+    "equipment": "Plate-loaded machine",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "single-arm-plate-loaded-shoulder-press",
+    "name": "Single-Arm Plate-Loaded Shoulder Press",
+    "equipment": "Plate-loaded iso-lateral machine (assumed)",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "deltoid-lateral",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "trapezius-upper",
+      "pectoralis-major-clavicular",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "standing-landmine-press",
+    "name": "Standing Landmine Press",
+    "equipment": "Barbell, landmine (assumed)",
+    "primaryMuscles": [
+      "deltoid-anterior",
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "half-kneeling-single-arm-landmine-press",
+    "name": "Half-Kneeling Single-Arm Landmine Press",
+    "equipment": "Barbell, landmine (assumed)",
+    "primaryMuscles": [
+      "deltoid-anterior",
+      "pectoralis-major-clavicular"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "standing-dumbbell-lateral-raise",
+    "name": "Standing Dumbbell Lateral Raise",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "deltoid-lateral"
+    ],
+    "secondaryMuscles": [
+      "supraspinatus",
+      "trapezius-upper",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "seated-dumbbell-lateral-raise",
+    "name": "Seated Dumbbell Lateral Raise",
+    "equipment": "Dumbbells, bench",
+    "primaryMuscles": [
+      "deltoid-lateral"
+    ],
+    "secondaryMuscles": [
+      "supraspinatus",
+      "trapezius-upper",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "single-arm-leaning-dumbbell-lateral-raise",
+    "name": "Single-Arm Leaning Dumbbell Lateral Raise",
+    "equipment": "Dumbbell, upright to hold",
+    "primaryMuscles": [
+      "deltoid-lateral"
+    ],
+    "secondaryMuscles": [
+      "supraspinatus",
+      "trapezius-upper",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "side-lying-incline-dumbbell-lateral-raise",
+    "name": "Side-Lying Incline Dumbbell Lateral Raise",
+    "equipment": "Dumbbell, incline bench",
+    "primaryMuscles": [
+      "deltoid-lateral"
+    ],
+    "secondaryMuscles": [
+      "supraspinatus",
+      "trapezius-upper",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "cable-single-arm-lateral-raise",
+    "name": "Cable Single-Arm Lateral Raise",
+    "equipment": "Cable, handle or ankle/wrist cuff (assumed)",
+    "primaryMuscles": [
+      "deltoid-lateral"
+    ],
+    "secondaryMuscles": [
+      "supraspinatus",
+      "trapezius-upper",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "cable-y-raise",
+    "name": "Cable Y-Raise",
+    "equipment": "Dual cables, handles",
+    "primaryMuscles": [
+      "deltoid-lateral"
+    ],
+    "secondaryMuscles": [
+      "supraspinatus",
+      "trapezius-upper",
+      "trapezius-lower"
+    ]
+  },
+  {
+    "id": "machine-lateral-raise",
+    "name": "Machine Lateral Raise",
+    "equipment": "Selectorised machine (assumed)",
+    "primaryMuscles": [
+      "deltoid-lateral"
+    ],
+    "secondaryMuscles": [
+      "supraspinatus",
+      "trapezius-upper",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "resistance-band-lateral-raise",
+    "name": "Resistance Band Lateral Raise",
+    "equipment": "Band (assumed)",
+    "primaryMuscles": [
+      "deltoid-lateral"
+    ],
+    "secondaryMuscles": [
+      "supraspinatus",
+      "trapezius-upper",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "reverse-pec-deck-fly",
+    "name": "Reverse Pec Deck Fly",
+    "equipment": "Selectorised pec deck / rear delt",
+    "primaryMuscles": [
+      "deltoid-posterior"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "infraspinatus",
+      "teres-minor"
+    ]
+  },
+  {
+    "id": "single-arm-reverse-pec-deck-fly",
+    "name": "Single-Arm Reverse Pec Deck Fly",
+    "equipment": "Selectorised pec deck / rear delt",
+    "primaryMuscles": [
+      "deltoid-posterior"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "infraspinatus",
+      "teres-minor"
+    ]
+  },
+  {
+    "id": "bent-over-dumbbell-reverse-fly",
+    "name": "Bent-Over Dumbbell Reverse Fly",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "deltoid-posterior"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "infraspinatus",
+      "teres-minor"
+    ]
+  },
+  {
+    "id": "seated-bent-over-dumbbell-reverse-fly",
+    "name": "Seated Bent-Over Dumbbell Reverse Fly",
+    "equipment": "Dumbbells, bench",
+    "primaryMuscles": [
+      "deltoid-posterior"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "infraspinatus",
+      "teres-minor"
+    ]
+  },
+  {
+    "id": "chest-supported-incline-dumbbell-reverse-fly",
+    "name": "Chest-Supported Incline Dumbbell Reverse Fly",
+    "equipment": "Dumbbells, incline bench",
+    "primaryMuscles": [
+      "deltoid-posterior"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "infraspinatus",
+      "teres-minor"
+    ]
+  },
+  {
+    "id": "standing-cable-reverse-fly",
+    "name": "Standing Cable Reverse Fly",
+    "equipment": "Dual cables (no handle, or handles)",
+    "primaryMuscles": [
+      "deltoid-posterior"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "infraspinatus",
+      "teres-minor"
+    ]
+  },
+  {
+    "id": "cable-single-arm-rear-delt-fly",
+    "name": "Cable Single-Arm Rear Delt Fly",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "deltoid-posterior"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "infraspinatus",
+      "teres-minor"
+    ]
+  },
+  {
+    "id": "band-pull-apart",
+    "name": "Band Pull-Apart",
+    "equipment": "Band (assumed)",
+    "primaryMuscles": [
+      "deltoid-posterior"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "infraspinatus",
+      "teres-minor"
+    ]
+  },
+  {
+    "id": "dumbbell-front-raise",
+    "name": "Dumbbell Front Raise",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-lateral",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "alternating-dumbbell-front-raise",
+    "name": "Alternating Dumbbell Front Raise",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-lateral",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "barbell-front-raise",
+    "name": "Barbell Front Raise",
+    "equipment": "Barbell or EZ bar",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-lateral",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "plate-front-raise",
+    "name": "Plate Front Raise",
+    "equipment": "Plate",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-lateral",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "cable-front-raise-rope",
+    "name": "Cable Front Raise (Rope)",
+    "equipment": "Cable, rope",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-lateral",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "cable-single-arm-front-raise",
+    "name": "Cable Single-Arm Front Raise",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "deltoid-anterior"
+    ],
+    "secondaryMuscles": [
+      "pectoralis-major-clavicular",
+      "deltoid-lateral",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "standing-cable-face-pull-rope",
+    "name": "Standing Cable Face Pull (Rope)",
+    "equipment": "Cable, rope",
+    "primaryMuscles": [
+      "deltoid-posterior",
+      "infraspinatus",
+      "teres-minor"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "trapezius-lower"
+    ]
+  },
+  {
+    "id": "seated-cable-face-pull-rope",
+    "name": "Seated Cable Face Pull (Rope)",
+    "equipment": "Cable, rope, bench",
+    "primaryMuscles": [
+      "deltoid-posterior",
+      "infraspinatus",
+      "teres-minor"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "trapezius-lower"
+    ]
+  },
+  {
+    "id": "cable-single-arm-face-pull",
+    "name": "Cable Single-Arm Face Pull",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "deltoid-posterior",
+      "infraspinatus",
+      "teres-minor"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "trapezius-lower"
+    ]
+  },
+  {
+    "id": "banded-face-pull",
+    "name": "Banded Face Pull",
+    "equipment": "Band (assumed)",
+    "primaryMuscles": [
+      "deltoid-posterior",
+      "infraspinatus",
+      "teres-minor"
+    ],
+    "secondaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "trapezius-lower"
+    ]
+  },
+  {
+    "id": "barbell-upright-row",
+    "name": "Barbell Upright Row",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "deltoid-lateral",
+      "trapezius-upper"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "supraspinatus",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "ez-bar-upright-row",
+    "name": "EZ-Bar Upright Row",
+    "equipment": "EZ bar",
+    "primaryMuscles": [
+      "deltoid-lateral",
+      "trapezius-upper"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "supraspinatus",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "dumbbell-upright-row",
+    "name": "Dumbbell Upright Row",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "deltoid-lateral",
+      "trapezius-upper"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "supraspinatus",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "cable-upright-row-straight-bar",
+    "name": "Cable Upright Row (Straight Bar)",
+    "equipment": "Cable, straight bar",
+    "primaryMuscles": [
+      "deltoid-lateral",
+      "trapezius-upper"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "supraspinatus",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "smith-machine-upright-row",
+    "name": "Smith Machine Upright Row",
+    "equipment": "Smith machine",
+    "primaryMuscles": [
+      "deltoid-lateral",
+      "trapezius-upper"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "supraspinatus",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "wide-grip-lat-pulldown",
+    "name": "Wide-Grip Lat Pulldown",
+    "equipment": "Selectorised pulldown, wide bar",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "trapezius-lower",
+      "rhomboids",
+      "trapezius-middle",
+      "deltoid-posterior",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "close-grip-pronated-lat-pulldown",
+    "name": "Close-Grip Pronated Lat Pulldown",
+    "equipment": "Selectorised pulldown, straight bar",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "trapezius-lower",
+      "rhomboids",
+      "trapezius-middle",
+      "deltoid-posterior",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "wide-neutral-grip-lat-pulldown",
+    "name": "Wide Neutral-Grip Lat Pulldown",
+    "equipment": "Selectorised pulldown, wide neutral-grip bar (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "trapezius-lower",
+      "rhomboids",
+      "trapezius-middle",
+      "deltoid-posterior",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "close-grip-v-bar-lat-pulldown",
+    "name": "Close-Grip V-Bar Lat Pulldown",
+    "equipment": "Selectorised pulldown, V-bar",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "trapezius-lower",
+      "rhomboids",
+      "trapezius-middle",
+      "deltoid-posterior",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "supinated-lat-pulldown",
+    "name": "Supinated Lat Pulldown",
+    "equipment": "Selectorised pulldown, straight bar",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "trapezius-lower",
+      "rhomboids",
+      "trapezius-middle",
+      "deltoid-posterior",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "behind-the-neck-lat-pulldown",
+    "name": "Behind-the-Neck Lat Pulldown",
+    "equipment": "Selectorised pulldown, wide bar",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "trapezius-lower",
+      "rhomboids",
+      "trapezius-middle",
+      "deltoid-posterior",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "single-arm-cable-lat-pulldown",
+    "name": "Single-Arm Cable Lat Pulldown",
+    "equipment": "Cable or pulldown, handle",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "trapezius-lower",
+      "rhomboids",
+      "trapezius-middle",
+      "deltoid-posterior",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "plate-loaded-lat-pulldown",
+    "name": "Plate-Loaded Lat Pulldown",
+    "equipment": "Plate-loaded machine (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "trapezius-lower",
+      "rhomboids",
+      "trapezius-middle",
+      "deltoid-posterior",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "straight-arm-cable-pulldown-bar",
+    "name": "Straight-Arm Cable Pulldown (Bar)",
+    "equipment": "Cable, straight bar",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head",
+      "deltoid-posterior",
+      "pectoralis-major-sternal"
+    ]
+  },
+  {
+    "id": "straight-arm-cable-pulldown-rope",
+    "name": "Straight-Arm Cable Pulldown (Rope)",
+    "equipment": "Cable, rope",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head",
+      "deltoid-posterior",
+      "pectoralis-major-sternal"
+    ]
+  },
+  {
+    "id": "seated-cable-row-v-handle",
+    "name": "Seated Cable Row (V-Handle)",
+    "equipment": "Selectorised seated row, V-bar",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "wide-grip-seated-cable-row",
+    "name": "Wide-Grip Seated Cable Row",
+    "equipment": "Selectorised seated row, wide bar",
+    "primaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "deltoid-posterior"
+    ],
+    "secondaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "underhand-seated-cable-row",
+    "name": "Underhand Seated Cable Row",
+    "equipment": "Selectorised seated row, straight bar",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "single-arm-seated-cable-row",
+    "name": "Single-Arm Seated Cable Row",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "chest-supported-machine-row",
+    "name": "Chest-Supported Machine Row",
+    "equipment": "Selectorised chest-supported row (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "plate-loaded-seated-row",
+    "name": "Plate-Loaded Seated Row",
+    "equipment": "Plate-loaded seated row (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "single-arm-plate-loaded-seated-row",
+    "name": "Single-Arm Plate-Loaded Seated Row",
+    "equipment": "Plate-loaded iso-lateral machine (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "chest-supported-t-bar-row",
+    "name": "Chest-Supported T-Bar Row",
+    "equipment": "Plate-loaded T-bar row",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "wide-grip-chest-supported-t-bar-row",
+    "name": "Wide-Grip Chest-Supported T-Bar Row",
+    "equipment": "Plate-loaded T-bar row",
+    "primaryMuscles": [
+      "trapezius-middle",
+      "rhomboids",
+      "deltoid-posterior"
+    ],
+    "secondaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "landmine-t-bar-row-v-handle",
+    "name": "Landmine T-Bar Row (V-Handle)",
+    "equipment": "Barbell, landmine (assumed), V-bar",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "erector-spinae"
+    ]
+  },
+  {
+    "id": "meadows-row",
+    "name": "Meadows Row",
+    "equipment": "Barbell, landmine (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "erector-spinae"
+    ]
+  },
+  {
+    "id": "45-degree-back-extension",
+    "name": "45-Degree Back Extension",
+    "equipment": "Back extension bench",
+    "primaryMuscles": [
+      "erector-spinae"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus",
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ]
+  },
+  {
+    "id": "weighted-45-degree-back-extension",
+    "name": "Weighted 45-Degree Back Extension",
+    "equipment": "Back extension bench, plate or dumbbell",
+    "primaryMuscles": [
+      "erector-spinae"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus",
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ]
+  },
+  {
+    "id": "single-leg-45-degree-back-extension",
+    "name": "Single-Leg 45-Degree Back Extension",
+    "equipment": "Back extension bench",
+    "primaryMuscles": [
+      "erector-spinae"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus",
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ]
+  },
+  {
+    "id": "90-degree-back-extension",
+    "name": "90-Degree Back Extension",
+    "equipment": "Horizontal hyperextension bench (assumed) or GHD (assumed)",
+    "primaryMuscles": [
+      "erector-spinae"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus",
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ]
+  },
+  {
+    "id": "seated-machine-back-extension",
+    "name": "Seated Machine Back Extension",
+    "equipment": "Selectorised machine (assumed)",
+    "primaryMuscles": [
+      "erector-spinae"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus"
+    ]
+  },
+  {
+    "id": "floor-back-extension-superman",
+    "name": "Floor Back Extension (Superman)",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "erector-spinae"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus"
+    ]
+  },
+  {
+    "id": "pull-up",
+    "name": "Pull-Up",
+    "equipment": "Pull-up bar (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "trapezius-lower",
+      "trapezius-middle",
+      "rhomboids",
+      "deltoid-posterior",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "wide-grip-pull-up",
+    "name": "Wide-Grip Pull-Up",
+    "equipment": "Pull-up bar (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "trapezius-lower",
+      "trapezius-middle",
+      "rhomboids",
+      "deltoid-posterior",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "neutral-grip-pull-up",
+    "name": "Neutral-Grip Pull-Up",
+    "equipment": "Pull-up bar with parallel handles (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "trapezius-lower",
+      "trapezius-middle",
+      "rhomboids",
+      "deltoid-posterior",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "chin-up",
+    "name": "Chin-Up",
+    "equipment": "Pull-up bar (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "trapezius-lower",
+      "trapezius-middle",
+      "rhomboids",
+      "deltoid-posterior",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "weighted-pull-up",
+    "name": "Weighted Pull-Up",
+    "equipment": "Pull-up bar, dip belt (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "trapezius-lower",
+      "trapezius-middle",
+      "rhomboids",
+      "deltoid-posterior",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "weighted-chin-up",
+    "name": "Weighted Chin-Up",
+    "equipment": "Pull-up bar, dip belt (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "trapezius-lower",
+      "trapezius-middle",
+      "rhomboids",
+      "deltoid-posterior",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "machine-assisted-pull-up",
+    "name": "Machine-Assisted Pull-Up",
+    "equipment": "Assisted pull-up / dip machine (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "trapezius-lower",
+      "trapezius-middle",
+      "rhomboids",
+      "deltoid-posterior",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "band-assisted-pull-up",
+    "name": "Band-Assisted Pull-Up",
+    "equipment": "Pull-up bar, band (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "teres-major"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "trapezius-lower",
+      "trapezius-middle",
+      "rhomboids",
+      "deltoid-posterior",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "barbell-bent-over-row",
+    "name": "Barbell Bent-Over Row",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "erector-spinae"
+    ]
+  },
+  {
+    "id": "underhand-barbell-bent-over-row",
+    "name": "Underhand Barbell Bent-Over Row",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "erector-spinae"
+    ]
+  },
+  {
+    "id": "pendlay-row",
+    "name": "Pendlay Row",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "erector-spinae"
+    ]
+  },
+  {
+    "id": "smith-machine-bent-over-row",
+    "name": "Smith Machine Bent-Over Row",
+    "equipment": "Smith machine",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "erector-spinae"
+    ]
+  },
+  {
+    "id": "bent-over-dumbbell-row",
+    "name": "Bent-Over Dumbbell Row",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "erector-spinae"
+    ]
+  },
+  {
+    "id": "single-arm-dumbbell-row",
+    "name": "Single-Arm Dumbbell Row",
+    "equipment": "Dumbbell, flat bench",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "chest-supported-incline-dumbbell-row",
+    "name": "Chest-Supported Incline Dumbbell Row",
+    "equipment": "Dumbbells, incline bench",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "barbell-seal-row",
+    "name": "Barbell Seal Row",
+    "equipment": "Barbell, raised flat bench (assumed)",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ]
+  },
+  {
+    "id": "inverted-row",
+    "name": "Inverted Row",
+    "equipment": "Smith machine or rack bar",
+    "primaryMuscles": [
+      "latissimus-dorsi",
+      "trapezius-middle",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "teres-major",
+      "deltoid-posterior",
+      "trapezius-lower",
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis",
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "conventional-barbell-deadlift",
+    "name": "Conventional Barbell Deadlift",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "gluteus-maximus",
+      "erector-spinae",
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "adductors",
+      "trapezius-upper",
+      "trapezius-middle",
+      "latissimus-dorsi",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "sumo-barbell-deadlift",
+    "name": "Sumo Barbell Deadlift",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "gluteus-maximus",
+      "adductors",
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "trapezius-upper",
+      "latissimus-dorsi",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "trap-bar-deadlift",
+    "name": "Trap Bar Deadlift",
+    "equipment": "Trap bar (assumed)",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "trapezius-upper",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "dumbbell-deadlift",
+    "name": "Dumbbell Deadlift",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "gluteus-maximus",
+      "erector-spinae",
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "adductors",
+      "trapezius-upper",
+      "trapezius-middle",
+      "latissimus-dorsi",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "smith-machine-deadlift",
+    "name": "Smith Machine Deadlift",
+    "equipment": "Smith machine",
+    "primaryMuscles": [
+      "gluteus-maximus",
+      "erector-spinae",
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "adductors",
+      "trapezius-upper",
+      "trapezius-middle",
+      "latissimus-dorsi",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "barbell-rack-pull",
+    "name": "Barbell Rack Pull",
+    "equipment": "Barbell, rack",
+    "primaryMuscles": [
+      "erector-spinae",
+      "gluteus-maximus",
+      "trapezius-upper"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "trapezius-middle",
+      "latissimus-dorsi",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "barbell-deficit-deadlift",
+    "name": "Barbell Deficit Deadlift",
+    "equipment": "Barbell, plate to stand on",
+    "primaryMuscles": [
+      "gluteus-maximus",
+      "erector-spinae",
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "adductors",
+      "trapezius-upper",
+      "trapezius-middle",
+      "latissimus-dorsi",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "cable-overhead-triceps-extension-rope",
+    "name": "Cable Overhead Triceps Extension (Rope)",
+    "equipment": "Cable, rope",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "cable-overhead-triceps-extension-bar",
+    "name": "Cable Overhead Triceps Extension (Bar)",
+    "equipment": "Cable, straight bar or EZ bar",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "cable-single-arm-overhead-triceps-extension",
+    "name": "Cable Single-Arm Overhead Triceps Extension",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "seated-dumbbell-overhead-triceps-extension",
+    "name": "Seated Dumbbell Overhead Triceps Extension",
+    "equipment": "Dumbbell, adjustable bench set upright",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "standing-dumbbell-overhead-triceps-extension",
+    "name": "Standing Dumbbell Overhead Triceps Extension",
+    "equipment": "Dumbbell",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "single-arm-dumbbell-overhead-triceps-extension",
+    "name": "Single-Arm Dumbbell Overhead Triceps Extension",
+    "equipment": "Dumbbell",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "seated-ez-bar-overhead-triceps-extension",
+    "name": "Seated EZ-Bar Overhead Triceps Extension",
+    "equipment": "EZ bar, adjustable bench set upright",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "machine-overhead-triceps-extension",
+    "name": "Machine Overhead Triceps Extension",
+    "equipment": "Selectorised machine (assumed)",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "cable-single-arm-tricep-pushdown-handle",
+    "name": "Cable Single-Arm Tricep Pushdown (Handle)",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head"
+    ]
+  },
+  {
+    "id": "cable-single-arm-reverse-grip-tricep-pushdown",
+    "name": "Cable Single-Arm Reverse-Grip Tricep Pushdown",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head"
+    ]
+  },
+  {
+    "id": "cable-cross-body-triceps-extension",
+    "name": "Cable Cross-Body Triceps Extension",
+    "equipment": "Cable, handle or no handle",
+    "primaryMuscles": [
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head"
+    ]
+  },
+  {
+    "id": "cable-tricep-pushdown-rope",
+    "name": "Cable Tricep Pushdown (Rope)",
+    "equipment": "Cable, rope",
+    "primaryMuscles": [
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head"
+    ]
+  },
+  {
+    "id": "cable-tricep-pushdown-straight-bar",
+    "name": "Cable Tricep Pushdown (Straight Bar)",
+    "equipment": "Cable, straight bar",
+    "primaryMuscles": [
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head"
+    ]
+  },
+  {
+    "id": "cable-tricep-pushdown-v-bar",
+    "name": "Cable Tricep Pushdown (V-Bar)",
+    "equipment": "Cable, V-bar",
+    "primaryMuscles": [
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head"
+    ]
+  },
+  {
+    "id": "cable-reverse-grip-tricep-pushdown-bar",
+    "name": "Cable Reverse-Grip Tricep Pushdown (Bar)",
+    "equipment": "Cable, straight bar",
+    "primaryMuscles": [
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head"
+    ]
+  },
+  {
+    "id": "resistance-band-tricep-pushdown",
+    "name": "Resistance Band Tricep Pushdown",
+    "equipment": "Band (assumed)",
+    "primaryMuscles": [
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "triceps-brachii-long-head"
+    ]
+  },
+  {
+    "id": "ez-bar-preacher-curl",
+    "name": "EZ-Bar Preacher Curl",
+    "equipment": "EZ bar, free-standing preacher bench (assumed)",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "barbell-preacher-curl",
+    "name": "Barbell Preacher Curl",
+    "equipment": "Straight barbell, free-standing preacher bench (assumed)",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "reverse-grip-ez-bar-preacher-curl",
+    "name": "Reverse-Grip EZ-Bar Preacher Curl",
+    "equipment": "EZ bar, free-standing preacher bench (assumed)",
+    "primaryMuscles": [
+      "brachioradialis",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "forearm-extensors"
+    ]
+  },
+  {
+    "id": "single-arm-dumbbell-preacher-curl",
+    "name": "Single-Arm Dumbbell Preacher Curl",
+    "equipment": "Dumbbell, free-standing preacher bench (assumed)",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "machine-preacher-curl",
+    "name": "Machine Preacher Curl",
+    "equipment": "Selectorised preacher machine",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "single-arm-machine-preacher-curl",
+    "name": "Single-Arm Machine Preacher Curl",
+    "equipment": "Selectorised preacher machine",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "cable-preacher-curl-bar",
+    "name": "Cable Preacher Curl (Bar)",
+    "equipment": "Cable, straight or EZ bar, free-standing preacher bench (assumed)",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "cable-single-arm-preacher-curl",
+    "name": "Cable Single-Arm Preacher Curl",
+    "equipment": "Cable, handle, free-standing preacher bench (assumed)",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "cable-single-arm-bayesian-curl",
+    "name": "Cable Single-Arm Bayesian Curl",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "cable-single-arm-bayesian-hammer-curl",
+    "name": "Cable Single-Arm Bayesian Hammer Curl",
+    "equipment": "Cable, handle or half rope (assumed)",
+    "primaryMuscles": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head"
+    ]
+  },
+  {
+    "id": "standing-dumbbell-hammer-curl",
+    "name": "Standing Dumbbell Hammer Curl",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head"
+    ]
+  },
+  {
+    "id": "alternating-dumbbell-hammer-curl",
+    "name": "Alternating Dumbbell Hammer Curl",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head"
+    ]
+  },
+  {
+    "id": "seated-dumbbell-hammer-curl",
+    "name": "Seated Dumbbell Hammer Curl",
+    "equipment": "Dumbbells, bench",
+    "primaryMuscles": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head"
+    ]
+  },
+  {
+    "id": "cross-body-dumbbell-hammer-curl",
+    "name": "Cross-Body Dumbbell Hammer Curl",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head"
+    ]
+  },
+  {
+    "id": "cable-rope-hammer-curl",
+    "name": "Cable Rope Hammer Curl",
+    "equipment": "Cable, rope",
+    "primaryMuscles": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head"
+    ]
+  },
+  {
+    "id": "cable-single-arm-hammer-curl",
+    "name": "Cable Single-Arm Hammer Curl",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head"
+    ]
+  },
+  {
+    "id": "seated-barbell-wrist-curl",
+    "name": "Seated Barbell Wrist Curl",
+    "equipment": "Barbell or EZ bar, bench",
+    "primaryMuscles": [
+      "forearm-flexors"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "seated-single-arm-dumbbell-wrist-curl",
+    "name": "Seated Single-Arm Dumbbell Wrist Curl",
+    "equipment": "Dumbbell, bench",
+    "primaryMuscles": [
+      "forearm-flexors"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "behind-the-back-barbell-wrist-curl",
+    "name": "Behind-the-Back Barbell Wrist Curl",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "forearm-flexors"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "cable-wrist-curl",
+    "name": "Cable Wrist Curl",
+    "equipment": "Cable, straight bar",
+    "primaryMuscles": [
+      "forearm-flexors"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "seated-barbell-wrist-extension",
+    "name": "Seated Barbell Wrist Extension",
+    "equipment": "Barbell or EZ bar, bench",
+    "primaryMuscles": [
+      "forearm-extensors"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "seated-single-arm-dumbbell-wrist-extension",
+    "name": "Seated Single-Arm Dumbbell Wrist Extension",
+    "equipment": "Dumbbell, bench",
+    "primaryMuscles": [
+      "forearm-extensors"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "cable-wrist-extension",
+    "name": "Cable Wrist Extension",
+    "equipment": "Cable, straight bar",
+    "primaryMuscles": [
+      "forearm-extensors"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "standing-barbell-curl",
+    "name": "Standing Barbell Curl",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "standing-ez-bar-curl",
+    "name": "Standing EZ-Bar Curl",
+    "equipment": "EZ bar",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "standing-dumbbell-curl",
+    "name": "Standing Dumbbell Curl",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "alternating-dumbbell-curl",
+    "name": "Alternating Dumbbell Curl",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "seated-dumbbell-curl",
+    "name": "Seated Dumbbell Curl",
+    "equipment": "Dumbbells, bench",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "incline-dumbbell-curl",
+    "name": "Incline Dumbbell Curl",
+    "equipment": "Dumbbells, incline bench",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "concentration-curl",
+    "name": "Concentration Curl",
+    "equipment": "Dumbbell, bench",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "dumbbell-spider-curl",
+    "name": "Dumbbell Spider Curl",
+    "equipment": "Dumbbells, incline bench",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "cable-curl-straight-bar",
+    "name": "Cable Curl (Straight Bar)",
+    "equipment": "Cable, straight or EZ bar",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "cable-single-arm-curl",
+    "name": "Cable Single-Arm Curl",
+    "equipment": "Cable, handle",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "barbell-drag-curl",
+    "name": "Barbell Drag Curl",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "brachioradialis",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "reverse-grip-ez-bar-curl",
+    "name": "Reverse-Grip EZ-Bar Curl",
+    "equipment": "EZ bar",
+    "primaryMuscles": [
+      "brachioradialis",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "forearm-extensors"
+    ]
+  },
+  {
+    "id": "zottman-curl",
+    "name": "Zottman Curl",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "biceps-brachii-long-head",
+      "biceps-brachii-short-head",
+      "brachialis",
+      "brachioradialis"
+    ],
+    "secondaryMuscles": [
+      "forearm-flexors",
+      "forearm-extensors"
+    ]
+  },
+  {
+    "id": "ez-bar-skull-crusher",
+    "name": "EZ-Bar Skull Crusher",
+    "equipment": "EZ bar, flat bench",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "barbell-skull-crusher",
+    "name": "Barbell Skull Crusher",
+    "equipment": "Straight barbell, flat bench",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "incline-ez-bar-skull-crusher",
+    "name": "Incline EZ-Bar Skull Crusher",
+    "equipment": "EZ bar, incline bench",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "dumbbell-lying-triceps-extension",
+    "name": "Dumbbell Lying Triceps Extension",
+    "equipment": "Dumbbells, flat bench",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "smith-machine-skull-crusher",
+    "name": "Smith Machine Skull Crusher",
+    "equipment": "Smith machine, flat bench",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "cable-lying-triceps-extension",
+    "name": "Cable Lying Triceps Extension",
+    "equipment": "Cable, straight or EZ bar, flat bench",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "close-grip-barbell-bench-press",
+    "name": "Close-Grip Barbell Bench Press",
+    "equipment": "Barbell, flat bench, rack",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "pectoralis-major-clavicular"
+    ]
+  },
+  {
+    "id": "smith-machine-close-grip-bench-press",
+    "name": "Smith Machine Close-Grip Bench Press",
+    "equipment": "Smith machine, flat bench",
+    "primaryMuscles": [
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head",
+      "pectoralis-major-sternal"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "pectoralis-major-clavicular"
+    ]
+  },
+  {
+    "id": "dumbbell-crush-press",
+    "name": "Dumbbell Crush Press",
+    "equipment": "Dumbbells, flat bench",
+    "primaryMuscles": [
+      "pectoralis-major-sternal",
+      "triceps-brachii-long-head",
+      "triceps-brachii-lateral-head",
+      "triceps-brachii-medial-head"
+    ],
+    "secondaryMuscles": [
+      "deltoid-anterior",
+      "pectoralis-major-clavicular"
+    ]
+  },
+  {
+    "id": "kneeling-cable-crunch-rope",
+    "name": "Kneeling Cable Crunch (Rope)",
+    "equipment": "Cable, rope",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ]
+  },
+  {
+    "id": "standing-cable-crunch",
+    "name": "Standing Cable Crunch",
+    "equipment": "Cable, rope or handles",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ]
+  },
+  {
+    "id": "kneeling-cable-oblique-crunch",
+    "name": "Kneeling Cable Oblique Crunch",
+    "equipment": "Cable, rope or handle",
+    "primaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ],
+    "secondaryMuscles": [
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "machine-ab-crunch",
+    "name": "Machine Ab Crunch",
+    "equipment": "Selectorised ab crunch machine (assumed)",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ]
+  },
+  {
+    "id": "hanging-leg-raise",
+    "name": "Hanging Leg Raise",
+    "equipment": "Pull-up bar (assumed)",
+    "primaryMuscles": [
+      "rectus-abdominis",
+      "iliopsoas"
+    ],
+    "secondaryMuscles": [
+      "rectus-femoris",
+      "sartorius",
+      "external-oblique",
+      "internal-oblique",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "hanging-knee-raise",
+    "name": "Hanging Knee Raise",
+    "equipment": "Pull-up bar (assumed)",
+    "primaryMuscles": [
+      "rectus-abdominis",
+      "iliopsoas"
+    ],
+    "secondaryMuscles": [
+      "rectus-femoris",
+      "sartorius",
+      "external-oblique",
+      "internal-oblique",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "hanging-oblique-knee-raise",
+    "name": "Hanging Oblique Knee Raise",
+    "equipment": "Pull-up bar (assumed)",
+    "primaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "iliopsoas"
+    ],
+    "secondaryMuscles": [
+      "rectus-abdominis",
+      "rectus-femoris",
+      "sartorius"
+    ]
+  },
+  {
+    "id": "captain-s-chair-leg-raise",
+    "name": "Captain's Chair Leg Raise",
+    "equipment": "Captain's chair (assumed)",
+    "primaryMuscles": [
+      "rectus-abdominis",
+      "iliopsoas"
+    ],
+    "secondaryMuscles": [
+      "rectus-femoris",
+      "sartorius",
+      "external-oblique",
+      "internal-oblique"
+    ]
+  },
+  {
+    "id": "captain-s-chair-knee-raise",
+    "name": "Captain's Chair Knee Raise",
+    "equipment": "Captain's chair (assumed)",
+    "primaryMuscles": [
+      "rectus-abdominis",
+      "iliopsoas"
+    ],
+    "secondaryMuscles": [
+      "rectus-femoris",
+      "sartorius",
+      "external-oblique",
+      "internal-oblique"
+    ]
+  },
+  {
+    "id": "lying-leg-raise",
+    "name": "Lying Leg Raise",
+    "equipment": "Bodyweight or flat bench",
+    "primaryMuscles": [
+      "rectus-abdominis",
+      "iliopsoas"
+    ],
+    "secondaryMuscles": [
+      "rectus-femoris",
+      "sartorius",
+      "external-oblique",
+      "internal-oblique"
+    ]
+  },
+  {
+    "id": "reverse-crunch",
+    "name": "Reverse Crunch",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "iliopsoas"
+    ]
+  },
+  {
+    "id": "decline-bench-reverse-crunch",
+    "name": "Decline Bench Reverse Crunch",
+    "equipment": "Decline bench",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "iliopsoas"
+    ]
+  },
+  {
+    "id": "bodyweight-russian-twist",
+    "name": "Bodyweight Russian Twist",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ],
+    "secondaryMuscles": [
+      "rectus-abdominis",
+      "iliopsoas"
+    ]
+  },
+  {
+    "id": "plate-russian-twist",
+    "name": "Plate Russian Twist",
+    "equipment": "Plate",
+    "primaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ],
+    "secondaryMuscles": [
+      "rectus-abdominis",
+      "iliopsoas"
+    ]
+  },
+  {
+    "id": "dumbbell-russian-twist",
+    "name": "Dumbbell Russian Twist",
+    "equipment": "Dumbbell",
+    "primaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ],
+    "secondaryMuscles": [
+      "rectus-abdominis",
+      "iliopsoas"
+    ]
+  },
+  {
+    "id": "medicine-ball-russian-twist",
+    "name": "Medicine Ball Russian Twist",
+    "equipment": "Medicine ball (assumed)",
+    "primaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ],
+    "secondaryMuscles": [
+      "rectus-abdominis",
+      "iliopsoas"
+    ]
+  },
+  {
+    "id": "decline-bench-russian-twist",
+    "name": "Decline Bench Russian Twist",
+    "equipment": "Decline bench, plate",
+    "primaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ],
+    "secondaryMuscles": [
+      "rectus-abdominis",
+      "iliopsoas"
+    ]
+  },
+  {
+    "id": "landmine-rotation",
+    "name": "Landmine Rotation",
+    "equipment": "Barbell, landmine (assumed)",
+    "primaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ],
+    "secondaryMuscles": [
+      "rectus-abdominis",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "front-plank",
+    "name": "Front Plank",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "deltoid-anterior",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "weighted-front-plank",
+    "name": "Weighted Front Plank",
+    "equipment": "Bodyweight, plate on back",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "deltoid-anterior",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "side-plank",
+    "name": "Side Plank",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ],
+    "secondaryMuscles": [
+      "gluteus-medius",
+      "gluteus-minimus",
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "plank-with-shoulder-taps",
+    "name": "Plank with Shoulder Taps",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "deltoid-anterior",
+      "serratus-anterior"
+    ]
+  },
+  {
+    "id": "floor-crunch",
+    "name": "Floor Crunch",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ]
+  },
+  {
+    "id": "bicycle-crunch",
+    "name": "Bicycle Crunch",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "iliopsoas"
+    ]
+  },
+  {
+    "id": "oblique-crunch",
+    "name": "Oblique Crunch",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ],
+    "secondaryMuscles": [
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "decline-bench-crunch",
+    "name": "Decline Bench Crunch",
+    "equipment": "Decline bench",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ]
+  },
+  {
+    "id": "stability-ball-crunch",
+    "name": "Stability Ball Crunch",
+    "equipment": "Stability ball (assumed)",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ]
+  },
+  {
+    "id": "sit-up",
+    "name": "Sit-Up",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "iliopsoas",
+      "rectus-femoris"
+    ]
+  },
+  {
+    "id": "decline-bench-sit-up",
+    "name": "Decline Bench Sit-Up",
+    "equipment": "Decline bench",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "iliopsoas",
+      "rectus-femoris"
+    ]
+  },
+  {
+    "id": "weighted-decline-bench-sit-up",
+    "name": "Weighted Decline Bench Sit-Up",
+    "equipment": "Decline bench, plate",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "iliopsoas",
+      "rectus-femoris"
+    ]
+  },
+  {
+    "id": "kneeling-ab-wheel-rollout",
+    "name": "Kneeling Ab Wheel Rollout",
+    "equipment": "Ab wheel (assumed)",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "latissimus-dorsi",
+      "serratus-anterior",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "standing-ab-wheel-rollout",
+    "name": "Standing Ab Wheel Rollout",
+    "equipment": "Ab wheel (assumed)",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "latissimus-dorsi",
+      "serratus-anterior",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "kneeling-barbell-rollout",
+    "name": "Kneeling Barbell Rollout",
+    "equipment": "Barbell with round plates",
+    "primaryMuscles": [
+      "rectus-abdominis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique",
+      "latissimus-dorsi",
+      "serratus-anterior",
+      "deltoid-anterior"
+    ]
+  },
+  {
+    "id": "seated-machine-hip-abduction",
+    "name": "Seated Machine Hip Abduction",
+    "equipment": "Selectorised hip abductor",
+    "primaryMuscles": [
+      "gluteus-medius",
+      "gluteus-minimus"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus"
+    ]
+  },
+  {
+    "id": "seated-machine-hip-abduction-forward-lean",
+    "name": "Seated Machine Hip Abduction (Forward Lean)",
+    "equipment": "Selectorised hip abductor",
+    "primaryMuscles": [
+      "gluteus-medius",
+      "gluteus-minimus",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "cable-standing-hip-abduction",
+    "name": "Cable Standing Hip Abduction",
+    "equipment": "Cable, ankle strap (assumed)",
+    "primaryMuscles": [
+      "gluteus-medius",
+      "gluteus-minimus"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus"
+    ]
+  },
+  {
+    "id": "side-lying-hip-abduction",
+    "name": "Side-Lying Hip Abduction",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "gluteus-medius",
+      "gluteus-minimus"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus"
+    ]
+  },
+  {
+    "id": "banded-seated-hip-abduction",
+    "name": "Banded Seated Hip Abduction",
+    "equipment": "Band (assumed)",
+    "primaryMuscles": [
+      "gluteus-medius",
+      "gluteus-minimus"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus"
+    ]
+  },
+  {
+    "id": "banded-lateral-walk",
+    "name": "Banded Lateral Walk",
+    "equipment": "Band (assumed)",
+    "primaryMuscles": [
+      "gluteus-medius",
+      "gluteus-minimus"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus"
+    ]
+  },
+  {
+    "id": "banded-clamshell",
+    "name": "Banded Clamshell",
+    "equipment": "Band (assumed)",
+    "primaryMuscles": [
+      "gluteus-medius",
+      "gluteus-minimus"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus"
+    ]
+  },
+  {
+    "id": "seated-machine-hip-adduction",
+    "name": "Seated Machine Hip Adduction",
+    "equipment": "Selectorised hip adductor",
+    "primaryMuscles": [
+      "adductors",
+      "gracilis"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "cable-standing-hip-adduction",
+    "name": "Cable Standing Hip Adduction",
+    "equipment": "Cable, ankle strap (assumed)",
+    "primaryMuscles": [
+      "adductors",
+      "gracilis"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "side-lying-hip-adduction",
+    "name": "Side-Lying Hip Adduction",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "adductors",
+      "gracilis"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "copenhagen-plank",
+    "name": "Copenhagen Plank",
+    "equipment": "Bodyweight, flat bench",
+    "primaryMuscles": [
+      "adductors",
+      "gracilis"
+    ],
+    "secondaryMuscles": [
+      "external-oblique",
+      "internal-oblique"
+    ]
+  },
+  {
+    "id": "barbell-hip-thrust",
+    "name": "Barbell Hip Thrust",
+    "equipment": "Barbell, flat bench",
+    "primaryMuscles": [
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "dumbbell-hip-thrust",
+    "name": "Dumbbell Hip Thrust",
+    "equipment": "Dumbbell, flat bench",
+    "primaryMuscles": [
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "single-leg-hip-thrust",
+    "name": "Single-Leg Hip Thrust",
+    "equipment": "Bodyweight or dumbbell, flat bench",
+    "primaryMuscles": [
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "smith-machine-hip-thrust",
+    "name": "Smith Machine Hip Thrust",
+    "equipment": "Smith machine, flat bench",
+    "primaryMuscles": [
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "machine-hip-thrust",
+    "name": "Machine Hip Thrust",
+    "equipment": "Hip thrust machine (assumed)",
+    "primaryMuscles": [
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "glute-bridge",
+    "name": "Glute Bridge",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "barbell-glute-bridge",
+    "name": "Barbell Glute Bridge",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "single-leg-glute-bridge",
+    "name": "Single-Leg Glute Bridge",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "dumbbell-step-up",
+    "name": "Dumbbell Step-Up",
+    "equipment": "Dumbbells, box or bench (assumed box)",
+    "primaryMuscles": [
+      "gluteus-maximus",
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": [
+      "rectus-femoris",
+      "gluteus-medius",
+      "gluteus-minimus",
+      "adductors"
+    ]
+  },
+  {
+    "id": "barbell-step-up",
+    "name": "Barbell Step-Up",
+    "equipment": "Barbell, box or bench (assumed box)",
+    "primaryMuscles": [
+      "gluteus-maximus",
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": [
+      "rectus-femoris",
+      "gluteus-medius",
+      "gluteus-minimus",
+      "adductors"
+    ]
+  },
+  {
+    "id": "bodyweight-step-up",
+    "name": "Bodyweight Step-Up",
+    "equipment": "Box or bench (assumed box)",
+    "primaryMuscles": [
+      "gluteus-maximus",
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": [
+      "rectus-femoris",
+      "gluteus-medius",
+      "gluteus-minimus",
+      "adductors"
+    ]
+  },
+  {
+    "id": "dumbbell-lateral-step-up",
+    "name": "Dumbbell Lateral Step-Up",
+    "equipment": "Dumbbells, box or bench (assumed box)",
+    "primaryMuscles": [
+      "gluteus-maximus",
+      "gluteus-medius",
+      "gluteus-minimus",
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": [
+      "rectus-femoris",
+      "adductors"
+    ]
+  },
+  {
+    "id": "cable-glute-kickback",
+    "name": "Cable Glute Kickback",
+    "equipment": "Cable, ankle strap (assumed)",
+    "primaryMuscles": [
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ]
+  },
+  {
+    "id": "machine-glute-kickback",
+    "name": "Machine Glute Kickback",
+    "equipment": "Glute kickback machine (assumed)",
+    "primaryMuscles": [
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ]
+  },
+  {
+    "id": "quadruped-donkey-kick",
+    "name": "Quadruped Donkey Kick",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ]
+  },
+  {
+    "id": "45-degree-leg-press",
+    "name": "45-Degree Leg Press",
+    "equipment": "Plate-loaded leg press",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "45-degree-leg-press-low-narrow-feet",
+    "name": "45-Degree Leg Press (Low, Narrow Feet)",
+    "equipment": "Plate-loaded leg press",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus",
+      "adductors"
+    ]
+  },
+  {
+    "id": "45-degree-leg-press-high-wide-feet",
+    "name": "45-Degree Leg Press (High, Wide Feet)",
+    "equipment": "Plate-loaded leg press",
+    "primaryMuscles": [
+      "gluteus-maximus",
+      "adductors",
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ]
+  },
+  {
+    "id": "single-leg-45-degree-leg-press",
+    "name": "Single-Leg 45-Degree Leg Press",
+    "equipment": "Plate-loaded leg press",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "seated-horizontal-leg-press",
+    "name": "Seated Horizontal Leg Press",
+    "equipment": "Selectorised leg press (assumed)",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "seated-machine-leg-extension",
+    "name": "Seated Machine Leg Extension",
+    "equipment": "Selectorised leg extension",
+    "primaryMuscles": [
+      "rectus-femoris",
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "single-leg-machine-leg-extension",
+    "name": "Single-Leg Machine Leg Extension",
+    "equipment": "Selectorised leg extension",
+    "primaryMuscles": [
+      "rectus-femoris",
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "pendulum-squat",
+    "name": "Pendulum Squat",
+    "equipment": "Plate-loaded pendulum squat",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "dumbbell-bulgarian-split-squat",
+    "name": "Dumbbell Bulgarian Split Squat",
+    "equipment": "Dumbbells, flat bench",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "barbell-bulgarian-split-squat",
+    "name": "Barbell Bulgarian Split Squat",
+    "equipment": "Barbell, flat bench",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "smith-machine-bulgarian-split-squat",
+    "name": "Smith Machine Bulgarian Split Squat",
+    "equipment": "Smith machine, flat bench",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "bodyweight-bulgarian-split-squat",
+    "name": "Bodyweight Bulgarian Split Squat",
+    "equipment": "Flat bench",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "high-bar-barbell-back-squat",
+    "name": "High-Bar Barbell Back Squat",
+    "equipment": "Barbell, rack",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus",
+      "adductors"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "low-bar-barbell-back-squat",
+    "name": "Low-Bar Barbell Back Squat",
+    "equipment": "Barbell, rack",
+    "primaryMuscles": [
+      "gluteus-maximus",
+      "adductors",
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus"
+    ]
+  },
+  {
+    "id": "barbell-front-squat",
+    "name": "Barbell Front Squat",
+    "equipment": "Barbell, rack",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "erector-spinae",
+      "rectus-abdominis"
+    ]
+  },
+  {
+    "id": "safety-bar-squat",
+    "name": "Safety Bar Squat",
+    "equipment": "Safety squat bar (assumed), rack",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus",
+      "adductors"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "smith-machine-squat",
+    "name": "Smith Machine Squat",
+    "equipment": "Smith machine",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus",
+      "adductors"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "goblet-squat",
+    "name": "Goblet Squat",
+    "equipment": "Dumbbell",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "bodyweight-squat",
+    "name": "Bodyweight Squat",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "machine-hack-squat",
+    "name": "Machine Hack Squat",
+    "equipment": "Plate-loaded hack squat",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "reverse-machine-hack-squat",
+    "name": "Reverse Machine Hack Squat",
+    "equipment": "Plate-loaded hack squat",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "barbell-hack-squat",
+    "name": "Barbell Hack Squat",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus",
+      "adductors",
+      "erector-spinae",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "dumbbell-walking-lunge",
+    "name": "Dumbbell Walking Lunge",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "barbell-walking-lunge",
+    "name": "Barbell Walking Lunge",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "bodyweight-walking-lunge",
+    "name": "Bodyweight Walking Lunge",
+    "equipment": "Bodyweight",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "dumbbell-reverse-lunge",
+    "name": "Dumbbell Reverse Lunge",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "barbell-reverse-lunge",
+    "name": "Barbell Reverse Lunge",
+    "equipment": "Barbell, rack",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "smith-machine-reverse-lunge",
+    "name": "Smith Machine Reverse Lunge",
+    "equipment": "Smith machine",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "dumbbell-forward-lunge",
+    "name": "Dumbbell Forward Lunge",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "dumbbell-lateral-lunge",
+    "name": "Dumbbell Lateral Lunge",
+    "equipment": "Dumbbell or bodyweight",
+    "primaryMuscles": [
+      "adductors",
+      "gracilis",
+      "gluteus-maximus",
+      "vastus-lateralis",
+      "vastus-medialis",
+      "vastus-intermedius"
+    ],
+    "secondaryMuscles": [
+      "gluteus-medius",
+      "gluteus-minimus"
+    ]
+  },
+  {
+    "id": "seated-machine-leg-curl",
+    "name": "Seated Machine Leg Curl",
+    "equipment": "Selectorised leg curl",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "sartorius",
+      "gracilis"
+    ]
+  },
+  {
+    "id": "single-leg-seated-machine-leg-curl",
+    "name": "Single-Leg Seated Machine Leg Curl",
+    "equipment": "Selectorised leg curl",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "sartorius",
+      "gracilis"
+    ]
+  },
+  {
+    "id": "lying-machine-leg-curl",
+    "name": "Lying Machine Leg Curl",
+    "equipment": "Selectorised leg curl (assumed lying version)",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "sartorius",
+      "gracilis"
+    ]
+  },
+  {
+    "id": "single-leg-lying-machine-leg-curl",
+    "name": "Single-Leg Lying Machine Leg Curl",
+    "equipment": "Selectorised leg curl (assumed lying version)",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "sartorius",
+      "gracilis"
+    ]
+  },
+  {
+    "id": "standing-single-leg-machine-leg-curl",
+    "name": "Standing Single-Leg Machine Leg Curl",
+    "equipment": "Standing leg curl (assumed)",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "sartorius",
+      "gracilis"
+    ]
+  },
+  {
+    "id": "cable-standing-leg-curl",
+    "name": "Cable Standing Leg Curl",
+    "equipment": "Cable, ankle strap (assumed)",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "sartorius",
+      "gracilis"
+    ]
+  },
+  {
+    "id": "dumbbell-lying-leg-curl",
+    "name": "Dumbbell Lying Leg Curl",
+    "equipment": "Dumbbell, flat bench",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "sartorius",
+      "gracilis"
+    ]
+  },
+  {
+    "id": "stability-ball-leg-curl",
+    "name": "Stability Ball Leg Curl",
+    "equipment": "Stability ball (assumed)",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus",
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head"
+    ]
+  },
+  {
+    "id": "barbell-romanian-deadlift",
+    "name": "Barbell Romanian Deadlift",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "adductors",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "dumbbell-romanian-deadlift",
+    "name": "Dumbbell Romanian Deadlift",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "adductors",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "single-leg-dumbbell-romanian-deadlift",
+    "name": "Single-Leg Dumbbell Romanian Deadlift",
+    "equipment": "Dumbbell or dumbbells",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "b-stance-dumbbell-romanian-deadlift",
+    "name": "B-Stance Dumbbell Romanian Deadlift",
+    "equipment": "Dumbbells",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "adductors",
+      "gluteus-medius",
+      "gluteus-minimus",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "smith-machine-romanian-deadlift",
+    "name": "Smith Machine Romanian Deadlift",
+    "equipment": "Smith machine",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "adductors",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "barbell-stiff-leg-deadlift",
+    "name": "Barbell Stiff-Leg Deadlift",
+    "equipment": "Barbell",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "erector-spinae",
+      "adductors",
+      "forearm-flexors"
+    ]
+  },
+  {
+    "id": "nordic-hamstring-curl",
+    "name": "Nordic Hamstring Curl",
+    "equipment": "Bodyweight, ankles anchored (pad, partner or bar; assumed)",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head"
+    ]
+  },
+  {
+    "id": "band-assisted-nordic-hamstring-curl",
+    "name": "Band-Assisted Nordic Hamstring Curl",
+    "equipment": "Bodyweight, band (assumed)",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head"
+    ]
+  },
+  {
+    "id": "barbell-good-morning",
+    "name": "Barbell Good Morning",
+    "equipment": "Barbell, rack",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "erector-spinae",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "smith-machine-good-morning",
+    "name": "Smith Machine Good Morning",
+    "equipment": "Smith machine",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "erector-spinae",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "banded-good-morning",
+    "name": "Banded Good Morning",
+    "equipment": "Band (assumed)",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "semitendinosus",
+      "semimembranosus",
+      "erector-spinae",
+      "gluteus-maximus"
+    ],
+    "secondaryMuscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "glute-ham-raise",
+    "name": "Glute-Ham Raise",
+    "equipment": "GHD (assumed)",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus",
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "erector-spinae"
+    ]
+  },
+  {
+    "id": "weighted-glute-ham-raise",
+    "name": "Weighted Glute-Ham Raise",
+    "equipment": "GHD (assumed), plate",
+    "primaryMuscles": [
+      "biceps-femoris-long-head",
+      "biceps-femoris-short-head",
+      "semitendinosus",
+      "semimembranosus"
+    ],
+    "secondaryMuscles": [
+      "gluteus-maximus",
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "erector-spinae"
+    ]
+  },
+  {
+    "id": "standing-machine-calf-raise",
+    "name": "Standing Machine Calf Raise",
+    "equipment": "Selectorised standing calf raise",
+    "primaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "soleus"
+    ],
+    "secondaryMuscles": [
+      "fibularis"
+    ]
+  },
+  {
+    "id": "seated-machine-calf-raise",
+    "name": "Seated Machine Calf Raise",
+    "equipment": "Seated calf raise machine (assumed)",
+    "primaryMuscles": [
+      "soleus"
+    ],
+    "secondaryMuscles": [
+      "fibularis"
+    ]
+  },
+  {
+    "id": "leg-press-calf-raise",
+    "name": "Leg Press Calf Raise",
+    "equipment": "Plate-loaded leg press",
+    "primaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "soleus"
+    ],
+    "secondaryMuscles": [
+      "fibularis"
+    ]
+  },
+  {
+    "id": "hack-squat-calf-raise",
+    "name": "Hack Squat Calf Raise",
+    "equipment": "Plate-loaded hack squat",
+    "primaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "soleus"
+    ],
+    "secondaryMuscles": [
+      "fibularis"
+    ]
+  },
+  {
+    "id": "smith-machine-standing-calf-raise",
+    "name": "Smith Machine Standing Calf Raise",
+    "equipment": "Smith machine, step (assumed) or plate",
+    "primaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "soleus"
+    ],
+    "secondaryMuscles": [
+      "fibularis"
+    ]
+  },
+  {
+    "id": "barbell-standing-calf-raise",
+    "name": "Barbell Standing Calf Raise",
+    "equipment": "Barbell, rack, step (assumed) or plate",
+    "primaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "soleus"
+    ],
+    "secondaryMuscles": [
+      "fibularis"
+    ]
+  },
+  {
+    "id": "single-leg-dumbbell-calf-raise",
+    "name": "Single-Leg Dumbbell Calf Raise",
+    "equipment": "Dumbbell, step (assumed)",
+    "primaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "soleus"
+    ],
+    "secondaryMuscles": [
+      "fibularis"
+    ]
+  },
+  {
+    "id": "bodyweight-standing-calf-raise",
+    "name": "Bodyweight Standing Calf Raise",
+    "equipment": "Step (assumed)",
+    "primaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "soleus"
+    ],
+    "secondaryMuscles": [
+      "fibularis"
+    ]
+  },
+  {
+    "id": "seated-dumbbell-calf-raise",
+    "name": "Seated Dumbbell Calf Raise",
+    "equipment": "Dumbbells, bench, step (assumed) or plate",
+    "primaryMuscles": [
+      "soleus"
+    ],
+    "secondaryMuscles": [
+      "fibularis"
+    ]
+  },
+  {
+    "id": "donkey-calf-raise",
+    "name": "Donkey Calf Raise",
+    "equipment": "Donkey calf raise machine (assumed)",
+    "primaryMuscles": [
+      "gastrocnemius-medial-head",
+      "gastrocnemius-lateral-head",
+      "soleus"
+    ],
+    "secondaryMuscles": [
+      "fibularis"
+    ]
+  },
+  {
+    "id": "wall-tibialis-raise",
+    "name": "Wall Tibialis Raise",
+    "equipment": "Bodyweight, wall",
+    "primaryMuscles": [
+      "tibialis-anterior"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "seated-dumbbell-tibialis-raise",
+    "name": "Seated Dumbbell Tibialis Raise",
+    "equipment": "Dumbbell, bench",
+    "primaryMuscles": [
+      "tibialis-anterior"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "tib-bar-tibialis-raise",
+    "name": "Tib Bar Tibialis Raise",
+    "equipment": "Tib bar (assumed)",
+    "primaryMuscles": [
+      "tibialis-anterior"
+    ],
+    "secondaryMuscles": []
+  },
+  {
+    "id": "banded-ankle-dorsiflexion",
+    "name": "Banded Ankle Dorsiflexion",
+    "equipment": "Band (assumed)",
+    "primaryMuscles": [
+      "tibialis-anterior"
+    ],
+    "secondaryMuscles": []
+  }
+]
