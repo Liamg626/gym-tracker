@@ -292,6 +292,40 @@ Applied as written below, with small wording changes from review: ADR-0006 was a
 and under **Rules**:
   > - Volume for a Muscle Group counts each Working Set once, even when the Exercise tags several Muscles in that group
 
+## Phase 1 proposal: every gym-trained Muscle visible (SCRUM-22, not applied)
+
+**Proposal for Liam to approve; nothing above has changed.** The rule from SCRUM-22: every gym-trained Muscle gets its own Region or a shared Region, so it appears in the tap list. A shared Region lists each Muscle with its own state when tapped, so folding a Muscle into a neighbour's Region costs no map space. No ID above is renamed or removed (ADR-0006), so Phase 1 only **adds** Muscles and edits display names.
+
+### New Muscles (7, taking the total from 41 to 48)
+
+| ID | Display name | Side | Group | Region | Why a Muscle now | Tag note |
+|---|---|---|---|---|---|---|
+| `rhomboids` | Rhomboids (major and minor) | back | back | shares `trapezius-middle` | Trained by every row and reverse fly, and a common "rhomboid" target in gym talk. Deep to trapezius ([StatPearls rhomboids][sp-rhomboid]), so there is no shape of its own | Rows tag both `trapezius-middle` and `rhomboids` |
+| `vastus-intermedius` | Vastus intermedius | front | quads | shares `vastus-lateralis` | Trained by every knee extension and squat. Sits between the lateral and medial vasti, deep to rectus femoris ([OpenStax 11.6][os-116]). Sharing the rectus femoris Region (the old objection) would colour it after squats, which barely train rectus femoris ([Kubo 2019][kubo2019]); the vasti are the better neighbour | Tag with the other vasti, never with `rectus-femoris` alone |
+| `gluteus-minimus` | Gluteus minimus | back | hips | shares `gluteus-medius` | Same shape and function as medius ([TeachMe gluteal][tma-glute]); trained by abduction and single-leg work | Tag with `gluteus-medius` |
+| `teres-minor` | Teres minor | back | shoulders | shares `infraspinatus` | Rotator cuff, lateral rotation like infraspinatus ([TeachMe shoulder][tma-shoulder]); trained by face pulls and external rotations | Tag with `infraspinatus` |
+| `supraspinatus` | Supraspinatus | back | shoulders | shares `infraspinatus` | Rotator cuff; starts shoulder abduction ([OpenStax 11.5][os-115]); trained by lateral raises and cuff work. Sits above the scapular spine, under trapezius | Lateral raises list it as Secondary |
+| `internal-oblique` | Internal oblique | front | core | shares `external-oblique` | Twisting and side bending, under the external oblique ([OpenStax 11.4][os-114]); trained by every woodchop and side bend | Tag with `external-oblique` |
+| `gracilis` | Gracilis | front | hips | shares `adductors` (own Region in Phase 3 if the front `adductors` 2 sliver confirms as gracilis) | Adductor-group strap ([TeachMe medial thigh][tma-medthigh]); trained by adductor work | Tag with `adductors` |
+
+Display-name edits that go with this: `infraspinatus` drops "(with teres minor)", `gluteus-medius` drops "(with minimus)", `adductors` drops "gracilis" from its parenthesis.
+
+Kept as they are: `biceps-femoris-short-head` and `iliopsoas` already share a Region, which satisfies the rule. `sartorius` and `fibularis` already have a Muscle; Phase 3 confirms their shapes.
+
+Still excluded (not gym-trained or not reachable by any Exercise in the list): subscapularis, quadratus lumborum, transversus abdominis, transversospinales, pectineus, deep hip rotators, tensor fasciae latae, pectoralis minor, levator scapulae, coracobrachialis, anconeus, deep posterior leg, neck, hand and foot. Phase 2 will tell us if any Exercise needs one of these; IDs are add-only.
+
+### Muscle Groups re-check
+
+- **Serratus anterior:** stay in **chest**. It is worked by pressing and push-ups and sits beside the pec on the diagram. Core is defensible only for anti-rotation work, which is rare in this lifter's list.
+- **Arms:** the open question. With 9 Muscles in one group, it lumps biceps, triceps and forearm Volume together, so "Weekly Sets: arms" cannot tell a missed triceps day from a missed biceps day. **Recommendation: split into Biceps (3: both heads, brachialis), Triceps (3), Forearms (3: brachioradialis, flexors, extensors)**, taking the group count from 9 to 11. Cost: two more rows in the Weekly Breakdown and picker filter. Group IDs are only a roll-up, so this stays easy to change.
+- **Other groups unchanged.** Shoulders gains `teres-minor` and `supraspinatus`; hips gains `gluteus-minimus` and `gracilis`; quads gains `vastus-intermedius`; core gains `internal-oblique`; back gains `rhomboids`.
+
+### Proposed doc changes (applied only after approval)
+
+- Add the 7 rows above to the taxonomy table (#42-48) and the group table, and move the matching rows out of **Excluded muscles**.
+- `CONTEXT.md`: only if arms are split, update the **Muscle Group** list to the 11 names.
+- `docs/product/features/exl-exercise-library.md` and `rec-recovery.md`: update "41 Muscles in 9 Muscle Groups" to the final numbers.
+
 ## Unverified / limits
 
 - **Which sub-path is which muscle** comes from my labelled render of the artwork, not from any documentation. Those marked "to confirm" in the mapping are the least certain: the serratus vs external oblique split of the 8 front `obliques` sub-paths; sartorius and gracilis inside `adductors`; fibularis and the medial gastrocnemius in the front `calves`; the third back `triceps` sub-path; the outer and inner thin back `hamstring` strips; the flank `lower-back` block; the front `forearm` 0 shape read as brachioradialis. Check each against an anatomy plate while tagging.
