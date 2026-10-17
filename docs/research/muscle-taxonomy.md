@@ -39,7 +39,7 @@ The rule used for "how much detail": split a muscle into heads or parts only whe
 | 15 | `biceps-brachii-short-head` | Biceps brachii, short head | front | arms | cut from `biceps` | Arises from the coracoid process ([TeachMe upper arm][tma-arm]); visibly distinct |
 | 16 | `brachialis` | Brachialis | front | arms | cut a sliver from `biceps` (no own shape) | Deep to the biceps, a pure elbow flexor ([TeachMe upper arm][tma-arm]); trained by every curl, worth its own state |
 | 17 | `brachioradialis` | Brachioradialis | front | arms | `forearm` (front) sub-path | Elbow flexor despite extensor origin ([TeachMe posterior forearm][tma-postfa]); its share changes with grip ([Kleiber 2015][kleiber2015], [Coratella 2023][coratella2023]) |
-| 18 | `triceps-brachii-long-head` | Triceps brachii, long head | both | arms | `triceps` (front) + `triceps` (back) sub-path | Crosses the shoulder; grew 1.5× more with overhead extensions ([Maeo 2023][maeo2023]) |
+| 18 | `triceps-brachii-long-head` | Triceps brachii, long head | both | arms | `triceps` (front) + `triceps` (back) sub-path | The only head that crosses the shoulder, so overhead work stretches it ([TeachMe upper arm][tma-arm]); overhead extensions grew it more than pushdowns did (+28.5% vs +19.6%), though the other heads gained too ([Maeo 2023][maeo2023]) |
 | 19 | `triceps-brachii-lateral-head` | Triceps brachii, lateral head | back | arms | `triceps` (back) sub-path | Visibly distinct; one-joint head ([StatPearls triceps][sp-triceps], [Maeo 2023][maeo2023]) |
 | 20 | `triceps-brachii-medial-head` | Triceps brachii, medial head | back | arms | `triceps` (back) sub-path (to confirm) | Third head; mostly covered by the other two ([TeachMe upper arm][tma-arm]). Kept because the artwork has a third triceps shape |
 | 21 | `forearm-flexors` | Forearm flexors (wrist and finger flexors) | front | arms | `forearm` (front) sub-paths | Anterior compartment, flexes wrist and fingers ([TeachMe anterior forearm][tma-antfa], [OpenStax 11.5][os-115]); grip and wrist curls |
@@ -56,15 +56,15 @@ The rule used for "how much detail": split a muscle into heads or parts only whe
 | 32 | `sartorius` | Sartorius | front | quads | `adductors` (front) sub-path (to confirm) | Visible strap across the thigh; anterior compartment; flexes hip and knee ([OpenStax 11.6][os-116], [TeachMe anterior thigh][tma-antthigh]) |
 | 33 | `biceps-femoris-long-head` | Biceps femoris, long head | back | hamstrings | `hamstring` sub-path | Two-joint head; hip extension training grew it more than Nordics ([Bourne 2017][bourne2017]) |
 | 34 | `biceps-femoris-short-head` | Biceps femoris, short head | back | hamstrings | no shape: shares the `biceps-femoris-long-head` region | Arises from the femur, so knee flexion only ([TeachMe hamstrings][tma-ham], [StatPearls hamstring][sp-ham]); hip hinges don't train it, leg curls do |
-| 35 | `semitendinosus` | Semitendinosus | back | hamstrings | `hamstring` sub-path | Superficial medial hamstring ([TeachMe hamstrings][tma-ham]); grew selectively with isometric hip extension ([Carmichael 2022][carmichael2022]) |
-| 36 | `semimembranosus` | Semimembranosus | back | hamstrings | `hamstring` sub-path (to confirm) | Deep to semitendinosus but visible either side of it ([TeachMe hamstrings][tma-ham]); grew with eccentric hip extension ([Carmichael 2022][carmichael2022]) |
-| 37 | `gastrocnemius-medial-head` | Gastrocnemius, medial head | both | lower legs | `calves` (back) sub-path + `calves` (front) inner sub-path | Two-joint; grows with straight-leg, not seated, calf raises ([Kinoshita 2023][kinoshita2023]) |
-| 38 | `gastrocnemius-lateral-head` | Gastrocnemius, lateral head | back | lower legs | `calves` (back) sub-path | As above; heads respond differently to foot position ([Nunes 2020][nunes2020]) |
-| 39 | `soleus` | Soleus | back | lower legs | `calves` (back) lower sub-paths | Deep to gastrocnemius, acts only at the ankle ([TeachMe posterior leg][tma-postleg]); bent-knee calf raises favour it ([Kassiano 2023][kassiano2023]) |
-| 40 | `tibialis-anterior` | Tibialis anterior | front | lower legs | `tibialis` | Visible on the shin; lifts the front of the foot ([OpenStax 11.6][os-116]); tib raises |
-| 41 | `fibularis` | Fibularis (peroneus) longus and brevis | front | lower legs | `calves` (front) outer sub-path (to confirm) | The lateral compartment; eversion ([TeachMe lateral leg][tma-latleg], [OpenStax 11.6][os-116]). Kept because the artwork appears to draw it |
+| 35 | `semitendinosus` | Semitendinosus | back | hamstrings | `hamstring` sub-path | Superficial medial hamstring ([TeachMe hamstrings][tma-ham]); grew more with isometric hip extension, a borderline result (p = 0.054) ([Carmichael 2022][carmichael2022]) |
+| 36 | `semimembranosus` | Semimembranosus | back | hamstrings | `hamstring` sub-path (to confirm) | Deep to semitendinosus ([TeachMe hamstrings][tma-ham]); the artwork appears to draw a separate inner strip for it; grew with eccentric hip extension ([Carmichael 2022][carmichael2022]) |
+| 37 | `gastrocnemius-medial-head` | Gastrocnemius, medial head | both | lower-legs | `calves` (back) sub-path + `calves` (front) inner sub-path | Two-joint; grows with straight-leg, not seated, calf raises ([Kinoshita 2023][kinoshita2023]) |
+| 38 | `gastrocnemius-lateral-head` | Gastrocnemius, lateral head | back | lower-legs | `calves` (back) sub-path | As above; heads respond differently to foot position ([Nunes 2020][nunes2020]) |
+| 39 | `soleus` | Soleus | back | lower-legs | `calves` (back) lower sub-paths | Deep to gastrocnemius, acts only at the ankle ([TeachMe posterior leg][tma-postleg]); bent-knee calf raises favour it ([Kassiano 2023][kassiano2023]) |
+| 40 | `tibialis-anterior` | Tibialis anterior | front | lower-legs | `tibialis` | Visible on the shin; lifts the front of the foot ([OpenStax 11.6][os-116]); tib raises |
+| 41 | `fibularis` | Fibularis (peroneus) longus and brevis | front | lower-legs | `calves` (front) outer sub-path (to confirm) | The lateral compartment; eversion ([TeachMe lateral leg][tma-latleg], [OpenStax 11.6][os-116]). Kept because the artwork appears to draw it |
 
-Group counts: chest 3, shoulders 4, back 6, arms 9, core 2, hips 4, quads 4, hamstrings 4, lower legs 5.
+Group counts: chest 3, shoulders 4, back 6, arms 9, core 2, hips 4, quads 4, hamstrings 4, lower-legs 5.
 
 ### The group set
 
@@ -99,7 +99,7 @@ One catch for **Volume by group**: a Working Set of bench press is attributed to
 | **Back only** (18) | deltoid-posterior, infraspinatus, trapezius-middle, trapezius-lower, latissimus-dorsi, teres-major, erector-spinae, triceps-brachii-lateral-head, triceps-brachii-medial-head, forearm-extensors, gluteus-maximus, gluteus-medius, biceps-femoris-long-head, biceps-femoris-short-head, semitendinosus, semimembranosus, gastrocnemius-lateral-head, soleus |
 | **Both** (7) | deltoid-lateral, trapezius-upper, triceps-brachii-long-head, external-oblique, adductors, vastus-lateralis, gastrocnemius-medial-head |
 
-So: 16 front only + 18 back only + 7 both = 41. Two of the "both" entries depend on sub-paths still to confirm (vastus-lateralis on the back, gastrocnemius-medial-head on the front); if either turns out wrong, that Muscle becomes single-sided.
+So: 16 front only + 18 back only + 7 both = 41. Four of the "both" entries depend on sub-paths still to confirm (triceps-brachii-long-head on the front, external-oblique and vastus-lateralis on the back, gastrocnemius-medial-head on the front); if one turns out wrong, that Muscle becomes single-sided.
 
 ## Source disagreements and the convention we follow
 
@@ -122,7 +122,7 @@ So: 16 front only + 18 back only + 7 both = 41. Two of the "both" entries depend
 | Serratus anterior | One muscle with several digitations ([StatPearls serratus][sp-serratus]) | 1 Muscle | Digitations aren't trained separately |
 | Rhomboids | Major + minor, deep to trapezius ([StatPearls rhomboids][sp-rhomboid], [TeachMe superficial back][tma-back]) | Left out (see [Excluded](#excluded-muscles)) | Can't be seen; retract the scapula with the middle trapezius |
 | Teres major / minor, infraspinatus | Teres minor is rotator cuff; teres major is not ([TeachMe shoulder][tma-shoulder]) | Teres major own Muscle; teres minor folded into infraspinatus | Teres major's action (extend, adduct, medially rotate) matches the lats; teres minor's matches infraspinatus |
-| Triceps | 3 heads ([StatPearls triceps][sp-triceps], [TeachMe upper arm][tma-arm]); OpenStax names no heads ([OpenStax 11.5][os-115]) | 3 Muscles | Long head trained differently overhead ([Maeo 2023][maeo2023]); the artwork has 3 back sub-paths |
+| Triceps | 3 heads ([StatPearls triceps][sp-triceps], [TeachMe upper arm][tma-arm]); OpenStax names no heads ([OpenStax 11.5][os-115]) | 3 Muscles | The long head alone crosses the shoulder ([TeachMe upper arm][tma-arm]); overhead work grew all heads more, the long head most ([Maeo 2023][maeo2023]); the artwork has 3 back sub-paths |
 | Biceps | Long and short head ([TeachMe upper arm][tma-arm]) | 2 Muscles | Visibly distinct on the front diagram, and the long head crosses the shoulder. I found **no** hypertrophy study showing the heads respond to different exercises (see [Unverified](#unverified--limits)) |
 | Rectus abdominis | One muscle, segmented ([OpenStax 11.4][os-114]) | 1 Muscle | No upper/lower split: the "segments" are one muscle in one sheath |
 
@@ -169,7 +169,7 @@ Source: `assets/bodyFront.ts` and `assets/bodyBack.ts` in [react-native-body-hig
 | `obliques` | 0, 1, 3 / 0, 1, 3 | Upper finger-like blocks on the side of the ribcage | `serratus-anterior` (to confirm) |
 | `obliques` | 2, 4, 5, 6, 7 / 2, 4, 5, 6, 7 | Lower blocks beside the abs and the large flank block (7) | `external-oblique` (to confirm which of 2/4 belongs to serratus) |
 | `abs` | 0–3 / 0–3 | Four segments per side | `rectus-abdominis` |
-| `forearm` | 0 / 0 | Large outer (thumb-side) shape | `brachioradialis` |
+| `forearm` | 0 / 0 | Large outer (thumb-side) shape | `brachioradialis` (to confirm) |
 | `forearm` | 1, 2 / 1, 2 | Two thin inner strips | `forearm-flexors` |
 | `adductors` | 0 / 0 | Upper inner thigh | `adductors` |
 | `adductors` | 1 / 1 | Long diagonal strip from the hip crease to the inner knee | `sartorius` (to confirm) |
@@ -228,9 +228,9 @@ The cuts the build story must make: chest ×1 shape into 2; deltoids front into 
 
 | Muscle | Recommendation | Reason |
 |---|---|---|
-| Brachialis | **(a)**, cut a small sliver from the lower outer edge of the `biceps` shape | We cut the biceps anyway, so it costs one more line. In life it shows either side of the lower biceps ([TeachMe upper arm][tma-arm]). Every curl works it, so sharing a biceps head region would be nearly always the same colour, but a sliver lets hammer and reverse curls show their own effect |
+| Brachialis | **(a)**, cut a small sliver from the lower outer edge of the `biceps` shape | We cut the biceps anyway, so it costs one more line. It lies deep to the biceps ([TeachMe upper arm][tma-arm]); the sliver is a display choice, not an anatomical claim. Every curl works it, so sharing a biceps head region would be nearly always the same colour, but a sliver lets hammer and reverse curls show their own effect |
 | Biceps femoris, short head | **(b)**, share the `biceps-femoris-long-head` region | It lies under the long head ([StatPearls hamstring][sp-ham]). Keeping it as a Muscle lets leg curls and RDLs be tagged honestly (RDL: long head only) |
-| Iliopsoas | **(b)**, share the `rectus-femoris` region | Both are hip flexors at the front of the hip. Leg raises fatigue both. Squats barely train rectus femoris ([Kubo 2019][kubo2019]) or iliopsoas, so the shared region stays honest |
+| Iliopsoas | **(b)**, share the `rectus-femoris` region | Both are hip flexors at the front of the hip. Leg raises fatigue both. Squats barely grew rectus femoris ([Kubo 2019][kubo2019]); Kubo did not measure iliopsoas, so its pairing rests on shared function, not a source |
 | Sartorius | Re-tag `adductors` front sub-path 1. **If** that strip turns out not to be sartorius: **(c)** | Rarely a Primary Muscle; not worth drawing |
 | Gracilis | **(c)**, fold into `adductors` | Anatomically in the adductor group ([TeachMe medial thigh][tma-medthigh]); its sliver (front `adductors` 2) becomes part of the `adductors` region |
 | Fibularis (peroneals) | Re-tag front `calves` sub-path 0. **If** that is wrong: **(c)** | Rarely trained in a gym |
@@ -241,7 +241,7 @@ The cuts the build story must make: chest ×1 shape into 2; deltoids front into 
 | Gluteus minimus | **(c)**, fold into `gluteus-medius` | Same function ([TeachMe gluteal][tma-glute]) |
 | Teres minor, internal oblique | **(c)** | See [Excluded](#excluded-muscles) |
 
-Net effect: 41 Muscles; 39 have their own region (38 from existing sub-paths or cuts of existing shapes, plus brachialis's new sliver); 2 share a region (biceps femoris short head, iliopsoas). If a "to confirm" read fails, that Muscle falls back as shown above.
+Net effect: 41 Muscles; 39 have their own region (38 from existing sub-paths or cuts of existing shapes, plus brachialis's new sliver); 2 share a region (biceps femoris short head, iliopsoas). If a "to confirm" read fails, that Muscle falls back as shown above. Two more fallbacks: if the upper `obliques` blocks are not serratus anterior, tag them `external-oblique` and leave serratus anterior out of the taxonomy; if the inner `hamstring` strip is not semimembranosus, semimembranosus shares the `semitendinosus` region (option b).
 
 ## Proposed CONTEXT.md updates (for Liam to approve, not applied)
 
@@ -249,7 +249,7 @@ Replace **Muscle** with:
 
 > **Muscle**:
 > A skeletal muscle, or a head or part of one, that the app tracks (e.g. "Biceps brachii, long head"). Each has a stable ID, a display name, the side of the Recovery Map it shows on (front, back or both) and one Muscle Group. Muscles are split only where the parts can be trained differently or are visibly distinct.
-> _Avoid_: Muscle group (except for a Muscle Group), body part
+> _Avoid_: muscle group (say Muscle Group only for the roll-up), body part
 
 Add:
 
@@ -294,9 +294,9 @@ and under **Rules**:
 
 - **Which sub-path is which muscle** comes from my labelled render of the artwork, not from any documentation. Those marked "to confirm" in the mapping are the least certain: the serratus vs external oblique split of the 8 front `obliques` sub-paths; sartorius and gracilis inside `adductors`; fibularis and the medial gastrocnemius in the front `calves`; the third back `triceps` sub-path; the outer and inner thin back `hamstring` strips; the flank `lower-back` block. Check each against an anatomy plate while tagging.
 - **StatPearls pages could not be fetched directly** (NCBI served a bot check). Claims linked to StatPearls come from search-result excerpts of those pages; the load-bearing ones are also backed by TeachMeAnatomy or OpenStax, which I did fetch.
-- **Biceps long vs short head:** I found anatomical reasons and visual distinctness but no hypertrophy study showing the heads respond to different exercises. They are kept for visibility. The brachioradialis evidence is mixed: one EMG study found its share rose with a pronated grip ([Kleiber 2015][kleiber2015]); another found it highest with a supinated grip ([Coratella 2023][coratella2023]).
+- **Biceps long vs short head:** I found anatomical reasons and visual distinctness but no hypertrophy study showing the heads respond to different exercises. They are kept for visibility. The brachioradialis evidence is mixed: one EMG study found its share differed with a pronated grip ([Kleiber 2015][kleiber2015]); another found it highest with a supinated grip ([Coratella 2023][coratella2023]).
 - **Terminologia Anatomica:** the TA2 trapezius part names are confirmed from search results of the TA2 viewer (the viewer page itself renders client-side and I could not read it). The deltoid's TA part names were not confirmed; Kenhub's clavicular/acromial/spinal names were used instead.
-- **Training studies** are small, mostly in untrained adults, and run 6–12 weeks. They support "these parts can be trained differently", not exact effect sizes.
+- **Training studies** are small, mostly in untrained adults, and either run for weeks or measure one session (EMG, short-term swelling). They support "these parts can be trained differently", not exact effect sizes.
 - **The group set is judgement**, not a standard. Arms could be split, serratus could sit in core.
 - **Not checked:** Liam's actual Exercise list (EXL: Liam's exercise list is not written yet). If he does neck work, tibialis raises or no adductor work, Muscles can be added (IDs are add-only) or simply never tagged.
 
