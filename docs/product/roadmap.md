@@ -14,12 +14,11 @@ Releases map to Jira versions. Sprints are one week long, with no story points.
 - Workout history: view, edit, delete, log after the fact
 - Weigh-ins (one per day) and Trend Weight
 - Measurement Sessions and the Body Fat Estimate (US Navy, male, 188cm)
-- Recovery Map: **time-only** rules on a **placeholder** body diagram
+- Recovery Map: **time-only** rules on the **anatomical** body diagram (fitness-style front/back SVG, ADR-0007)
 
 ## v1.1: progress and goals
 
 - Customisable home screen: edit mode, move/resize to set sizes, add/remove widgets, layouts per device saved to the API
-- Anatomical Recovery Map (licensed SVG, full Muscle detail)
 - PR detection, with a celebration during the Workout
 - Milestones (weight × reps) and Body Goals (optional deadline, on-track indicator)
 - Charts: Estimated 1RM per Exercise, Trend Weight, Body Fat Estimate, tape measurements, Workout calendar

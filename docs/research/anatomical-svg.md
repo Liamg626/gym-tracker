@@ -14,7 +14,7 @@ Which openly licensed front and back muscle-anatomy artwork can the **Recovery M
 - **Taxonomy coverage:** against the provisional Muscle list in [Recommendation](#recommendation), 35 of 40 Muscles work as-is or after a cut. For 3 of those, which sub-path is which still has to be confirmed. 5 are gaps: brachialis, sartorius, gracilis, peroneals, and one of infraspinatus / teres major / rhomboids. Deltoid, pec major, trapezius and biceps are one shape each and need cutting into heads.
 - **Runner-up:** A, Wikimedia Commons `Muscles front and back.svg` (OpenStax, redrawn by Tomáš Kebert & umimeto.org, **CC BY-SA 4.0**). It's finer medical anatomy with one closed path per muscle, but it's in a textbook style with the legs together, and share-alike applies. It remains the fallback if H's artwork provenance turns out to be a problem (see [Unverified](#unverified--limits)).
 
-A draft ADR is at `docs/adr/0007-anatomical-svg-source.md` (Status: proposed).
+Recorded in `docs/adr/0007-anatomical-svg-source.md` (accepted 2026-10-17).
 
 ## Comparison
 
@@ -151,7 +151,7 @@ So **35 of the 40 provisional Muscles** can be shown, 3 of them pending confirma
 
 **If H has to be dropped** (e.g. its artwork provenance turns out to be a problem), fall back to A: CC BY-SA 4.0, kept as a separate file with attribution (see A's notes and the Share-alike section). The credit would read "Body diagram adapted from 'Muscles front and back' by OpenStax, Tomáš Kebert & umimeto.org, redrawn from OpenStax *Anatomy and Physiology* (CC BY 4.0); CC BY-SA 4.0; modified".
 
-## Proposed doc changes (for Liam to approve, not applied)
+## Doc changes (approved by Liam and applied 2026-10-17)
 
 **`docs/product/roadmap.md`**
 

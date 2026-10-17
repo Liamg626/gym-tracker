@@ -11,6 +11,7 @@ The repo-owned catalogue of Exercises and the Muscles they work (ADR-0006).
 **EXL: Muscle taxonomy** (MVP, Task)
 - Research and define the list of Muscles at anatomical detail (e.g. biceps brachii long/short head), each with a stable ID, display name, front/back side and a roll-up group for summaries
 - The IDs must match the region IDs in the Recovery Map SVG (REC)
+- Decide how Muscles with no shape in the Recovery Map artwork (e.g. brachialis, sartorius, peroneals) get a region; see `docs/research/anatomical-svg.md`
 
 **EXL: Library schema and validation** (MVP)
 - JSON schema plus a typed loader in `packages/exercise-library`

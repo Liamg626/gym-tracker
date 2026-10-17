@@ -25,14 +25,12 @@ Volume-weighted fatigue per Muscle that decays over a recovery window per Muscle
 **REC: Recovery State calculation (time-only)** (MVP, domain, TDD)
 - Pure function: Workouts + Exercise Library + now → Recovery State per Muscle
 
-**REC: Placeholder Recovery Map** (MVP)
-- Simple front/back diagram with roughly a dozen rough regions; each anatomical Muscle maps onto one; tapping a region lists its Muscles, their states and when they were last trained
+**REC: Find a licensed anatomical SVG** (MVP, research Task)
+- Findings in `docs/research/anatomical-svg.md`; source recorded in ADR-0007 (react-native-body-highlighter path data, MIT)
 
-**REC: Find a licensed anatomical SVG** (v1.1, research Task)
-- Find an openly licensed front + back anatomical SVG, confirm the licence allows public use with changes, and record it in an ADR; fallback: extend an existing React body-map library
-
-**REC: Anatomical Recovery Map** (v1.1, blocked by the SVG research and the EXL Muscle taxonomy)
-- Each region ID matches a Muscle ID; the same component renders on phone and dashboard
+**REC: Anatomical Recovery Map** (MVP, blocked by the EXL Muscle taxonomy)
+- Front/back diagram from the ADR-0007 artwork, legs widened, grey base; each region ID matches a Muscle ID and is coloured by its Recovery State, and a Muscle with no Working Sets yet stays grey (no state); tapping a region lists its Muscles, their states and when they were last trained; the same component renders on phone and dashboard
+- The MIT notice is kept in the SVG file and the README third-party notices; the app's About screen carries a credit line
 
 **REC: Research muscle fatigue and recovery** (v1.2, research Task)
 - Primary sources on per-muscle recovery times and how fatigue scales with volume and RIR; the output is a findings doc plus a proposed model and config values
