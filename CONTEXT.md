@@ -59,7 +59,7 @@ A roll-up of Muscles for summaries and filters: Chest, Shoulders, Back, Arms, Co
 _Avoid_: Body part, muscle (for a group), split
 
 **Region**:
-One shape on the Recovery Map. A Region shows one or more Muscles and is coloured by the worst Recovery State among them.
+One shape on the Recovery Map. A Region shows one or more Muscles and is coloured by the worst Recovery State among them; Muscles with no state are ignored, and a Region where none has a state is grey.
 _Avoid_: Area, zone, body part
 
 **Primary Muscle / Secondary Muscle**:

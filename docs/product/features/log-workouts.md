@@ -35,7 +35,7 @@ Live logging at the gym is the core of the app. Everything else depends on this 
 
 **LOG: Workout history** (MVP)
 - List of past Workouts (date, Routine, duration, Exercise count); open one to see every Set
-- Edit or delete any Set or Workout
+- Edit or delete any Set or Workout (phone only; the dashboard's history is read-only)
 
-**LOG: Log a Workout after the fact** (MVP)
+**LOG: Log a Workout after the fact** (MVP, phone only)
 - Create a Workout with a start and end time you type in, then add Sets; Recovery uses the Workout's performed time

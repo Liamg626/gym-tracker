@@ -271,7 +271,7 @@ Amend **Recovery Map**:
 
 ## Doc changes (approved by Liam and applied 2026-10-17)
 
-Applied as written below. ADR-0006 was amended in place, with a dated note.
+Applied as written below, with small wording changes from review: ADR-0006 was amended in place with a dated note and split into two sentences; the picker filter keeps "or equipment"; the REC Anatomical Recovery Map bullet was rewritten for Regions rather than adding a separate line.
 
 **`docs/adr/0006-exercise-library-in-repo.md`** (or a short new ADR, if ADRs are not edited after acceptance). Replace "and Muscle IDs in the file must match region IDs in the Recovery Map SVG" with:
 
