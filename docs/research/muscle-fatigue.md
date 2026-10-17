@@ -13,7 +13,7 @@ The output is a model for the v1.2 **Volume-weighted fatigue model** story, whic
 - **The literature gives time courses for a handful of Exercises, not a table of recovery times per Muscle.** The best-matched trials (resistance-trained adults, multi-set bench press and squat) show performance back to baseline in **about 6 h (far from failure, low volume) to 48-72 h (sets taken to failure, or 8 x 10)**. See [Q1](#q1-how-long-do-muscles-take-to-recover) and [Q2](#q2-how-recovery-scales-with-volume-and-effort).
 - **Nothing retrieved supports different recovery times for large vs small Muscles or fast vs slow fibres.** The one direct comparison (untrained, eccentric-only) found arm muscles recovered *slower* than leg muscles ([Jamurtas 2005][jamurtas2005]). The proposed config therefore uses one recovery scale for every Muscle Group (1.0) and keeps the field so Liam can tune it.
 - **Effort changes the immediate drop more clearly than the recovery.** Closer to failure means a bigger velocity loss right after the Working Set ([Refalo 2023][refalo2023]). The recovery difference is small: in Refalo 2023 velocity at 24 h was -3% for both failure and 1 RIR, and there was no significant difference at 48 h. Morán-Navarro 2017 compared 3 x 10 to failure with 6 x 5, which changes reps and effort together, so it cannot isolate proximity to failure ([Morán-Navarro 2017][moran2017]).
-- **Secondary Muscle = 0.5 of a Primary set** is supported, but only for *training stimulus*, not for fatigue. A 2026 meta-regression of 67 studies found that counting indirect (synergist) sets as half a set predicted hypertrophy and strength gains better than counting them as full sets or as zero ([Pelland 2026][pelland2026]). No study retrieved measures fatigue or recovery in synergists against a fraction. One bench press study suggests triceps soreness lasts as long as chest soreness ([Nuckols 2026][nuckols2026]), which argues *against* 0.5 for recovery time.
+- **Secondary Muscle = 0.5 of a Primary set** is supported, but only for *training stimulus*, not for fatigue. A 2026 meta-regression of 67 studies found that counting indirect (synergist) sets as half a set predicted hypertrophy better than counting them as full sets or as zero (strength was not the basis of that finding) ([Pelland 2026][pelland2026]). No study retrieved measures fatigue or recovery in synergists against a fraction. One bench press study suggests triceps soreness lasts as long as chest soreness ([Nuckols 2026][nuckols2026]), which argues *against* 0.5 for recovery time.
 - **Best marker for "ready to train again": recovery of force or velocity** (maximal voluntary contraction torque, lifting velocity), not soreness or creatine kinase ([Warren 1999][warren1999]). The app records none of these directly, so the model is anchored to performance studies and the doc proposes a cheap check against next-Workout Estimated 1RM.
 - **Sleep, resting HR and HRV: do not use in v1.2.** There is no resistance-training evidence that would let us pick a number. See [Q5](#q5-sleep-resting-hr-and-hrv).
 - **Weekly Working Sets per Muscle Group: 12-20 is the target range (Baz-Valle 2022), 4 is the minimum detectable gain, and gains keep rising past 20 with diminishing returns (Pelland 2026 preprint tiers).** Sources: [Baz-Valle 2022][bazvalle2022], [Pelland 2026][pelland2026] (tiers from the September 2024 preprint, not the published version). Schoenfeld 2017 shows a dose-response but its 10+ bin was not significant, so it is not the source of any number here. See [Q6](#q6-weekly-working-sets-per-muscle-group).
@@ -171,7 +171,16 @@ export const FATIGUE_CONFIG = {
     min: 4,                                               // S: Pelland 2026 preprint (Sept 2024), minimum detectable gain
     targetLow: 12,                                        // S: Baz-Valle 2022 (12-20 per Muscle Group)
     targetHigh: 20,                                       // S: Baz-Valle 2022
-    softCeiling: 30,                                      // S: Pelland 2026 preprint (Sept 2024) tier boundary; evidence thin above
+    // Bands are lower bounds: a band runs from its `from` up to (not including) the next band's `from`.
+    // Fractional totals (Secondary = 0.5) fall in the band whose `from` they are at or above.
+    bands: [
+      { from: 0, label: 'below minimum' },              // S: below Pelland 2026 preprint minimum detectable gain (4)
+      { from: 4, label: 'detectable' },                  // S: Pelland 2026 preprint; 5-10 is its "efficient" tier
+      { from: 11, label: 'tier 11-18' },                 // S: Pelland 2026 preprint tier
+      { from: 19, label: 'tier 19-29' },                 // S: Pelland 2026 preprint tier
+      { from: 30, label: 'tier 30-42' },                 // S: Pelland 2026 preprint tier
+      { from: 43, label: 'unclear' },                    // S: Pelland 2026 preprint (no tier above 42)
+    ],
     maxRirCounted: null as number | null,                 // A: null = count every Working Set
   },
 
@@ -183,7 +192,7 @@ Weekly Working Set bands the UI could use, aligned with the tiers in the Sept 20
 
 ## Worked examples
 
-All numbers are made-up demo values (ADR-0005). Assumed tags for the bench press: Primary `pectoralis-major-sternal`; Secondary `pectoralis-major-clavicular`, `deltoid-anterior`, `triceps-brachii-lateral-head`, `triceps-brachii-medial-head`, `triceps-brachii-long-head`. (The Exercise Library is not written yet; this is for illustration.) Config values as above; `t = 0` is the Workout's performed time. Recovery Windows are not rounded in the state checks; elapsed time exactly at a boundary counts as the later state.
+All numbers are made-up demo values (ADR-0005). Assumed tags for the bench press: Primary `pectoralis-major-sternal`; Secondary `pectoralis-major-clavicular`, `deltoid-anterior`, `triceps-brachii-lateral-head`, `triceps-brachii-medial-head`, `triceps-brachii-long-head`. Assumed tags for the incline press: Primary `pectoralis-major-clavicular`; Secondary `pectoralis-major-sternal`, `deltoid-anterior`. (The Exercise Library is not written yet; this is for illustration.) Config values as above; `t = 0` is the Workout's performed time. Recovery Windows are not rounded in the state checks; elapsed time exactly at a boundary counts as the later state.
 
 ### Example 1: 4 Working Sets of bench press at RIR 1
 
@@ -193,8 +202,10 @@ All numbers are made-up demo values (ADR-0005). Assumed tags for the bench press
 | Pectoralis major, clavicular part | Secondary | 4 x 0.5 x 0.52 = **1.04** | 12 + 60 x 1.04 / 4 = **27.6 h** | 9.2 h |
 | Deltoid, anterior part | Secondary | 4 x 0.5 x 0.52 = **1.04** | 12 + 60 x 1.04 / 4 = **27.6 h** | 9.2 h |
 | Triceps brachii, lateral head | Secondary | 1.04 | 27.6 h | 9.2 h |
+| Triceps brachii, medial head | Secondary | 1.04 | 27.6 h | 9.2 h |
+| Triceps brachii, long head | Secondary | 1.04 | 27.6 h | 9.2 h |
 
-The medial and long triceps heads are also Secondary and match the lateral-head row exactly (same U, D and states); they are left out of the table to keep it short.
+All three triceps heads are tagged Secondary, so they share the same U, D and states.
 
 Fatigue Level `L = 1 - elapsed / D` and state:
 
@@ -204,6 +215,8 @@ Fatigue Level `L = 1 - elapsed / D` and state:
 | Clavicular pec (S) | L = 1 - 24/27.6 = 0.13 -> **Recovering** | **Ready** | **Ready** |
 | Anterior deltoid (S) | L = 1 - 24/27.6 = 0.13 -> **Recovering** | **Ready** | **Ready** |
 | Triceps lateral head (S) | **Recovering** (0.13) | **Ready** | **Ready** |
+| Triceps medial head (S) | **Recovering** (0.13) | **Ready** | **Ready** |
+| Triceps long head (S) | **Recovering** (0.13) | **Ready** | **Ready** |
 
 Sanity check against the trial: [Refalo 2023][refalo2023] had 6 Working Sets at 1 RIR. U = 6 x 0.52 = 3.12, D = 12 + 60 x 3.12 / 4 = 58.8 h. The trial saw velocity within 3% of baseline at 24 h and back to baseline at 48 h; the model is a little more cautious than the data.
 
@@ -247,7 +260,7 @@ Replace the story **REC: Volume-weighted fatigue model**:
 
 > **REC: Volume-weighted fatigue model** (v1.2, domain, TDD, blocked by the research)
 > - Pure function: Workouts + Exercise Library + fatigue config + now -> Recovery State and Fatigue Level per Muscle, behind the same interface as the time-only rules
-> - Config holds `roleWeight`, `effortByRir`, `rirWhenMissing`, `recovery`, `groupScale`, `muscleScale`, `weeklySets` and `watchAdjustment` (see `docs/research/muscle-fatigue.md` for values and sources)
+> - Config holds `version`, `roleWeight`, `effortByRir`, `rirWhenMissing`, `recovery`, `groupScale`, `muscleScale`, `weeklySets` and `watchAdjustment` (see `docs/research/muscle-fatigue.md` for values and sources)
 > - Proposal: the config lives in one shared fatigue config module, e.g. `src/fatigue/fatigue.config.ts`, imported by both the fatigue model and the Weekly Sets insight so the targets and the Recovery Window share one source. The path is a suggestion; no `src/` module exists yet.
 > - Tests cover the worked examples in the research doc and the MVP boundaries at the maximum dose
 
