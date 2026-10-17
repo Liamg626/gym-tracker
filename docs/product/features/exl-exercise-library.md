@@ -10,7 +10,7 @@ The repo-owned catalogue of Exercises and the Muscles they work (ADR-0006).
 
 **EXL: Muscle taxonomy** (MVP, Task)
 - Research and define the list of Muscles at anatomical detail (e.g. biceps brachii long/short head), each with a stable ID, display name, front/back side and a roll-up group for summaries
-- Findings and the proposed list in `docs/research/muscle-taxonomy.md`: 41 Muscles in 9 Muscle Groups, each mapped to one or more Recovery Map Regions
+- Findings and the proposed list in `docs/research/muscle-taxonomy.md`: 48 Muscles in 11 Muscle Groups (after SCRUM-22 Phase 1), each mapped to one or more Recovery Map Regions
 - Decide how Muscles with no shape in the Recovery Map artwork (e.g. brachialis, sartorius, peroneals) get a Region; see `docs/research/anatomical-svg.md`
 
 **EXL: Library schema and validation** (MVP)
