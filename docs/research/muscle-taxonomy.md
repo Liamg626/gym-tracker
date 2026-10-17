@@ -243,7 +243,7 @@ The cuts the build story must make: chest ×1 shape into 2; deltoids front into 
 
 Net effect: 41 Muscles; 39 have their own region (38 from existing sub-paths or cuts of existing shapes, plus brachialis's new sliver); 2 share a region (biceps femoris short head, iliopsoas). If a "to confirm" read fails, that Muscle falls back as shown above. Three more fallbacks: if the upper `obliques` blocks are not serratus anterior, tag them `external-oblique` and leave serratus anterior out of the taxonomy; if the inner `hamstring` strip is not semimembranosus, semimembranosus shares the `semitendinosus` region (option b), and the strip is tagged `semitendinosus` (or `adductors` if it turns out to be gracilis), so every Region still carries a Muscle; if front `forearm` 0 is not brachioradialis, brachioradialis shares the `forearm-flexors` region (option b). In general, a shape whose Muscle falls back is tagged with its nearest neighbour in the same Muscle Group (e.g. front `forearm` 0 → `forearm-flexors`), so no Region is left without a Muscle.
 
-## Proposed CONTEXT.md updates (for Liam to approve, not applied)
+## CONTEXT.md updates (approved by Liam and applied 2026-10-17)
 
 Replace **Muscle** with:
 
@@ -269,7 +269,9 @@ Amend **Recovery Map**:
 
 > The front-and-back body diagram that colours each Region by the Recovery State of its Muscles.
 
-## Proposed doc changes (for Liam to approve, not applied)
+## Doc changes (approved by Liam and applied 2026-10-17)
+
+Applied as written below, with small wording changes from review: ADR-0006 was amended in place with a dated note and split into two sentences; the picker filter keeps "or equipment"; the REC Anatomical Recovery Map bullet was rewritten for Regions rather than adding a separate line.
 
 **`docs/adr/0006-exercise-library-in-repo.md`** (or a short new ADR, if ADRs are not edited after acceptance). Replace "and Muscle IDs in the file must match region IDs in the Recovery Map SVG" with:
 

@@ -51,18 +51,27 @@ The number of Workouts the lifter aims to complete per week.
 ### Muscles and recovery
 
 **Muscle**:
-An anatomical region on the Recovery Map, at the finest anatomical detail the map supports (e.g. "biceps brachii, long head").
-_Avoid_: Muscle group (except when explicitly rolling Muscles up for display)
+A skeletal muscle, or a head or part of one, that the app tracks (e.g. "Biceps brachii, long head"). Each has a stable ID, a display name, the side of the Recovery Map it shows on (front, back or both) and one Muscle Group. Muscles are split only where the parts can be trained differently or are visibly distinct.
+_Avoid_: muscle group (say Muscle Group only for the roll-up), body part
+
+**Muscle Group**:
+A roll-up of Muscles for summaries and filters: Chest, Shoulders, Back, Arms, Core, Glutes and hips, Quads, Hamstrings, Calves and shins. Every Muscle belongs to exactly one.
+_Avoid_: Body part, muscle (for a group), split
+
+**Region**:
+One shape on the Recovery Map. A Region shows one or more Muscles and is coloured by the worst Recovery State among them; Muscles with no state are ignored, and a Region where none has a state is grey.
+_Avoid_: Area, zone, body part
 
 **Primary Muscle / Secondary Muscle**:
 The role a Muscle plays in an Exercise: the main mover, or an assisting one.
 
 **Recovery State**:
 A Muscle's readiness: **Fatigued** (red, just worked), **Recovering** (amber) or **Ready** (green).
+A Muscle with no Working Sets yet has no Recovery State and is shown grey.
 _Avoid_: Fresh, sore, rested
 
 **Recovery Map**:
-The front-and-back body diagram that colours each Muscle by its Recovery State.
+The front-and-back body diagram that colours each Region by the Recovery State of its Muscles.
 _Avoid_: Heatmap, body chart
 
 ### Body

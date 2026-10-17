@@ -1,12 +1,13 @@
 # REC: Recovery Map and fatigue model
 
-The feature that sets this app apart: a front/back body diagram colouring each Muscle Fatigued (red), Recovering (amber) or Ready (green).
+The feature that sets this app apart: a front/back body diagram colouring each Region by its Muscles' Recovery State: Fatigued (red), Recovering (amber) or Ready (green).
 
 ## Rules
 
 - Recovery is driven by Working Sets only, using the Workout's performed time.
 - No left/right split; both sides show the same state.
 - All thresholds live in a config file in the repo, not in Settings.
+- Volume for a Muscle Group counts each Working Set once, even when the Exercise tags several Muscles in that group.
 
 ### MVP rules (time-only)
 
@@ -29,7 +30,7 @@ Volume-weighted fatigue per Muscle that decays over a recovery window per Muscle
 - Findings in `docs/research/anatomical-svg.md`; source recorded in ADR-0007 (react-native-body-highlighter path data, MIT)
 
 **REC: Anatomical Recovery Map** (MVP, blocked by the EXL Muscle taxonomy)
-- Front/back diagram from the ADR-0007 artwork, legs widened, grey base; each region ID matches a Muscle ID and is coloured by its Recovery State, and a Muscle with no Working Sets yet stays grey (no state); tapping a region lists its Muscles, their states and when they were last trained; the same component renders on phone and dashboard
+- Front/back diagram from the ADR-0007 artwork, legs widened, grey base; each Region carries one or more Muscle IDs and is coloured by the worst Recovery State among them, and a Region whose Muscles have no Working Sets yet stays grey (no state); tapping a Region lists each of its Muscles with its own state and when it was last trained (see `docs/research/muscle-taxonomy.md`); the same component renders on phone and dashboard
 - The MIT notice is kept in the SVG file and the README third-party notices; the app's About screen carries a credit line
 
 **REC: Research muscle fatigue and recovery** (v1.2, research Task)
