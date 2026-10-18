@@ -34,6 +34,7 @@ Volume-weighted fatigue per Muscle, from `docs/research/muscle-fatigue.md`. Each
 **REC: Anatomical Recovery Map** (MVP, blocked by the EXL Muscle taxonomy)
 - Front/back diagram from the ADR-0007 artwork, legs widened, grey base; each Region carries one or more Muscle IDs and is coloured by the worst Recovery State among them, and a Region whose Muscles have no Working Sets yet stays grey (no state); tapping a Region lists each of its Muscles with its own state and when it was last trained (see `docs/research/muscle-taxonomy.md`); the same component renders on phone and dashboard
 - The MIT notice is kept in the SVG file and the README third-party notices; the app's About screen carries a credit line
+- The artwork is `assets/recovery-map/recovery-map.svg` (built by `scripts/build_recovery_map.py`; Regions and their Muscle IDs in `assets/recovery-map/regions.md`). A tap selects the nearest Region, using the SVG's invisible hit paths, and the sheet lists that Region's Muscles plus a "Nearby" list of the Regions within a finger's reach as full-width 44 px rows, so every Region is reachable in two taps at most; pinch-zoom on the body also works (Liam, 2026-10-18: no Region can get a 44 px target on a 150 px-wide body)
 
 **REC: Research muscle fatigue and recovery** (v1.2, research Task)
 - Primary sources on per-muscle recovery times and how fatigue scales with volume and RIR; the output is a findings doc plus a proposed model and config values
