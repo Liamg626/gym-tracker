@@ -9,6 +9,7 @@ Which Primary and Secondary Muscles, from the 48 in [muscle-taxonomy.md](muscle-
 ## How the tags are made
 
 - **Primary** = a main mover; **Secondary** = an assisting mover that takes real load. In the fatigue model a Secondary Muscle takes half the dose (CONTEXT.md). Pure stabilisers (e.g. the rotator cuff in a bench press) are **not** tagged, because tagging them would colour the map after almost every Workout.
+- **No Secondary Muscle:** an empty Secondary list means the Exercise has no Secondary Muscle. This is isolation work (overhead triceps extensions, skull crushers, wrist curls, hip adduction and tibialis raises; 31 Exercises in the draft library). So "every Exercise has Primary and Secondary tags" means every Exercise has at least one Primary Muscle and an explicit, possibly empty, Secondary list.
 - Tags are set **per family**, with **variant overrides** where a variant changes the target (incline vs decline fly, upright vs chest-lean dip, seated vs standing calf raise). Every one of the rows gets its own entry in the draft library.
 - **Sources:** an EMG or training study where one exists (keys below); otherwise the Muscle's listed action in an anatomy reference ("anatomy: …"), which is weaker. "By analogy" means the study tested a close relative of the Exercise, not the Exercise itself.
 - **Biceps heads:** both heads are always tagged together. No study shows the heads respond to different curls (muscle-taxonomy.md § Unverified), so "long-head" curls (incline, Bayesian) get no special tags.

@@ -186,7 +186,7 @@ The production artwork is `assets/recovery-map/recovery-map.svg`, built by `scri
 - **Biceps:** split along the arm's long axis into the short head (inner) and long head (outer) over the top 78%; the last 22% towards the elbow is `brachialis`.
 - Cut pieces are inset so cuts show the same dark seam as the source's own gaps. The cut lines are a first pass and will be polished before the REC story builds on them.
 
-**Tapping:** no Region can get a 44 px target on a body 150 px wide (the best cells are 3–23 px). Liam chose nearest-Region taps plus a "Nearby" list of 44 px rows; the SVG carries an invisible hit path per Region (`.hit`, `data-region`) for this. See `docs/product/features/rec-recovery.md`.
+**Tapping:** no Region can get a 44 px target on a body 150 px wide (the best cells are 3–23 px). Liam chose nearest-Region taps plus a "Nearby" list of 44 px rows; the SVG carries an invisible hit path per Region (`.hit`, `data-region`) for this. Every Region has its own hit path, so a tap on or near it selects it directly. The sheet lists that Region's Muscles plus the "Nearby" Regions as full-width 44 px rows, so a tap that lands on a neighbour is corrected with one more tap. Pinch-zoom on the body also works. See `docs/product/features/rec-recovery.md`.
 
 ## No-shape Muscles: recommendation per Muscle (proposal for Liam)
 
@@ -222,6 +222,8 @@ Add:
 > **Muscle Group**:
 > A roll-up of Muscles for summaries and filters: Chest, Shoulders, Back, Arms, Core, Glutes and hips, Quads, Hamstrings, Calves and shins. Every Muscle belongs to exactly one.
 > _Avoid_: Body part, muscle (for a group), split
+
+(superseded by SCRUM-22 Phase 1: Biceps, Triceps and Forearms replace Arms; CONTEXT.md holds the live list)
 
 > **Region**:
 > One shape on the Recovery Map. A Region shows one or more Muscles and is coloured by the worst Recovery State among them.
