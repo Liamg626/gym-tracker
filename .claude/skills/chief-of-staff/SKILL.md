@@ -1,6 +1,6 @@
 ---
 name: chief-of-staff
-description: "Run a team of agents through several SCRUM tickets at once, from To Do to Ready To Merge."
+description: 'Run a team of agents through several SCRUM tickets at once, from To Do to Ready To Merge.'
 disable-model-invocation: true
 model: sonnet
 effort: medium
@@ -12,10 +12,10 @@ You are Liam's **chief of staff** for the tickets he names (`/chief-of-staff SCR
 
 ## The team
 
-| Agent | Model | Dispatch |
-|---|---|---|
-| `ticket-worker` | its default (Haiku, low) | one per ticket, background, `isolation: "worktree"`, mode `run` |
-| `reviewer` | its default (Haiku, medium) | one per ticket, background, once its PR is open |
+| Agent           | Model                       | Dispatch                                                        |
+| --------------- | --------------------------- | --------------------------------------------------------------- |
+| `ticket-worker` | its default (Haiku, low)    | one per ticket, background, `isolation: "worktree"`, mode `run` |
+| `reviewer`      | its default (Haiku, medium) | one per ticket, background, once its PR is open                 |
 
 Every agent runs in the background. Continue an existing agent with `SendMessage` whenever it already holds the context: answers go to the same worker, required changes go to the same worker, and re-reviews go to the same reviewer, which checks only that its required changes are fixed. The only fresh dispatch after the first is the round-3 fix: a new `ticket-worker` with `model: sonnet`, `effort: medium`.
 
@@ -34,13 +34,13 @@ Keep `.claude/chief-of-staff-board.md` (git-ignored) up to date after every even
    - it is `ready-for-human`;
    - it is blocked by a ticket outside this batch that isn't Done;
    - it is a Story with no "is blocked by" link to its release's design ticket.
-   Done when every ticket is either stopped or plannable.
+     Done when every ticket is either stopped or plannable.
 2. **Plan.** Order the plannable tickets by their links within the batch. A ticket waits for each ticket it is blocked by to be **merged**. Flag tickets whose acceptance criteria or spec suggest a schema change. Then show Liam the plan as a short table (runs now / waits on what) and start without waiting for a reply.
 3. **Dispatch.** Start a `ticket-worker` in `run` mode for each ready ticket, up to **3** at once, with:
    - the ticket key and acceptance criteria;
    - the spec and ADR paths;
    - for a Story, the design artifacts from its design ticket's "Design frozen" comment.
-   Only **one** schema-change ticket may hold an open PR at a time, because all previews share one database. Fill a freed slot from the queue straight away.
+     Only **one** schema-change ticket may hold an open PR at a time, because all previews share one database. Fill a freed slot from the queue straight away.
 4. **Handle reports** as each one arrives:
    - **question:** answer it yourself when `CONTEXT.md`, the spec, an ADR or `workflow.md` settles it, and cite the source. Bring Liam product decisions, scope changes, contradictions between docs, and anything that would change a spec; send him one question at a time with the ticket key and your recommended answer. Resume the worker with the answer. Log both the question and the answer, with who answered (Liam / source / chief of staff).
    - **done** (PR open): check that every acceptance criterion has evidence (resume the worker for any gap), log its judgement calls, then dispatch the `reviewer` with the ticket key, the PR number and, for a Story, the design artifacts.
@@ -56,7 +56,7 @@ Keep `.claude/chief-of-staff-board.md` (git-ignored) up to date after every even
    - remove its worktree with `git worktree remove`;
    - release any tickets that were waiting on it;
    - run `gh pr view --json mergeable` on every other open PR in the batch, and resume the worker of any conflicting one in `rebase` mode.
-   Done with the run when every ticket is merged or stopped. Give Liam a final summary.
+     Done with the run when every ticket is merged or stopped. Give Liam a final summary.
 
 ## Talking to Liam
 

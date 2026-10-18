@@ -24,8 +24,8 @@ Install to Home Screen needed: <!-- yes (why) / no -->
 <!-- iPhone-width screenshots or a short screen recording of each changed screen. Demo data only. -->
 
 | Before | After |
-|---|---|
-| | |
+| ------ | ----- |
+|        |       |
 
 ## Notes for the reviewer
 

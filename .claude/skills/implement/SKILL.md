@@ -1,6 +1,6 @@
 ---
 name: implement
-description: "Take a SCRUM-n ticket from To Do to Ready To Merge: build, review, PR, closing comment."
+description: 'Take a SCRUM-n ticket from To Do to Ready To Merge: build, review, PR, closing comment.'
 disable-model-invocation: true
 model: sonnet
 effort: medium

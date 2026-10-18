@@ -6,3 +6,4 @@ scripts
 docs
 assets
 pnpm-lock.yaml
+.claude/skills/graphify

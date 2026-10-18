@@ -123,4 +123,3 @@ _Avoid_: PB, record
 **Weekly Breakdown**:
 The Monday–Sunday summary of Workouts, Volume, PRs, body changes and goal progress.
 _Avoid_: Report, weekly summary
-
