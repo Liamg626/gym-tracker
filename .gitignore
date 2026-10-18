@@ -1,2 +1,17 @@
 .claude/settings.local.json
 graphify-out/
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+coverage/
+.wrangler/
+
+# Real data never committed (ADR-0005)
+exports/
+# Zepp export: <userId>_<epoch ms>.zip holding <FOLDER>_<epoch ms>.csv files
+*_[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9].zip
+*_[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9].csv
+.dev.vars
+.dev.vars.*
