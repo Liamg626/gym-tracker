@@ -10,7 +10,7 @@ Releases map to Jira versions. Sprints are one week long, with no story points.
 - Routines: create, edit, start a Workout from one
 - Live Workout logging: Start/End Workout with an elapsed clock (no rest timer), prefill from last time, Warm-up Sets, RIR, notes, per-exercise weight step; Sets saved on the device first (ADR-0004); auto-end after 3h with no Sets
 - Home screen widgets in a fixed default layout (Start Workout on the phone only, Recovery Map, Quick Weigh-in, This week, Last Workout, Latest Body Fat Estimate, Weight and Body Fat chart)
-- Settings: Weekly Target, height, sex
+- Settings: Weekly Target, height
 - Workout history: view, edit, delete, log after the fact (editing and logging on the phone only; the dashboard is read-only)
 - Weigh-ins (one per day) and Trend Weight
 - Measurement Sessions and the Body Fat Estimate (US Navy, male, 188cm)

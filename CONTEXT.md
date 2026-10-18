@@ -42,11 +42,11 @@ Sum of weight × reps across Working Sets, attributed to a Muscle or Exercise ov
 _Avoid_: Tonnage, load
 
 **Estimated 1RM**:
-The single-rep max implied by a Working Set, using the Epley formula.
+The single-rep max implied by a Working Set of 1 to 12 reps, using the Epley formula. Sets of more than 12 reps have none.
 _Avoid_: Max, e1RM (in UI copy)
 
 **Weekly Target**:
-The number of Workouts the lifter aims to complete per week.
+The number of Workouts the lifter aims to complete per week. Only a Workout with at least one Working Set counts.
 
 ### Muscles and recovery
 
@@ -96,7 +96,7 @@ _Avoid_: Hard sets, effective sets
 A single body-weight reading the lifter types in, normally daily.
 
 **Trend Weight**:
-The 7-day rolling average of Weigh-ins; what goals and charts track.
+The mean of the Weigh-ins in the 7 days ending on a day (none if there are none); what goals and charts track.
 _Avoid_: Average weight, smoothed weight
 
 **Measurement Session**:
