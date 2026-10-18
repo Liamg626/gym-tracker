@@ -41,5 +41,5 @@ Volume-weighted fatigue per Muscle, from `docs/research/muscle-fatigue.md`. Each
 
 **REC: Volume-weighted fatigue model** (v1.2, domain, TDD, blocked by the research)
 - Pure function: Workouts + Exercise Library + fatigue config + now → Recovery State and Fatigue Level per Muscle, replacing the time-only rules behind the same interface
-- Config holds `version`, `roleWeight`, `effortByRir`, `rirWhenMissing`, `recovery`, `groupScale`, `muscleScale`, `weeklySets` and `watchAdjustment` (values and sources in `docs/research/muscle-fatigue.md`), in one shared fatigue config module (suggested path `src/fatigue/fatigue.config.ts`) that the Weekly Sets insight also imports
+- Config holds `version`, `roleWeight`, `effortByRir`, `rirWhenMissing`, `recovery`, `groupScale`, `muscleScale` and `weeklySets` (values and sources in `docs/research/muscle-fatigue.md`), in one shared fatigue config module (suggested path `src/fatigue/fatigue.config.ts`) that the Weekly Sets insight also imports
 - Tests cover the worked examples in the research doc and the MVP boundaries at the maximum dose

@@ -17,6 +17,7 @@ The output is a model for the v1.2 **Volume-weighted fatigue model** story, whic
 - **Best marker for "ready to train again": recovery of force or velocity** (maximal voluntary contraction torque and range of motion per [Warren 1999][warren1999]; bar velocity per [Refalo 2023][refalo2023] and [Morán-Navarro 2017][moran2017]), not soreness or creatine kinase ([Warren 1999][warren1999]). The app records none of these directly, so the model is anchored to performance studies and the doc proposes a cheap check against next-Workout Estimated 1RM.
 - **Sleep, resting HR and HRV: do not use in v1.2.** There is no resistance-training evidence that would let us pick a number. See [Q5](#q5-sleep-resting-hr-and-hrv).
 - **Weekly Working Sets per Muscle Group: 12-20 is the target range (Baz-Valle 2022), 4 is the minimum detectable gain, and gains keep rising past 20 with diminishing returns (Pelland 2026 preprint tiers).** Sources: [Baz-Valle 2022][bazvalle2022], [Pelland 2026][pelland2026] (tiers from the September 2024 preprint, not the published version). Schoenfeld 2017 shows a dose-response but its 10+ bin was not significant, so it is not the source of any number here. See [Q6](#q6-weekly-working-sets-per-muscle-group).
+- **Re-checked for SCRUM-22 (2026-10-18):** every config value still holds for the 48 Muscles and 11 Muscle Groups. `groupScale` stays 1.0: supported for Chest, Quads and the hip hinge by [Belcher 2019][belcher2019], extrapolated for the other groups. Worked push, pull and leg examples now use the real Exercise tags. See [Re-check](#re-check-against-the-48-muscles-and-11-muscle-groups-scrum-22-phase-4-2026-10-18).
 - **Proposed model** (details below): each Working Set adds `roleWeight x effort(RIR)` to a Muscle's **Fatigue Dose** for that Workout; the Fatigue Dose sets the **Recovery Window** (12 h for a trivial dose rising linearly to 72 h at a Fatigue Dose of 4 and above); Fatigue Level falls linearly from 1 to 0 across that window; **Fatigued** for the first third, **Recovering** until the end, then **Ready**. At the top of the range it reproduces the MVP's 24 h / 72 h boundaries.
 
 ## Findings
@@ -189,9 +190,42 @@ export const FATIGUE_CONFIG = {
 
 Weekly Working Set bands the UI could use, aligned with the tiers in the Sept 2024 [Pelland preprint][pelland2024pre] (the published 2026 version was not read past its abstract): under 4 = below the minimum detectable gain; 4-10 = detectable, efficient at 5-10 (**4 is the minimum detectable gain; "efficient" is the preprint's 5-10 tier**); 11-18; 19-29; 30-42; 43 or more = unclear. The **target** is a separate overlay of **12-20** from [Baz-Valle 2022][bazvalle2022] (a Muscle Group-agnostic range; not a Pelland tier). Targets are a goal, not a limit: [Pelland 2026][pelland2026] found no clear plateau.
 
+## Re-check against the 48 Muscles and 11 Muscle Groups (SCRUM-22 Phase 4, 2026-10-18)
+
+SCRUM-22 changed the inputs this model runs on: 48 Muscles instead of 41, Arms split into Biceps, Triceps and Forearms, and real Exercise tags (`docs/research/exercise-muscle-tags.md`) instead of the assumed bench and incline tags above. Each config value was re-checked against them.
+
+| Config key | Value | Still holds? | Source, or what is extrapolated |
+|---|---|---|---|
+| `roleWeight` | Primary 1.0, Secondary 0.5 | Yes | [Pelland 2026][pelland2026] counts indirect sets as half for stimulus. The Phase 2 tags use the same Primary/Secondary split, and pure stabilisers are not tagged, so no third weight is needed. Applying 0.5 to *fatigue* stays our own assumption (Q3) |
+| `effortByRir` | 1.0 / 0.52 / 0.42 / 0.32 / 0.25 / 0.2 | Yes | [Refalo 2023][refalo2023] bench press only. Every other Exercise, including all single-joint and lower-body work, is extrapolated |
+| `rirWhenMissing` | 1 | Yes | Our own assumption; unaffected by the taxonomy |
+| `recovery.minHours / maxHours / capFatigueDose / fatiguedUntilFraction` | 12 / 72 / 4 / ⅓ | Yes | `maxHours` from [Morán-Navarro 2017][moran2017] and [Bartolomei 2017][bartolomei2017], now also consistent with [Belcher 2019][belcher2019] (squat velocity down for up to 72 h after 4 sets to failure at 80% 1RM). The rest is our own assumption |
+| `groupScale` | 1.0 for all 11 groups | Yes, see the table below | Supported for three groups, extrapolated for eight |
+| `muscleScale` | empty | Yes | No Muscle-level recovery data for any of the 48 |
+| `weeklySets` | min 4, target 12-20, Pelland tiers | Yes, and the Arms split fits it better | [Baz-Valle 2022][bazvalle2022] reported quadriceps, biceps and triceps separately, so per-group targets for Biceps and Triceps now match how the source counted. Forearms and Core had no group-level data in either source: extrapolated |
+
+### Recovery scale per Muscle Group
+
+Only scale a group away from 1.0 where a source in trained lifters shows a different time course at matched effort. None does.
+
+| Muscle Group | `groupScale` | Evidence |
+|---|---|---|
+| Chest | 1.0 | Supported: bench press recovered on the same time course as squat and deadlift, 12 well-trained men, 4 sets to failure at 80% 1RM, measured to 96 h, no between-lift differences ([Belcher 2019][belcher2019], abstract) |
+| Quads | 1.0 | Supported: same study (squat) |
+| Back | 1.0 | Partly supported: deadlift caused no greater damage or recovery time than squat or bench ([Belcher 2019][belcher2019]). Covers the hip hinge (erector spinae); the lats, rhomboids and traps are extrapolated |
+| Glutes and hips, Hamstrings | 1.0 | Extrapolated from the squat and deadlift data above (they were not measured separately) |
+| Biceps, Forearms | 1.0 | Extrapolated, with conflicting hints: arm muscles recovered *slower* than legs after eccentric-only work in untrained men ([Jamurtas 2005][jamurtas2005]); preacher curls cost more and recovered slower than rows for the elbow flexors ([Soares 2015][soares2015]). Neither is a trained lifter's normal Workout, and they disagree on mechanism, so no scale is set |
+| Shoulders, Triceps, Core, Calves and shins | 1.0 | Extrapolated: no source measured these groups' recovery time course |
+
+One weaker contrary hint: in adolescent male athletes, bench press recovered later than back squat (a conference abstract, not a peer-reviewed trial in adults), so it is not used ([Mitchell 2014 abstract][mitchell2014]).
+
+### Closing question 6
+
+Question 6 (validation) is closed: **validation is by literature and worked examples; on-device validation is out of scope** (Liam, SCRUM-22, 2026-10-17, under ADR-0005). The worked examples below are generated by `scripts/fatigue_examples.py` from the Phase 2 tags, and the v1.2 story's tests should reproduce them.
+
 ## Worked examples
 
-All numbers are made-up demo values (ADR-0005). Assumed tags for the bench press: Primary `pectoralis-major-sternal`; Secondary `pectoralis-major-clavicular`, `deltoid-anterior`, `triceps-brachii-lateral-head`, `triceps-brachii-medial-head`, `triceps-brachii-long-head`. Assumed tags for the incline press: Primary `pectoralis-major-clavicular`; Secondary `pectoralis-major-sternal`, `deltoid-anterior`. (The Exercise Library is not written yet; this is for illustration.) Config values as above; `t = 0` is the Workout's performed time. Recovery Windows are not rounded in the state checks; elapsed time exactly at a boundary counts as the later state.
+Examples 1-4 predate the Exercise tags and use assumed tags; Examples 5-7 use the real Phase 2 tags. All numbers are made-up demo values (ADR-0005). Assumed tags for the bench press: Primary `pectoralis-major-sternal`; Secondary `pectoralis-major-clavicular`, `deltoid-anterior`, `triceps-brachii-lateral-head`, `triceps-brachii-medial-head`, `triceps-brachii-long-head`. Assumed tags for the incline press: Primary `pectoralis-major-clavicular`; Secondary `pectoralis-major-sternal`, `deltoid-anterior`. (The Exercise Library is not written yet; this is for illustration.) Config values as above; `t = 0` is the Workout's performed time. Recovery Windows are not rounded in the state checks; elapsed time exactly at a boundary counts as the later state.
 
 ### Example 1: 4 Working Sets of bench press at RIR 1
 
@@ -239,6 +273,100 @@ At Wednesday 06:00 (t = 36 h after Monday, 12 h after Tuesday): Monday's L = 1 -
 ### Example 4: weekly Working Sets for the Chest group
 
 Bench 4 sets (sternocostal Primary, clavicular Secondary) + incline press 3 sets (clavicular Primary, sternocostal Secondary) = 7 Working Sets at weight 1.0, each counted once for the Chest group even though two chest Muscles are tagged. The Shoulders group gets the same bench sets once at 0.5 (front-delt Secondary) = 2.0 plus incline 3 x 0.5 = 1.5. Chest: 7 (band 4-10, below the 12-20 target); Shoulders: 3.5 before any overhead work (under the 4 minimum).
+
+### Examples 5-7: push, pull and legs, MVP vs v1.2 (Phase 2 tags)
+
+One Workout each, every Muscle the Exercises tag, state at 12, 24, 48 and 72 h after the Workout under the MVP time-only rules and the v1.2 model. A Muscle that is Primary in one Exercise and Secondary in another counts as Primary for the MVP rules; the v1.2 Fatigue Dose sums both.
+
+<!-- generated:examples:start -->
+States are written MVP → v1.2: **F** Fatigued, **R** Recovering, **G** Ready (green). Bold marks a Muscle whose two models disagree at that hour. U is the Fatigue Dose; D the Recovery Window.
+
+#### Push
+
+Working Sets: Barbell Bench Press 4 × RIR 1; Incline Dumbbell Press 3 × RIR 2; Seated Dumbbell Shoulder Press 3 × RIR 1; Standing Dumbbell Lateral Raise 3 × RIR 0; Cable Tricep Pushdown (Rope) 3 × RIR 1.
+
+| Muscle | Role | U | D (h) | 12 h | 24 h | 48 h | 72 h |
+|---|---|---|---|---|---|---|---|
+| `deltoid-anterior` | P | 4.73 | 72.0 | F → F | R → R | R → R | G → G |
+| `triceps-brachii-lateral-head` | P | 4.01 | 72.0 | F → F | R → R | R → R | G → G |
+| `triceps-brachii-medial-head` | P | 4.01 | 72.0 | F → F | R → R | R → R | G → G |
+| `deltoid-lateral` | P | 3.78 | 68.7 | F → F | R → R | R → R | G → G |
+| `triceps-brachii-long-head` | S | 3.23 | 60.5 | **R → F** | R → R | R → R | G → G |
+| `pectoralis-major-clavicular` | P | 3.08 | 58.2 | F → F | R → R | R → R | G → G |
+| `pectoralis-major-sternal` | P | 2.71 | 52.6 | F → F | R → R | R → R | G → G |
+| `trapezius-upper` | S | 2.28 | 46.2 | **R → F** | R → R | **R → G** | G → G |
+| `supraspinatus` | S | 1.50 | 34.5 | R → R | R → R | **R → G** | G → G |
+| `serratus-anterior` | S | 0.78 | 23.7 | R → R | **R → G** | **R → G** | G → G |
+
+#### Pull
+
+Working Sets: Wide-Grip Lat Pulldown 4 × RIR 1; Seated Cable Row (V-Handle) 4 × RIR 1; Standing Barbell Curl 3 × RIR 1; Standing Cable Face Pull (Rope) 3 × RIR 2; Standing Dumbbell Hammer Curl 3 × RIR 1.
+
+| Muscle | Role | U | D (h) | 12 h | 24 h | 48 h | 72 h |
+|---|---|---|---|---|---|---|---|
+| `brachialis` | P | 5.20 | 72.0 | F → F | R → R | R → R | G → G |
+| `biceps-brachii-long-head` | P | 4.42 | 72.0 | F → F | R → R | R → R | G → G |
+| `biceps-brachii-short-head` | P | 4.42 | 72.0 | F → F | R → R | R → R | G → G |
+| `brachioradialis` | P | 4.42 | 72.0 | F → F | R → R | R → R | G → G |
+| `latissimus-dorsi` | P | 4.16 | 72.0 | F → F | R → R | R → R | G → G |
+| `rhomboids` | P | 3.75 | 68.2 | F → F | R → R | R → R | G → G |
+| `trapezius-middle` | P | 3.75 | 68.2 | F → F | R → R | R → R | G → G |
+| `deltoid-posterior` | P | 3.34 | 62.1 | F → F | R → R | R → R | G → G |
+| `teres-major` | P | 3.12 | 58.8 | F → F | R → R | R → R | G → G |
+| `trapezius-lower` | S | 2.71 | 52.6 | **R → F** | R → R | R → R | G → G |
+| `infraspinatus` | P | 1.26 | 30.9 | **F → R** | R → R | **R → G** | G → G |
+| `teres-minor` | P | 1.26 | 30.9 | **F → R** | R → R | **R → G** | G → G |
+| `forearm-flexors` | S | 0.78 | 23.7 | R → R | **R → G** | **R → G** | G → G |
+
+#### Legs
+
+Working Sets: High-Bar Barbell Back Squat 4 × RIR 2; Barbell Romanian Deadlift 3 × RIR 2; Seated Machine Leg Extension 3 × RIR 0; Seated Machine Leg Curl 3 × RIR 1; Standing Machine Calf Raise 4 × RIR 1.
+
+| Muscle | Role | U | D (h) | 12 h | 24 h | 48 h | 72 h |
+|---|---|---|---|---|---|---|---|
+| `vastus-intermedius` | P | 4.68 | 72.0 | F → F | R → R | R → R | G → G |
+| `vastus-lateralis` | P | 4.68 | 72.0 | F → F | R → R | R → R | G → G |
+| `vastus-medialis` | P | 4.68 | 72.0 | F → F | R → R | R → R | G → G |
+| `rectus-femoris` | P | 3.00 | 57.0 | F → F | R → R | R → R | G → G |
+| `gluteus-maximus` | P | 2.94 | 56.1 | F → F | R → R | R → R | G → G |
+| `gastrocnemius-lateral-head` | P | 2.86 | 54.9 | F → F | R → R | R → R | G → G |
+| `gastrocnemius-medial-head` | P | 2.86 | 54.9 | F → F | R → R | R → R | G → G |
+| `biceps-femoris-long-head` | P | 2.82 | 54.3 | F → F | R → R | R → R | G → G |
+| `semimembranosus` | P | 2.82 | 54.3 | F → F | R → R | R → R | G → G |
+| `semitendinosus` | P | 2.82 | 54.3 | F → F | R → R | R → R | G → G |
+| `adductors` | P | 2.31 | 46.6 | F → F | R → R | **R → G** | G → G |
+| `soleus` | P | 2.08 | 43.2 | F → F | R → R | **R → G** | G → G |
+| `biceps-femoris-short-head` | P | 1.56 | 35.4 | **F → R** | R → R | **R → G** | G → G |
+| `erector-spinae` | S | 1.47 | 34.0 | R → R | R → R | **R → G** | G → G |
+| `fibularis` | S | 1.04 | 27.6 | R → R | R → R | **R → G** | G → G |
+| `gluteus-medius` | S | 0.84 | 24.6 | R → R | R → R | **R → G** | G → G |
+| `gluteus-minimus` | S | 0.84 | 24.6 | R → R | R → R | **R → G** | G → G |
+| `gracilis` | S | 0.78 | 23.7 | R → R | **R → G** | **R → G** | G → G |
+| `sartorius` | S | 0.78 | 23.7 | R → R | **R → G** | **R → G** | G → G |
+| `forearm-flexors` | S | 0.63 | 21.4 | R → R | **R → G** | **R → G** | G → G |
+
+#### Weekly Sets for the week (push + pull + legs once each)
+
+| Muscle Group | Weekly Sets | Against the 12-20 target |
+|---|---|---|
+| shoulders | 16.5 | in target |
+| back | 16 | in target |
+| biceps | 10 | below target |
+| forearms | 10 | below target |
+| chest | 8.5 | below target |
+| quads | 8.5 | below target |
+| hips | 8.5 | below target |
+| triceps | 8 | below target |
+| hamstrings | 6 | below target |
+| lower-legs | 5.5 | below target |
+<!-- generated:examples:end -->
+
+What the examples show:
+
+- **At the full dose the two models agree.** Every Muscle that reaches the cap (U ≥ 4, D = 72 h) has the same state at every hour under both models, so the v1.2 model can replace the MVP rules without changing what a hard Workout looks like.
+- **v1.2 clears light doses sooner.** Muscles with a small Fatigue Dose turn Ready at 24 h or 48 h where the MVP rules keep them Recovering until 72 h. Examples: serratus anterior after push, forearm flexors after pull, gracilis and sartorius after legs.
+- **Heavily used Secondary Muscles start Fatigued in v1.2.** The triceps long head (push), upper traps (push) and lower traps (pull) take enough Secondary sets to pass the Fatigued threshold, while the MVP rules would show them Recovering. A lightly used Primary Muscle goes the other way: infraspinatus and teres minor (3 face pulls at RIR 2) and the biceps femoris short head (3 leg curls) start Recovering under v1.2 but Fatigued under the MVP rules.
+- **One push, pull and leg Workout a week leaves most Muscle Groups below the 12-20 target.** Only Shoulders and Back reach it. That is a property of the demo week, not of the model.
 
 ## Proposed doc changes (applied 2026-10-17)
 
@@ -309,9 +437,9 @@ Answered by Liam on 2026-10-17:
 4. **Minimum-dose cutoff:** none. Any Working Set counts (Example 3's quirk accepted).
 5. **RIR stays optional.** An unrecorded RIR counts as RIR 1, which lengthens Windows if most Working Sets are really RIR 3.
 
-Still open:
+Closed by SCRUM-22 (Liam, 2026-10-17):
 
-6. **Validation.** Are you happy to compare model state with the next Workout's Estimated 1RM and reps on your own data, locally (ADR-0005: demo data only in the repo)?
+6. **Validation.** Validation by literature and worked examples; on-device validation is out of scope (ADR-0005).
 
 ## Unverified / limits
 
@@ -326,6 +454,8 @@ Still open:
 ## Sources
 
 Recovery time courses
+- [belcher2019]: Belcher DJ, Sousa CA, Carzoli JP, Johnson TK, Helms ER, Visavadiya NP, Zoeller RF, Whitehurst M, Zourdos MC. Time course of recovery is similar for the back squat, bench press, and deadlift in well-trained males. *Appl Physiol Nutr Metab* 2019;44(10):1033-1042 (abstract via Europe PMC) — https://pubmed.ncbi.nlm.nih.gov/30779596/
+- [mitchell2014]: Time for recovery differs between resistance exercises in adolescent male athletes (conference abstract, summarised by Coaching Science Abstracts; not used for any value) — https://coachsci.sdsu.edu/csa/vol216/mitchell.htm
 - [raastad2000]: Raastad T, Hallén J. Recovery of skeletal muscle contractility after high- and moderate-intensity strength exercise. *Eur J Appl Physiol* 2000 — https://pubmed.ncbi.nlm.nih.gov/10929214/
 - [moran2017]: Morán-Navarro R et al. Time course of recovery following resistance training leading or not to failure. *Eur J Appl Physiol* 2017;117(12):2387-2399 — https://pubmed.ncbi.nlm.nih.gov/28965198/
 - [refalo2023]: Refalo MC, Helms ER, Hamilton DL, Fyfe JJ. Influence of resistance training proximity-to-failure, determined by repetitions-in-reserve, on neuromuscular fatigue in resistance-trained males and females. *Sports Med Open* 2023;9:10 — https://pmc.ncbi.nlm.nih.gov/articles/PMC9908800
@@ -369,6 +499,8 @@ Weekly volume
 - [spiering2021]: Spiering BA et al. Maintaining physical performance: the minimal dose of exercise needed to preserve endurance and strength over time. *J Strength Cond Res* 2021;35(5):1449-1458 — https://pubmed.ncbi.nlm.nih.gov/33629972/
 - [bickel2011]: Bickel CS, Cross JM, Bamman MM. Exercise dosing to retain resistance training adaptations in young and older adults. *Med Sci Sports Exerc* 2011 — https://pubmed.ncbi.nlm.nih.gov/21131862/
 
+[belcher2019]: https://pubmed.ncbi.nlm.nih.gov/30779596/
+[mitchell2014]: https://coachsci.sdsu.edu/csa/vol216/mitchell.htm
 [raastad2000]: https://pubmed.ncbi.nlm.nih.gov/10929214/
 [moran2017]: https://pubmed.ncbi.nlm.nih.gov/28965198/
 [refalo2023]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9908800
