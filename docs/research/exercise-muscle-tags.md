@@ -4,7 +4,7 @@ SCRUM-22 · [REC-004] Phase 2 · researched 2026-10-17
 
 ## Question
 
-Which Primary and Secondary Muscles, from the 48 in [muscle-taxonomy.md](muscle-taxonomy.md), does each Exercise in [exercise-list.md](exercise-list.md) work? Which Muscles does no Exercise train, and which Exercises light up only one side of the map?
+Which Primary and Secondary Muscles, from the 46 in [muscle-taxonomy.md](muscle-taxonomy.md), does each Exercise in [exercise-list.md](exercise-list.md) work? Which Muscles does no Exercise train, and which Exercises light up only one side of the map?
 
 ## How the tags are made
 
@@ -12,7 +12,7 @@ Which Primary and Secondary Muscles, from the 48 in [muscle-taxonomy.md](muscle-
 - **No Secondary Muscle:** an empty Secondary list means the Exercise has no Secondary Muscle. This is isolation work (overhead triceps extensions, skull crushers, wrist curls, hip adduction and tibialis raises; 31 Exercises in the draft library). So "every Exercise has Primary and Secondary tags" means every Exercise has at least one Primary Muscle and an explicit, possibly empty, Secondary list.
 - Tags are set **per family**, with **variant overrides** where a variant changes the target (incline vs decline fly, upright vs chest-lean dip, seated vs standing calf raise). Every one of the rows gets its own entry in the draft library.
 - **Sources:** an EMG or training study where one exists (keys below); otherwise the Muscle's listed action in an anatomy reference ("anatomy: …"), which is weaker. "By analogy" means the study tested a close relative of the Exercise, not the Exercise itself.
-- **Biceps heads:** both heads are always tagged together. No study shows the heads respond to different curls (muscle-taxonomy.md § Unverified), so "long-head" curls (incline, Bayesian) get no special tags.
+- **Biceps:** one Muscle, `biceps-brachii`, which also stands for brachialis (Liam, 2026-10-18: the biceps is one Muscle, `biceps-brachii`; the two heads and brachialis were merged into it). Hammer and reverse curls therefore tag `biceps-brachii` with `brachioradialis`.
 - **Grip:** `forearm-flexors` are Secondary only on heavy hanging or pulling work (pull-ups, deadlifts, RDLs, hanging leg raises), not on every row.
 - The data and the logic live in `scripts/exercise_tags.py`. It writes `docs/research/exercise-library.draft.json` and the tables below. Run `python scripts/exercise_tags.py` after any change.
 
@@ -30,7 +30,7 @@ Which Primary and Secondary Muscles, from the 48 in [muscle-taxonomy.md](muscle-
 ## Tags
 
 <!-- generated:start -->
-333 Exercises tagged from 54 families. Every Exercise has at least one Primary Muscle and every tag is one of the 48 Muscle IDs.
+333 Exercises tagged from 54 families. Every Exercise has at least one Primary Muscle and every tag is one of the 46 Muscle IDs.
 
 ### Family tags
 
@@ -47,22 +47,22 @@ Which Primary and Secondary Muscles, from the 48 in [muscle-taxonomy.md](muscle-
 | Rear Delt Fly | deltoid-posterior | trapezius-middle, rhomboids, infraspinatus, teres-minor | none | anatomy: tma-shoulder, tma-back |
 | Front Raise | deltoid-anterior | pectoralis-major-clavicular, deltoid-lateral, serratus-anterior | none | anatomy: tma-shoulder |
 | Face Pull | deltoid-posterior, infraspinatus, teres-minor | trapezius-middle, rhomboids, trapezius-lower | none | anatomy: tma-shoulder, tma-back |
-| Upright Row | deltoid-lateral, trapezius-upper | deltoid-anterior, supraspinatus, brachialis, brachioradialis | none | anatomy: tma-shoulder, tma-back |
-| Lat Pulldown | latissimus-dorsi, teres-major | trapezius-lower, rhomboids, trapezius-middle, deltoid-posterior, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis | *Straight-Arm*: P latissimus-dorsi, teres-major / S triceps-brachii-long-head, deltoid-posterior, pectoralis-major-sternal | anatomy: tma-back, sp-teresmajor |
-| Seated Row | latissimus-dorsi, trapezius-middle, rhomboids | teres-major, deltoid-posterior, trapezius-lower, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis | *Wide-Grip*: P trapezius-middle, rhomboids, deltoid-posterior / S latissimus-dorsi, teres-major, trapezius-lower, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis | anatomy: tma-back |
-| T-Bar Row | latissimus-dorsi, trapezius-middle, rhomboids | teres-major, deltoid-posterior, trapezius-lower, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis | *Wide-Grip*: P trapezius-middle, rhomboids, deltoid-posterior / S latissimus-dorsi, teres-major, trapezius-lower, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis; *Landmine*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis, erector-spinae; *Meadows*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis, erector-spinae | anatomy: tma-back |
+| Upright Row | deltoid-lateral, trapezius-upper | deltoid-anterior, supraspinatus, biceps-brachii, brachioradialis | none | anatomy: tma-shoulder, tma-back |
+| Lat Pulldown | latissimus-dorsi, teres-major | trapezius-lower, rhomboids, trapezius-middle, deltoid-posterior, biceps-brachii, brachioradialis | *Straight-Arm*: P latissimus-dorsi, teres-major / S triceps-brachii-long-head, deltoid-posterior, pectoralis-major-sternal | anatomy: tma-back, sp-teresmajor |
+| Seated Row | latissimus-dorsi, trapezius-middle, rhomboids | teres-major, deltoid-posterior, trapezius-lower, biceps-brachii, brachioradialis | *Wide-Grip*: P trapezius-middle, rhomboids, deltoid-posterior / S latissimus-dorsi, teres-major, trapezius-lower, biceps-brachii, brachioradialis | anatomy: tma-back |
+| T-Bar Row | latissimus-dorsi, trapezius-middle, rhomboids | teres-major, deltoid-posterior, trapezius-lower, biceps-brachii, brachioradialis | *Wide-Grip*: P trapezius-middle, rhomboids, deltoid-posterior / S latissimus-dorsi, teres-major, trapezius-lower, biceps-brachii, brachioradialis; *Landmine*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii, brachioradialis, erector-spinae; *Meadows*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii, brachioradialis, erector-spinae | anatomy: tma-back |
 | Back Extension | erector-spinae | gluteus-maximus, biceps-femoris-long-head, semitendinosus, semimembranosus | *Seated Machine*: P erector-spinae / S gluteus-maximus; *Superman*: P erector-spinae / S gluteus-maximus | anatomy: tma-intrinsic |
-| Pull-Up | latissimus-dorsi, teres-major | biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis, trapezius-lower, trapezius-middle, rhomboids, deltoid-posterior, forearm-flexors | none | anatomy: tma-back, sp-teresmajor |
-| Bent-Over Row | latissimus-dorsi, trapezius-middle, rhomboids | teres-major, deltoid-posterior, trapezius-lower, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis, erector-spinae | *Chest-Supported*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis; *Seal Row*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis; *Single-Arm*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis; *Inverted*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis, rectus-abdominis | anatomy: tma-back, tma-intrinsic |
+| Pull-Up | latissimus-dorsi, teres-major | biceps-brachii, brachioradialis, trapezius-lower, trapezius-middle, rhomboids, deltoid-posterior, forearm-flexors | none | anatomy: tma-back, sp-teresmajor |
+| Bent-Over Row | latissimus-dorsi, trapezius-middle, rhomboids | teres-major, deltoid-posterior, trapezius-lower, biceps-brachii, brachioradialis, erector-spinae | *Chest-Supported*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii, brachioradialis; *Seal Row*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii, brachioradialis; *Single-Arm*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii, brachioradialis; *Inverted*: P latissimus-dorsi, trapezius-middle, rhomboids / S teres-major, deltoid-posterior, trapezius-lower, biceps-brachii, brachioradialis, rectus-abdominis | anatomy: tma-back, tma-intrinsic |
 | Deadlift | gluteus-maximus, erector-spinae, biceps-femoris-long-head, semitendinosus, semimembranosus | vastus-lateralis, vastus-medialis, vastus-intermedius, adductors, trapezius-upper, trapezius-middle, latissimus-dorsi, forearm-flexors | *Sumo*: P gluteus-maximus, adductors, vastus-lateralis, vastus-medialis, vastus-intermedius / S erector-spinae, biceps-femoris-long-head, semitendinosus, semimembranosus, trapezius-upper, latissimus-dorsi, forearm-flexors; *Trap Bar*: P vastus-lateralis, vastus-medialis, vastus-intermedius, gluteus-maximus / S erector-spinae, biceps-femoris-long-head, semitendinosus, semimembranosus, trapezius-upper, forearm-flexors; *Rack Pull*: P erector-spinae, gluteus-maximus, trapezius-upper / S biceps-femoris-long-head, semitendinosus, semimembranosus, trapezius-middle, latissimus-dorsi, forearm-flexors | anatomy: tma-glute, tma-intrinsic, tma-ham |
 | Overhead Triceps Extension | triceps-brachii-long-head, triceps-brachii-lateral-head, triceps-brachii-medial-head | none | none | maeo2023 |
 | Triceps Pushdown | triceps-brachii-lateral-head, triceps-brachii-medial-head | triceps-brachii-long-head | none | maeo2023 |
-| Preacher Curl | biceps-brachii-long-head, biceps-brachii-short-head, brachialis | brachioradialis, forearm-flexors | *Reverse-Grip*: P brachioradialis, brachialis / S biceps-brachii-long-head, biceps-brachii-short-head, forearm-extensors | anatomy: tma-arm |
-| Bayesian Curl | biceps-brachii-long-head, biceps-brachii-short-head, brachialis | brachioradialis, forearm-flexors | *Hammer*: P brachialis, brachioradialis / S biceps-brachii-long-head, biceps-brachii-short-head | anatomy: tma-arm |
-| Hammer Curl | brachialis, brachioradialis | biceps-brachii-long-head, biceps-brachii-short-head | none | kleiber2015, coratella2023 |
+| Preacher Curl | biceps-brachii | brachioradialis, forearm-flexors | *Reverse-Grip*: P brachioradialis, biceps-brachii / S forearm-extensors | anatomy: tma-arm |
+| Bayesian Curl | biceps-brachii | brachioradialis, forearm-flexors | *Hammer*: P biceps-brachii, brachioradialis / S  | anatomy: tma-arm |
+| Hammer Curl | biceps-brachii, brachioradialis | none | none | kleiber2015, coratella2023 |
 | Wrist Curl | forearm-flexors | none | none | anatomy: tma-antfa |
 | Wrist Extension | forearm-extensors | none | none | anatomy: tma-postfa |
-| Biceps Curl | biceps-brachii-long-head, biceps-brachii-short-head, brachialis | brachioradialis, forearm-flexors | *Reverse-Grip*: P brachioradialis, brachialis / S biceps-brachii-long-head, biceps-brachii-short-head, forearm-extensors; *Zottman*: P biceps-brachii-long-head, biceps-brachii-short-head, brachialis, brachioradialis / S forearm-flexors, forearm-extensors | anatomy: tma-arm |
+| Biceps Curl | biceps-brachii | brachioradialis, forearm-flexors | *Reverse-Grip*: P brachioradialis, biceps-brachii / S forearm-extensors; *Zottman*: P biceps-brachii, brachioradialis / S forearm-flexors, forearm-extensors | anatomy: tma-arm |
 | Lying Triceps Extension (Skull Crusher) | triceps-brachii-long-head, triceps-brachii-lateral-head, triceps-brachii-medial-head | none | none | maeo2023 (by analogy) |
 | Close-Grip Bench Press | triceps-brachii-long-head, triceps-brachii-lateral-head, triceps-brachii-medial-head, pectoralis-major-sternal | deltoid-anterior, pectoralis-major-clavicular | *Crush Press*: P pectoralis-major-sternal, triceps-brachii-long-head, triceps-brachii-lateral-head, triceps-brachii-medial-head / S deltoid-anterior, pectoralis-major-clavicular | anatomy: tma-arm |
 | Cable Crunch | rectus-abdominis | external-oblique, internal-oblique | *Oblique*: P external-oblique, internal-oblique / S rectus-abdominis | anatomy: os-114 |
@@ -111,9 +111,7 @@ Which Primary and Secondary Muscles, from the 48 in [muscle-taxonomy.md](muscle-
 | `teres-major` | back | 18 | 20 |
 | `erector-spinae` | back | 14 | 23 |
 | `rhomboids` | back | 20 | 28 |
-| `biceps-brachii-long-head` | biceps | 20 | 45 |
-| `biceps-brachii-short-head` | biceps | 20 | 45 |
-| `brachialis` | biceps | 29 | 41 |
+| `biceps-brachii` | biceps | 29 | 41 |
 | `triceps-brachii-long-head` | triceps | 24 | 56 |
 | `triceps-brachii-lateral-head` | triceps | 32 | 46 |
 | `triceps-brachii-medial-head` | triceps | 32 | 46 |

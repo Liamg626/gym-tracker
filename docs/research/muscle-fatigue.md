@@ -17,7 +17,7 @@ The output is a model for the v1.2 **Volume-weighted fatigue model** story, whic
 - **Best marker for "ready to train again": recovery of force or velocity** (maximal voluntary contraction torque and range of motion per [Warren 1999][warren1999]; bar velocity per [Refalo 2023][refalo2023] and [Morán-Navarro 2017][moran2017]), not soreness or creatine kinase ([Warren 1999][warren1999]). The app records none of these directly, so the model is anchored to performance studies and the doc proposes a cheap check against next-Workout Estimated 1RM.
 - **Sleep, resting HR and HRV: do not use in v1.2.** There is no resistance-training evidence that would let us pick a number. See [Q5](#q5-sleep-resting-hr-and-hrv).
 - **Weekly Working Sets per Muscle Group: 12-20 is the target range (Baz-Valle 2022), 4 is the minimum detectable gain, and gains keep rising past 20 with diminishing returns (Pelland 2026 preprint tiers).** Sources: [Baz-Valle 2022][bazvalle2022], [Pelland 2026][pelland2026] (tiers from the September 2024 preprint, not the published version). Schoenfeld 2017 shows a dose-response but its 10+ bin was not significant, so it is not the source of any number here. See [Q6](#q6-weekly-working-sets-per-muscle-group).
-- **Re-checked for SCRUM-22 (2026-10-18):** every config value still holds for the 48 Muscles and 11 Muscle Groups. `groupScale` stays 1.0: supported for Chest, Quads and the hip hinge by [Belcher 2019][belcher2019], extrapolated for the other groups. Worked push, pull and leg examples now use the real Exercise tags. See [Re-check](#re-check-against-the-48-muscles-and-11-muscle-groups-scrum-22-phase-4-2026-10-18).
+- **Re-checked for SCRUM-22 (2026-10-18):** every config value still holds for the 46 Muscles and 11 Muscle Groups. `groupScale` stays 1.0: supported for Chest, Quads and the hip hinge by [Belcher 2019][belcher2019], extrapolated for the other groups. Worked push, pull and leg examples now use the real Exercise tags. See [Re-check](#re-check-against-the-46-muscles-and-11-muscle-groups-scrum-22-phase-4-2026-10-18).
 - **Proposed model** (details below): each Working Set adds `roleWeight x effort(RIR)` to a Muscle's **Fatigue Dose** for that Workout; the Fatigue Dose sets the **Recovery Window** (12 h for a trivial dose rising linearly to 72 h at a Fatigue Dose of 4 and above); Fatigue Level falls linearly from 1 to 0 across that window; **Fatigued** for the first third, **Recovering** until the end, then **Ready**. At the top of the range it reproduces the MVP's 24 h / 72 h boundaries.
 
 ## Findings
@@ -190,9 +190,9 @@ export const FATIGUE_CONFIG = {
 
 Weekly Working Set bands the UI could use, aligned with the tiers in the Sept 2024 [Pelland preprint][pelland2024pre] (the published 2026 version was not read past its abstract): under 4 = below the minimum detectable gain; 4-10 = detectable, efficient at 5-10 (**4 is the minimum detectable gain; "efficient" is the preprint's 5-10 tier**); 11-18; 19-29; 30-42; 43 or more = unclear. The **target** is a separate overlay of **12-20** from [Baz-Valle 2022][bazvalle2022] (a Muscle Group-agnostic range; not a Pelland tier). Targets are a goal, not a limit: [Pelland 2026][pelland2026] found no clear plateau.
 
-## Re-check against the 48 Muscles and 11 Muscle Groups (SCRUM-22 Phase 4, 2026-10-18)
+## Re-check against the 46 Muscles and 11 Muscle Groups (SCRUM-22 Phase 4, 2026-10-18)
 
-SCRUM-22 changed the inputs this model runs on: 48 Muscles instead of 41, Arms split into Biceps, Triceps and Forearms, and real Exercise tags (`docs/research/exercise-muscle-tags.md`) instead of the assumed bench and incline tags above. Each config value was re-checked against them.
+SCRUM-22 changed the inputs this model runs on: 46 Muscles instead of 41, Arms split into Biceps, Triceps and Forearms (Biceps is one Muscle), and real Exercise tags (`docs/research/exercise-muscle-tags.md`) instead of the assumed bench and incline tags above. Each config value was re-checked against them.
 
 | Config key | Value | Still holds? | Source, or what is extrapolated |
 |---|---|---|---|
@@ -201,7 +201,7 @@ SCRUM-22 changed the inputs this model runs on: 48 Muscles instead of 41, Arms s
 | `rirWhenMissing` | 1 | Yes | Our own assumption; unaffected by the taxonomy |
 | `recovery.minHours / maxHours / capFatigueDose / fatiguedUntilFraction` | 12 / 72 / 4 / ⅓ | Yes | `maxHours` from [Morán-Navarro 2017][moran2017] and [Bartolomei 2017][bartolomei2017], now also consistent with [Belcher 2019][belcher2019] (squat velocity down for up to 72 h after 4 sets to failure at 80% 1RM). The rest is our own assumption |
 | `groupScale` | 1.0 for all 11 groups | Yes, see the table below | Supported for three groups, extrapolated for eight |
-| `muscleScale` | empty | Yes | No Muscle-level recovery data for any of the 48 |
+| `muscleScale` | empty | Yes | No Muscle-level recovery data for any of the 46 |
 | `weeklySets` | min 4, target 12-20, Pelland tiers | Yes, and the Arms split fits it better | [Baz-Valle 2022][bazvalle2022] reported quadriceps, biceps and triceps separately, so per-group targets for Biceps and Triceps now match how the source counted. Forearms and Core had no group-level data in either source: extrapolated |
 
 ### Recovery scale per Muscle Group
@@ -304,9 +304,7 @@ Working Sets: Wide-Grip Lat Pulldown 4 × RIR 1; Seated Cable Row (V-Handle) 4 �
 
 | Muscle | Role | U | D (h) | 12 h | 24 h | 48 h | 72 h |
 |---|---|---|---|---|---|---|---|
-| `brachialis` | P | 5.20 | 72.0 | F → F | R → R | R → R | G → G |
-| `biceps-brachii-long-head` | P | 4.42 | 72.0 | F → F | R → R | R → R | G → G |
-| `biceps-brachii-short-head` | P | 4.42 | 72.0 | F → F | R → R | R → R | G → G |
+| `biceps-brachii` | P | 5.20 | 72.0 | F → F | R → R | R → R | G → G |
 | `brachioradialis` | P | 4.42 | 72.0 | F → F | R → R | R → R | G → G |
 | `latissimus-dorsi` | P | 4.16 | 72.0 | F → F | R → R | R → R | G → G |
 | `rhomboids` | P | 3.75 | 68.2 | F → F | R → R | R → R | G → G |

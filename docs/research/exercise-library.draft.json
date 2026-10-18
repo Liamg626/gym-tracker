@@ -1351,7 +1351,7 @@
     "secondaryMuscles": [
       "deltoid-anterior",
       "supraspinatus",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1366,7 +1366,7 @@
     "secondaryMuscles": [
       "deltoid-anterior",
       "supraspinatus",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1381,7 +1381,7 @@
     "secondaryMuscles": [
       "deltoid-anterior",
       "supraspinatus",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1396,7 +1396,7 @@
     "secondaryMuscles": [
       "deltoid-anterior",
       "supraspinatus",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1411,7 +1411,7 @@
     "secondaryMuscles": [
       "deltoid-anterior",
       "supraspinatus",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1428,9 +1428,7 @@
       "rhomboids",
       "trapezius-middle",
       "deltoid-posterior",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1447,9 +1445,7 @@
       "rhomboids",
       "trapezius-middle",
       "deltoid-posterior",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1466,9 +1462,7 @@
       "rhomboids",
       "trapezius-middle",
       "deltoid-posterior",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1485,9 +1479,7 @@
       "rhomboids",
       "trapezius-middle",
       "deltoid-posterior",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1504,9 +1496,7 @@
       "rhomboids",
       "trapezius-middle",
       "deltoid-posterior",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1523,9 +1513,7 @@
       "rhomboids",
       "trapezius-middle",
       "deltoid-posterior",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1542,9 +1530,7 @@
       "rhomboids",
       "trapezius-middle",
       "deltoid-posterior",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1561,9 +1547,7 @@
       "rhomboids",
       "trapezius-middle",
       "deltoid-posterior",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1608,9 +1592,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1627,9 +1609,7 @@
       "latissimus-dorsi",
       "teres-major",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1646,9 +1626,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1665,9 +1643,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1684,9 +1660,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1703,9 +1677,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1722,9 +1694,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1741,9 +1711,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1760,9 +1728,7 @@
       "latissimus-dorsi",
       "teres-major",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -1779,9 +1745,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "erector-spinae"
     ]
@@ -1799,9 +1763,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "erector-spinae"
     ]
@@ -1893,9 +1855,7 @@
       "teres-major"
     ],
     "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "trapezius-lower",
       "trapezius-middle",
@@ -1913,9 +1873,7 @@
       "teres-major"
     ],
     "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "trapezius-lower",
       "trapezius-middle",
@@ -1933,9 +1891,7 @@
       "teres-major"
     ],
     "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "trapezius-lower",
       "trapezius-middle",
@@ -1953,9 +1909,7 @@
       "teres-major"
     ],
     "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "trapezius-lower",
       "trapezius-middle",
@@ -1973,9 +1927,7 @@
       "teres-major"
     ],
     "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "trapezius-lower",
       "trapezius-middle",
@@ -1993,9 +1945,7 @@
       "teres-major"
     ],
     "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "trapezius-lower",
       "trapezius-middle",
@@ -2013,9 +1963,7 @@
       "teres-major"
     ],
     "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "trapezius-lower",
       "trapezius-middle",
@@ -2033,9 +1981,7 @@
       "teres-major"
     ],
     "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "trapezius-lower",
       "trapezius-middle",
@@ -2057,9 +2003,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "erector-spinae"
     ]
@@ -2077,9 +2021,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "erector-spinae"
     ]
@@ -2097,9 +2039,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "erector-spinae"
     ]
@@ -2117,9 +2057,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "erector-spinae"
     ]
@@ -2137,9 +2075,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "erector-spinae"
     ]
@@ -2157,9 +2093,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -2176,9 +2110,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -2195,9 +2127,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ]
   },
@@ -2214,9 +2144,7 @@
       "teres-major",
       "deltoid-posterior",
       "trapezius-lower",
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis",
       "rectus-abdominis"
     ]
@@ -2556,9 +2484,7 @@
     "name": "EZ-Bar Preacher Curl",
     "equipment": "EZ bar, free-standing preacher bench (assumed)",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2570,9 +2496,7 @@
     "name": "Barbell Preacher Curl",
     "equipment": "Straight barbell, free-standing preacher bench (assumed)",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2585,11 +2509,9 @@
     "equipment": "EZ bar, free-standing preacher bench (assumed)",
     "primaryMuscles": [
       "brachioradialis",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
       "forearm-extensors"
     ]
   },
@@ -2598,9 +2520,7 @@
     "name": "Single-Arm Dumbbell Preacher Curl",
     "equipment": "Dumbbell, free-standing preacher bench (assumed)",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2612,9 +2532,7 @@
     "name": "Machine Preacher Curl",
     "equipment": "Selectorised preacher machine",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2626,9 +2544,7 @@
     "name": "Single-Arm Machine Preacher Curl",
     "equipment": "Selectorised preacher machine",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2640,9 +2556,7 @@
     "name": "Cable Preacher Curl (Bar)",
     "equipment": "Cable, straight or EZ bar, free-standing preacher bench (assumed)",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2654,9 +2568,7 @@
     "name": "Cable Single-Arm Preacher Curl",
     "equipment": "Cable, handle, free-standing preacher bench (assumed)",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2668,9 +2580,7 @@
     "name": "Cable Single-Arm Bayesian Curl",
     "equipment": "Cable, handle",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2682,91 +2592,70 @@
     "name": "Cable Single-Arm Bayesian Hammer Curl",
     "equipment": "Cable, handle or half rope (assumed)",
     "primaryMuscles": [
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ],
-    "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head"
-    ]
+    "secondaryMuscles": []
   },
   {
     "id": "standing-dumbbell-hammer-curl",
     "name": "Standing Dumbbell Hammer Curl",
     "equipment": "Dumbbells",
     "primaryMuscles": [
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ],
-    "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head"
-    ]
+    "secondaryMuscles": []
   },
   {
     "id": "alternating-dumbbell-hammer-curl",
     "name": "Alternating Dumbbell Hammer Curl",
     "equipment": "Dumbbells",
     "primaryMuscles": [
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ],
-    "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head"
-    ]
+    "secondaryMuscles": []
   },
   {
     "id": "seated-dumbbell-hammer-curl",
     "name": "Seated Dumbbell Hammer Curl",
     "equipment": "Dumbbells, bench",
     "primaryMuscles": [
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ],
-    "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head"
-    ]
+    "secondaryMuscles": []
   },
   {
     "id": "cross-body-dumbbell-hammer-curl",
     "name": "Cross-Body Dumbbell Hammer Curl",
     "equipment": "Dumbbells",
     "primaryMuscles": [
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ],
-    "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head"
-    ]
+    "secondaryMuscles": []
   },
   {
     "id": "cable-rope-hammer-curl",
     "name": "Cable Rope Hammer Curl",
     "equipment": "Cable, rope",
     "primaryMuscles": [
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ],
-    "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head"
-    ]
+    "secondaryMuscles": []
   },
   {
     "id": "cable-single-arm-hammer-curl",
     "name": "Cable Single-Arm Hammer Curl",
     "equipment": "Cable, handle",
     "primaryMuscles": [
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ],
-    "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head"
-    ]
+    "secondaryMuscles": []
   },
   {
     "id": "seated-barbell-wrist-curl",
@@ -2836,9 +2725,7 @@
     "name": "Standing Barbell Curl",
     "equipment": "Barbell",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2850,9 +2737,7 @@
     "name": "Standing EZ-Bar Curl",
     "equipment": "EZ bar",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2864,9 +2749,7 @@
     "name": "Standing Dumbbell Curl",
     "equipment": "Dumbbells",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2878,9 +2761,7 @@
     "name": "Alternating Dumbbell Curl",
     "equipment": "Dumbbells",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2892,9 +2773,7 @@
     "name": "Seated Dumbbell Curl",
     "equipment": "Dumbbells, bench",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2906,9 +2785,7 @@
     "name": "Incline Dumbbell Curl",
     "equipment": "Dumbbells, incline bench",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2920,9 +2797,7 @@
     "name": "Concentration Curl",
     "equipment": "Dumbbell, bench",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2934,9 +2809,7 @@
     "name": "Dumbbell Spider Curl",
     "equipment": "Dumbbells, incline bench",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2948,9 +2821,7 @@
     "name": "Cable Curl (Straight Bar)",
     "equipment": "Cable, straight or EZ bar",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2962,9 +2833,7 @@
     "name": "Cable Single-Arm Curl",
     "equipment": "Cable, handle",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2976,9 +2845,7 @@
     "name": "Barbell Drag Curl",
     "equipment": "Barbell",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
       "brachioradialis",
@@ -2991,11 +2858,9 @@
     "equipment": "EZ bar",
     "primaryMuscles": [
       "brachioradialis",
-      "brachialis"
+      "biceps-brachii"
     ],
     "secondaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
       "forearm-extensors"
     ]
   },
@@ -3004,9 +2869,7 @@
     "name": "Zottman Curl",
     "equipment": "Dumbbells",
     "primaryMuscles": [
-      "biceps-brachii-long-head",
-      "biceps-brachii-short-head",
-      "brachialis",
+      "biceps-brachii",
       "brachioradialis"
     ],
     "secondaryMuscles": [

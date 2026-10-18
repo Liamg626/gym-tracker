@@ -2,7 +2,7 @@
 
 Fetches react-native-body-highlighter's male front/back path data at a pinned
 commit (parsed as text, never executed), gives every Region its Muscle IDs, cuts
-the chest, deltoids, trapezius and biceps on the source geometry, rotates the
+the chest, deltoids and trapezius on the source geometry, rotates the
 legs 5 degrees outward at the hip (ADR-0007), and writes:
 
     assets/recovery-map/recovery-map.svg   front at x 0-724, back at x 724-1448
@@ -38,8 +38,6 @@ CUT_GAP = 6  # source units, about the width of the seams between source shapes
 PHONE_PX_PER_UNIT = 150 / 724  # each view 150 px wide on the phone Recovery Map
 HIT_MARGIN_PX = 8  # taps this close outside a Region still count
 
-BIC = ["biceps-brachii-long-head", "biceps-brachii-short-head"]
-
 # (Region name, slug, left index, right index, Muscle IDs, cut). Cuts are listed
 # under cut(). Reads confirmed from labelled false-colour renders on 2026-10-17;
 # see docs/research/muscle-taxonomy.md § Region mapping.
@@ -50,9 +48,7 @@ REGIONS = {
         ("deltoid-anterior", "deltoids", 0, 0, ["deltoid-anterior"], ("band", .5)),
         ("deltoid-lateral", "deltoids", 0, 0, ["deltoid-lateral"], ("band-rest", .5)),
         ("trapezius", "trapezius", 0, 0, ["trapezius-upper"], None),
-        ("biceps-short-head", "biceps", 0, 0, ["biceps-brachii-short-head"], ("axis-inner", .78)),
-        ("biceps-long-head", "biceps", 0, 0, ["biceps-brachii-long-head"], ("axis-outer", .78)),
-        ("brachialis", "biceps", 0, 0, ["brachialis"], ("axis-end", .78)),
+        ("biceps", "biceps", 0, 0, ["biceps-brachii"], None),
         ("triceps", "triceps", 0, 0, ["triceps-brachii-long-head", "triceps-brachii-medial-head"], None),
         *[(f"serratus-{i}", "obliques", i, i, ["serratus-anterior"], None) for i in (0, 1, 3)],
         *[(f"obliques-{i}", "obliques", i, i, ["external-oblique", "internal-oblique"], None) for i in (2, 4, 5, 6, 7)],
@@ -163,10 +159,7 @@ def cut(shape, spec, mid):
         fraction o on the edge away from the midline to i on the edge towards it.
     band/band-rest (k): the shape squeezed sideways to k of its width towards the
         midline, clipped to the shape (band), or the shape minus that (band-rest);
-        the cut runs parallel to the outer contour.
-    axis-inner/axis-outer/axis-end (f): split along the shape's long axis; the two
-        halves of the first f of its length (towards the midline / away from it), or
-        the last 1-f (the end towards the elbow)."""
+        the cut runs parallel to the outer contour."""
     if spec is None:
         return shape
     kind, a = spec[0], spec[1]
@@ -178,36 +171,8 @@ def cut(shape, spec, mid):
         edge = y0 - 10 if kind == "above" else y1 + 10
         pad = 10 if right else -10
         return shape.intersection(Polygon([(outer_x + pad, o), (inner_x - pad, i), (inner_x - pad, edge), (outer_x + pad, edge)]))
-    if kind.startswith("band"):
-        band = shape.intersection(affinity.scale(shape, xfact=a, yfact=1, origin=(inner_x, (y0 + y1) / 2)))
-        return band if kind == "band" else shape.difference(band)
-    # long axis from the minimum rotated rectangle
-    rect = list(shape.minimum_rotated_rectangle.exterior.coords)[:4]
-    e1 = (rect[1][0] - rect[0][0], rect[1][1] - rect[0][1])
-    e2 = (rect[2][0] - rect[1][0], rect[2][1] - rect[1][1])
-    long_e = e1 if e1[0] ** 2 + e1[1] ** 2 > e2[0] ** 2 + e2[1] ** 2 else e2
-    if long_e[1] < 0:
-        long_e = (-long_e[0], -long_e[1])  # point down the arm
-    c = shape.centroid
-    L = (long_e[0] ** 2 + long_e[1] ** 2) ** .5
-    u = (long_e[0] / L, long_e[1] / L)
-    proj = [(p[0] - c.x) * u[0] + (p[1] - c.y) * u[1] for p in shape.exterior.coords]
-    t_cut = min(proj) + (max(proj) - min(proj)) * a
-    big = 2000
-    n = (-u[1], u[0])
-    cross = Polygon([(c.x + u[0] * t_cut + n[0] * big, c.y + u[1] * t_cut + n[1] * big),
-                     (c.x + u[0] * t_cut - n[0] * big, c.y + u[1] * t_cut - n[1] * big),
-                     (c.x + u[0] * (t_cut + big) - n[0] * big, c.y + u[1] * (t_cut + big) - n[1] * big),
-                     (c.x + u[0] * (t_cut + big) + n[0] * big, c.y + u[1] * (t_cut + big) + n[1] * big)])
-    if kind == "axis-end":
-        return shape.intersection(cross)
-    top = shape.difference(cross)
-    half = Polygon([(c.x - u[0] * big, c.y - u[1] * big), (c.x + u[0] * big, c.y + u[1] * big),
-                    (c.x + u[0] * big + n[0] * big, c.y + u[1] * big + n[1] * big),
-                    (c.x - u[0] * big + n[0] * big, c.y - u[1] * big + n[1] * big)])
-    side_a, side_b = top.intersection(half), top.difference(half)
-    a_outer = abs(side_a.centroid.x - mid) > abs(side_b.centroid.x - mid)
-    return (side_a if a_outer else side_b) if kind == "axis-outer" else (side_b if a_outer else side_a)
+    band = shape.intersection(affinity.scale(shape, xfact=a, yfact=1, origin=(inner_x, (y0 + y1) / 2)))
+    return band if kind == "band" else shape.difference(band)
 
 
 def d_of(geom, nd=1):
@@ -307,7 +272,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 Modified for Gym Tracker (SCRUM-22): original colours removed, shapes tagged
-with Muscle IDs, chest, deltoids, trapezius and biceps cut into Regions, legs
+with Muscle IDs, chest, deltoids and trapezius cut into Regions, legs
 rotated 5 degrees outward at the hip. Generated by scripts/build_recovery_map.py."""
 
 

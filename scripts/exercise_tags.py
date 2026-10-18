@@ -15,7 +15,7 @@ LIST = ROOT / "docs/research/exercise-list.md"
 DOC = ROOT / "docs/research/exercise-muscle-tags.md"
 OUT = ROOT / "docs/research/exercise-library.draft.json"
 
-# The 48 Muscles from docs/research/muscle-taxonomy.md: id -> (side, group).
+# The Muscles from docs/research/muscle-taxonomy.md: id -> (side, group).
 MUSCLES = {
     "pectoralis-major-clavicular": ("front", "chest"),
     "pectoralis-major-sternal": ("front", "chest"),
@@ -33,9 +33,7 @@ MUSCLES = {
     "teres-major": ("back", "back"),
     "erector-spinae": ("back", "back"),
     "rhomboids": ("back", "back"),
-    "biceps-brachii-long-head": ("front", "biceps"),
-    "biceps-brachii-short-head": ("front", "biceps"),
-    "brachialis": ("front", "biceps"),
+    "biceps-brachii": ("front", "biceps"),
     "triceps-brachii-long-head": ("both", "triceps"),
     "triceps-brachii-lateral-head": ("back", "triceps"),
     "triceps-brachii-medial-head": ("both", "triceps"),
@@ -76,7 +74,8 @@ SETS = {
     "TU": "trapezius-upper", "TM": "trapezius-middle", "TL": "trapezius-lower",
     "RH": "rhomboids", "LAT": "latissimus-dorsi", "TMAJ": "teres-major",
     "ES": "erector-spinae",
-    "BIC": "biceps-brachii-long-head biceps-brachii-short-head", "BR": "brachialis",
+    # brachialis is folded into biceps-brachii (Liam, 2026-10-18), so BR and BIC are the same Muscle
+    "BIC": "biceps-brachii", "BR": "biceps-brachii",
     "TRI": "triceps-brachii-long-head triceps-brachii-lateral-head triceps-brachii-medial-head",
     "TRI1": "triceps-brachii-lateral-head triceps-brachii-medial-head",
     "TRIL": "triceps-brachii-long-head",
@@ -323,7 +322,7 @@ def main():
     cov_rows += [f"| `{x}` | {MUSCLES[x][1]} | {c[0]} | {c[1]} |" for x, c in counts.items()]
 
     generated = "\n".join([
-        f"{len(library)} Exercises tagged from {len(FAMILIES)} families. Every Exercise has at least one Primary Muscle and every tag is one of the 48 Muscle IDs.",
+        f"{len(library)} Exercises tagged from {len(FAMILIES)} families. Every Exercise has at least one Primary Muscle and every tag is one of the {len(MUSCLES)} Muscle IDs.",
         "",
         "### Family tags",
         "",
