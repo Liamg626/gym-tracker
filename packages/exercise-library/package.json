@@ -1,0 +1,11 @@
+{
+  "name": "exercise-library",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint . && prettier --check ."
+  }
+}
