@@ -140,6 +140,8 @@ The Muscle taxonomy (EXL-002, SCRUM-7) isn't written yet. The list below is this
 | Available after we cut an existing shape | deltoid anterior / lateral / posterior (one shape per view); pectoralis major clavicular vs sternal (one shape); trapezius upper / middle / lower (one shape per view); biceps long vs short head (one shape). **10** |
 | **Gap**: no shape in H | brachialis; sartorius; gracilis; peroneals; the third of infraspinatus / teres major / rhomboids. **5** |
 
+> **Note (SCRUM-22 Phase 3):** the "sub-path to confirm" reads in this table were confirmed. The current mapping is in `docs/research/muscle-taxonomy.md` § Recovery Map region mapping and `assets/recovery-map/regions.md`.
+
 So **35 of the 40 provisional Muscles** can be shown, 3 of them pending confirmation, and 5 are gaps. **Open question for EXL-002:** ADR-0006 says Muscle IDs must match region IDs, so a Muscle without a shape needs a decision. The options are: (a) draw a small region for it, (b) let it borrow the region of a neighbouring muscle (e.g. brachialis with biceps), or (c) leave it out of the taxonomy.
 
 **Splitting work** (for the Anatomical Recovery Map story; estimate about 1 day of SVG work)
