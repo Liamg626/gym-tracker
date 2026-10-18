@@ -246,7 +246,7 @@ Applied as written below, with small wording changes from review: ADR-0006 was a
 **`docs/product/features/exl-exercise-library.md`**
 
 - **EXL: Muscle taxonomy**: replace the second bullet with:
-  > - Findings and the proposed list in `docs/research/muscle-taxonomy.md`: 41 Muscles in 9 Muscle Groups, each mapped to one or more Recovery Map Regions
+  > - Findings and the proposed list in `docs/research/muscle-taxonomy.md`: 41 Muscles in 9 Muscle Groups, each mapped to one or more Recovery Map Regions (superseded by SCRUM-22 Phase 1: now 48 Muscles in 11 Muscle Groups)
 - **EXL: Library schema and validation**: add bullets:
   > - The Muscle list (ID, display name, side, Muscle Group) lives in the library package alongside the Exercises
   > - A test fails if a Muscle has no Region or a Region has no Muscle (ADR-0006)
@@ -290,7 +290,7 @@ Still excluded (not gym-trained or not reachable by any Exercise in the list): s
 
 - Add the 7 rows above to the taxonomy table (#42-48) and the group table, and move the matching rows out of **Excluded muscles**.
 - `CONTEXT.md`: only if arms are split, update the **Muscle Group** list to the 11 names.
-- `docs/product/features/exl-exercise-library.md` and `rec-recovery.md`: update "41 Muscles in 9 Muscle Groups" to the final numbers.
+- `docs/product/features/exl-exercise-library.md` and `rec-recovery.md`: update "41 Muscles in 9 Muscle Groups" to the final numbers. (Superseded by SCRUM-22 Phase 1: the final numbers are 48 Muscles in 11 Muscle Groups.)
 
 ## Unverified / limits
 

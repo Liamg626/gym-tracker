@@ -389,7 +389,7 @@ Replace the story **REC: Volume-weighted fatigue model**:
 
 > **REC: Volume-weighted fatigue model** (v1.2, domain, TDD, blocked by the research)
 > - Pure function: Workouts + Exercise Library + fatigue config + now -> Recovery State and Fatigue Level per Muscle, behind the same interface as the time-only rules
-> - Config holds `version`, `roleWeight`, `effortByRir`, `rirWhenMissing`, `recovery`, `groupScale`, `muscleScale`, `weeklySets` and `watchAdjustment` (see `docs/research/muscle-fatigue.md` for values and sources)
+> - Config holds `version`, `roleWeight`, `effortByRir`, `rirWhenMissing`, `recovery`, `groupScale`, `muscleScale`, `weeklySets` (see `docs/research/muscle-fatigue.md` for values and sources). Note (2026-10-18): `watchAdjustment` was in this list on 2026-10-17 but was dropped later with Watch Data (ADR-0008, SCRUM-22); the live config has no such key.
 > - Proposal: the config lives in one shared fatigue config module, e.g. `src/fatigue/fatigue.config.ts`, imported by both the fatigue model and the Weekly Sets insight so the targets and the Recovery Window share one source. The path is a suggestion; no `src/` module exists yet.
 > - Tests cover the worked examples in the research doc and the MVP boundaries at the maximum dose
 
