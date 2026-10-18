@@ -15,3 +15,6 @@ exports/
 *_[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9].csv
 .dev.vars
 .dev.vars.*
+
+# chief-of-staff status board
+.claude/chief-of-staff-board.md
