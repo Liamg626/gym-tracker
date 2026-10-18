@@ -27,15 +27,19 @@ To Do → In Progress → In Review → **Ready To Merge** → Done
 
 Liam starts each ticket with the project `implement` skill and a `SCRUM-n` key.
 
-Models: the skill itself runs on Sonnet (medium effort) and orchestrates; the code is written by the `implementer` subagent (Haiku, low; Sonnet, medium for the round-3 fixes) and reviewed by the `reviewer` subagent (Haiku, medium), both defined in `.claude/agents/`. Research and design tickets are done by the skill session itself.
+Models: the skill itself runs on Sonnet (medium effort) and orchestrates; the code is written by the `ticket-worker` subagent (Haiku, low; Sonnet, medium for the round-3 fixes) and reviewed by the `reviewer` subagent (Haiku, medium), both defined in `.claude/agents/`. Research and design tickets are done by the skill session itself.
 
 ponytail (level `full`) is on for the skill session and both subagents through `.claude/settings.json`. Subagents get it through its SubagentStart hook. See [ponytail.md](../agents/ponytail.md).
 
-1. **Skill session**: reads the ticket, moves it to In Progress and branches off `main` as `SCRUM-n-short-slug`. The **`implementer`** builds test-first (TDD) for domain logic and API, runs typecheck and tests, and commits with `SCRUM-n: …` messages. The skill session checks its evidence, pushes, opens a **draft PR** titled `SCRUM-n [AREA-nnn] …`, and moves the ticket to In Review.
-2. **`reviewer`**: reviews the PR against the ticket's acceptance criteria and the repo docs, and leaves line comments on the draft PR. If changes are needed, the skill session sends them to a fresh `implementer` (the ticket stays In Review).
+1. **Skill session**: reads the ticket, moves it to In Progress and branches off `main` as `SCRUM-n-short-slug`. The **`ticket-worker`** builds test-first (TDD) for domain logic and API, runs typecheck and tests, and commits with `SCRUM-n: …` messages. The skill session checks its evidence, pushes, opens a **draft PR** titled `SCRUM-n [AREA-nnn] …`, and moves the ticket to In Review.
+2. **`reviewer`**: reviews the PR against the ticket's acceptance criteria and the repo docs, and leaves line comments on the draft PR. If changes are needed, the skill session sends them to a fresh `ticket-worker` (the ticket stays In Review).
 3. After **3** unsuccessful review rounds: label `ready-for-human`, comment on the ticket with what's blocking, stop.
 4. When the reviewer approves: the **skill session** marks the PR ready for review, assigns Liam, posts the closing comment on the ticket, and moves the ticket to **Ready To Merge**. Before it marks the PR ready, the skill session opens the preview, checks that the build SHA matches the branch head and that the preview passphrase logs in, and reseeds the preview database if a migration changed. The PR body's "Test on iPhone" list is Liam's checklist.
 5. **Liam** tests in Safari on the PR's preview URL, following the PR's "Test on iPhone" list, and merges; the ticket moves to Done. He installs the preview to the Home Screen only when the PR says so, and deletes the icon afterwards.
+
+## Running several tickets at once
+
+`/chief-of-staff SCRUM-11 SCRUM-12 SCRUM-13` runs a batch with the project `chief-of-staff` skill (Sonnet, medium). It never writes code. It plans the batch from the tickets' "is blocked by" links, starts one `ticket-worker` per ticket in `run` mode and its own worktree (up to 3 at once, and one schema-change PR at a time), and sends each PR to a `reviewer`. It answers the workers' questions from the docs and brings Liam only what the docs can't settle. To save tokens it resumes the same worker and reviewer rather than starting fresh ones; the reviewer's later rounds check only its own required changes. When a PR passes review and its final check, it does step 4 above and tells Liam. Liam merges and tells it "merged SCRUM-n"; then it starts the tickets that were waiting and rebases conflicting PRs. A dependent ticket starts only after the ticket it waits on is merged. Design and research tickets stay with `implement`.
 
 ## Previews
 
@@ -51,7 +55,7 @@ Each release (MVP, v1.1, v1.2) has one **design ticket**, labelled `design`: FND
 - **The design ticket's loop:** the agent posts the artifact links on the ticket and moves it to In Review. Liam gives feedback in artifact comments or Jira comments, and the agent republishes that ticket's artifacts to the same URLs. This repeats, with no round limit, until Liam approves. There is no branch, PR or reviewer agent. The closing comment's **Done** line holds the final artifact links, and the ticket moves to Done.
 - **Sliced = frozen:** a release's design is frozen once it is approved **and** at least one Story with an "is blocked by" link to its design ticket exists, whichever happens later. If Stories are sliced before approval, the freeze comment is posted when Liam approves. Whoever triggers the freeze (creates that Story, or closes the design ticket when Stories already exist; Liam or an agent) adds a comment on the design ticket: "Design frozen for <release>", with the artifact links and their current version ids (the Artifact tool's version id, e.g. `1792235320-0528`).
 - **Changes after approval, before slicing:** before republishing, the agent checks the design ticket for a "Design frozen" comment or a Story blocked by it. If either exists, the change goes to the next release's design ticket instead. Otherwise the agent republishes to the same URLs and adds a dated comment on the design ticket saying what changed; the ticket stays Done. If the next release's design ticket has already copied these artifacts, the change is applied there too.
-- **Building a Story:** the `implementer` opens the artifacts named in the design ticket's "Design frozen" comment, for the device(s) the Story touches, and builds to match them. The reviewer checks the build against them too.
+- **Building a Story:** the `ticket-worker` opens the artifacts named in the design ticket's "Design frozen" comment, for the device(s) the Story touches, and builds to match them. The reviewer checks the build against them too.
 
 ## Skills by ticket type
 
