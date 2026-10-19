@@ -1,0 +1,36 @@
+{
+  // One Worker: Hono serves /api/*, the built web app (../web/dist) is served as static assets.
+  // Build the web app first (root `pnpm build`); `wrangler` reads the built files from there.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gym-tracker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "../web/dist",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"],
+  },
+  // Production. The database ID below is a PLACEHOLDER until `wrangler d1 create gym-tracker`
+  // is run; replace it with the real ID before the first deploy.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "gym-tracker",
+      "database_id": "PLACEHOLDER-PRODUCTION-D1-ID",
+      "migrations_dir": "drizzle",
+      "migrations_pattern": "drizzle/*/migration.sql",
+    },
+  ],
+  // Previews (wrangler preview) do not inherit the top-level bindings. They get only the demo
+  // database. The database ID must never equal the production one (see src/wrangler-config.test.ts).
+  // Placeholder until `wrangler d1 create gym-tracker-preview` is run.
+  "previews": {
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "gym-tracker-preview",
+        "database_id": "PLACEHOLDER-PREVIEW-D1-ID",
+      },
+    ],
+  },
+}
