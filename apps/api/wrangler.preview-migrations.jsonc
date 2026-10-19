@@ -1,0 +1,15 @@
+{
+  // Used only by `pnpm db:reseed:preview` to migrate the shared preview database.
+  // Must point at the same physical database as the `previews` binding in wrangler.jsonc.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gym-tracker",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "gym-tracker-preview",
+      "database_id": "PLACEHOLDER-PREVIEW-D1-ID",
+      "migrations_dir": "drizzle",
+      "migrations_pattern": "drizzle/*/migration.sql",
+    },
+  ],
+}

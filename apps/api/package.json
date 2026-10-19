@@ -4,11 +4,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run",
-    "lint": "eslint . && prettier --check ."
+    "build": "node scripts/write-build-info.mjs && wrangler deploy --dry-run --outdir .wrangler/dry-run",
+    "typecheck": "node scripts/write-build-info.mjs && tsc --noEmit",
+    "test": "node scripts/write-build-info.mjs && vitest run",
+    "lint": "eslint . && prettier --check .",
+    "deploy": "node scripts/write-build-info.mjs && wrangler deploy",
+    "preview": "node scripts/write-build-info.mjs && wrangler preview",
+    "db:reseed:preview": "node scripts/reseed-preview.mjs"
   },
   "dependencies": {
+    "drizzle-orm": "^0.45.4",
     "hono": "^4.13.13"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "drizzle-kit": "^0.31.11",
+    "jsonc-parser": "^3.3.1",
+    "wrangler": "^4.151.1"
   }
 }
