@@ -7,7 +7,7 @@
     "build": "node scripts/write-build-info.mjs && wrangler deploy --dry-run --outdir .wrangler/dry-run",
     "typecheck": "node scripts/write-build-info.mjs && tsc --noEmit",
     "test": "node scripts/write-build-info.mjs && vitest run",
-    "lint": "eslint . && prettier --check .",
+    "lint": "node scripts/write-build-info.mjs && eslint . && prettier --check .",
     "deploy": "node scripts/write-build-info.mjs && wrangler deploy",
     "preview": "node scripts/write-build-info.mjs && wrangler preview",
     "db:reseed:preview": "node scripts/reseed-preview.mjs"
