@@ -5,8 +5,8 @@
   "packageManager": "pnpm@12.14.0",
   "scripts": {
     "build": "pnpm --filter web build && pnpm --filter api build",
-    "deploy": "pnpm --filter api deploy",
-    "preview": "pnpm --filter api preview",
+    "deploy": "pnpm --filter api run deploy",
+    "preview": "pnpm --filter api run preview",
     "db:reseed:preview": "pnpm --filter api db:reseed:preview",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
