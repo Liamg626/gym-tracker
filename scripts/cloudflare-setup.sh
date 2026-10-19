@@ -240,7 +240,9 @@ sed -i "s/PLACEHOLDER-PRODUCTION-D1-ID/$PROD_D1_ID/" wrangler.jsonc
 sed -i "s/PLACEHOLDER-PREVIEW-D1-ID/$PREVIEW_D1_ID/" wrangler.jsonc wrangler.preview-migrations.jsonc
 printf '  %s✓ wrote%s IDs → apps/api/wrangler.jsonc, apps/api/wrangler.preview-migrations.jsonc\n' "$GREEN" "$RESET"
 say "IDs aren't secrets (ADR-0005), so they're committed."
-if confirm "Commit and push the IDs on the current branch ($(git branch --show-current))?"; then
+if [[ "$(git branch --show-current)" == "main" ]]; then
+  warn "you're on main; commit the ID change from a branch and open a PR instead"
+elif confirm "Commit and push the IDs on the current branch ($(git branch --show-current))?"; then
   git add wrangler.jsonc wrangler.preview-migrations.jsonc
   git commit -m "SCRUM-34: real D1 database IDs"
   git push
